@@ -1,0 +1,342 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\gestorseguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\gestorseguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\bll\\interfaces\\igestorseguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\igestorseguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\bll\\interfaces\\igestorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\igestorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\0-ProyectoDAS.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\0-ProyectoDAS.csproj|solutionrelative:0-proyectodas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\actores\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\actores\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\actores\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\actores\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\actores\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\actores\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\ubicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\ubicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\listadoproductodefectuosos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\listadoproductodefectuosos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\listadoempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\listadoempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\seguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\seguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\sesionactiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\sesionactiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\reporteresponsable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\reporteresponsable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\enums\\rolempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\enums\\rolempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\arearesponsable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\arearesponsable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|solutionrelative:bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{331A07D3-C077-47F1-A438-7AF45ED35455}|DAL\\DAL.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{331A07D3-C077-47F1-A438-7AF45ED35455}|DAL\\DAL.csproj|solutionrelative:dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IGestorSeguimiento.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorSeguimiento.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\IGestorSeguimiento.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorSeguimiento.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\IGestorSeguimiento.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:40:39.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Usuario.cs",
+              "RelativeDocumentMoniker": "BE\\actores\\Usuario.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Usuario.cs",
+              "RelativeToolTip": "BE\\actores\\Usuario.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:21:08.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Administrador.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Administrador.cs",
+              "RelativeDocumentMoniker": "BE\\actores\\Administrador.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Administrador.cs",
+              "RelativeToolTip": "BE\\actores\\Administrador.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:20:38.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Form1.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\Form1.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "0-ProyectoDAS\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T14:43:21.481Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IGestorProductos.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorProductos.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\IGestorProductos.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorProductos.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\IGestorProductos.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T14:55:36.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GestorSeguimiento.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\GestorSeguimiento.cs",
+              "RelativeDocumentMoniker": "BE\\GestorSeguimiento.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\GestorSeguimiento.cs",
+              "RelativeToolTip": "BE\\GestorSeguimiento.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:51.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Empleado.cs",
+              "RelativeDocumentMoniker": "BE\\actores\\Empleado.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Empleado.cs",
+              "RelativeToolTip": "BE\\actores\\Empleado.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:21:18.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Ubicacion.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Ubicacion.cs",
+              "RelativeDocumentMoniker": "BE\\Ubicacion.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Ubicacion.cs",
+              "RelativeToolTip": "BE\\Ubicacion.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:30.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ListadoProductoDefectuosos.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ListadoProductoDefectuosos.cs",
+              "RelativeDocumentMoniker": "BE\\ListadoProductoDefectuosos.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ListadoProductoDefectuosos.cs",
+              "RelativeToolTip": "BE\\ListadoProductoDefectuosos.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:52.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ListadoEmpleados.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ListadoEmpleados.cs",
+              "RelativeDocumentMoniker": "BE\\ListadoEmpleados.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ListadoEmpleados.cs",
+              "RelativeToolTip": "BE\\ListadoEmpleados.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:52.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Seguimiento.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Seguimiento.cs",
+              "RelativeDocumentMoniker": "BE\\Seguimiento.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Seguimiento.cs",
+              "RelativeToolTip": "BE\\Seguimiento.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:29.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SesionActiva.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\SesionActiva.cs",
+              "RelativeDocumentMoniker": "BE\\SesionActiva.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\SesionActiva.cs",
+              "RelativeToolTip": "BE\\SesionActiva.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:59.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ReporteResponsable.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ReporteResponsable.cs",
+              "RelativeDocumentMoniker": "BE\\ReporteResponsable.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ReporteResponsable.cs",
+              "RelativeToolTip": "BE\\ReporteResponsable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:56.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RolEmpresa.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ENUMS\\RolEmpresa.cs",
+              "RelativeDocumentMoniker": "BE\\ENUMS\\RolEmpresa.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ENUMS\\RolEmpresa.cs",
+              "RelativeToolTip": "BE\\ENUMS\\RolEmpresa.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:57.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Producto.cs",
+              "RelativeDocumentMoniker": "BE\\Producto.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Producto.cs",
+              "RelativeToolTip": "BE\\Producto.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAANoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:55.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Estado.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Estado.cs",
+              "RelativeDocumentMoniker": "BE\\Estado.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Estado.cs",
+              "RelativeToolTip": "BE\\Estado.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:06:50.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AreaResponsable.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\AreaResponsable.cs",
+              "RelativeDocumentMoniker": "BE\\AreaResponsable.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\AreaResponsable.cs",
+              "RelativeToolTip": "BE\\AreaResponsable.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:00:43.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Class1.cs",
+              "RelativeDocumentMoniker": "BLL\\Class1.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Class1.cs",
+              "RelativeToolTip": "BLL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T14:47:48.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\DAL\\Class1.cs",
+              "RelativeDocumentMoniker": "DAL\\Class1.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\DAL\\Class1.cs",
+              "RelativeToolTip": "DAL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T14:47:27.168Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.AssemblyReference.cache
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Properties.Resources.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.GenerateResource.cache
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.CoreCompileInputs.cache
