@@ -8,23 +8,36 @@ namespace BE
 {
     public class Seguimiento
     {
-        public DateTime Fecha { get; set;}
-        public string Mensaje { get; set;}
-        public string Responsable { get; set;}
-        public DateTime FechaModificiacion { get; set; }
-        public string CodigoProducto { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Mensaje { get; set; }
+        public string Responsable { get; set; }
+        public int CodigoProducto { get; set; }
 
-        public override string ToString()
-        {
-            return $"Fecha: {Fecha: yyyy-MM-dd};{Mensaje};{Responsable};Fecha modificacion: {FechaModificiacion: yyyy-MM-dd} Codigo Producto:{this.CodigoProducto} ";
-        }
-        public Seguimiento(DateTime fecha ,string mensaje, string responsbale,string cod)
+        public Seguimiento(DateTime fecha, string mensaje, string responsable, int codigoProducto)
         {
             this.Fecha = fecha;
             this.Mensaje = mensaje;
-            this.Responsable = responsbale;
-            this.FechaModificiacion = DateTime.Now;
-            this.CodigoProducto = cod;
+            this.Responsable = responsable;
+            this.CodigoProducto = codigoProducto;
+        }
+
+        // Constructor sin parámetros para compatibilidad con la deserialización, si es necesario.
+        public Seguimiento(){}
+
+        public override string ToString()
+        {
+            return $"Fecha: {Fecha:yyyy-MM-dd HH:mm:ss} | Mensaje: {Mensaje} | Responsable: {Responsable} | Código Producto: {CodigoProducto}";
+        }
+
+        public object Clone()
+        {
+            return new Seguimiento
+            {
+                Fecha = this.Fecha,
+                Mensaje = this.Mensaje,
+                Responsable = this.Responsable,
+                CodigoProducto = this.CodigoProducto
+            };
         }
     }
 }

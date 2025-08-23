@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -52,7 +52,96 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAyuda.Designer.cs">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoProductos.Designer.cs">
+      <DependentUpon>FormListadoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroProductos.Designer.cs">
+      <DependentUpon>FormRegistroProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteFinanciero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteFinanciero.Designer.cs">
+      <DependentUpon>FormReporteFinanciero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteResponsables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteResponsables.Designer.cs">
+      <DependentUpon>FormReporteResponsables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportesUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportesUbicacion.Designer.cs">
+      <DependentUpon>FormReportesUbicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSeguimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeguimiento.Designer.cs">
+      <DependentUpon>FormSeguimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Res.español.Designer.cs" />
+    <Compile Include="Res.ingles.Designer.cs" />
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAyuda.resx">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoProductos.resx">
+      <DependentUpon>FormListadoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroProductos.resx">
+      <DependentUpon>FormRegistroProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteFinanciero.resx">
+      <DependentUpon>FormReporteFinanciero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteResponsables.resx">
+      <DependentUpon>FormReporteResponsables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportesUbicacion.resx">
+      <DependentUpon>FormReportesUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSeguimiento.resx">
+      <DependentUpon>FormSeguimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +151,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

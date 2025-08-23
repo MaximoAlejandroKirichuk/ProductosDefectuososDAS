@@ -9,7 +9,7 @@ namespace BLL
 {
     public class GestorSeguimiento : IGestorSeguimiento
     {
-        // Lista general de seguimientos para todos los productos
+
         private List<Seguimiento> listaSeguimientos;
 
         public GestorSeguimiento()
@@ -17,7 +17,7 @@ namespace BLL
             listaSeguimientos = new List<Seguimiento>();
         }
 
-        // Agrega un nuevo seguimiento a la lista
+
         public void AgregarSeguimiento(string codigoProducto, Seguimiento nuevoSeguimiento)
         {
             if (nuevoSeguimiento == null)
@@ -62,7 +62,7 @@ namespace BLL
             return false;
         }
 
-        
+
         public void ModificarEstadoSeguimiento()
         {
         }

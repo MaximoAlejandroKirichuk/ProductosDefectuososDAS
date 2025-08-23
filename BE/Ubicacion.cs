@@ -8,50 +8,20 @@ namespace BE
 {
     public class Ubicacion
     {
-		private string depositoAlmacenado;
-        private int numeroEstante;
-        private int nivelEstante;
-
-        public string DepositoAlmacenado
-		{
-			get { return depositoAlmacenado; }
-			set { depositoAlmacenado = value; }
-		}
-
-	
-		public int NumeroEstante
-		{
-			get { return numeroEstante; }
-			set { numeroEstante = value; }
-		}
-
-		
-		public int NivelEstante
-		{
-			get { return nivelEstante; }
-			set { nivelEstante = value; }
-		}
-
-		private int numeroColumna;
-
-		public int NumeroColumna
-		{
-			get { return numeroColumna; }
-			set { numeroColumna = value; }
-		}
-
+		public string DepositoAlmacenado { get; set; }
+        public int NumeroEstante { get; set; }
+        public int NivelEstante { get; set; }
+        public int NumeroColumna { get; set; }
 
         public Ubicacion(string nroDeposito, int nroEstante, int nivelEstante, int nroColumna)
         {
 			this.DepositoAlmacenado = nroDeposito;
 			this.NumeroColumna = nroColumna ;
 			this.NivelEstante = nivelEstante;
-			this.numeroEstante = nroEstante;
+			this.NumeroEstante = nroEstante;
         }
-        public Ubicacion()
-        {
-            
-        }
+        public Ubicacion() { }
+        
         public override string ToString()
         {
             return $"{DepositoAlmacenado};{NumeroColumna};{NivelEstante};{NumeroEstante}";

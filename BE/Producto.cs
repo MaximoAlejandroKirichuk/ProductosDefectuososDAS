@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BE.actores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,169 +7,53 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Producto: ICloneable, IComparable<Producto>
+    public class Producto : ICloneable, IComparable<Producto>
     {
-        private string codigoProducto;
-        private string nombreProducto;
-        private decimal costoProducto;
-        private decimal costoAcumuladoAntesDefecto;
-        private decimal gastoAdicionalAntesDefecto;
-        private int cantidadDaniada;
-        private string problemaEntrada;
 
-
-        private Usuario personaResponsable;
-        private Ubicacion ubicacionProducto;
-        private EstadoProducto estadoProducto;
+        public int CodigoProducto { get; set; }
+        public string NombreProducto { get; set; }
+        public decimal CostoProducto { get; set; }
+        public decimal GastoAdicionalAntesDefecto { get; set; } 
+        public int CantidadDaniada { get; set; }
+        public string ProblemaEntrada { get; set; }
+        public Cliente Cliente { get; set; }
+        public Usuario PersonaResponsable { get; set; }
+        public Ubicacion UbicacionProducto { get; set; }
         public AreaResponsable AreaDevolver { get; set; }
+        public List<Seguimiento> ListaSeguimiento { get; set; } = new List<Seguimiento>();
 
+        // Usamos una enumeración para el estado, es más seguro que un string.
+        public CondicionProducto EstadoActual { get; set; }
 
-        //Es una lista del tipo string => se anota cada paso del producto
-        public List<Seguimiento> Seguimiento { get; set; } = new List<Seguimiento>();
+        public Producto() { }
+
         
-        public string CodigoProducto
-        {
-            get { return codigoProducto; }
-            set { codigoProducto = value; }
-        }
-
-
-        public string NombreProducto
-        {
-            get { return nombreProducto; }
-            set { nombreProducto = value; }
-        }
-
-       
-
-        public decimal CostoProducto
-        {
-            get { return costoProducto; }
-            set { costoProducto = value; }
-        }
-
-
-
-        //Gasto adicional antes del defecto
-        public decimal GastoAdicionalAntesDefecto
-        {
-            get { return gastoAdicionalAntesDefecto; }
-            set { gastoAdicionalAntesDefecto = value; }
-        }
-
-
-        public int CantidadDaniada
-        {
-            get { return cantidadDaniada; }
-            set { cantidadDaniada = value; }
-        }
-
-
-        public string ProblemaEntrada
-        {
-            get { return problemaEntrada; }
-            set { problemaEntrada = value; }
-        }
-        public Usuario PersonaResponsable
-        {
-            get { return personaResponsable; }
-            set { personaResponsable = value; }
-        }
-
-
-
-        public Ubicacion UbicacionProducto
-        {
-            get { return ubicacionProducto; }
-            set { ubicacionProducto = value; }
-        }
-
-        // cuando cambia el estado de un producto. Recibe el producto, el estado anterior y el nuevo.
-        public delegate void EstadoProductoCambiadoHandler(Producto producto, string estadoAnterior, string estadoNuevo);
-        public event EstadoProductoCambiadoHandler EstadoProductoCambiado;
-
-        public EstadoProducto EstadoProducto
-        {
-            get { return estadoProducto; }
-            set
-            {
-      
-                if (estadoProducto != null)
-                {
-                    estadoProducto.EstadoInternoCambiado -= ManejarCambioInterno;
-                }
-
-                // Si no hay estado previo o el nuevo estado es diferente al anterior
-                if (estadoProducto == null || estadoProducto.Estado != value.Estado)
-                {
-                    // Guarda el estado anterior (puede ser null)
-                    string anterior = estadoProducto?.Estado;
-                    // Asigna el nuevo estado
-                    estadoProducto = value;
-                    estadoProducto.EstadoInternoCambiado += ManejarCambioInterno;
-                    // Lanza el evento EstadoProductoCambiado para notificar que hubo un cambio, es lo que vemos en nuestro messageBox
-                    EstadoProductoCambiado?.Invoke(this, anterior, estadoProducto.Estado);
-                }
-                else
-                {
-                    // Si el estado no cambió (es igual al anterior), simplemente se reasigna
-                    // y se vuelve a suscribir al evento interno.
-                    estadoProducto = value;
-                    estadoProducto.EstadoInternoCambiado += ManejarCambioInterno;
-                }
-            }
-        }
-
-        // Método que se ejecuta cuando cambia el estado interno del objeto EstadoProducto.
-        // Este método lanza el evento EstadoProductoCambiado.
-        private void ManejarCambioInterno(string anterior, string nuevo)
-        {
-            EstadoProductoCambiado?.Invoke(this, anterior, nuevo);
-        }
-
-
-        public Producto(
-            string codigoProducto,
-            string nombreProducto,
-            decimal costoProducto,
-            decimal gastoAdicionalAntesDefecto,
-            int cantidadDaniada,
-            string problemaEntrada,
-            Usuario personaResponsable,
-            Ubicacion ubicacionProducto,
-            EstadoProducto estadoProducto,
-            List<Seguimiento> seguimiento,
-            AreaResponsable areaDevolver
-            )
+        public Producto(int codigoProducto, string nombreProducto, decimal costoProducto, Cliente cliente)
         {
             this.CodigoProducto = codigoProducto;
             this.NombreProducto = nombreProducto;
             this.CostoProducto = costoProducto;
+            this.Cliente = cliente;
+            this.EstadoActual = CondicionProducto.Normal; // Un producto nuevo inicia como normal.
+        }
+
+        public void MarcarComoDefectuoso(string problema, int cantidadDaniada, decimal gastoAdicional, Ubicacion ubicacion)
+        {
+            this.EstadoActual = CondicionProducto.Defectuoso;
+            this.ProblemaEntrada = problema;
             this.CantidadDaniada = cantidadDaniada;
-            this.ProblemaEntrada = problemaEntrada;
-            this.PersonaResponsable = personaResponsable;
-            this.UbicacionProducto = ubicacionProducto;
-            this.EstadoProducto = estadoProducto;
-            this.Seguimiento = seguimiento;
-            this.GastoAdicionalAntesDefecto = gastoAdicionalAntesDefecto;
-            AreaDevolver = areaDevolver;
-        }
-
-        public Producto()
-        {
+            this.GastoAdicionalAntesDefecto = gastoAdicional;
+            this.UbicacionProducto = ubicacion;
             
+            this.AgregarSeguimiento("Producto marcado como defectuoso.");
         }
-        //Se usa en reporte ubiacion los 2
-        public int CompareTo(Producto other)
+
+        public void AgregarSeguimiento(string mensaje,)
         {
-            if (other == null) return 1;
-
-            decimal thisTotal = this.CostoProducto + this.GastoAdicionalAntesDefecto;
-            decimal otherTotal = other.CostoProducto + other.GastoAdicionalAntesDefecto;
-
-            return otherTotal.CompareTo(thisTotal); // Orden descendente
+            this.ListaSeguimiento.Add(new Seguimiento(DateTime.Now, mensaje,responsable,codigoProducto));
         }
 
+        // Métodos ICloneable e IComparable
         public object Clone()
         {
             return new Producto
@@ -179,50 +64,28 @@ namespace BE
                 GastoAdicionalAntesDefecto = this.GastoAdicionalAntesDefecto,
                 CantidadDaniada = this.CantidadDaniada,
                 ProblemaEntrada = this.ProblemaEntrada,
-                PersonaResponsable = new Empleado(this.personaResponsable.Fullname),
-                UbicacionProducto = new Ubicacion
-                {
-                    DepositoAlmacenado = this.UbicacionProducto.DepositoAlmacenado,
-                    NumeroEstante = this.UbicacionProducto.NumeroEstante,
-                    NivelEstante = this.UbicacionProducto.NivelEstante,
-                    NumeroColumna = this.UbicacionProducto.NumeroColumna
-                },
-                EstadoProducto = new EstadoProducto
-                {
-                    Estado = this.EstadoProducto.Estado,
-                    CostoManoObra = this.EstadoProducto.CostoManoObra,
-                    CostoPerdida = this.EstadoProducto.CostoPerdida
-                },
-                Seguimiento = new List<Seguimiento>(this.Seguimiento), // Clona referencias, pero no profundo
-                AreaDevolver = new AreaResponsable(this.AreaDevolver.Area)
-                
+                Cliente = this.Cliente, // Se asume que Cliente es inmutable 
+                PersonaResponsable = this.PersonaResponsable, // Idem
+                UbicacionProducto = this.UbicacionProducto, // Idem
+                EstadoActual = this.EstadoActual,
+                AreaDevolver = this.AreaDevolver,
+                ListaSeguimiento = new List<Seguimiento>(this.ListaSeguimiento.Select(s => (Seguimiento)s.Clone())) // Clonación profunda si la clase Seguimiento tiene Clone
             };
+        }
+
+        public int CompareTo(Producto other)
+        {
+            if (other == null) return 1;
+            decimal thisTotal = this.CostoProducto + this.GastoAdicionalAntesDefecto;
+            decimal otherTotal = other.CostoProducto + other.GastoAdicionalAntesDefecto;
+            return otherTotal.CompareTo(thisTotal); 
         }
 
         public override string ToString()
         {
-            return $"{CodigoProducto};{NombreProducto};{CostoProducto};{GastoAdicionalAntesDefecto};{CantidadDaniada};{ProblemaEntrada};{PersonaResponsable.Fullname};{AreaDevolver.Area}";
+            return $"{CodigoProducto};{NombreProducto};{CostoProducto};{GastoAdicionalAntesDefecto};{CantidadDaniada};{ProblemaEntrada};{EstadoActual};{UbicacionProducto?.DepositoAlmacenado}";
         }
-        public List<Ubicacion> DevolverUbicacionProductos()
-        {
-            return new List<Ubicacion> { this.UbicacionProducto };
-        }
-        public string ToCsv()
-        {
-            // Obtener el costo correcto según el tipo de estado
-            decimal costoEstado = 0;
-
-            if (EstadoProducto.Estado == "Desechado")
-            {
-                costoEstado = EstadoProducto.CostoPerdida;
-            }
-            else if (EstadoProducto.Estado == "Reacondicionable")
-            {
-                costoEstado = EstadoProducto.CostoManoObra;
-            }
-
-            return $"{CodigoProducto};{NombreProducto};{CostoProducto};{GastoAdicionalAntesDefecto};{CantidadDaniada};{ProblemaEntrada};{PersonaResponsable.Fullname};{UbicacionProducto.DepositoAlmacenado};{UbicacionProducto.NumeroEstante};{UbicacionProducto.NivelEstante};{UbicacionProducto.NumeroColumna};{EstadoProducto.Estado};{costoEstado};{AreaDevolver.Area}";
-        }
-
     }
+
+
 }
