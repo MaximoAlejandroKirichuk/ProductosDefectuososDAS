@@ -117,10 +117,133 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>37</value>
-  </metadata>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Add steps to tracking" xml:space="preserve">
+    <value>Add steps to tracking</value>
+  </data>
+  <data name="Additional expense" xml:space="preserve">
+    <value>Additional expense</value>
+  </data>
+  <data name="Change Language" xml:space="preserve">
+    <value>Change Language</value>
+  </data>
+  <data name="Column" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="Cost Incurred (before becoming faulty) " xml:space="preserve">
+    <value>Cost Incurred (before becoming faulty) </value>
+  </data>
+  <data name="cost of raw material loss" xml:space="preserve">
+    <value>cost of raw material loss</value>
+  </data>
+  <data name="Damaged Product Quantity " xml:space="preserve">
+    <value>Damaged Product Quantity </value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Financial Reports" xml:space="preserve">
+    <value>Financial Reports</value>
+  </data>
+  <data name="Finish Form " xml:space="preserve">
+    <value>Finish Form </value>
+  </data>
+  <data name="finish upload" xml:space="preserve">
+    <value>finish upload</value>
+  </data>
+  <data name="Follow up" xml:space="preserve">
+    <value>Follow up</value>
+  </data>
+  <data name="Follow-up " xml:space="preserve">
+    <value>Follow-up </value>
+  </data>
+  <data name="Geographical Location " xml:space="preserve">
+    <value>Geographical Location </value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Input problem" xml:space="preserve">
+    <value>Input problem</value>
+  </data>
+  <data name="Labor cost" xml:space="preserve">
+    <value>Labor cost</value>
+  </data>
+  <data name="Log Out" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="Modify Product" xml:space="preserve">
+    <value>Modify Product</value>
+  </data>
+  <data name="Product code" xml:space="preserve">
+    <value>Product code</value>
+  </data>
+  <data name="Product Code " xml:space="preserve">
+    <value>Product Code </value>
+  </data>
+  <data name="product condition" xml:space="preserve">
+    <value>product condition</value>
+  </data>
+  <data name="Product Cost " xml:space="preserve">
+    <value>Product Cost </value>
+  </data>
+  <data name="Product information" xml:space="preserve">
+    <value>Product information</value>
+  </data>
+  <data name="Product Information " xml:space="preserve">
+    <value>Product Information </value>
+  </data>
+  <data name="Product name" xml:space="preserve">
+    <value>Product name</value>
+  </data>
+  <data name="Product Name " xml:space="preserve">
+    <value>Product Name </value>
+  </data>
+  <data name="Product Status " xml:space="preserve">
+    <value>Product Status </value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Reported Issue " xml:space="preserve">
+    <value>Reported Issue </value>
+  </data>
+  <data name="Reports by Geographic Location" xml:space="preserve">
+    <value>Reports by Geographic Location</value>
+  </data>
+  <data name="Reports by Manager" xml:space="preserve">
+    <value>Reports by Manager</value>
+  </data>
+  <data name="Responsible person" xml:space="preserve">
+    <value>Responsible person</value>
+  </data>
+  <data name="Responsible Person " xml:space="preserve">
+    <value>Responsible Person </value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Shelf" xml:space="preserve">
+    <value>Shelf</value>
+  </data>
+  <data name="Shelf level" xml:space="preserve">
+    <value>Shelf level</value>
+  </data>
+  <data name="Steps of Follow-up" xml:space="preserve">
+    <value>Steps of Follow-up</value>
+  </data>
+  <data name="Storage bin" xml:space="preserve">
+    <value>Storage bin</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
 </root>

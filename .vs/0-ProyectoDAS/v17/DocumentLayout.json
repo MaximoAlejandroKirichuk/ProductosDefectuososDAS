@@ -1,125 +1,80 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\",
+  "WorkspaceRootPath": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|c:\\users\\lucas\\source\\repos\\productosdefectuososdas\\0-proyectodas\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Seguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:BE\\Seguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:BE\\Producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:BE\\actores\\Administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\actores\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\actores\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ReporteResponsable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:BE\\ReporteResponsable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Ubicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:BE\\Ubicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\bll\\gestorseguimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|solutionrelative:bll\\gestorseguimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\be\\enums\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:be\\enums\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\AreaResponsable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:BE\\AreaResponsable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:BE\\actores\\Empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formseguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formseguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formreportesubicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formreportesubicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formregistroproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|c:\\users\\lucas\\source\\repos\\productosdefectuososdas\\0-proyectodas\\formregistroproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formregistroproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formregistroproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formregistroproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formreportefinanciero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formreportefinanciero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formreporteresponsables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formreporteresponsables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formayuda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formayuda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formlistadoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\formlistadoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formlistadoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\formlistadoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formlistadoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|e:\\facultad 2025\\segundocuatrimestre\\das\\0-proyectodas\\0-proyectodas\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-proyectodas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ENUMS\\RolEmpresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BE\\ENUMS\\RolEmpresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorSeguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\formseguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formseguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\formreportesubicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formreportesubicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\formregistroproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formregistroproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\formreportefinanciero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formreportefinanciero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\formreporteresponsables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formreporteresponsables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\formayuda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formayuda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-proyectodas\\formlistadoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EDAC8ED-FDFA-4165-AD9E-8DDAA927BAF2}|0-ProyectoDAS\\UI.csproj|solutionrelative:0-proyectodas\\formlistadoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ENUMS\\RolEmpresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BLL\\Interfaces\\IGestorSeguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|solutionrelative:BLL\\Interfaces\\IGestorSeguimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BE\\actores\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCEC6F52-1F33-40BA-86F2-D19104CF9151}|BE\\BE.csproj|solutionrelative:BE\\actores\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorProductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BLL\\Interfaces\\IGestorProductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{495EBB27-CC65-4956-AAEC-4A603381BEBB}|BLL\\BLL.csproj|solutionrelative:BLL\\Interfaces\\IGestorProductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{331A07D3-C077-47F1-A438-7AF45ED35455}|DAL\\DAL.csproj|E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\DAL\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{331A07D3-C077-47F1-A438-7AF45ED35455}|DAL\\DAL.csproj|C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\DAL\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{331A07D3-C077-47F1-A438-7AF45ED35455}|DAL\\DAL.csproj|solutionrelative:DAL\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -143,336 +98,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Compra.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Compra.cs",
-              "RelativeDocumentMoniker": "BE\\Compra.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Compra.cs",
-              "RelativeToolTip": "BE\\Compra.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Title": "Signup.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\Signup.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\Signup.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\Signup.cs",
+              "RelativeToolTip": "0-ProyectoDAS\\Signup.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwDQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T16:16:18.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Cliente.cs",
-              "RelativeDocumentMoniker": "BE\\actores\\Cliente.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Cliente.cs",
-              "RelativeToolTip": "BE\\actores\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T16:05:42.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Administrador.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Administrador.cs",
-              "RelativeDocumentMoniker": "BE\\actores\\Administrador.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Administrador.cs",
-              "RelativeToolTip": "BE\\actores\\Administrador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:20:38.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Enums.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ENUMS\\Enums.cs",
-              "RelativeDocumentMoniker": "BE\\ENUMS\\Enums.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ENUMS\\Enums.cs",
-              "RelativeToolTip": "BE\\ENUMS\\Enums.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T14:32:39.052Z",
+              "WhenOpened": "2025-08-23T17:38:29.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Producto.cs",
-              "RelativeDocumentMoniker": "BE\\Producto.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Producto.cs",
-              "RelativeToolTip": "BE\\Producto.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAA2wDQAAAA1AAAAAAAAAA==",
+              "Title": "FormRegistroProductos.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormRegistroProductos.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormRegistroProductos.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormRegistroProductos.cs",
+              "RelativeToolTip": "0-ProyectoDAS\\FormRegistroProductos.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAcwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:06:55.173Z",
+              "WhenOpened": "2025-08-23T17:25:03.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ReporteResponsable.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ReporteResponsable.cs",
-              "RelativeDocumentMoniker": "BE\\ReporteResponsable.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ReporteResponsable.cs",
-              "RelativeToolTip": "BE\\ReporteResponsable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:06:56.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Seguimiento.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Seguimiento.cs",
-              "RelativeDocumentMoniker": "BE\\Seguimiento.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Seguimiento.cs",
-              "RelativeToolTip": "BE\\Seguimiento.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:06:29.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Ubicacion.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Ubicacion.cs",
-              "RelativeDocumentMoniker": "BE\\Ubicacion.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\Ubicacion.cs",
-              "RelativeToolTip": "BE\\Ubicacion.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:06:30.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Empleado.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Empleado.cs",
-              "RelativeDocumentMoniker": "BE\\actores\\Empleado.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Empleado.cs",
-              "RelativeToolTip": "BE\\actores\\Empleado.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:21:18.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AreaResponsable.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\AreaResponsable.cs",
-              "RelativeDocumentMoniker": "BE\\AreaResponsable.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\AreaResponsable.cs",
-              "RelativeToolTip": "BE\\AreaResponsable.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:00:43.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GestorSeguimientos.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\GestorSeguimientos.cs",
-              "RelativeDocumentMoniker": "BLL\\GestorSeguimientos.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\GestorSeguimientos.cs",
-              "RelativeToolTip": "BLL\\GestorSeguimientos.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T14:32:39.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Login.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Login.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\Login.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Login.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\Login.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:42:57.574Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Signup.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Signup.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\Signup.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Signup.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\Signup.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:43:05.592Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FormSeguimiento.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormSeguimiento.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormSeguimiento.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormSeguimiento.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\FormSeguimiento.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:43:04.09Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FormReportesUbicacion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReportesUbicacion.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormReportesUbicacion.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReportesUbicacion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\FormReportesUbicacion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:38:59.963Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FormRegistroProductos.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormRegistroProductos.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormRegistroProductos.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormRegistroProductos.cs",
-              "RelativeToolTip": "0-ProyectoDAS\\FormRegistroProductos.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:39:29.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FormRegistroProductos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormRegistroProductos.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormRegistroProductos.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormRegistroProductos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\FormRegistroProductos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:38:46.187Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "FormReporteFinanciero.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReporteFinanciero.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormReporteFinanciero.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReporteFinanciero.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\FormReporteFinanciero.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:38:57.347Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FormReporteResponsables.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReporteResponsables.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormReporteResponsables.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReporteResponsables.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\FormReporteResponsables.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:38:59.086Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FormAyuda.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormAyuda.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormAyuda.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormAyuda.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\FormAyuda.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:38:45.056Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "FormListadoProductos.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormListadoProductos.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormListadoProductos.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormListadoProductos.cs",
-              "RelativeToolTip": "0-ProyectoDAS\\FormListadoProductos.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:34:16.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FormListadoProductos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormListadoProductos.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormListadoProductos.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormListadoProductos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\FormListadoProductos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:34:14.719Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MainForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\MainForm.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\MainForm.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\MainForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "0-ProyectoDAS\\MainForm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:30:25.544Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\MainForm.cs",
-              "RelativeDocumentMoniker": "0-ProyectoDAS\\MainForm.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\MainForm.cs",
-              "RelativeToolTip": "0-ProyectoDAS\\MainForm.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:29:53.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IGestorSeguimiento.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorSeguimiento.cs",
-              "RelativeDocumentMoniker": "BLL\\Interfaces\\IGestorSeguimiento.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorSeguimiento.cs",
-              "RelativeToolTip": "BLL\\Interfaces\\IGestorSeguimiento.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:40:39.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Usuario.cs",
-              "RelativeDocumentMoniker": "BE\\actores\\Usuario.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\actores\\Usuario.cs",
-              "RelativeToolTip": "BE\\actores\\Usuario.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T15:21:08.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\Form1.cs",
               "RelativeDocumentMoniker": "0-ProyectoDAS\\Form1.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "0-ProyectoDAS\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T14:43:21.481Z",
@@ -480,11 +135,156 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\MainForm.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\MainForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "0-ProyectoDAS\\MainForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:30:25.544Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Signup.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\Signup.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\Signup.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\Signup.cs [Dise\u00F1o]",
+              "RelativeToolTip": "0-ProyectoDAS\\Signup.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:43:05.592Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormSeguimiento.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormSeguimiento.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormSeguimiento.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormSeguimiento.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:43:04.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormReportesUbicacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormReportesUbicacion.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormReportesUbicacion.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReportesUbicacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:38:59.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormListadoProductos.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormListadoProductos.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormListadoProductos.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormListadoProductos.cs",
+              "RelativeToolTip": "0-ProyectoDAS\\FormListadoProductos.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAASwGcAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:34:16.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\Login.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\Login.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\Login.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:42:57.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormRegistroProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormRegistroProductos.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormRegistroProductos.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormRegistroProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "0-ProyectoDAS\\FormRegistroProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:38:46.187Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormReporteFinanciero.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormReporteFinanciero.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormReporteFinanciero.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReporteFinanciero.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:38:57.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormReporteResponsables.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormReporteResponsables.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormReporteResponsables.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormReporteResponsables.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:38:59.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormAyuda.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormAyuda.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormAyuda.cs",
+              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\0-ProyectoDAS\\FormAyuda.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:38:45.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormListadoProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormListadoProductos.cs",
+              "RelativeDocumentMoniker": "0-ProyectoDAS\\FormListadoProductos.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\0-ProyectoDAS\\FormListadoProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "0-ProyectoDAS\\FormListadoProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:34:14.719Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IGestorSeguimiento.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BLL\\Interfaces\\IGestorSeguimiento.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\IGestorSeguimiento.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BLL\\Interfaces\\IGestorSeguimiento.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\IGestorSeguimiento.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:40:39.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BE\\actores\\Usuario.cs",
+              "RelativeDocumentMoniker": "BE\\actores\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BE\\actores\\Usuario.cs",
+              "RelativeToolTip": "BE\\actores\\Usuario.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:21:08.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "IGestorProductos.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorProductos.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BLL\\Interfaces\\IGestorProductos.cs",
               "RelativeDocumentMoniker": "BLL\\Interfaces\\IGestorProductos.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BLL\\Interfaces\\IGestorProductos.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\BLL\\Interfaces\\IGestorProductos.cs",
               "RelativeToolTip": "BLL\\Interfaces\\IGestorProductos.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAwAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -492,23 +292,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 14,
               "Title": "RolEmpresa.cs",
               "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ENUMS\\RolEmpresa.cs",
-              "RelativeDocumentMoniker": "BE\\ENUMS\\RolEmpresa.cs",
               "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\BE\\ENUMS\\RolEmpresa.cs",
-              "RelativeToolTip": "BE\\ENUMS\\RolEmpresa.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T15:06:57.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 18,
               "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\DAL\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\DAL\\Class1.cs",
               "RelativeDocumentMoniker": "DAL\\Class1.cs",
-              "ToolTip": "E:\\facultad 2025\\SegundoCuatrimestre\\DAS\\0-ProyectoDAS\\DAL\\Class1.cs",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\ProductosDefectuososDAS\\DAL\\Class1.cs",
               "RelativeToolTip": "DAL\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

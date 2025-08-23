@@ -2,3 +2,17 @@ E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\U
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Properties.Resources.resources
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.GenerateResource.cache
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.csproj.AssemblyReference.cache
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.FormAyuda.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.FormListadoProductos.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.FormRegistroProductos.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.FormReporteFinanciero.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.FormReporteResponsables.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.FormReportesUbicacion.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.FormSeguimiento.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.Login.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.MainForm.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Properties.Resources.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.Signup.resources
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Lucas\Source\Repos\ProductosDefectuososDAS\0-ProyectoDAS\obj\Debug\UI.csproj.CoreCompileInputs.cache

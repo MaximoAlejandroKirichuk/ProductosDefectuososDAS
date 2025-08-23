@@ -107,8 +107,9 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Res.español.Designer.cs" />
-    <Compile Include="Res.ingles.Designer.cs" />
+    <Compile Include="Idiomas\Res.español.Designer.cs" />
+    <Compile Include="Idiomas\Res.ingles.Designer.cs" />
+    <Compile Include="Idiomas\Res.portugues.Designer.cs" />
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +152,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Idiomas\Res.español.resx" />
+    <EmbeddedResource Include="Idiomas\Res.ingles.resx" />
+    <EmbeddedResource Include="Idiomas\Res.portugues.resx" />
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>

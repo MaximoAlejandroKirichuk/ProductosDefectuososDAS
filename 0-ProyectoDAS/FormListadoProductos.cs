@@ -1,14 +1,6 @@
-﻿using _02_ProductosDefectuosos.Modelos;
+﻿using _02_ProductosDefectuosos;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI

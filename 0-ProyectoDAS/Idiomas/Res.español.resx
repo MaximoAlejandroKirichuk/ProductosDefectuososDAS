@@ -117,10 +117,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>37</value>
-  </metadata>
+  <data name="Actualizar" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="Ayuda" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="Cambiar Idioma" xml:space="preserve">
+    <value>Cambiar Idioma</value>
+  </data>
+  <data name="Cantidad de productos dañada " xml:space="preserve">
+    <value>Cantidad de productos dañada </value>
+  </data>
+  <data name="Cerrar Sesion " xml:space="preserve">
+    <value>Cerrar Sesion </value>
+  </data>
+  <data name="Columna" xml:space="preserve">
+    <value>Columna</value>
+  </data>
+  <data name="Costo de mano de obra" xml:space="preserve">
+    <value>Costo de mano de obra</value>
+  </data>
+  <data name="Costo de mano de obra1" xml:space="preserve">
+    <value>Costo de mano de obra</value>
+  </data>
+  <data name="Costo de perdida de materia prima" xml:space="preserve">
+    <value>Costo de perdida de materia prima</value>
+  </data>
+  <data name="Costo producto " xml:space="preserve">
+    <value>Costo producto </value>
+  </data>
+  <data name="Código producto " xml:space="preserve">
+    <value>Código producto </value>
+  </data>
+  <data name="Datos del Producto " xml:space="preserve">
+    <value>Datos del Producto </value>
+  </data>
+  <data name="Deposito almacenado" xml:space="preserve">
+    <value>Deposito almacenado</value>
+  </data>
+  <data name="Estado del producto" xml:space="preserve">
+    <value>Estado del producto</value>
+  </data>
+  <data name="Estado del producto " xml:space="preserve">
+    <value>Estado del producto </value>
+  </data>
+  <data name="Estante" xml:space="preserve">
+    <value>Estante</value>
+  </data>
+  <data name="Finalizar formulario " xml:space="preserve">
+    <value>Finalizar formulario </value>
+  </data>
+  <data name="Gasto generado (antes de ser defectuoso) " xml:space="preserve">
+    <value>Gasto generado (antes de ser defectuoso) </value>
+  </data>
+  <data name="Guardar" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Modificar Productos" xml:space="preserve">
+    <value>Modificar Productos</value>
+  </data>
+  <data name="Nivel de estante" xml:space="preserve">
+    <value>nivel de estante</value>
+  </data>
+  <data name="Nombre producto " xml:space="preserve">
+    <value>Nombre producto </value>
+  </data>
+  <data name="Problema por el que llega " xml:space="preserve">
+    <value>Problema por el que llega </value>
+  </data>
+  <data name="Registrar" xml:space="preserve">
+    <value>Registrar</value>
+  </data>
+  <data name="Reporte" xml:space="preserve">
+    <value>Reporte</value>
+  </data>
+  <data name="Seguimiento" xml:space="preserve">
+    <value>Seguimiento</value>
+  </data>
+  <data name="Ubicación Geográfica " xml:space="preserve">
+    <value>Ubicación Geográfica </value>
+  </data>
+  <data name="Ubicación Geográfica" xml:space="preserve">
+    <value>Ubicación Geográfica </value>
+  </data>
+  <data name="Paso al seguimiento" xml:space="preserve">
+    <value>Paso al seguimiento</value>
+  </data>
+  <data name="Modificar" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="Borrar" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="informacion producto" xml:space="preserve">
+    <value>informacion producto</value>
+  </data>
+  <data name="codigo producto" xml:space="preserve">
+    <value>codigo producto</value>
+  </data>
+  <data name="nombre producto" xml:space="preserve">
+    <value>nombre producto</value>
+  </data>
+  <data name="problema de entrada" xml:space="preserve">
+    <value>problema de entrada</value>
+  </data>
+  <data name="persona responsable" xml:space="preserve">
+    <value>persona responsable</value>
+  </data>
+  <data name="Reportes por responsable" xml:space="preserve">
+    <value>Reportes por responsable</value>
+  </data>
+  <data name="Reportes por ubicacion geografica" xml:space="preserve">
+    <value>Reportes por ubicacion geografica</value>
+  </data>
+  <data name="Reportes financieros" xml:space="preserve">
+    <value>Reportes financieros</value>
+  </data>
+  <data name="Agregar" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="Terminar Carga" xml:space="preserve">
+    <value>Terminar Carga</value>
+  </data>
+  <data name="Gasto adicional" xml:space="preserve">
+    <value>Gasto adicional</value>
+  </data>
 </root>

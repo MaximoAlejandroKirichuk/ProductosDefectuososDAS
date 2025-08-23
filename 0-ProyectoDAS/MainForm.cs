@@ -1,4 +1,5 @@
 ﻿
+using _02_ProductosDefectuosos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -318,6 +319,10 @@ namespace UI
             }
         }
 
+        private void cambiarIdiomaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
  
