@@ -45,7 +45,6 @@
     <Compile Include="actores\Cliente.cs" />
     <Compile Include="actores\Empleado.cs" />
     <Compile Include="actores\Usuario.cs" />
-    <Compile Include="AreaResponsable.cs" />
     <Compile Include="Compra.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

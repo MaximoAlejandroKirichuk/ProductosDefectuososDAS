@@ -1,4 +1,4 @@
-﻿
+﻿using BE;
 using _02_ProductosDefectuosos;
 using System;
 using System.Collections.Generic;
@@ -134,9 +134,9 @@ namespace UI
 
         private void FormRegistroProductos_Load(object sender, EventArgs e)
         {
-            comboBoxPersonaResponsable.DataSource = null;
-            comboBoxPersonaResponsable.DataSource = ListadoEmpleados.Instancia.Empleados;
-            comboBoxPersonaResponsable.DisplayMember = "NombreCompleto";
+            //comboBoxPersonaResponsable.DataSource = null;
+            //comboBoxPersonaResponsable.DataSource = ListadoEmpleados.Instancia.Empleados;
+            //comboBoxPersonaResponsable.DisplayMember = "NombreCompleto";
 
 
         }
@@ -163,69 +163,69 @@ namespace UI
         {
             try
             {
-                //Generar producto
-                Usuario personaResponsable = (Usuario)comboBoxPersonaResponsable.SelectedItem;
-                string codigoProducto = txtCodigoProducto.Text;
-                string nombreProducto = txtNombreProducto.Text;
-                decimal costoProducto = Convert.ToDecimal(txtCostoProducto.Text);
-                decimal gastoGeneradoAntesDefectuoso = Convert.ToDecimal(txtGastoGenerado.Text);
+                ////Generar producto
+                //Usuario personaResponsable = (Usuario)comboBoxPersonaResponsable.SelectedItem;
+                //string codigoProducto = txtCodigoProducto.Text;
+                //string nombreProducto = txtNombreProducto.Text;
+                //decimal costoProducto = Convert.ToDecimal(txtCostoProducto.Text);
+                //decimal gastoGeneradoAntesDefectuoso = Convert.ToDecimal(txtGastoGenerado.Text);
 
-                int cantidadProductoDañada = Convert.ToInt32(txtCantidadProductosDañada.Text);
-                string problemaEntrada = comboBoxProblemaEntrada.SelectedItem.ToString();
+                //int cantidadProductoDañada = Convert.ToInt32(txtCantidadProductosDañada.Text);
+                //string problemaEntrada = comboBoxProblemaEntrada.SelectedItem.ToString();
 
-                //Generar ubicación
-                string depositoAlmacenado = comboBoxDepositoAlmacenado.SelectedItem.ToString();
-                int nroEstante = Convert.ToInt32(numericUpDownEstante.Value);
-                int nivelEstante = Convert.ToInt32(numericUpDownNivelEstante.Value);
-                int nroColumna = Convert.ToInt32(numericUpDownColumna.Value);
-                Ubicacion ubicacionProducto = new Ubicacion(depositoAlmacenado, nroEstante, nivelEstante, nroColumna);
+                ////Generar ubicación
+                //string depositoAlmacenado = comboBoxDepositoAlmacenado.SelectedItem.ToString();
+                //int nroEstante = Convert.ToInt32(numericUpDownEstante.Value);
+                //int nivelEstante = Convert.ToInt32(numericUpDownNivelEstante.Value);
+                //int nroColumna = Convert.ToInt32(numericUpDownColumna.Value);
+                //Ubicacion ubicacionProducto = new Ubicacion(depositoAlmacenado, nroEstante, nivelEstante, nroColumna);
 
-                //Generar seguimiento
+                ////Generar seguimiento
 
-                List<Seguimiento> seguimiento = listBox1.Items.Cast<Seguimiento>().ToList();
+                //List<Seguimiento> seguimiento = listBox1.Items.Cast<Seguimiento>().ToList();
 
 
-                //Generar estado
-                string estado = comboBoxEstadoProducto.SelectedItem.ToString();
-                EstadoProducto estadoProducto = null; //declaro null
+                ////Generar estado
+                //string estado = comboBoxEstadoProducto.SelectedItem.ToString();
+                //EstadoProducto estadoProducto = null; //declaro null
 
-                if (estado == "Desechado")
-                {
-                    decimal costoPerdida = Convert.ToDecimal(numericUpDownCostoPerdidaMateriaPrima.Value);
-                    estadoProducto = new EstadoProducto(costoPerdida, EstadoProducto.TipoEstado.Desechado);
-                }
-                else if (estado == "Reacondicionable")
-                {
-                    decimal costoManoObra = Convert.ToDecimal(numericUpDownCostoManoObra.Value);
-                    estadoProducto = new EstadoProducto(costoManoObra, EstadoProducto.TipoEstado.Reacondicionable);
-                }
-                else
-                {
-                    MessageBox.Show("Ocurrio un error con el estado del producto");
-                }
+                //if (estado == "Desechado")
+                //{
+                //    decimal costoPerdida = Convert.ToDecimal(numericUpDownCostoPerdidaMateriaPrima.Value);
+                //    estadoProducto = new EstadoProducto(costoPerdida, EstadoProducto.TipoEstado.Desechado);
+                //}
+                //else if (estado == "Reacondicionable")
+                //{
+                //    decimal costoManoObra = Convert.ToDecimal(numericUpDownCostoManoObra.Value);
+                //    estadoProducto = new EstadoProducto(costoManoObra, EstadoProducto.TipoEstado.Reacondicionable);
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Ocurrio un error con el estado del producto");
+                //}
 
-                //Generar el area responsable 
-                AreaPosibles areaEnum;
-                AreaResponsable area = null;
+                ////Generar el area responsable 
+                //AreaPosibles areaEnum;
+                //AreaResponsable area = null;
 
-                if (comboBoxAreaResponsable.SelectedItem != null &&
-                    Enum.TryParse(comboBoxAreaResponsable.SelectedItem.ToString(), out areaEnum))
-                {
-                    area = new AreaResponsable(areaEnum);
-                }
-                else
-                {
-                    MessageBox.Show("El valor seleccionado para el área responsable no es válido.");
-                    return;
-                }
+                //if (comboBoxAreaResponsable.SelectedItem != null &&
+                //    Enum.TryParse(comboBoxAreaResponsable.SelectedItem.ToString(), out areaEnum))
+                //{
+                //    area = new AreaResponsable(areaEnum);
+                //}
+                //else
+                //{
+                //    MessageBox.Show("El valor seleccionado para el área responsable no es válido.");
+                //    return;
+                //}
                 
                 
-                //Generar producto Defectuoso
-                Producto nuevoProductoDefectuoso = new Producto(codigoProducto, nombreProducto, costoProducto, gastoGeneradoAntesDefectuoso, cantidadProductoDañada, problemaEntrada, personaResponsable, ubicacionProducto, estadoProducto, seguimiento, area);
-                //utilizamos el objeto delegado.
-                Notificador?.Invoke("Se creó un nuevo Producto Defectuoso con éxito");
+                ////Generar producto Defectuoso
+                //Producto nuevoProductoDefectuoso = new Producto(codigoProducto, nombreProducto, costoProducto, gastoGeneradoAntesDefectuoso, cantidadProductoDañada, problemaEntrada, personaResponsable, ubicacionProducto, estadoProducto, seguimiento, area);
+                ////utilizamos el objeto delegado.
+                //Notificador?.Invoke("Se creó un nuevo Producto Defectuoso con éxito");
 
-                ListadoProductoDefectuosos.Instancia.agregarProducto(nuevoProductoDefectuoso);
+                //ListadoProductoDefectuosos.Instancia.agregarProducto(nuevoProductoDefectuoso);
                 
                
             }
@@ -242,13 +242,13 @@ namespace UI
         
         private void btnAgregarPaso_Click(object sender, EventArgs e)
         {
-            DateTime dia = dateTimePickerFecha.Value;
-            string mensaje = txtAgregarPaso.Text;
-            string creadorSeguimiento = SesionActiva.Instancia.UsuarioActivo.Fullname;
-            string codigo = txtCodigoProducto.Text;
-            Seguimiento nuevo = new Seguimiento(dia,mensaje, creadorSeguimiento,codigo);
+            //DateTime dia = dateTimePickerFecha.Value;
+            //string mensaje = txtAgregarPaso.Text;
+            //string creadorSeguimiento = SesionActiva.Instancia.UsuarioActivo.Fullname;
+            //string codigo = txtCodigoProducto.Text;
+            //Seguimiento nuevo = new Seguimiento(dia,mensaje, creadorSeguimiento,codigo);
             
-            listBox1.Items.Add(nuevo);
+            //listBox1.Items.Add(nuevo);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

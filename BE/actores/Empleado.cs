@@ -23,24 +23,6 @@ namespace BE
             this.Fullname = nombreCompleto;
         }
 
-        public override void AltaProductos(Producto nuevoProductoDefectuoso)
-        {
-            ListadoProductoDefectuosos.Instancia.agregarProducto(nuevoProductoDefectuoso);
-        }
 
-        public override void AltaSeguimientoProducto(Seguimiento nuevoSeguimiento)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void BajaSeguimientoProducto(Seguimiento nuevoSeguimiento)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void ModificadorSeguimientoProducto(Seguimiento nuevoSeguimiento)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -64,23 +64,17 @@
     <Compile Include="FormListadoProductos.Designer.cs">
       <DependentUpon>FormListadoProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegistroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroCliente.Designer.cs">
+      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegistroProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegistroProductos.Designer.cs">
       <DependentUpon>FormRegistroProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormReporteFinanciero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReporteFinanciero.Designer.cs">
-      <DependentUpon>FormReporteFinanciero.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormReporteResponsables.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReporteResponsables.Designer.cs">
-      <DependentUpon>FormReporteResponsables.cs</DependentUpon>
     </Compile>
     <Compile Include="FormReportesUbicacion.cs">
       <SubType>Form</SubType>
@@ -106,6 +100,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Idiomas\Res.español.Designer.cs" />
     <Compile Include="Idiomas\Res.ingles.Designer.cs" />
@@ -122,14 +117,11 @@
     <EmbeddedResource Include="FormListadoProductos.resx">
       <DependentUpon>FormListadoProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroCliente.resx">
+      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegistroProductos.resx">
       <DependentUpon>FormRegistroProductos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteFinanciero.resx">
-      <DependentUpon>FormReporteFinanciero.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteResponsables.resx">
-      <DependentUpon>FormReporteResponsables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportesUbicacion.resx">
       <DependentUpon>FormReportesUbicacion.cs</DependentUpon>
@@ -170,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{CCEC6F52-1F33-40BA-86F2-D19104CF9151}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

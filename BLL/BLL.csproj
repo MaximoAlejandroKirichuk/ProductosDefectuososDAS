@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GestorSeguimientos.cs" />
-    <Compile Include="Interfaces\IGestorProductos.cs" />
+    <Compile Include="Interfaces\IABM.cs" />
     <Compile Include="Interfaces\IGestorSeguimiento.cs" />
     <Compile Include="ListadoEmpleados.cs" />
     <Compile Include="ListadoProductoDefectuosos.cs" />

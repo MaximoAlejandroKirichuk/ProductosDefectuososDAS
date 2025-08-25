@@ -391,7 +391,7 @@
             // 
             // bindingSource1
             // 
-            this.bindingSource1.DataSource = typeof(_02_ProductosDefectuosos.Modelos.ListadoEmpleados);
+            
             // 
             // comboBoxProblemaEntrada
             // 

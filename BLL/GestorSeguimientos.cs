@@ -18,7 +18,7 @@ namespace BLL
         }
 
 
-        public void AgregarSeguimiento(string codigoProducto, Seguimiento nuevoSeguimiento)
+        public void AgregarSeguimiento(int codigoProducto, Seguimiento nuevoSeguimiento)
         {
             if (nuevoSeguimiento == null)
                 throw new ArgumentNullException(nameof(nuevoSeguimiento));
@@ -29,7 +29,7 @@ namespace BLL
         }
 
         // Borra un seguimiento dado el código de producto y las propiedades del seguimiento
-        public bool BorrarSeguimiento(string codigoProducto, Seguimiento seguimientoABorrar)
+        public bool BorrarSeguimiento(int codigoProducto, Seguimiento seguimientoABorrar)
         {
             var seguimientoExistente = listaSeguimientos.FirstOrDefault(s =>
                 s.CodigoProducto == codigoProducto &&
@@ -46,7 +46,7 @@ namespace BLL
         }
 
         // Modifica un seguimiento buscando por código y fecha (asumiendo fecha como identificador único)
-        public bool ModificarSeguimiento(string codigoProducto, DateTime fechaOriginal, Seguimiento seguimientoModificado)
+        public bool ModificarSeguimiento(int codigoProducto, DateTime fechaOriginal, Seguimiento seguimientoModificado)
         {
             var seguimientoExistente = listaSeguimientos.FirstOrDefault(s =>
                 s.CodigoProducto == codigoProducto &&
@@ -68,7 +68,7 @@ namespace BLL
         }
 
         // Retorna los seguimientos para un producto específico
-        public List<Seguimiento> ObtenerSeguimientosPorProducto(string codigoProducto)
+        public List<Seguimiento> ObtenerSeguimientosPorProducto(int codigoProducto)
         {
             return listaSeguimientos
                 .Where(s => s.CodigoProducto == codigoProducto)
@@ -87,5 +87,7 @@ namespace BLL
         {
             return listaSeguimientos;
         }
+
+        
     }
 }

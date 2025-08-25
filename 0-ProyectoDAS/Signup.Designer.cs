@@ -177,6 +177,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Signup";
             this.Text = "Signup";
+            this.Load += new System.EventHandler(this.Signup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

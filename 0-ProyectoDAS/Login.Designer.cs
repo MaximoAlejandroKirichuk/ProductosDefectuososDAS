@@ -57,7 +57,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO1;
+            //this.pictureBox1.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
@@ -133,7 +133,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO2;
+            //this.panel1.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO2;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -169,7 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO;
+            //this.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(472, 656);
             this.Controls.Add(this.panel1);

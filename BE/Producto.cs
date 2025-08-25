@@ -19,7 +19,6 @@ namespace BE
         public Cliente Cliente { get; set; }
         public Usuario PersonaResponsable { get; set; }
         public Ubicacion UbicacionProducto { get; set; }
-        public AreaResponsable AreaDevolver { get; set; }
         public List<Seguimiento> ListaSeguimiento { get; set; } = new List<Seguimiento>();
 
         // Usamos una enumeración para el estado, es más seguro que un string.
@@ -37,21 +36,21 @@ namespace BE
             this.EstadoActual = CondicionProducto.Normal; // Un producto nuevo inicia como normal.
         }
 
-        public void MarcarComoDefectuoso(string problema, int cantidadDaniada, decimal gastoAdicional, Ubicacion ubicacion)
-        {
-            this.EstadoActual = CondicionProducto.Defectuoso;
-            this.ProblemaEntrada = problema;
-            this.CantidadDaniada = cantidadDaniada;
-            this.GastoAdicionalAntesDefecto = gastoAdicional;
-            this.UbicacionProducto = ubicacion;
+        //public void MarcarComoDefectuoso(string problema, int cantidadDaniada, decimal gastoAdicional, Ubicacion ubicacion)
+        //{
+        //    this.EstadoActual = CondicionProducto.Defectuoso;
+        //    this.ProblemaEntrada = problema;
+        //    this.CantidadDaniada = cantidadDaniada;
+        //    this.GastoAdicionalAntesDefecto = gastoAdicional;
+        //    this.UbicacionProducto = ubicacion;
             
-            this.AgregarSeguimiento("Producto marcado como defectuoso.");
-        }
+        //    this.AgregarSeguimiento("Producto marcado como defectuoso.", this.PersonaResponsabl);
+        //}
 
-        public void AgregarSeguimiento(string mensaje,)
-        {
-            this.ListaSeguimiento.Add(new Seguimiento(DateTime.Now, mensaje,responsable,codigoProducto));
-        }
+        //public void AgregarSeguimiento(string mensaje, Usuario responsable, int codigoProducto)
+        //{
+        //    this.ListaSeguimiento.Add(new Seguimiento(DateTime.Now, mensaje,responsable,codigoProducto));
+        //}
 
         // Métodos ICloneable e IComparable
         public object Clone()
@@ -68,7 +67,6 @@ namespace BE
                 PersonaResponsable = this.PersonaResponsable, // Idem
                 UbicacionProducto = this.UbicacionProducto, // Idem
                 EstadoActual = this.EstadoActual,
-                AreaDevolver = this.AreaDevolver,
                 ListaSeguimiento = new List<Seguimiento>(this.ListaSeguimiento.Select(s => (Seguimiento)s.Clone())) // Clonación profunda si la clase Seguimiento tiene Clone
             };
         }

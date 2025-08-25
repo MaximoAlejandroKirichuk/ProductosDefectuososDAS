@@ -1,4 +1,4 @@
-﻿using _02_ProductosDefectuosos.Modelos;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,11 +52,7 @@ namespace BE
         }
 
 
-        // Método abstracto (obligatorio de implementar en las clases hijas)
-        public abstract void AltaProductos(Producto nuevoProductoDefectuoso);
-        public abstract void AltaSeguimientoProducto(Seguimiento nuevoSeguimiento);
-        public abstract void BajaSeguimientoProducto(Seguimiento nuevoSeguimiento);
-        public abstract void ModificadorSeguimientoProducto(Seguimiento nuevoSeguimiento);
+
         
 
 
