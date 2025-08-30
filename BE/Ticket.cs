@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Compra
+    public class Ticket
     {
         public int IdCompra { get; set; }
         public DateTime FechaRealizacion { get; set; }

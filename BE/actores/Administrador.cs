@@ -10,16 +10,8 @@ namespace BE
 {
     internal class Administrador : Usuario
     {
-        
-        public Administrador(string nombreCompleto, string usuarioNombreCuenta, string mail, string password, string rol)
+        public Administrador(string nombreCompleto, string nomUsuario, string email, string contrasenia, RolesUsuarios rol) : base(nombreCompleto, nomUsuario, email, contrasenia, rol)
         {
-            this.Username = usuarioNombreCuenta;
-            this.Fullname = nombreCompleto;
-            this.Mail = mail;
-            this.Password = password;
-            this.Rol = rol;
         }
-        
-
     }
 }

@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionUsuarios.cs" />
     <Compile Include="GestorSeguimientos.cs" />
     <Compile Include="Interfaces\IABM.cs" />
     <Compile Include="Interfaces\IGestorSeguimiento.cs" />
+    <Compile Include="Interfaces\IGestorCliente.cs" />
     <Compile Include="ListadoEmpleados.cs" />
     <Compile Include="ListadoProductoDefectuosos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

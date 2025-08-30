@@ -10,61 +10,33 @@ namespace BE
 {
     public abstract class Usuario
     {
-        
-        private string fullname;
+        public string NombreCompleto { get; set; }
+        public string NombreUsuario { get; set; }
+        public string Email { get; set; }
+        public string Contrasenia { get; set; }
+        public RolesUsuarios Rol { get; set; }
 
-        public string Fullname
+
+        protected Usuario(string nombreCompleto,string nomUsuario, string email, string contrasenia, RolesUsuarios rol )
         {
-            get { return fullname; }
-            set { fullname = value; }
+            NombreCompleto = nombreCompleto;
+            NombreUsuario = nomUsuario;
+            Email = email;
+            Contrasenia = contrasenia;
+            Rol = rol;
         }
 
-        private string username;
-
-        public string Username
-        {
-            get { return username; }
-            set { username = value; }
-        }
-
-        private string mail;
-
-        public string Mail
-        {
-            get { return mail; }
-            set { mail = value; }
-        }
-
-        private string password;
-
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
-
-        private string rol;
-
-        public string Rol
-        {
-            get { return rol; }
-            set { rol = value; }
-        }
-
-
-
-        
 
 
         //sobreescribir el metodo para guardarlo correctamente
         public override string ToString()
         {
-            return $"{Fullname}";
+            return $"{NombreCompleto}";
         }
         public string DameUsuarioString()
         {
             //NombreCompleto; Email; Password; Rol; NombreCuenta
-            return $"{Fullname};{Mail};{Password};{Rol};{Username}";
+            return $"{NombreCompleto};{Email};{Contrasenia};{Rol};{NombreUsuario}";
         }
         
     }

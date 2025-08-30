@@ -9,20 +9,8 @@ namespace BE
 {
     public class Empleado : Usuario
     {
-        
-        public Empleado(string nombreCompleto, string usuario, string mail, string password, string rol)
+        public Empleado(string nombreCompleto, string nomUsuario, string email, string contrasenia, RolesUsuarios rol) : base(nombreCompleto, nomUsuario, email, contrasenia, rol)
         {
-            this.Mail = mail;
-            this.Fullname = nombreCompleto;
-            this.Password = password;
-            this.Username = usuario;
-            this.Rol = rol;
         }
-        public Empleado(string nombreCompleto)
-        {
-            this.Fullname = nombreCompleto;
-        }
-
-
     }
 }

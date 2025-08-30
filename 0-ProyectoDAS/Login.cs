@@ -31,6 +31,15 @@ namespace UI
             string nombreUsuario = txtUsername.Text.Trim();
             string contrasenia = txtContrasenia.Text.Trim();
 
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un error al iniciar sesion");
+            }
+
             ////esta funcion es media rara pero es facil. nada mas es para fijarse si esta vacio el txtbox.
             //if (string.IsNullOrWhiteSpace(nombreUsuario) || string.IsNullOrWhiteSpace(contrasenia))
             //{

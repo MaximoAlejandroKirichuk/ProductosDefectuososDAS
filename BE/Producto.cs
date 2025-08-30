@@ -11,19 +11,19 @@ namespace BE
     {
 
         public int CodigoProducto { get; set; }
-        public string NombreProducto { get; set; }
-        public decimal CostoProducto { get; set; }
-        public decimal GastoAdicionalAntesDefecto { get; set; } 
         public int CantidadDaniada { get; set; }
+        public decimal CostoProducto { get; set; }
+        public CondicionProducto EstadoActual { get; set; }
+        public decimal GastoAdicionalAntesDefecto { get; set; } 
+        public string NombreProducto { get; set; }
+        public List<Seguimiento> ListaSeguimiento { get; set; } = new List<Seguimiento>();
         public string ProblemaEntrada { get; set; }
         public Cliente Cliente { get; set; }
         public Usuario PersonaResponsable { get; set; }
         public Ubicacion UbicacionProducto { get; set; }
-        public List<Seguimiento> ListaSeguimiento { get; set; } = new List<Seguimiento>();
+      
 
-        // Usamos una enumeración para el estado, es más seguro que un string.
-        public CondicionProducto EstadoActual { get; set; }
-
+        
         public Producto() { }
 
         

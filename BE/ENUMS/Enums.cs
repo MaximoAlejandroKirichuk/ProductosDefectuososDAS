@@ -29,4 +29,15 @@ namespace BE
         Efectivo,
         Credito
     }
+    public enum RolesUsuarios
+    {
+        Admin,
+        Empleado,
+        Cliente
+    }
+    public enum TipoDocumentoCliente
+    {
+        ResponsableEmpresa,
+        PersonaFisica
+    }
 }
