@@ -12,10 +12,9 @@ namespace BE
         public int IdCompra { get; set; }
         public DateTime FechaRealizacion { get; set; }
         public Cliente Cliente { get; set; }
-        public Producto Producto { get; set; }
+        public Producto Productos { get; set; }
         public TipoMedioPago MedioPago { get; set; }
         public decimal SaldoAbonado { get; set; }
-        public decimal SaldoPendiente { get; set; }
 
     }
 }

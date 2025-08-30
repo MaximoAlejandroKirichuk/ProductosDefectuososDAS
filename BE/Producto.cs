@@ -13,17 +13,17 @@ namespace BE
         public int CodigoProducto { get; set; }
         public int CantidadDaniada { get; set; }
         public decimal CostoProducto { get; set; }
-        public CondicionProducto EstadoActual { get; set; }
+        public CondicionProducto CondicionProducto { get; set; }
+        public EstadoEntraga EstadoEntrega { get; set; }
         public decimal GastoAdicionalAntesDefecto { get; set; } 
         public string NombreProducto { get; set; }
         public List<Seguimiento> ListaSeguimiento { get; set; } = new List<Seguimiento>();
         public string ProblemaEntrada { get; set; }
         public Cliente Cliente { get; set; }
-        public Usuario PersonaResponsable { get; set; }
+        public DateTime FechaEstimadaDevolucion { get; set; }
         public Ubicacion UbicacionProducto { get; set; }
-      
 
-        
+
         public Producto() { }
 
         
@@ -33,7 +33,8 @@ namespace BE
             this.NombreProducto = nombreProducto;
             this.CostoProducto = costoProducto;
             this.Cliente = cliente;
-            this.EstadoActual = CondicionProducto.Normal; // Un producto nuevo inicia como normal.
+            this.CondicionProducto = CondicionProducto.Normal; // Un producto nuevo inicia como normal.
+            EstadoEntrega = EstadoEntraga.NoEntregado; // Se recibe
         }
 
         //public void MarcarComoDefectuoso(string problema, int cantidadDaniada, decimal gastoAdicional, Ubicacion ubicacion)
@@ -64,9 +65,8 @@ namespace BE
                 CantidadDaniada = this.CantidadDaniada,
                 ProblemaEntrada = this.ProblemaEntrada,
                 Cliente = this.Cliente, // Se asume que Cliente es inmutable 
-                PersonaResponsable = this.PersonaResponsable, // Idem
                 UbicacionProducto = this.UbicacionProducto, // Idem
-                EstadoActual = this.EstadoActual,
+                EstadoEntrega = this.EstadoEntrega,
                 ListaSeguimiento = new List<Seguimiento>(this.ListaSeguimiento.Select(s => (Seguimiento)s.Clone())) // Clonación profunda si la clase Seguimiento tiene Clone
             };
         }
@@ -81,7 +81,7 @@ namespace BE
 
         public override string ToString()
         {
-            return $"{CodigoProducto};{NombreProducto};{CostoProducto};{GastoAdicionalAntesDefecto};{CantidadDaniada};{ProblemaEntrada};{EstadoActual};{UbicacionProducto?.DepositoAlmacenado}";
+            return $"{CodigoProducto};{NombreProducto};{CostoProducto};{GastoAdicionalAntesDefecto};{CantidadDaniada};{ProblemaEntrada};{EstadoEntrega};{UbicacionProducto?.DepositoAlmacenado}";
         }
     }
 

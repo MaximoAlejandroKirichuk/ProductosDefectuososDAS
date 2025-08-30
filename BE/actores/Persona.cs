@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace BE.actores
 {
-    public class Class1
+    public abstract class Persona
     {
+        public string NombreCompleto { get; set; }
     }
 }

@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace BE.actores
 {
-    public class Cliente : Usuario 
+    public class Cliente  
     {
-        public Cliente(string nombreCompleto, string nomUsuario, string email, string contrasenia, RolesUsuarios rol,TipoDocumentoCliente documento, int nroDocumento,string direccion,decimal deudaTotal) 
-            : base(nombreCompleto, nomUsuario, email, contrasenia, rol)
-        {
-
-        }
+        public int IdCliente { get; set; }
         public TipoDocumentoCliente TipoDocumento { get; set; }
-        public int NroDocumento { get; set; }
+        public int NroDocumento { get; set; }//cuil o cuit nro
         public string Direccion { get; set; }
         public List<Producto> ProductosComprados { get; set; }
         public decimal DeudaTotal { get; set; }

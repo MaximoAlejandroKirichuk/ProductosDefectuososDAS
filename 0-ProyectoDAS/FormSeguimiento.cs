@@ -135,9 +135,8 @@ namespace UI
                 Seguimiento s = (Seguimiento)dataGridViewSeguimiento.Rows[e.RowIndex].DataBoundItem;
 
                 // Mostrar detalles en controles auxiliares
-                DateTime fecha = s.Fecha;
+                DateTime fecha = s.FechaRegistro;
                 string mensaje = s.Mensaje;
-                string responsable = s.Responsable;
                 listBox1.DataSource = new List<string> { s.ToString() }; ;
                 dateTimePickerFecha.Value = fecha;
                 txtAgregarPaso.Text = mensaje;

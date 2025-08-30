@@ -12,5 +12,6 @@ namespace BE
         public Empleado(string nombreCompleto, string nomUsuario, string email, string contrasenia, RolesUsuarios rol) : base(nombreCompleto, nomUsuario, email, contrasenia, rol)
         {
         }
+        public Empleado() { }
     }
 }

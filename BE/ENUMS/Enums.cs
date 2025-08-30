@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public enum Enums
-    {
-        Administrador,
-        Empleado
-    }
     public enum TipoCosto
     {
         Perdida,
@@ -32,12 +27,16 @@ namespace BE
     public enum RolesUsuarios
     {
         Admin,
-        Empleado,
-        Cliente
+        Empleado
     }
     public enum TipoDocumentoCliente
     {
         ResponsableEmpresa,
         PersonaFisica
+    }
+    public enum EstadoEntraga
+    {
+        Entregado,
+        NoEntregado
     }
 }

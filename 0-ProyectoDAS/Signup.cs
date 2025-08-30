@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BE.actores;
+using BLL;
+using BLL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,9 +23,9 @@ namespace UI
         public Signup()
         {
             InitializeComponent();
-            //ServiciosUsuariosCSV.CrearCSV();
         }
 
+        private readonly GestorClienteBLL gestorCliente = new GestorClienteBLL();
 
 
 
@@ -35,9 +38,9 @@ namespace UI
         private void button2_Click(object sender, EventArgs e)
         {
             string nombreCompleto = txtFullName.Text.Trim();
-            string usuario = txtUserName.Text.Trim();
             string mail = txtMail.Text.Trim();
-            
+            string password = txtPassword.Text.Trim();
+
             //string password = ServiciosUsuariosCSV.HashPassword(txtPassword.Text.Trim());
             //string rolTexto = "Empleado"; //el empleado puede crear una cuenta
 
@@ -47,7 +50,7 @@ namespace UI
             //    MessageBox.Show("Todos los campos son obligatorios.");
             //    return;
             //}
- 
+
             //try
             //{
             //    Empleado nuevoEmpleado = new Empleado(nombreCompleto, usuario, mail, password, rolTexto);
@@ -62,8 +65,8 @@ namespace UI
 
             //te manda a login cuando te registras
             Login login = new Login();
-            login.Show();
             this.Hide();
+            login.Show();
         }
 
         private void Signup_Load(object sender, EventArgs e)

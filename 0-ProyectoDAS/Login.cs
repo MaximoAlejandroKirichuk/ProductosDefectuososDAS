@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using BE;
-
+using BLL;
 namespace UI
 {
     public partial class Login : Form
@@ -20,7 +20,7 @@ namespace UI
         {
             InitializeComponent();
         }
-
+        GestorUsuarioBLL gestorUsuario = new GestorUsuarioBLL();
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -28,16 +28,24 @@ namespace UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string nombreUsuario = txtUsername.Text.Trim();
+            string email = txtUsername.Text.Trim();
             string contrasenia = txtContrasenia.Text.Trim();
-
+            
             try
             {
-
+                var respuesta = gestorUsuario.IniciarSesion(email, contrasenia);
+                if (!respuesta)
+                {
+                    throw new Exception("Email o contrasaña inexistente");
+                    
+                }
+                MessageBox.Show("Ingreso correcto.");
+                MainForm mainMenu = new MainForm(); 
+                mainMenu.Show();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un error al iniciar sesion");
+                MessageBox.Show("Ocurrio un error al iniciar sesion: " + ex.Message);
             }
 
             ////esta funcion es media rara pero es facil. nada mas es para fijarse si esta vacio el txtbox.
@@ -167,6 +175,11 @@ namespace UI
             // Mostrar el formulario como una ventana modal (bloquea el anterior hasta cerrarse)
             Signup formSignup = new Signup();
             formSignup.ShowDialog();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
         }
     }
 }

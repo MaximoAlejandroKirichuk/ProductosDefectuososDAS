@@ -40,3 +40,10 @@ E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\B
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.Up2Date
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.pdb
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormCliente.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\BLL.dll
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\MPP.dll
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\DAL.dll
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\BLL.pdb
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\MPP.pdb
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\DAL.pdb

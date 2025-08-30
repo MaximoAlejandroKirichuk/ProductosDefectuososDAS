@@ -58,6 +58,12 @@
     <Compile Include="FormAyuda.Designer.cs">
       <DependentUpon>FormAyuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListadoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <EmbeddedResource Include="FormAyuda.resx">
       <DependentUpon>FormAyuda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormListadoProductos.resx">
       <DependentUpon>FormListadoProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +176,10 @@
     <ProjectReference Include="..\BE\BE.csproj">
       <Project>{CCEC6F52-1F33-40BA-86F2-D19104CF9151}</Project>
       <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{495ebb27-cc65-4956-aaec-4a603381bebb}</Project>
+      <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,14 +8,16 @@ namespace BE
 {
     public class Seguimiento
     {
-        public DateTime Fecha { get; set; }
-        public string Mensaje { get; set; }
-        public string Responsable { get; set; }
+        public int CodigoSeguimiento { get; set; }
         public int CodigoProducto { get; set; }
+        public DateTime FechaRegistro { get; set; }
+        public string Mensaje { get; set; }
+        public Empleado Responsable { get; set; }
+        
 
-        public Seguimiento(DateTime fecha, string mensaje, string responsable, int codigoProducto)
+        public Seguimiento(DateTime fecha, string mensaje, Empleado responsable, int codigoProducto)
         {
-            this.Fecha = fecha;
+            this.FechaRegistro = fecha;
             this.Mensaje = mensaje;
             this.Responsable = responsable;
             this.CodigoProducto = codigoProducto;
@@ -26,14 +28,14 @@ namespace BE
 
         public override string ToString()
         {
-            return $"Fecha: {Fecha:yyyy-MM-dd HH:mm:ss} | Mensaje: {Mensaje} | Responsable: {Responsable} | Código Producto: {CodigoProducto}";
+            return $"Fecha: {FechaRegistro:yyyy-MM-dd HH:mm:ss} | Mensaje: {Mensaje} | Responsable: {Responsable} | Código Producto: {CodigoProducto}";
         }
 
         public object Clone()
         {
             return new Seguimiento
             {
-                Fecha = this.Fecha,
+                FechaRegistro = this.FechaRegistro,
                 Mensaje = this.Mensaje,
                 Responsable = this.Responsable,
                 CodigoProducto = this.CodigoProducto

@@ -33,7 +33,7 @@ namespace BLL
         {
             var seguimientoExistente = listaSeguimientos.FirstOrDefault(s =>
                 s.CodigoProducto == codigoProducto &&
-                s.Fecha == seguimientoABorrar.Fecha &&
+                s.FechaRegistro == seguimientoABorrar.FechaRegistro &&
                 s.Mensaje == seguimientoABorrar.Mensaje &&
                 s.Responsable == seguimientoABorrar.Responsable);
 
@@ -45,16 +45,16 @@ namespace BLL
             return false;
         }
 
-        // Modifica un seguimiento buscando por código y fecha (asumiendo fecha como identificador único)
-        public bool ModificarSeguimiento(int codigoProducto, DateTime fechaOriginal, Seguimiento seguimientoModificado)
+        // Modifica un seguimiento buscando por código y FechaRegistro (asumiendo FechaRegistro como identificador único)
+        public bool ModificarSeguimiento(int codigoProducto, DateTime FechaRegistroOriginal, Seguimiento seguimientoModificado)
         {
             var seguimientoExistente = listaSeguimientos.FirstOrDefault(s =>
                 s.CodigoProducto == codigoProducto &&
-                s.Fecha == fechaOriginal);
+                s.FechaRegistro == FechaRegistroOriginal);
 
             if (seguimientoExistente != null)
             {
-                seguimientoExistente.Fecha = seguimientoModificado.Fecha;
+                seguimientoExistente.FechaRegistro = seguimientoModificado.FechaRegistro;
                 seguimientoExistente.Mensaje = seguimientoModificado.Mensaje;
                 seguimientoExistente.Responsable = seguimientoModificado.Responsable;
                 return true;
@@ -72,7 +72,7 @@ namespace BLL
         {
             return listaSeguimientos
                 .Where(s => s.CodigoProducto == codigoProducto)
-                .OrderBy(s => s.Fecha)
+                .OrderBy(s => s.FechaRegistro)
                 .ToList();
         }
 

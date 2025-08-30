@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,7 +58,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            //this.pictureBox1.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
@@ -76,7 +76,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(154, 20);
             this.txtUsername.TabIndex = 4;
-            this.txtUsername.Text = "maxi";
+            this.txtUsername.Text = "admin@tuapp.com ";
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtContrasenia
@@ -86,7 +86,7 @@
             this.txtContrasenia.PasswordChar = '*';
             this.txtContrasenia.Size = new System.Drawing.Size(154, 20);
             this.txtContrasenia.TabIndex = 5;
-            this.txtContrasenia.Text = "maxi";
+            this.txtContrasenia.Text = "maxi123";
             // 
             // label2
             // 
@@ -96,9 +96,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.label2.Location = new System.Drawing.Point(73, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 18);
+            this.label2.Size = new System.Drawing.Size(50, 18);
             this.label2.TabIndex = 6;
-            this.label2.Text = "User";
+            this.label2.Text = "Email";
             // 
             // label3
             // 
@@ -108,9 +108,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.label3.Location = new System.Drawing.Point(73, 282);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 18);
+            this.label3.Size = new System.Drawing.Size(95, 18);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Password";
+            this.label3.Text = "Contraseña";
             // 
             // button2
             // 
@@ -133,8 +133,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            //this.panel1.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO2;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.linkLabel2);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button2);
@@ -149,6 +149,21 @@
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.Blue;
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.LinkColor = System.Drawing.Color.GhostWhite;
+            this.linkLabel2.Location = new System.Drawing.Point(83, 455);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(181, 16);
+            this.linkLabel2.TabIndex = 10;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Soy cliente. Tengo un codigo";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Blue;
@@ -156,7 +171,7 @@
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.GhostWhite;
-            this.linkLabel1.Location = new System.Drawing.Point(94, 431);
+            this.linkLabel1.Location = new System.Drawing.Point(104, 399);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(105, 16);
             this.linkLabel1.TabIndex = 9;
@@ -169,7 +184,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            //this.BackgroundImage = global::_02_ProductosDefectuosos.Properties.Resources.Captura_de_pantalla_FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(472, 656);
             this.Controls.Add(this.panel1);
@@ -195,5 +209,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

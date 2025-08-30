@@ -8,8 +8,7 @@ namespace BLL.Interfaces
         void Agregar(T objeto);
         void Borrar(int id);
         void Modificar(T objeto);
-        T ObtenerPorId(int id);
-        List<T> ObtenerTodos();
+    
         
     }
 }

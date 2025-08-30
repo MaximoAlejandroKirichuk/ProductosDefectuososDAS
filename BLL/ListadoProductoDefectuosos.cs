@@ -34,17 +34,6 @@ namespace BE
         {
             ProductosDefectuosos.Add(nuevoProducto);
         }
-        public List<Producto> FiltrarPorArea(AreaResponsable area)
-        {
-            return ProductosDefectuosos
-                   .Where(p => p.AreaDevolver?.Area == area.Area)
-                   .ToList();
-        }
-
-        public Producto filtarProductoId(string codigoProducto)
-        {
-            return ProductosDefectuosos.First(p => p.CodigoProducto == codigoProducto);
-        }
 
     }
 }
