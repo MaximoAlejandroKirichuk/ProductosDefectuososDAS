@@ -19,9 +19,12 @@ namespace BLL
             if (usuario == null) return false;
 
             var hashContrasena = HashContrasena(contrasena);
-            SesionActiva.Instancia.IniciarSesion(usuario);
-            return usuario.Contrasenia == hashContrasena;
-
+            if (usuario.Contrasenia == hashContrasena)
+            {
+                SesionActiva.Instancia.IniciarSesion(usuario);
+                return true;
+            }
+            return false;
         }
         private string HashContrasena(string contrasena)
         {

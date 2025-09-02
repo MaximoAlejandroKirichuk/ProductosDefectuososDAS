@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestorEmpleadoBLL.cs" />
     <Compile Include="GestorUsuarioBLL.cs" />
+    <Compile Include="ListadoClientes.cs" />
     <Compile Include="ServiciosUsuarios.cs" />
     <Compile Include="GestorClienteBLL.cs" />
     <Compile Include="GestorSeguimientos.cs" />
-    <Compile Include="Interfaces\IABM.cs" />
     <Compile Include="Interfaces\IGestorSeguimiento.cs" />
-    <Compile Include="Interfaces\IGestorCliente.cs" />
     <Compile Include="ListadoEmpleados.cs" />
     <Compile Include="ListadoProductoDefectuosos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

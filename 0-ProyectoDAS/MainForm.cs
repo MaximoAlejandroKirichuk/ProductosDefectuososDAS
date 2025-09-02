@@ -1,5 +1,6 @@
 ﻿
-using _02_ProductosDefectuosos;
+using _0_ProyectoDAS.Idiomas;
+using UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using static System.Windows.Forms.AxHost;
+using _0_ProyectoDAS;
 
 namespace UI
 {
@@ -27,16 +29,19 @@ namespace UI
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAyuda ventanaAyuda = new FormAyuda(idioma);
-            ventanaAyuda.ShowDialog();
+            ventanaAyuda.MdiParent = this;
+            ventanaAyuda.WindowState = FormWindowState.Maximized;
+            ventanaAyuda.Show();
         }
 
 
 
         private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
             FormListadoProductos formListado = new FormListadoProductos(idioma);
-            formListado.ShowDialog();
+            formListado.MdiParent = this; 
+            formListado.WindowState = FormWindowState.Maximized;
+            formListado.Show();
         }
 
 
@@ -53,13 +58,7 @@ namespace UI
             ayudaToolStripMenuItem.Text = Res_español.Ayuda;
             cerrarSesiónToolStripMenuItem.Text = Res_español.Cerrar_Sesion_;
             cambiarIdiomaToolStripMenuItem.Text = Res_español.Cambiar_Idioma;
-            reportePorResponsalbeGeográficaToolStripMenuItem.Text = Res_español.Reportes_por_responsable;
             reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_español.Reportes_por_ubicacion_geografica;
-            reporteFinancieroToolStripMenuItem.Text = Res_español.Reportes_financieros;
-
-
-            button1.Text = Res_español.Actualizar;
-            btnGuardar.Text = Res_español.Guardar;
 
 
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
@@ -84,13 +83,8 @@ namespace UI
             ayudaToolStripMenuItem.Text = Res_ingles.Help;
             cerrarSesiónToolStripMenuItem.Text = Res_ingles.Log_Out;
             cambiarIdiomaToolStripMenuItem.Text = Res_ingles.Change_Language;
-            reportePorResponsalbeGeográficaToolStripMenuItem.Text = Res_ingles.Reports_by_Manager;
             reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_ingles.Reports_by_Geographic_Location;
-            reporteFinancieroToolStripMenuItem.Text = Res_ingles.Financial_Reports;
 
-
-            button1.Text = Res_ingles.Update;
-            btnGuardar.Text = Res_ingles.Save;
 
 
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
@@ -107,13 +101,7 @@ namespace UI
             ayudaToolStripMenuItem.Text = Res_portugues.Ajuda;
             cerrarSesiónToolStripMenuItem.Text = Res_portugues.Sair;
             cambiarIdiomaToolStripMenuItem.Text = Res_portugues.mudar_idioma;
-            reportePorResponsalbeGeográficaToolStripMenuItem.Text = Res_portugues.Relatórios_por_Gerente;
             reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_portugues.Relatórios_por_Localização_Geográfica;
-            reporteFinancieroToolStripMenuItem.Text = Res_portugues.Relatórios_Financeiros;
-
-            button1.Text = Res_portugues.Atualizar;
-            btnGuardar.Text = Res_portugues.Salvar;
-
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
             cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
             cambiarIdiomaToolStripMenuItem.DropDownItems[1].Text = "English";
@@ -146,9 +134,10 @@ namespace UI
 
         private void seguimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
             FormSeguimiento f = new FormSeguimiento(idioma);
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -159,8 +148,8 @@ namespace UI
         private void reportePorUbicaciónGeográficaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormReportesUbicacion F = new FormReportesUbicacion();
-            F.ShowDialog();
-
+            F.MdiParent = this;
+            F.Show();
         }
 
         private void reporteFinancieroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -195,7 +184,9 @@ namespace UI
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormRegistroProductos formRegistro = new FormRegistroProductos(idioma);
-            formRegistro.ShowDialog();
+            formRegistro.MdiParent = this;
+            formRegistro.WindowState = FormWindowState.Maximized;
+            formRegistro.Show();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -245,6 +236,14 @@ namespace UI
         private void cambiarIdiomaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormABMCliente form = new FormABMCliente();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
         }
     }
 }
