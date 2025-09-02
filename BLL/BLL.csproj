@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestorEmpleadoBLL.cs" />
     <Compile Include="GestorUsuarioBLL.cs" />
     <Compile Include="ServiciosUsuarios.cs" />
     <Compile Include="GestorClienteBLL.cs" />

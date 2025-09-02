@@ -107,7 +107,7 @@
             this.button2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.button2.Location = new System.Drawing.Point(86, 345);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 38);
+            this.button2.Size = new System.Drawing.Size(132, 38);
             this.button2.TabIndex = 8;
             this.button2.Text = "LOGIN";
             this.button2.UseVisualStyleBackColor = false;
@@ -158,7 +158,7 @@
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.GhostWhite;
-            this.linkLabel1.Location = new System.Drawing.Point(95, 418);
+            this.linkLabel1.Location = new System.Drawing.Point(97, 407);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(105, 16);
             this.linkLabel1.TabIndex = 9;

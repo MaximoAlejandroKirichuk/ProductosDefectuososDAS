@@ -1,4 +1,5 @@
 ﻿using BE;
+using BLL.Interfaces;
 using MPP;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,12 @@ namespace BLL
             if (usuario == null) return false;
 
             var hashContrasena = HashContrasena(contrasena);
-            SesionActiva.Instancia.IniciarSesion(usuario);
-            return usuario.Contrasenia == hashContrasena;
-
+            if (usuario.Contrasenia == hashContrasena)
+            {
+                SesionActiva.Instancia.IniciarSesion(usuario);
+                return true;
+            }
+            return false;
         }
         private string HashContrasena(string contrasena)
         {
