@@ -173,7 +173,7 @@ namespace UI
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Mostrar el formulario como una ventana modal (bloquea el anterior hasta cerrarse)
-            Signup formSignup = new Signup();
+            FormEmpleados formSignup = new FormEmpleados();
             formSignup.ShowDialog();
         }
 
