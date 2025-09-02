@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _02_ProductosDefectuosos {
+namespace _0_ProyectoDAS.Idiomas {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace _02_ProductosDefectuosos {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_02_ProductosDefectuosos.Res.español", typeof(Res_español).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_0_ProyectoDAS.Idiomas.Res.español", typeof(Res_español).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

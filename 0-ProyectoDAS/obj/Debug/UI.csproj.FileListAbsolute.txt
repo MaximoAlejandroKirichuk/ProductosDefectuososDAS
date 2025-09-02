@@ -47,3 +47,35 @@ E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\D
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\BLL.pdb
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\MPP.pdb
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\DAL.pdb
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.exe.config
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.exe
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.pdb
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\BE.dll
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\BLL.dll
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\MPP.dll
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\DAL.dll
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\BE.pdb
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\BLL.pdb
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\MPP.pdb
+D:\tareas visual facultad\DAS\0-ProyectoDAS\bin\Debug\DAL.pdb
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.csproj.AssemblyReference.cache
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.FormAyuda.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormCliente.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.FormListadoProductos.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormRegistroCliente.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.FormRegistroProductos.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.FormReportesUbicacion.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.FormSeguimiento.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.Login.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.MainForm.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Properties.Resources.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.español.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.ingles.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.portugues.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.Signup.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.csproj.GenerateResource.cache
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.csproj.Up2Date
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.pdb
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe.config

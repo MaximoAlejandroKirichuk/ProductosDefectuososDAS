@@ -15,7 +15,7 @@ namespace UI
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Cambia "Form1" por tu formulario principal
-            Application.Run(new Login());
+            Application.Run(new MainForm());
         }
     }
 }
