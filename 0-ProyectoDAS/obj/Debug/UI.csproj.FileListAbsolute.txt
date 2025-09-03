@@ -71,7 +71,6 @@ D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Properties.
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.español.resources
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.ingles.resources
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.portugues.resources
-D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.Signup.resources
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.csproj.GenerateResource.cache
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.csproj.CoreCompileInputs.cache
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.csproj.Up2Date
@@ -110,3 +109,6 @@ E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\DAL
 E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.Up2Date
 E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe
 E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.pdb
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormABMCliente.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormAbmEmpleados.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormAbmEmpleados.resources

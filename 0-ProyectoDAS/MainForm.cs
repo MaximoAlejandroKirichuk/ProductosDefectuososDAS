@@ -245,6 +245,19 @@ namespace UI
             form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void empleadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormAbmEmpleados form = new FormAbmEmpleados();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
     }
 }
  

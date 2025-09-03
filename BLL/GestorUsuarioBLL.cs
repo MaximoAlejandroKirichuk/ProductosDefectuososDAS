@@ -15,7 +15,7 @@ namespace BLL
         private UsuarioMPP usuarioMPP = new UsuarioMPP();
         public bool IniciarSesion(string email, string contrasena)
         {
-            Usuario usuario = usuarioMPP.BuscarUsuarioPorMail(email);
+            Usuario usuario = BuscarUsuarioPorMail(email);
             if (usuario == null) return false;
 
             var hashContrasena = HashContrasena(contrasena);
@@ -26,7 +26,7 @@ namespace BLL
             }
             return false;
         }
-        private string HashContrasena(string contrasena)
+        public string HashContrasena(string contrasena)
         {
             using (SHA256 sha256 = SHA256.Create())
             {
@@ -39,6 +39,11 @@ namespace BLL
                 }
                 return result.ToString();
             }
+        }
+
+        public Usuario BuscarUsuarioPorMail(string email)
+        {
+            return usuarioMPP.BuscarUsuarioPorMail(email);
         }
 
     }

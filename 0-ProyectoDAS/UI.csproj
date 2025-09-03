@@ -52,6 +52,12 @@
     <Compile Include="FormABMCliente.Designer.cs">
       <DependentUpon>FormABMCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAbmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbmEmpleados.Designer.cs">
+      <DependentUpon>FormAbmEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAyuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormABMCliente.resx">
       <DependentUpon>FormABMCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbmEmpleados.resx">
+      <DependentUpon>FormAbmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAyuda.resx">
       <DependentUpon>FormAyuda.cs</DependentUpon>
