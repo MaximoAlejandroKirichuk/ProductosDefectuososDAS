@@ -10,7 +10,7 @@ namespace BE
 {
     public class Administrador : Usuario
     {
-        public Administrador(string nombreCompleto, string nomUsuario, string email, string contrasenia, RolesUsuarios rol) : base(nombreCompleto, nomUsuario, email, contrasenia, rol)
+        public Administrador(string nombreCompleto, string email, string contrasenia, RolesUsuarios rol) : base(nombreCompleto, email, contrasenia, rol)
         {
         }
         public Administrador() { }

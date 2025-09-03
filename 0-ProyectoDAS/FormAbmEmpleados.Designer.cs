@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ComboBoxRol = new System.Windows.Forms.ComboBox();
+            this.LRol = new System.Windows.Forms.Label();
             this.LNombre = new System.Windows.Forms.Label();
             this.txtNombreCompleto = new System.Windows.Forms.TextBox();
             this.LEmail = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.btnModificarEmpleado = new System.Windows.Forms.Button();
             this.btnBorrarEmpleado = new System.Windows.Forms.Button();
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
-            this.LRol = new System.Windows.Forms.Label();
-            this.ComboBoxRol = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEmpleados)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,23 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Propiedades";
+            // 
+            // ComboBoxRol
+            // 
+            this.ComboBoxRol.FormattingEnabled = true;
+            this.ComboBoxRol.Location = new System.Drawing.Point(41, 208);
+            this.ComboBoxRol.Name = "ComboBoxRol";
+            this.ComboBoxRol.Size = new System.Drawing.Size(100, 21);
+            this.ComboBoxRol.TabIndex = 11;
+            // 
+            // LRol
+            // 
+            this.LRol.AutoSize = true;
+            this.LRol.Location = new System.Drawing.Point(38, 192);
+            this.LRol.Name = "LRol";
+            this.LRol.Size = new System.Drawing.Size(23, 13);
+            this.LRol.TabIndex = 10;
+            this.LRol.Text = "Rol";
             // 
             // LNombre
             // 
@@ -144,23 +161,7 @@
             this.btnAgregarEmpleado.TabIndex = 20;
             this.btnAgregarEmpleado.Text = "Agregar empleado";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // LRol
-            // 
-            this.LRol.AutoSize = true;
-            this.LRol.Location = new System.Drawing.Point(38, 192);
-            this.LRol.Name = "LRol";
-            this.LRol.Size = new System.Drawing.Size(23, 13);
-            this.LRol.TabIndex = 10;
-            this.LRol.Text = "Rol";
-            // 
-            // ComboBoxRol
-            // 
-            this.ComboBoxRol.FormattingEnabled = true;
-            this.ComboBoxRol.Location = new System.Drawing.Point(41, 208);
-            this.ComboBoxRol.Name = "ComboBoxRol";
-            this.ComboBoxRol.Size = new System.Drawing.Size(100, 21);
-            this.ComboBoxRol.TabIndex = 11;
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
             // FormAbmEmpleados
             // 
@@ -174,6 +175,7 @@
             this.Controls.Add(this.btnAgregarEmpleado);
             this.Name = "FormAbmEmpleados";
             this.Text = "FormAbmEmpleados";
+            this.Load += new System.EventHandler(this.FormAbmEmpleados_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEmpleados)).EndInit();

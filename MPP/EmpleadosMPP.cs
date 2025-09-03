@@ -1,22 +1,29 @@
 ﻿using BE;
-using MPP;
+using DAL;
+using MPP.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL
+namespace MPP
 {
-    public class GestorEmpleadoBLL : IABM<Empleado>
+    public class EmpleadosMPP : IABM<Empleado>, IMapeableTodos<Empleado>
     {
-        private EmpleadosMPP mppEmpleado = new EmpleadosMPP();
+        private EmpleadoDAL empleadoDAL = new EmpleadoDAL();
         public bool Agregar(Empleado objeto)
         {
-            return mppEmpleado.Agregar(objeto);
+            return empleadoDAL.Insertar(objeto);
         }
 
         public bool Borrar(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Empleado> MapearTodos(DataTable row)
         {
             throw new NotImplementedException();
         }
