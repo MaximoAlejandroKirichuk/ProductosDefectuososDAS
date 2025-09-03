@@ -63,13 +63,8 @@ namespace _0_ProyectoDAS
                     var respuesta = gestorClienteBLL.Borrar(idCliente);
                     if (!respuesta) throw new Exception("No se pudo borrar el cliente");
 
-<<<<<<< HEAD
-                    MessageBox.Show("Cliente borrado correctamente");
-=======
-                    MessageBox.Show("Cliente modificado correctamente");
 
-                    // refrescar grilla
->>>>>>> 78dd95e168130b612743a161f6abf0a29d315156
+                    MessageBox.Show("Cliente borrado correctamente");
                     CargarClientes();
                 }
                 else
@@ -101,21 +96,13 @@ namespace _0_ProyectoDAS
                     var deudaTotal = Convert.ToDecimal(txtDeudaTotal.Text);
 
                     var clienteModificado = new Cliente(nombreCompleto, tipoDocumentoCliente, nroDocumento, direccion, deudaTotal, email);
-<<<<<<< HEAD
                     clienteModificado.IdCliente = idCliente; // importante para que sepa cuál modificar ya que el constructor es sin idCliente
-=======
-                    clienteModificado.IdCliente = idCliente; // importante para que sepa cuál modificar
->>>>>>> 78dd95e168130b612743a161f6abf0a29d315156
 
                     var respuesta = gestorClienteBLL.Modificar(clienteModificado);
                     if (!respuesta) throw new Exception("No se pudo modificar el cliente");
 
                     MessageBox.Show("Cliente modificado correctamente");
 
-<<<<<<< HEAD
-=======
-                    // refrescar grilla
->>>>>>> 78dd95e168130b612743a161f6abf0a29d315156
                     CargarClientes();
                 }
                 else

@@ -79,3 +79,34 @@ D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.pdb
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe.config
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormABMCliente.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.AssemblyReference.cache
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormABMCliente.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.FormAyuda.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormCliente.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.FormListadoProductos.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormRegistroCliente.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.FormRegistroProductos.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.FormReportesUbicacion.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.FormSeguimiento.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.español.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.ingles.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.portugues.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.Login.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.MainForm.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Properties.Resources.resources
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.GenerateResource.cache
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.CoreCompileInputs.cache
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.exe.config
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.exe
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.pdb
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\BE.dll
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\BLL.dll
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\MPP.dll
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\DAL.dll
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\BE.pdb
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\BLL.pdb
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\MPP.pdb
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\bin\Debug\DAL.pdb
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.Up2Date
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe
+E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.pdb
