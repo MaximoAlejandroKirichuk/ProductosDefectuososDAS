@@ -8,6 +8,6 @@ namespace DAL
 {
     public static class StringConnection
     {
-        public static string connectionString = "Server=.;Database=ProductosDefectuosos;Trusted_Connection=True;";
+        public static string stringConnection = "Server=.;Database=ProductosDefectuosos;Trusted_Connection=True;";
     }
 }

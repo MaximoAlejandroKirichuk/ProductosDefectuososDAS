@@ -40,6 +40,7 @@
             this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.portuguesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.ModificarToolStripMenuItem,
             this.ayudaToolStripMenuItem,
             this.cerrarSesiónToolStripMenuItem,
-            this.cambiarIdiomaToolStripMenuItem});
+            this.cambiarIdiomaToolStripMenuItem,
+            this.empleadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1175, 28);
@@ -143,6 +145,13 @@
             this.portuguesToolStripMenuItem.Text = "Portugues";
             this.portuguesToolStripMenuItem.Click += new System.EventHandler(this.portuguesToolStripMenuItem_Click);
             // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +185,7 @@
         private System.Windows.Forms.ToolStripMenuItem españolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inglesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem portuguesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
     }
 }
 

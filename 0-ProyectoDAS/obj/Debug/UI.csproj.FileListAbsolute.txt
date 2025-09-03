@@ -29,7 +29,6 @@ E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.español.resources
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.ingles.resources
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.portugues.resources
-E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.Signup.resources
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.GenerateResource.cache
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\UI.csproj.CoreCompileInputs.cache
 E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.exe.config
@@ -79,3 +78,4 @@ D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\UI.csproj.Up2Date
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.pdb
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe.config
+E:\facultad 2025\SegundoCuatrimestre\DAS\0-ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormABMCliente.resources

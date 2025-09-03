@@ -1,6 +1,7 @@
-﻿using BE.actores;
-using BLL.Interfaces;
+﻿using BE;
+using BE.actores;
 
+using MPP;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,27 +11,32 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class GestorClienteBLL : IGestorCliente
+    public class GestorClienteBLL : IABM<Cliente>
     {
-
-        public void Agregar(Cliente objeto)
+        private ClienteMPP clienteMPP = new ClienteMPP();
+        public bool Agregar(Cliente objeto)
         {
-
+            //TODO VALIDACIONES ACA
+            return clienteMPP.Agregar(objeto);
         }
 
-        public void Borrar(int id)
+        public bool Borrar(int id)
         {
-            throw new NotImplementedException();
+            return clienteMPP.Borrar(id);
         }
 
-        public void Modificar(Cliente objeto)
+        public bool Modificar(Cliente objeto)
         {
-            throw new NotImplementedException();
+            return clienteMPP.Modificar(objeto);
         }
-
         public DataTable ObtenerSeguimientoTicket(int codigo)
         {
             throw new NotImplementedException();
         }
+        public List<Cliente> ObtenerClientes()
+        {
+            return clienteMPP.ObtenerTodos();
+        }
     }
+    
 }

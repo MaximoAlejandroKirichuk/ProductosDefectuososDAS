@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class Signup
+    partial class FormEmpleados
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleados));
             this.button1 = new System.Windows.Forms.Button();
             this.btnSignup = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,10 +59,22 @@
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(162, 32);
             this.btnSignup.TabIndex = 16;
-            this.btnSignup.Text = "Sign Up";
+            this.btnSignup.Text = "Crear cuenta";
             this.btnSignup.UseVisualStyleBackColor = true;
             this.btnSignup.Click += new System.EventHandler(this.button2_Click);
             // 
+<<<<<<< HEAD:0-ProyectoDAS/FormEmpleados.Designer.cs
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(308, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 18);
+            this.label3.TabIndex = 15;
+            // 
+=======
+>>>>>>> b46ab653e71c4ce9839227aa6d58620be07b9e27:0-ProyectoDAS/Signup.Designer.cs
             // label2
             // 
             this.label2.AutoSize = true;
@@ -107,7 +119,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:0-ProyectoDAS/FormEmpleados.Designer.cs
+            this.label1.Location = new System.Drawing.Point(308, 246);
+=======
             this.label1.Location = new System.Drawing.Point(308, 275);
+>>>>>>> b46ab653e71c4ce9839227aa6d58620be07b9e27:0-ProyectoDAS/Signup.Designer.cs
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 18);
             this.label1.TabIndex = 18;
@@ -115,7 +131,11 @@
             // 
             // txtMail
             // 
+<<<<<<< HEAD:0-ProyectoDAS/FormEmpleados.Designer.cs
+            this.txtMail.Location = new System.Drawing.Point(311, 267);
+=======
             this.txtMail.Location = new System.Drawing.Point(311, 296);
+>>>>>>> b46ab653e71c4ce9839227aa6d58620be07b9e27:0-ProyectoDAS/Signup.Designer.cs
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(162, 20);
             this.txtMail.TabIndex = 17;
@@ -124,7 +144,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:0-ProyectoDAS/FormEmpleados.Designer.cs
+            this.label6.Location = new System.Drawing.Point(308, 298);
+=======
             this.label6.Location = new System.Drawing.Point(308, 327);
+>>>>>>> b46ab653e71c4ce9839227aa6d58620be07b9e27:0-ProyectoDAS/Signup.Designer.cs
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 18);
             this.label6.TabIndex = 20;
@@ -132,13 +156,21 @@
             // 
             // txtPassword
             // 
+<<<<<<< HEAD:0-ProyectoDAS/FormEmpleados.Designer.cs
+            this.txtPassword.Location = new System.Drawing.Point(311, 319);
+=======
             this.txtPassword.Location = new System.Drawing.Point(311, 348);
+>>>>>>> b46ab653e71c4ce9839227aa6d58620be07b9e27:0-ProyectoDAS/Signup.Designer.cs
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(162, 20);
             this.txtPassword.TabIndex = 19;
             // 
+<<<<<<< HEAD:0-ProyectoDAS/FormEmpleados.Designer.cs
+            // FormEmpleados
+=======
             // Signup
+>>>>>>> b46ab653e71c4ce9839227aa6d58620be07b9e27:0-ProyectoDAS/Signup.Designer.cs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,7 +186,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Name = "Signup";
+            this.Name = "FormEmpleados";
             this.Text = "Signup";
             this.Load += new System.EventHandler(this.Signup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

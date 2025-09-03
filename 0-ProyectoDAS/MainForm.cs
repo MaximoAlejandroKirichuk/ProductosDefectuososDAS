@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using static System.Windows.Forms.AxHost;
+using _0_ProyectoDAS;
 
 namespace UI
 {
@@ -235,6 +236,14 @@ namespace UI
         private void cambiarIdiomaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormABMCliente form = new FormABMCliente();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
         }
     }
 }
