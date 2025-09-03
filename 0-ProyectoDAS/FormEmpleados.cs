@@ -41,7 +41,7 @@ namespace UI
             string mail = txtMail.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            //string password = ServiciosUsuariosCSV.HashPassword(txtPassword.Text.Trim());
+            //password = ServiciosUsuariosCSV.HashPassword(txtPassword.Text.Trim());
             //string rolTexto = "Empleado"; //el empleado puede crear una cuenta
 
             ////manejar los errores por si no completan un txt.

@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteMPP.cs" />
+    <Compile Include="Interfaces\IMapeableUno.cs" />
+    <Compile Include="Interfaces\IMapeableTodos.cs" />
     <Compile Include="UsuarioMPP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

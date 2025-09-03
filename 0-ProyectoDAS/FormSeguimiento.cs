@@ -1,4 +1,4 @@
-﻿using _02_ProductosDefectuosos;
+﻿using UI;
 using BE;
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _0_ProyectoDAS.Idiomas;
 
 
 namespace UI

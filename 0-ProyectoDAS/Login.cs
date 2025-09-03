@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using BE;
 using BLL;
+using _0_ProyectoDAS;
 namespace UI
 {
     public partial class Login : Form
@@ -172,14 +173,15 @@ namespace UI
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Mostrar el formulario como una ventana modal (bloquea el anterior hasta cerrarse)
-            Signup formSignup = new Signup();
-            formSignup.ShowDialog();
+            //// Mostrar el formulario como una ventana modal (bloquea el anterior hasta cerrarse)
+            //FormEmpleados formSignup = new FormEmpleados();
+            //formSignup.ShowDialog();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            FormCliente formcliente = new FormCliente();
+            formcliente.ShowDialog();
         }
     }
 }

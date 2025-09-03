@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DALUsuario
     {
-        string stringConnection = StringConnection.connectionString;
+        string stringConnection = StringConnection.stringConnection;
         public DataRow BuscarUsuarioPorMail(string email)
         {
             using (SqlConnection con = new SqlConnection(stringConnection))

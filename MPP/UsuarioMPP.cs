@@ -6,9 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using BE;
 using DAL;
+using MPP.Interfaces;
 namespace MPP
 {
-    public class UsuarioMPP
+    public class UsuarioMPP : IMapeableUno<Usuario>
     {
         private DALUsuario dalUsuario = new DALUsuario();
 
@@ -17,6 +18,12 @@ namespace MPP
             DataRow row = dalUsuario.BuscarUsuarioPorMail(email);
 
             if (row == null) return null;
+            return Mapear(row);
+
+        }
+
+        public Usuario Mapear(DataRow row)
+        {
             RolesUsuarios rol;
             Enum.TryParse(row["Rol"].ToString(), out rol);
 
@@ -43,7 +50,6 @@ namespace MPP
                     };
                 default: return null;
             }
-
 
         }
     }

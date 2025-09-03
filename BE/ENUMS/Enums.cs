@@ -31,8 +31,8 @@ namespace BE
     }
     public enum TipoDocumentoCliente
     {
-        ResponsableEmpresa,
-        PersonaFisica
+        CUIL,
+        CUIT
     }
     public enum EstadoEntraga
     {
