@@ -9,7 +9,7 @@ namespace BE
 {
     public class Empleado : Usuario
     {
-        public Empleado(string nombreCompleto, string nomUsuario, string email, string contrasenia, RolesUsuarios rol) : base(nombreCompleto, nomUsuario, email, contrasenia, rol)
+        public Empleado(string nombreCompleto, string email, string contrasenia, RolesUsuarios rol) : base(nombreCompleto, email, contrasenia, rol)
         {
         }
         public Empleado() { }

@@ -16,7 +16,7 @@ namespace BE
         public string Contrasenia { get; set; }
         public RolesUsuarios Rol { get; set; }
         
-        protected Usuario(string nombreCompleto,string nomUsuario, string email, string contrasenia, RolesUsuarios rol)
+        protected Usuario(string nombreCompleto, string email, string contrasenia, RolesUsuarios rol)
         {
             NombreCompleto = nombreCompleto;
             Email = email;
