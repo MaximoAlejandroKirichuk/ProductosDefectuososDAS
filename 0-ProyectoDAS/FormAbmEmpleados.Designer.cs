@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ComboBoxRol = new System.Windows.Forms.ComboBox();
-            this.LRol = new System.Windows.Forms.Label();
             this.LNombre = new System.Windows.Forms.Label();
             this.txtNombreCompleto = new System.Windows.Forms.TextBox();
             this.LEmail = new System.Windows.Forms.Label();
@@ -47,37 +45,18 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ComboBoxRol);
-            this.groupBox1.Controls.Add(this.LRol);
             this.groupBox1.Controls.Add(this.LNombre);
             this.groupBox1.Controls.Add(this.txtNombreCompleto);
             this.groupBox1.Controls.Add(this.LEmail);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.LContraseña);
             this.groupBox1.Controls.Add(this.TxtContraseña);
-            this.groupBox1.Location = new System.Drawing.Point(104, 49);
+            this.groupBox1.Location = new System.Drawing.Point(104, 85);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(178, 252);
+            this.groupBox1.Size = new System.Drawing.Size(178, 195);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Propiedades";
-            // 
-            // ComboBoxRol
-            // 
-            this.ComboBoxRol.FormattingEnabled = true;
-            this.ComboBoxRol.Location = new System.Drawing.Point(41, 208);
-            this.ComboBoxRol.Name = "ComboBoxRol";
-            this.ComboBoxRol.Size = new System.Drawing.Size(100, 21);
-            this.ComboBoxRol.TabIndex = 11;
-            // 
-            // LRol
-            // 
-            this.LRol.AutoSize = true;
-            this.LRol.Location = new System.Drawing.Point(38, 192);
-            this.LRol.Name = "LRol";
-            this.LRol.Size = new System.Drawing.Size(23, 13);
-            this.LRol.TabIndex = 10;
-            this.LRol.Text = "Rol";
             // 
             // LNombre
             // 
@@ -106,7 +85,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(41, 94);
+            this.txtEmail.Location = new System.Drawing.Point(41, 93);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 3;
@@ -143,6 +122,7 @@
             this.btnModificarEmpleado.TabIndex = 22;
             this.btnModificarEmpleado.Text = "Modificar empleado";
             this.btnModificarEmpleado.UseVisualStyleBackColor = true;
+            this.btnModificarEmpleado.Click += new System.EventHandler(this.btnModificarEmpleado_Click);
             // 
             // btnBorrarEmpleado
             // 
@@ -152,6 +132,7 @@
             this.btnBorrarEmpleado.TabIndex = 21;
             this.btnBorrarEmpleado.Text = "Borrar empleado";
             this.btnBorrarEmpleado.UseVisualStyleBackColor = true;
+            this.btnBorrarEmpleado.Click += new System.EventHandler(this.btnBorrarEmpleado_Click);
             // 
             // btnAgregarEmpleado
             // 
@@ -196,7 +177,5 @@
         private System.Windows.Forms.Button btnModificarEmpleado;
         private System.Windows.Forms.Button btnBorrarEmpleado;
         private System.Windows.Forms.Button btnAgregarEmpleado;
-        private System.Windows.Forms.Label LRol;
-        private System.Windows.Forms.ComboBox ComboBoxRol;
     }
 }

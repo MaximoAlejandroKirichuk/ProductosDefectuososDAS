@@ -52,5 +52,37 @@ namespace _0_ProyectoDAS
                 MessageBox.Show("No se pudo agregar el empleado");
             }
         }
+
+        private void btnModificarEmpleado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrarEmpleado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DgvEmpleados.CurrentRow != null)
+                {
+                    DataGridViewRow fila = DgvEmpleados.CurrentRow;
+
+                    int idEmpleado = Convert.ToInt32(fila.Cells["IdEmpleado"].Value);  //esto no se si esta bien
+
+                    var respuesta = gestorEmpleadoBLL.Borrar(idEmpleado);
+                    if (!respuesta) throw new Exception("No se pudo borrar el empleado");
+
+                    MessageBox.Show("Empleado borrado correctamente");
+                    ActualizarData();
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un empleado de la lista");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al borrar empleado: " + ex.Message);
+            }
+        }
     }
 }

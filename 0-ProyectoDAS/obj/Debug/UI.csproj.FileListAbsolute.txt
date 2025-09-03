@@ -111,3 +111,4 @@ E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\0-P
 E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.pdb
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormABMCliente.resources
 E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormAbmEmpleados.resources
+D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormAbmEmpleados.resources
