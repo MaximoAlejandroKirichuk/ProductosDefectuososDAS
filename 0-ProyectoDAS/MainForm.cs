@@ -254,6 +254,8 @@ namespace UI
         private void empleadosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FormAbmEmpleados form = new FormAbmEmpleados();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
     }

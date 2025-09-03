@@ -24,7 +24,7 @@ namespace DAL
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
-                    cmd.Parameters.AddWithValue("IdCliente", id);
+                    cmd.Parameters.AddWithValue("IdEmpleado", id);
                     return cmd.ExecuteNonQuery() > 0;
                 }
             }
@@ -42,7 +42,7 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@email", objeto.Email);
                     cmd.Parameters.AddWithValue("@contrasena", objeto.Contrasenia);
                     cmd.Parameters.AddWithValue("@nombre", objeto.NombreCompleto);
-                    cmd.Parameters.AddWithValue("@rol", objeto.Rol);
+                    cmd.Parameters.AddWithValue("@rol", objeto.Rol.ToString());
                     return cmd.ExecuteNonQuery() > 0;
                 }
             }
@@ -67,15 +67,14 @@ namespace DAL
             using (SqlConnection con = new SqlConnection(stringConnection))
             {
                 string query = @"UPDATE Empleado 
-                            SET NombreCompleto = @NombreCompleto,
-                                Email = @Email,
+                            SET NombreCompleto = @NombreCompleto
                             WHERE IdEmpleado = @IdEmpleado";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@IdEmpleado", objeto.IdEmpleado);
+                    cmd.Parameters.AddWithValue("@IdEmpleado", objeto.IdUsuario);
                     cmd.Parameters.AddWithValue("@NombreCompleto", objeto.NombreCompleto);
-                    cmd.Parameters.AddWithValue("@Email", objeto.Email);
+                    
                     con.Open();
                     return cmd.ExecuteNonQuery() > 0;
                 }

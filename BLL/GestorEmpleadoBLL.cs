@@ -18,12 +18,16 @@ namespace BLL
 
         public bool Borrar(int id)
         {
-            throw new NotImplementedException();
+            return mppEmpleado.Borrar(id);
         }
 
         public bool Modificar(Empleado objeto)
         {
-            throw new NotImplementedException();
+            return mppEmpleado.Modificar(objeto);
+        }
+        public List<Empleado> ObtenerTodos()
+        {
+            return mppEmpleado.ObtenerTodos();
         }
     }
 }

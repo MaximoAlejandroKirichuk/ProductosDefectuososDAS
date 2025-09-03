@@ -28,7 +28,7 @@ namespace _0_ProyectoDAS
         public void ActualizarData()
         {
             DgvEmpleados.DataSource = null;
-            //DgvEmpleados.DataSource = null;
+            DgvEmpleados.DataSource = gestorEmpleadoBLL.ObtenerTodos();
 
         }
 
@@ -40,8 +40,10 @@ namespace _0_ProyectoDAS
                 string email = txtEmail.Text;
                 string contrasena = TxtContraseña.Text;
                 if(gestorUsuarioBLL.BuscarUsuarioPorMail(email) != null) throw new Exception("Ya hiciste un mail asociado a esta cuenta");
+                
 
-                var nuevoEmpleado = new Empleado(nombreCompleto, email, contrasena, RolesUsuarios.Empleado);
+                var hashContrasena = gestorUsuarioBLL.HashContrasena(contrasena);
+                var nuevoEmpleado = new Empleado(nombreCompleto, email, hashContrasena, RolesUsuarios.Empleado);
                 var respuesta = gestorEmpleadoBLL.Agregar(nuevoEmpleado);
                 if (!respuesta) throw new Exception("Ocurrio un error al agregar");
                 MessageBox.Show("Se pudo agregar el empleado");
@@ -55,7 +57,35 @@ namespace _0_ProyectoDAS
 
         private void btnModificarEmpleado_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (DgvEmpleados.CurrentRow != null)
+                {
+                    DataGridViewRow fila = DgvEmpleados.CurrentRow;
 
+                    int idEmpleado = Convert.ToInt32(fila.Cells["IdUsuario"].Value);  //esto vaya a saber uno porque es IdUsuario
+                    string nombreCompleto = txtNombreCompleto.Text;
+
+                    var nuevoEmpleado = new Empleado
+                    {
+                        NombreCompleto = nombreCompleto,
+                        IdUsuario = idEmpleado
+                    };
+                    var respuesta = gestorEmpleadoBLL.Modificar(nuevoEmpleado);
+                    if (!respuesta) throw new Exception("Ocurrio un error al modificar");
+                    MessageBox.Show("Se pudo modificar el empleado");
+                    ActualizarData();
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un empleado de la lista");
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo modificar el empleado: " + ex.Message);
+            }
         }
 
         private void btnBorrarEmpleado_Click(object sender, EventArgs e)
@@ -66,7 +96,7 @@ namespace _0_ProyectoDAS
                 {
                     DataGridViewRow fila = DgvEmpleados.CurrentRow;
 
-                    int idEmpleado = Convert.ToInt32(fila.Cells["IdEmpleado"].Value);  //esto no se si esta bien
+                    int idEmpleado = Convert.ToInt32(fila.Cells["IdUsuario"].Value);  //esto vaya a saber uno porque es IdUsuario
 
                     var respuesta = gestorEmpleadoBLL.Borrar(idEmpleado);
                     if (!respuesta) throw new Exception("No se pudo borrar el empleado");
