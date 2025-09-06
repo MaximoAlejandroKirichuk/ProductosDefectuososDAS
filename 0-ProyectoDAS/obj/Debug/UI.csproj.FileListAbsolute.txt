@@ -112,3 +112,36 @@ E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\0-P
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormABMCliente.resources
 E:\facultad 2025\SegundoCuatrimestre\DAS\ProyectoDAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormAbmEmpleados.resources
 D:\tareas visual facultad\DAS\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormAbmEmpleados.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.csproj.AssemblyReference.cache
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormABMCliente.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormAbmEmpleados.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.FormAyuda.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormCliente.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.FormListadoProductos.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.FormRegistroCliente.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.FormRegistroProductos.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.FormReportesUbicacion.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.FormSeguimiento.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.español.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.ingles.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Idiomas.Res.portugues.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.Login.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.MainForm.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\_0_ProyectoDAS.Properties.Resources.resources
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.csproj.GenerateResource.cache
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.exe.config
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.exe
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\0-ProyectoDAS.pdb
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\BE.dll
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\BLL.dll
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\MPP.dll
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\DAL.dll
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\BE.pdb
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\BLL.pdb
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\MPP.pdb
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\bin\Debug\DAL.pdb
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\UI.csproj.Up2Date
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.pdb
+D:\0-DAS-MolinariKirichuk\0-ProyectoDAS\obj\Debug\0-ProyectoDAS.exe.config

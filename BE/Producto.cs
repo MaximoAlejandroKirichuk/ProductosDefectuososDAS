@@ -7,22 +7,23 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Producto : ICloneable, IComparable<Producto>
+    public class Producto : ICloneable //, IComparable<Producto>
     {
 
         public int CodigoProducto { get; set; }
-        public int CantidadDaniada { get; set; }
         public decimal CostoProducto { get; set; }
         public CondicionProducto CondicionProducto { get; set; }
         public EstadoEntraga EstadoEntrega { get; set; }
-        public decimal GastoAdicionalAntesDefecto { get; set; } 
         public string NombreProducto { get; set; }
         public List<Seguimiento> ListaSeguimiento { get; set; } = new List<Seguimiento>();
         public string ProblemaEntrada { get; set; }
         public Cliente Cliente { get; set; }
+        public DateTime FechaRecibidaProducto { get; set; }
         public DateTime FechaEstimadaDevolucion { get; set; }
-        public Ubicacion UbicacionProducto { get; set; }
-
+        public int Dimensiones { get; set; }
+        public decimal CostoPerdidaMateriaPrima { get; set; }
+        public decimal CostoManoObra { get; set; }
+        public DateTime FechaDevolucionReal { get; set; }
 
         public Producto() { }
 
@@ -61,28 +62,22 @@ namespace BE
                 CodigoProducto = this.CodigoProducto,
                 NombreProducto = this.NombreProducto,
                 CostoProducto = this.CostoProducto,
-                GastoAdicionalAntesDefecto = this.GastoAdicionalAntesDefecto,
-                CantidadDaniada = this.CantidadDaniada,
                 ProblemaEntrada = this.ProblemaEntrada,
                 Cliente = this.Cliente, // Se asume que Cliente es inmutable 
-                UbicacionProducto = this.UbicacionProducto, // Idem
                 EstadoEntrega = this.EstadoEntrega,
                 ListaSeguimiento = new List<Seguimiento>(this.ListaSeguimiento.Select(s => (Seguimiento)s.Clone())) // Clonación profunda si la clase Seguimiento tiene Clone
             };
         }
 
-        public int CompareTo(Producto other)
-        {
-            if (other == null) return 1;
-            decimal thisTotal = this.CostoProducto + this.GastoAdicionalAntesDefecto;
-            decimal otherTotal = other.CostoProducto + other.GastoAdicionalAntesDefecto;
-            return otherTotal.CompareTo(thisTotal); 
-        }
+        //public int CompareTo(Producto other)
+        //{
+        //    if (other == null) return 1;
+        //    //decimal thisTotal = this.CostoProducto + this.GastoAdicionalAntesDefecto;
+        //    //decimal otherTotal = other.CostoProducto + other.GastoAdicionalAntesDefecto;
+        //    return otherTotal.CompareTo(thisTotal); 
+        //}
 
-        public override string ToString()
-        {
-            return $"{CodigoProducto};{NombreProducto};{CostoProducto};{GastoAdicionalAntesDefecto};{CantidadDaniada};{ProblemaEntrada};{EstadoEntrega};{UbicacionProducto?.DepositoAlmacenado}";
-        }
+        
     }
 
 
