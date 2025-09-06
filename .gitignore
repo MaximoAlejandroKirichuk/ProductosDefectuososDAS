@@ -1,10 +1,37 @@
-.vs/
-bin/
-obj/
-*.user
+# Directorios de compilación y archivos temporales
+## Directorios
+[Bb]in/
+[Oo]bj/
+## Archivos de caché y temporales de Visual Studio
 *.suo
+*.user
+*.userosscache
 *.cache
 *.dtbcache.json
+*.log
 *.pdb
 *.exe
 *.dll
+
+# Dependencias y paquetes
+## Paquetes NuGet
+*.nupkg
+*.snupkg
+## Archivos de bloqueo de paquetes
+project.lock.json
+packages/
+*.pdb
+
+# Directorios de IDEs
+.idea/
+.vs/
+.vscode/
+
+# Archivos de la solución
+## Este archivo puede ser útil si trabajas con distintos IDEs, pero generalmente se ignora
+## *.sln.iml
+
+# Archivos temporales de compilación
+*.csproj.AssemblyReference.cache
+*.csproj.CoreCompileInputs.cache
+*.csproj.FileListAbsolute.txt
