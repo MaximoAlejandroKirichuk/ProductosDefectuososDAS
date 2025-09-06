@@ -8,6 +8,16 @@ namespace DAL
 {
     public static class StringConnection
     {
-        public static string stringConnection = "Server=.;Database=ProductosDefectuosos;Trusted_Connection=True;";
+        private static string dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
+        public static string stringConnection =
+    "Server=tcp:das-proyecto.database.windows.net,1433;" +
+    "Initial Catalog=BaseDatos;" +
+    "Persist Security Info=False;" +
+    "User ID=maxdas;" +
+    $"Password={dbPassword};" +
+    "MultipleActiveResultSets=False;" +
+    "Encrypt=True;" +
+    "TrustServerCertificate=False;" +
+    "Connection Timeout=30;";
     }
 }
