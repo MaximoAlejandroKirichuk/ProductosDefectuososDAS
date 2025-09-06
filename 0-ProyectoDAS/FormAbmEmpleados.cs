@@ -49,9 +49,9 @@ namespace _0_ProyectoDAS
                 MessageBox.Show("Se pudo agregar el empleado");
                 ActualizarData();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("No se pudo agregar el empleado");
+                MessageBox.Show("No se pudo agregar el empleado: " +ex.Message);
             }
         }
 

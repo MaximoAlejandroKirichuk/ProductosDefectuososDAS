@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using _0_ProyectoDAS.Idiomas;
+using _0_ProyectoDAS;
+using BLL;
 
 
 namespace UI
@@ -23,10 +25,11 @@ namespace UI
 
             AplicarIdioma(idioma);
 
-            //entonces aca cuando se use el delegado utiliza la messagebox 
+            //entonces aca cuando se FileNameuse el delegado utiliza la messagebox 
             Notificador = mensaje => { MessageBox.Show(mensaje); this.Close(); };
         }
 
+       private GestorProductosBLL gestorProductosBLL = new GestorProductosBLL();
 
         public void AplicarIdioma(int idiomanuevo)
         {
@@ -41,12 +44,9 @@ namespace UI
 
         public void gettextespañol()
         {
-            label1.Text = Res_español.persona_responsable;
-            label2.Text = Res_español.codigo_producto;
             label3.Text = Res_español.nombre_producto;
             label4.Text = Res_español.Costo_producto_;
             label5.Text = Res_español.Gasto_generado__antes_de_ser_defectuoso__;
-            label14.Text = Res_español.Cantidad_de_productos_dañada_;
             label15.Text = Res_español.Problema_por_el_que_llega_;
 
             tabPage1.Text = Res_español.Datos_del_Producto_;
@@ -55,8 +55,6 @@ namespace UI
             tabPage4.Text = Res_español.Seguimiento;
             tabPage5.Text = Res_español.Finalizar_formulario_;
 
-            label10.Text = Res_español.Deposito_almacenado;
-            label9.Text = Res_español.Estante;
             label8.Text = Res_español.Nivel_de_estante;
             label7.Text = Res_español.Columna;
 
@@ -70,12 +68,9 @@ namespace UI
         }
         public void gettextingles()
         {
-            label1.Text = Res_ingles.Responsible_person;
-            label2.Text = Res_ingles.Product_code;
             label3.Text = Res_ingles.Product_name;
             label4.Text = Res_ingles.Product_Cost_;
             label5.Text = Res_ingles.Cost_Incurred__before_becoming_faulty__;
-            label14.Text = Res_ingles.Damaged_Product_Quantity_;
             label15.Text = Res_ingles.Input_problem;
 
             tabPage1.Text = Res_ingles.Product_information;
@@ -84,8 +79,6 @@ namespace UI
             tabPage4.Text = Res_ingles.Follow_up;
             tabPage5.Text = Res_ingles.finish_upload;
 
-            label10.Text = Res_ingles.Storage_bin;
-            label9.Text = Res_ingles.Shelf;
             label8.Text = Res_ingles.Shelf_level;
             label7.Text = Res_ingles.Column;
 
@@ -99,12 +92,9 @@ namespace UI
         }
         public void gettextportugues()
         {
-            label1.Text = Res_portugues.Pessoa_Responsável;
-            label2.Text = Res_portugues.Condição_do_produto;
             label3.Text = Res_portugues.Nome_do_Produto;
             label4.Text = Res_portugues.Custo_do_Produto;
             label5.Text = Res_portugues.Gasto_Gerado__antes_de_apresentar_defeito_;
-            label14.Text = Res_portugues.Quantidade_de_Produtos_Danificados;
             label15.Text = Res_portugues.Problema_de_entrada;
 
             tabPage1.Text = Res_portugues.Dados_do_Produto;
@@ -113,8 +103,6 @@ namespace UI
             tabPage4.Text = Res_portugues.Acompanhamento;
             tabPage5.Text = Res_portugues.Finalizar_Formulário;
 
-            label10.Text = Res_portugues.Caixa_de_armazenamento;
-            label9.Text = Res_portugues.Prateleira;
             label8.Text = Res_portugues.Nível_da_prateleira;
             label7.Text = Res_portugues.Coluna;
 
@@ -159,80 +147,78 @@ namespace UI
             }
         }
 
+        public List<Seguimiento> ObtenerSeguimiento()
+        {
+            ////Generar seguimiento
+            return listBox1.Items.Cast<Seguimiento>().ToList();
+
+        }
+        public CondicionProducto ObtenerCondicion(string condicionProducto)
+        {
+            try
+            {
+                CondicionProducto condicion; //declaro null
+                Enum.TryParse(condicionProducto, out condicion);
+
+                if (condicion == CondicionProducto.Desechado)
+                {
+                    // sale lo mismo que hacer devuelta todo el producto
+
+                }
+                else if (condicion == CondicionProducto.EnReparacion)
+                {
+                    decimal costoPerdida = Convert.ToDecimal(numericUpDownCostoPerdidaMateriaPrima.Value);
+                    decimal costoManoObra = Convert.ToDecimal(numericUpDownCostoManoObra.Value);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error con el estado del producto");
+                }
+                return condicion;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            
+
+
+        }
 
         public void ingresarDatos()
         {
             try
             {
                 ////Generar producto
-                //Usuario personaResponsable = (Usuario)comboBoxPersonaResponsable.SelectedItem;
-                //string codigoProducto = txtCodigoProducto.Text;
-                //string nombreProducto = txtNombreProducto.Text;
-                //decimal costoProducto = Convert.ToDecimal(txtCostoProducto.Text);
-                //decimal gastoGeneradoAntesDefectuoso = Convert.ToDecimal(txtGastoGenerado.Text);
+                ObtenerSeguimiento();
 
-                //int cantidadProductoDañada = Convert.ToInt32(txtCantidadProductosDañada.Text);
-                //string problemaEntrada = comboBoxProblemaEntrada.SelectedItem.ToString();
-
-                ////Generar ubicación
-                //string depositoAlmacenado = comboBoxDepositoAlmacenado.SelectedItem.ToString();
-                //int nroEstante = Convert.ToInt32(numericUpDownEstante.Value);
-                //int nivelEstante = Convert.ToInt32(numericUpDownNivelEstante.Value);
-                //int nroColumna = Convert.ToInt32(numericUpDownColumna.Value);
-                //Ubicacion ubicacionProducto = new Ubicacion(depositoAlmacenado, nroEstante, nivelEstante, nroColumna);
-
-                ////Generar seguimiento
-
-                //List<Seguimiento> seguimiento = listBox1.Items.Cast<Seguimiento>().ToList();
-
-
-                ////Generar estado
-                //string estado = comboBoxEstadoProducto.SelectedItem.ToString();
-                //EstadoProducto estadoProducto = null; //declaro null
-
-                //if (estado == "Desechado")
-                //{
-                //    decimal costoPerdida = Convert.ToDecimal(numericUpDownCostoPerdidaMateriaPrima.Value);
-                //    estadoProducto = new EstadoProducto(costoPerdida, EstadoProducto.TipoEstado.Desechado);
-                //}
-                //else if (estado == "Reacondicionable")
-                //{
-                //    decimal costoManoObra = Convert.ToDecimal(numericUpDownCostoManoObra.Value);
-                //    estadoProducto = new EstadoProducto(costoManoObra, EstadoProducto.TipoEstado.Reacondicionable);
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Ocurrio un error con el estado del producto");
-                //}
-
-                ////Generar el area responsable 
-                //AreaPosibles areaEnum;
-                //AreaResponsable area = null;
-
-                //if (comboBoxAreaResponsable.SelectedItem != null &&
-                //    Enum.TryParse(comboBoxAreaResponsable.SelectedItem.ToString(), out areaEnum))
-                //{
-                //    area = new AreaResponsable(areaEnum);
-                //}
-                //else
-                //{
-                //    MessageBox.Show("El valor seleccionado para el área responsable no es válido.");
-                //    return;
-                //}
-                
-                
+                //Generar condicion
+                string condicion = comboBoxEstadoProducto.SelectedItem.ToString();
+                ObtenerCondicion(condicion);
                 ////Generar producto Defectuoso
-                //Producto nuevoProductoDefectuoso = new Producto(codigoProducto, nombreProducto, costoProducto, gastoGeneradoAntesDefectuoso, cantidadProductoDañada, problemaEntrada, personaResponsable, ubicacionProducto, estadoProducto, seguimiento, area);
-                ////utilizamos el objeto delegado.
-                //Notificador?.Invoke("Se creó un nuevo Producto Defectuoso con éxito");
+                string nombreProducto = txtNombreProducto.Text;
+                decimal costoProducto = Convert.ToDecimal(txtCostoProducto.Text);
+                decimal gastoGeneradoAntesDefectuoso = Convert.ToDecimal(txtGastoGenerado.Text);
+                string problemaEntrada = comboBoxProblemaEntrada.SelectedItem.ToString();
+                var nuevoProducto = new Producto
+                {
+                      
+                };
+                gestorProductosBLL.Agregar(nuevoProducto);
+
+                //Producto nuevoProductoDefectuoso = new Producto(codigoProducto, nombreProducto, costoProducto, gastoGeneradoAntesDefectuoso, cantidadProductoDañada, problemaEntrada, personaResponsable, ubicacionProducto, estadoProducto, seguimiento, area);                ////utilizamos el objeto delegado.
+                Notificador?.Invoke("Se creó un nuevo Producto Defectuoso con éxito");
 
                 //ListadoProductoDefectuosos.Instancia.agregarProducto(nuevoProductoDefectuoso);
-                
-               
+
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un error al generar la carga     " + ex.Message + "   " + ex.Source );
+                MessageBox.Show("Ocurrio un error al generar la carga: " + ex.Message + "  " + ex.Source );
             }
         }
         private void btnTerminarCarga_Click(object sender, EventArgs e)
@@ -257,8 +243,20 @@ namespace UI
 
         }
 
-       
+        private void label16_Click(object sender, EventArgs e)
+        {
 
-       
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormABMCliente abm = new FormABMCliente();
+            abm.Show();
+        }
     }
 }

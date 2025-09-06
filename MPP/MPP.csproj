@@ -45,6 +45,7 @@
     <Compile Include="EmpleadosMPP.cs" />
     <Compile Include="Interfaces\IMapeableUno.cs" />
     <Compile Include="Interfaces\IMapeableTodos.cs" />
+    <Compile Include="ProductoMPP.cs" />
     <Compile Include="UsuarioMPP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
