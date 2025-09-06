@@ -1,28 +1,10 @@
-﻿# ---- Visual Studio ----
 .vs/
-*.user
-*.suo
-*.userosscache
-*.sln.iml
-
-# ---- Build/compilación ----
 bin/
 obj/
-Debug/
-Release/
-x64/
-x86/
-
-# ---- NuGet ----
-packages/
-*.nupkg
-*.snupkg
-project.lock.json
-
-# ---- IDEs ----
-.idea/
-.vscode/
-*.DotSettings.user
-
-# ---- Otros ----
-*.log
+*.user
+*.suo
+*.cache
+*.dtbcache.json
+*.pdb
+*.exe
+*.dll
