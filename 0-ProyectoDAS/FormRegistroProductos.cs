@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using _0_ProyectoDAS.Idiomas;
 using _0_ProyectoDAS;
 using BLL;
+using BE.actores;
 
 
 namespace UI
@@ -29,8 +30,7 @@ namespace UI
             Notificador = mensaje => { MessageBox.Show(mensaje); this.Close(); };
         }
 
-       private GestorProductosBLL gestorProductosBLL = new GestorProductosBLL();
-
+        private GestorProductosBLL gestorProductosBLL = new GestorProductosBLL();
         public void AplicarIdioma(int idiomanuevo)
         {
             if (idiomanuevo == 1)
@@ -46,7 +46,7 @@ namespace UI
         {
             label3.Text = Res_español.nombre_producto;
             label4.Text = Res_español.Costo_producto_;
-            label5.Text = Res_español.Gasto_generado__antes_de_ser_defectuoso__;
+            
             label15.Text = Res_español.Problema_por_el_que_llega_;
 
             tabPage1.Text = Res_español.Datos_del_Producto_;
@@ -70,7 +70,7 @@ namespace UI
         {
             label3.Text = Res_ingles.Product_name;
             label4.Text = Res_ingles.Product_Cost_;
-            label5.Text = Res_ingles.Cost_Incurred__before_becoming_faulty__;
+           
             label15.Text = Res_ingles.Input_problem;
 
             tabPage1.Text = Res_ingles.Product_information;
@@ -94,7 +94,7 @@ namespace UI
         {
             label3.Text = Res_portugues.Nome_do_Produto;
             label4.Text = Res_portugues.Custo_do_Produto;
-            label5.Text = Res_portugues.Gasto_Gerado__antes_de_apresentar_defeito_;
+            
             label15.Text = Res_portugues.Problema_de_entrada;
 
             tabPage1.Text = Res_portugues.Dados_do_Produto;
@@ -126,21 +126,26 @@ namespace UI
             //comboBoxPersonaResponsable.DataSource = null;
             //comboBoxPersonaResponsable.DataSource = ListadoEmpleados.Instancia.Empleados;
             //comboBoxPersonaResponsable.DisplayMember = "NombreCompleto";
-
+            
+            //TODO: ESTA HARDCODEADO AHORA EL COMBOBOX
+            //aca va a ir nuestro cliente 
+            //comboBoxCliente.DataSource = null;
+            //comboBoxCliente.DataSource = ListadoClientesBLL.Instancia;
+            //comboBoxCliente.DisplayMember = "NombreCompleto";
 
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string respuesta = comboBoxEstadoProducto.SelectedItem.ToString();
+            string respuesta = comboBoxCondicionProducto.SelectedItem.ToString();
 
-            if(respuesta == "Desechado")
+            if (respuesta == "Desechado")
             {
                 numericUpDownCostoPerdidaMateriaPrima.Enabled = true;
                 numericUpDownCostoManoObra.Enabled = false;
                 numericUpDownCostoManoObra.Value = 0;
             }
-            else{
+            else {
                 numericUpDownCostoManoObra.Enabled = true;
                 numericUpDownCostoPerdidaMateriaPrima.Enabled = false;
                 numericUpDownCostoPerdidaMateriaPrima.Value = 0;
@@ -149,65 +154,104 @@ namespace UI
 
         public List<Seguimiento> ObtenerSeguimiento()
         {
+
             ////Generar seguimiento
             return listBox1.Items.Cast<Seguimiento>().ToList();
 
         }
-        public CondicionProducto ObtenerCondicion(string condicionProducto)
+       
+        public Producto ObtenerDatos()
         {
             try
             {
-                CondicionProducto condicion; //declaro null
-                Enum.TryParse(condicionProducto, out condicion);
+                ////Generar producto Defectuoso
+                string nombreProducto = txtNombreProducto.Text;
+                decimal costoProducto = Convert.ToDecimal(txtCostoProducto.Text);
+                string problemaEntrada = txtProblemaEntrada.Text;
+                Producto nuevo = new Producto
+                {
+                    NombreProducto = nombreProducto,
+                    CostoProducto = costoProducto,
+                    ProblemaEntrada = problemaEntrada
+                };
+                return nuevo;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocurrio un error al obtener los datos del producto");
+            }
 
-                if (condicion == CondicionProducto.Desechado)
-                {
-                    // sale lo mismo que hacer devuelta todo el producto
-
-                }
-                else if (condicion == CondicionProducto.EnReparacion)
-                {
-                    decimal costoPerdida = Convert.ToDecimal(numericUpDownCostoPerdidaMateriaPrima.Value);
-                    decimal costoManoObra = Convert.ToDecimal(numericUpDownCostoManoObra.Value);
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Ocurrio un error con el estado del producto");
-                }
+        }
+        public Dimensiones ObtenerDimensiones()
+        {
+            try
+            {
+                decimal alto = numericUpDownAlto.Value;
+                decimal ancho = numericUpDownAncho.Value;
+                decimal largo = numericUpDownLargo.Value;
+                Dimensiones dimensiones = new Dimensiones(ancho, largo, alto);
+                return dimensiones;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocurrio un error al obtener las dimensiones del producto");
+            }
+            
+        }
+        public CondicionProducto ObtenerCondicionProducto()
+        {
+            try
+            {
+                CondicionProducto condicion;
+                Enum.TryParse(comboBoxCondicionProducto.SelectedItem.ToString(), out condicion);
                 return condicion;
             }
             catch (Exception)
             {
 
-                throw;
+                throw new Exception("Ocurrio un error al obtener la condicion del producto");
             }
-
             
-
-
         }
+        public Cliente ObtenerCliente()
+        {
+            try
+            {
+                int idCliente = Convert.ToInt32(comboBoxCliente.SelectedItem);
+                var cliente = new Cliente
+                {
+                    IdCliente = idCliente
+                };
+                return cliente;
+            }
+            catch (Exception)
+            {
 
+                throw new Exception("Ocurrio un error al obtener el cliente asociado al producto");
+            }
+            
+        }
         public void ingresarDatos()
         {
             try
             {
-                ////Generar producto
-                ObtenerSeguimiento();
+                //Obtener Datos Producto
+                var productoNuevo = ObtenerDatos();
+                //Obtener dimensiones
+                productoNuevo.Dimensiones = ObtenerDimensiones();
+                //Obtener Estado Producto
+                productoNuevo.CondicionProducto = ObtenerCondicionProducto();
+                productoNuevo.CostoPerdidaMateriaPrima = Convert.ToInt32(numericUpDownCostoPerdidaMateriaPrima.Value);
+                productoNuevo.CostoManoObra = Convert.ToInt32(numericUpDownCostoManoObra.Value);
+                ////Obtener seguimiento
+                productoNuevo.ListaSeguimiento = ObtenerSeguimiento();
+                // Obtener Cliente asociado
+                productoNuevo.Cliente = ObtenerCliente();
+                // Obtener Fechas
+                productoNuevo.FechaRecibidaProducto = dateTimePickerFechaRecibida.Value;
+                productoNuevo.FechaEstimadaDevolucion = dateTimePickerFechaEstimadaDevolucion.Value;
 
-                //Generar condicion
-                string condicion = comboBoxEstadoProducto.SelectedItem.ToString();
-                ObtenerCondicion(condicion);
-                ////Generar producto Defectuoso
-                string nombreProducto = txtNombreProducto.Text;
-                decimal costoProducto = Convert.ToDecimal(txtCostoProducto.Text);
-                decimal gastoGeneradoAntesDefectuoso = Convert.ToDecimal(txtGastoGenerado.Text);
-                string problemaEntrada = comboBoxProblemaEntrada.SelectedItem.ToString();
-                var nuevoProducto = new Producto
-                {
-                      
-                };
-                gestorProductosBLL.Agregar(nuevoProducto);
+                gestorProductosBLL.Agregar(productoNuevo);
 
                 //Producto nuevoProductoDefectuoso = new Producto(codigoProducto, nombreProducto, costoProducto, gastoGeneradoAntesDefectuoso, cantidadProductoDañada, problemaEntrada, personaResponsable, ubicacionProducto, estadoProducto, seguimiento, area);                ////utilizamos el objeto delegado.
                 Notificador?.Invoke("Se creó un nuevo Producto Defectuoso con éxito");
@@ -257,6 +301,16 @@ namespace UI
         {
             FormABMCliente abm = new FormABMCliente();
             abm.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

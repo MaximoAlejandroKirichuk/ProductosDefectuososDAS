@@ -29,25 +29,6 @@ namespace DAL
                 }
             }
         }
-        //public bool InsertarClientes(Cliente c)
-        //{
-        //    using(SqlConnection sqlConnection = new SqlConnection(stringConnection))
-        //    {
-        //        string query = "insert into Cliente (NombreCompleto, Email, Contrasena,TipoDocumento, Direccion, DeudaTotal, FechaNacimiento, NroDocumento) Values(@nombreCompleto,@email,@contrasenia,@tipoDocumento,@direccion,@deudaTotal,@FechaNacimiento,@NroDocumento)";
-        //        using(SqlCommand cmd = new SqlCommand(query, sqlConnection))
-        //        {
-        //            sqlConnection.Open();
-        //            cmd.Parameters.AddWithValue("@nombreCompleto", c.NombreCompleto);
-        //            cmd.Parameters.AddWithValue("@email", c.Email);
-        //            cmd.Parameters.AddWithValue("@contrasenia", c.Contrasenia);
-        //            cmd.Parameters.AddWithValue("@tipoDocumento", c.TipoDocumento.ToString());
-        //            cmd.Parameters.AddWithValue("@direccion", c.Direccion);
-        //            cmd.Parameters.AddWithValue("@deudaTotal", c.DeudaTotal);
-        //            cmd.Parameters.AddWithValue("@FechaNacimiento", c.FechaNacimiento.ToShortDateString());
-        //            cmd.Parameters.AddWithValue("@NroDocumento", c.NroDocumento);
-        //            return cmd.ExecuteNonQuery() > 0;
-        //        }
-        //    }
-        //}
+        
     }
 }

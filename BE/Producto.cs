@@ -20,7 +20,7 @@ namespace BE
         public Cliente Cliente { get; set; }
         public DateTime FechaRecibidaProducto { get; set; }
         public DateTime FechaEstimadaDevolucion { get; set; }
-        public int Dimensiones { get; set; }
+        public Dimensiones Dimensiones { get; set; }
         public decimal CostoPerdidaMateriaPrima { get; set; }
         public decimal CostoManoObra { get; set; }
         public DateTime FechaDevolucionReal { get; set; }

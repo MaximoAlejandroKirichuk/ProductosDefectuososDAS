@@ -46,6 +46,7 @@
     <Compile Include="actores\Empleado.cs" />
     <Compile Include="actores\Persona.cs" />
     <Compile Include="actores\Usuario.cs" />
+    <Compile Include="Dimensiones.cs" />
     <Compile Include="IABM.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="Producto.cs" />

@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class ListadoClientes
+    public class ListadoClientesBLL
     {
-        private static ListadoClientes instancia = null;
-        public static ListadoClientes Instancia
+        private static ListadoClientesBLL instancia = null;
+        public static ListadoClientesBLL Instancia
         {
             get
             {
                 if (instancia == null)
-                    instancia = new ListadoClientes();
+                    instancia = new ListadoClientesBLL();
                 return instancia;
             }
         }
 
         public List<Cliente> Clientes { get; set; }
 
-        private ListadoClientes()
+        private ListadoClientesBLL()
         {
             Clientes = new List<Cliente>();
         }

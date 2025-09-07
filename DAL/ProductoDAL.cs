@@ -34,11 +34,50 @@ namespace DAL
             using (SqlConnection con = new SqlConnection(stringConnection))
             {
                 //TODO QUERY
-                string query = @"INSERT INTO Producto ;";
+                string query = @"
+            INSERT INTO Producto (
+                CostoProducto,
+                CondicionProducto,
+                NombreProducto,
+                ProblemaEntrada,
+                Cliente,
+                FechaRecibida,
+                FechaEstimadaDevolucion,
+                Dimensiones,
+                CostoPerdidaManoObra,
+                CostoPerdidaMateriaPrima,
+                FechaDevolucionReal
+            )
+            VALUES (
+                @CostoProducto,
+                @CondicionProducto,
+                @NombreProducto,
+                @ProblemaEntrada,
+                @Cliente,
+                @FechaRecibida,
+                @FechaEstimadaDevolucion,
+                @Dimensiones,
+                @CostoPerdidaManoObra,
+                @CostoPerdidaMateriaPrima,
+                @FechaDevolucionReal
+            );";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     con.Open();
-                    
+                    // Parámetros
+                    cmd.Parameters.AddWithValue("@CostoProducto", objeto.CostoProducto);
+                    cmd.Parameters.AddWithValue("@CondicionProducto", objeto.CondicionProducto.ToString());
+                    cmd.Parameters.AddWithValue("@NombreProducto", objeto.NombreProducto);
+                    cmd.Parameters.AddWithValue("@ProblemaEntrada", objeto.ProblemaEntrada);
+                    cmd.Parameters.AddWithValue("@Cliente", objeto.Cliente.IdCliente);
+                    cmd.Parameters.AddWithValue("@FechaRecibida",objeto.FechaRecibidaProducto);
+                    cmd.Parameters.AddWithValue("@FechaEstimadaDevolucion",objeto.FechaEstimadaDevolucion);
+                    cmd.Parameters.AddWithValue("@Dimensiones", objeto.Dimensiones.ToString());
+                    cmd.Parameters.AddWithValue("@CostoPerdidaManoObra", objeto.CostoManoObra);
+                    cmd.Parameters.AddWithValue("@CostoPerdidaMateriaPrima", objeto.CostoPerdidaMateriaPrima);
+                    cmd.Parameters.AddWithValue("@FechaDevolucionReal", DBNull.Value);
+                   
+
                     return cmd.ExecuteNonQuery() > 0;
                 }
             }
@@ -68,7 +107,7 @@ namespace DAL
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                   
+
                     con.Open();
                     return cmd.ExecuteNonQuery() > 0;
                 }
