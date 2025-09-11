@@ -1,8 +1,11 @@
 ﻿using _0_ProyectoDAS.Idiomas;
-using UI;
+using BE;
+using BE.actores;
+using BLL;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using UI;
 
 namespace UI
 {
@@ -36,7 +39,6 @@ namespace UI
             label2.Text = Res_español.nombre_producto;
             label3.Text = Res_español.Costo_producto_;
             label4.Text = Res_español.Gasto_adicional;
-            label5.Text = Res_español.Cantidad_de_productos_dañada_;
             label10.Text = Res_español.problema_de_entrada;
             label9.Text = Res_español.persona_responsable;
 
@@ -46,8 +48,6 @@ namespace UI
             label6.Text = Res_español.Columna;
 
             groupBox1.Text = Res_español.Estado_del_producto;
-            label15.Text = Res_español.Estado_del_producto;
-            label14.Text = Res_español.Costo_de_perdida_de_materia_prima;
             label8.Text = Res_español.Costo_de_mano_de_obra;
         }
         public void gettextingles()
@@ -61,7 +61,6 @@ namespace UI
             label2.Text = Res_ingles.Product_name;
             label3.Text = Res_ingles.Product_Cost_;
             label4.Text = Res_ingles.Additional_expense;
-            label5.Text = Res_ingles.Damaged_Product_Quantity_;
             label10.Text = Res_ingles.Reported_Issue_;
             label9.Text = Res_ingles.Responsible_person;
 
@@ -71,8 +70,7 @@ namespace UI
             label6.Text = Res_ingles.Column;
 
             groupBox1.Text = Res_ingles.Product_Status_;
-            label15.Text = Res_ingles.Product_Status_;
-            label14.Text = Res_ingles.cost_of_raw_material_loss;
+
             label8.Text = Res_ingles.Labor_cost;
         }
         public void gettextportugues()
@@ -86,7 +84,6 @@ namespace UI
             label2.Text = Res_portugues.Nome_do_Produto;
             label3.Text = Res_portugues.Custo_da_mão_de_obra;
             label4.Text = Res_portugues.Adicionar;
-            label5.Text = Res_portugues.Quantidade_de_Produtos_Danificados;
             label10.Text = Res_portugues.Problema_de_entrada;
             label9.Text = Res_portugues.Responsável;
 
@@ -96,8 +93,6 @@ namespace UI
             label6.Text = Res_portugues.Coluna;
 
             groupBox1.Text = Res_portugues.Estado_do_Produto;
-            label15.Text = Res_portugues.Estado_do_Produto;
-            label14.Text = Res_portugues.Custo_da_perda_de_matéria_prima;
             label8.Text = Res_portugues.Custo_da_mão_de_obra;
         }
 
@@ -111,9 +106,12 @@ namespace UI
             //Servicios.ServiciosUsuariosCSV.EmpleadosActivos();
         }
 
+        private GestorProductosBLL gestorProductoBLL = new GestorProductosBLL();
+
         private void actualizarLista()
         {
-           
+            dataGridViewListadoProductosDefectuosos.DataSource = null;
+            dataGridViewListadoProductosDefectuosos.DataSource = gestorProductoBLL.ObtenerTodos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -174,100 +172,118 @@ namespace UI
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //if (dataGridViewListadoProductosDefectuosos.SelectedRows.Count > 0)
-            //{
-            //    int indice = dataGridViewListadoProductosDefectuosos.SelectedRows[0].Index;
-            //    var p = ListadoProductoDefectuosos.Instancia.ProductosDefectuosos[indice];
-            //    var admin = (Administrador)SesionActiva.Instancia.UsuarioActivo;
-            //    admin.BorrarProducto(p);
-            //    actualizarLista();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Seleccione un producto a borrar ");
-            //    return;
-            //}
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
             if (dataGridViewListadoProductosDefectuosos.SelectedRows.Count > 0)
             {
                 try
                 {
-                    //// Estado
-                    //string estado = comboBoxEstadoProducto.SelectedItem.ToString();
-                    //EstadoProducto estadoProducto = null;
+                    // fila actual
+                    DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
 
-                    //if (estado == "Desechado")
-                    //{
-                    //    // podés guardar este valor si lo necesitás después
-                    //    decimal costoPerdida = Convert.ToDecimal(numericUpDownCostoPerdidaMateriaPrima.Value);
-                    //    estadoProducto = new EstadoProducto(costoPerdida,EstadoProducto.TipoEstado.Desechado);
-                    //}
-                    //else if (estado == "Reacondicionable")
-                    //{
-                    //    decimal costoManoObra = Convert.ToDecimal(numericUpDownCostoManoObra.Value);
-                    //    estadoProducto = new EstadoProducto(costoManoObra,EstadoProducto.TipoEstado.Reacondicionable);
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Ocurrió un error con el estado del producto.");
-                    //    return;
-                    //}
-                    //Producto productoModificado = new Producto
-                    //{
-                    //    //Informacion
-                    //    CodigoProducto = txtCodigoProducto.Text,
-                    //    NombreProducto = txtNombreProducto.Text,
-                    //    CostoProducto = Convert.ToDecimal(numericUpDownCostoProducto.Value),
-                    //    GastoAdicionalAntesDefecto = Convert.ToDecimal(numericUpDownGastoAdicional.Value),
-                    //    CantidadDaniada = Convert.ToInt16(txtCantidadDaniada.Text),
-                    //    ProblemaEntrada = comboBoxProblemaEntrada.Text,
-                    //    PersonaResponsable = new Empleado(comboBoxPersonaResponsable.Text),
-                    //    //Ubicacion
-                    //    UbicacionProducto = new Ubicacion(
-                    //        comboBoxDepositoAlmacenado.Text,
-                    //        Convert.ToInt16(numericUpDownEstante.Value),
-                    //        Convert.ToInt16(numericUpDownNivelEstante.Value),
-                    //        Convert.ToInt16(numericUpDownColumna.Value)
-                    //     ),
-                    //    EstadoProducto = estadoProducto,
-                        
-                        
-                    //};
+                    // código del producto
+                    int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);
 
-                    //var admin = (Administrador)SesionActiva.Instancia.UsuarioActivo;
-                    //admin.ModificarProducto(productoModificado);
-                    //actualizarLista();
+                    bool respuesta = gestorProductoBLL.Borrar(codigoProducto);
+
+                        if (!respuesta)
+                        {
+                            throw new Exception("Ocurrió un error al eliminar el producto.");
+                        }
+
+                        MessageBox.Show("El producto fue eliminado con éxito.");
+                        actualizarLista();
+                    
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Ocurrio un error al crear el producto");
+                    MessageBox.Show("Error al eliminar el producto: " + ex.Message);
                 }
-
             }
             else
             {
-                MessageBox.Show("Seleccione un producto a borrar ");
-                return;
+                MessageBox.Show("Seleccione un producto para eliminar.");
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+           if (dataGridViewListadoProductosDefectuosos.SelectedRows.Count > 0)
+    {
+        try
+        {
+            DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
+
+            // ID producto
+            int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);
+
+            // ⚡ Manejo seguro de ComboBox
+            string condicionSeleccionada = comboBoxCondicionProducto.SelectedItem?.ToString();
+            CondicionProducto condicion = CondicionProducto.Nuevo; // poné el valor default de tu Enum
+            if (!string.IsNullOrEmpty(condicionSeleccionada))
+            {
+                condicion = (CondicionProducto)Enum.Parse(typeof(CondicionProducto), condicionSeleccionada);
+            }
+
+            string problemaSeleccionado = comboBoxProblemaEntrada.SelectedItem?.ToString() ?? "";
+
+            int idCliente = 0;
+            if (comboBoxCliente.SelectedValue != null)
+                idCliente = Convert.ToInt32(comboBoxCliente.SelectedValue);
+
+            // Crear el objeto producto
+            var productoModificado = new Producto()
+            {
+                CodigoProducto = codigoProducto,
+                NombreProducto = txtNombreProducto.Text,
+                CostoProducto = numericUpDownCostoProducto.Value,
+                CondicionProducto = condicion,
+                ProblemaEntrada = problemaSeleccionado,
+                Cliente = new Cliente()
+                {
+                    IdCliente = idCliente
+                },
+                CostoManoObra = numericUpDownCostoManoObra.Value,
+                CostoPerdidaMateriaPrima = numericUpDownCostoPerdidaMateriaPrima.Value,
+                Dimensiones = new Dimensiones()
+                {
+                    Alto = numericUpDownAlto.Value,
+                    Ancho = numericUpDownAncho.Value,
+                    Largo = numericUpDownLargo.Value
+                },
+            };
+
+            var respuesta = gestorProductoBLL.Modificar(productoModificado);
+
+            if (!respuesta)
+                throw new Exception("Ocurrió un error al modificar el producto.");
+
+            MessageBox.Show("El producto se modificó con éxito.");
+            actualizarLista();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error al modificar el producto: " + ex.Message);
+        }
+    }
+    else
+    {
+        MessageBox.Show("Seleccione un producto para modificar.");
+    }
         }
 
         private void comboBoxEstadoProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string respuesta = comboBoxEstadoProducto.SelectedItem.ToString();
+            //string respuesta = comboBoxEstadoProducto.SelectedItem.ToString();
 
-            if (respuesta == "Desechado")
-            {
-                numericUpDownCostoPerdidaMateriaPrima.Enabled = true;
-                numericUpDownCostoManoObra.Enabled = false;
-            }
-            else
-            {
-                numericUpDownCostoManoObra.Enabled = true;
-                numericUpDownCostoPerdidaMateriaPrima.Enabled = false;
-            }
+            //if (respuesta == "Desechado")
+            //{
+            //    numericUpDownCostoPerdidaMateriaPrima.Enabled = true;
+            //    numericUpDownCostoManoObra.Enabled = false;
+            //}
+            //else
+            //{
+            //    numericUpDownCostoManoObra.Enabled = true;
+            //    numericUpDownCostoPerdidaMateriaPrima.Enabled = false;
+            //}
         }
         
 
@@ -293,5 +309,39 @@ namespace UI
                 mainForm.Show();
             }
         }
+
+        private void dataGridViewListadoProductosDefectuosos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dataGridViewListadoProductosDefectuosos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewListadoProductosDefectuosos.CurrentRow != null)
+            {
+                DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
+
+                txtCodigoProducto.Text = fila.Cells["CodigoProducto"].Value.ToString();
+                txtNombreProducto.Text = fila.Cells["NombreProducto"].Value.ToString();
+
+                numericUpDownCostoProducto.Value = Convert.ToDecimal(fila.Cells["CostoProducto"].Value);
+                //numericUpDownCostoManoObra.Value = Convert.ToDecimal(fila.Cells["CostoManoObra"].Value);
+                //numericUpDownCostoPerdidaMateriaPrima.Value = Convert.ToDecimal(fila.Cells["CostoPerdidaMateriaPrima"].Value);
+
+                comboBoxCondicionProducto.SelectedItem = fila.Cells["CondicionProducto"].Value.ToString();
+                comboBoxProblemaEntrada.SelectedItem = fila.Cells["ProblemaEntrada"].Value.ToString();
+
+                comboBoxCliente.SelectedValue = new Cliente()
+                {
+                    IdCliente = Convert.ToInt32(comboBoxCliente.SelectedValue)
+                };
+            }
+        }
+
+        private void numericUpDownCostoPerdidaMateriaPrima_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

@@ -25,5 +25,10 @@ namespace BLL
         {
             return productoMPP.Modificar(objeto);
         }
+
+        public List<Producto> ObtenerTodos()
+        {
+            return productoMPP.ObtenerTodos();
+        }
     }
 }

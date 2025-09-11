@@ -18,6 +18,11 @@ namespace BE
             Largo = largo;
             Alto = alto;
         }
+
+        public Dimensiones()
+        {
+        }
+
         public override string ToString()
         {
             return $"Ancho:{Ancho}xLargo{Largo}xAlto{Alto}";

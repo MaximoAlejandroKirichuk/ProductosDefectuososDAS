@@ -258,7 +258,6 @@ namespace UI
 
                 //ListadoProductoDefectuosos.Instancia.agregarProducto(nuevoProductoDefectuoso);
 
-
             }
             catch (Exception ex)
             {
