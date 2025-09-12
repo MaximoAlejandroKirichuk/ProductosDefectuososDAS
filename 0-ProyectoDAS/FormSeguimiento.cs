@@ -1,5 +1,6 @@
-﻿using UI;
+﻿using _0_ProyectoDAS.Idiomas;
 using BE;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using _0_ProyectoDAS.Idiomas;
+using UI;
+using static System.Net.WebRequestMethods;
 
 
 namespace UI
@@ -40,45 +42,21 @@ namespace UI
         public void gettextespañol()
         {
             groupBox1.Text = Res_español.Seguimiento;
-            groupBox2.Text = Res_español.informacion_producto;
 
-            btnAgregarPaso.Text = Res_español.Agregar;
-            btnModificar.Text = Res_español.Modificar;
-            btnBorrar.Text = Res_español.Borrar;
-            label1.Text = Res_español.codigo_producto;
-            label2.Text = Res_español.nombre_producto;
-            label10.Text = Res_español.problema_de_entrada;
             label13.Text = Res_español.Paso_al_seguimiento; 
-            label9.Text = Res_español.persona_responsable;
 
         }
         public void gettextingles()
         {
             groupBox1.Text = Res_ingles.Follow_up;
-            groupBox2.Text = Res_ingles.Product_information;
 
-            btnAgregarPaso.Text = Res_ingles.Add;
-            btnModificar.Text = Res_ingles.Modify;
-            btnBorrar.Text = Res_ingles.Delete;
-            label1.Text = Res_ingles.Product_code;
-            label2.Text = Res_ingles.Product_name;
-            label10.Text = Res_ingles.Reported_Issue_;
             label13.Text = Res_ingles.Steps_of_Follow_up;
-            label9.Text = Res_ingles.Responsible_person;
         }
         public void gettextportugues()
         {
             groupBox1.Text = Res_portugues.Acompanhamento;
-            groupBox2.Text = Res_portugues.Informações_do_produto;
 
-            btnAgregarPaso.Text = Res_portugues.Adicionar;
-            btnModificar.Text = Res_portugues.Modificar;
-            btnBorrar.Text = Res_portugues.Deletar;
-            label1.Text = Res_portugues.Condição_do_produto;
-            label2.Text = Res_portugues.Nome_do_Produto;
-            label10.Text = Res_portugues.Problema_de_entrada;
             label13.Text = Res_portugues.steps_Acompanhamento;
-            label9.Text = Res_portugues.Pessoa_Responsável;
         }
 
 
@@ -124,7 +102,7 @@ namespace UI
         private void dataGridViewSeguimiento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica que se haya hecho clic en una fila valida
-            if (e.RowIndex < 0 || e.RowIndex >= dataGridViewSeguimiento.Rows.Count)
+            if (e.RowIndex < 0 || e.RowIndex >= dataGridViewListadoProductosDefectuosos.Rows.Count)
                 return;
 
             // Obtener el índice real de la fila seleccionada
@@ -133,7 +111,7 @@ namespace UI
             // Validación extra por seguridad
             try
             {
-                Seguimiento s = (Seguimiento)dataGridViewSeguimiento.Rows[e.RowIndex].DataBoundItem;
+                Seguimiento s = (Seguimiento)dataGridViewListadoProductosDefectuosos.Rows[e.RowIndex].DataBoundItem;
 
                 // Mostrar detalles en controles auxiliares
                 DateTime fecha = s.FechaRegistro;
@@ -154,7 +132,8 @@ namespace UI
         {
             //GESTOR CLASE
             try
-            {   
+            {  
+                
                 MessageBox.Show("Paso agregado correctamente.");
             }
             catch (Exception ex)
@@ -249,7 +228,27 @@ namespace UI
             }
         }
 
-        
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            if(dataGridViewListadoProductosDefectuosos.SelectedRows.Count > 0)
+            {
+                DateTime fecha = dateTimePickerFecha.Value;
+                string mensaje = txtAgregarPaso.Text;
+
+                // Responsable = usuario actual
+                Empleado Usuario = (Empleado)SesionActiva.Instancia.UsuarioActivo;
+
+                // Código producto
+                DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
+                int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);
+
+                Seguimiento nuevo = new Seguimiento(fecha, mensaje, Usuario, codigoProducto);
+
+                listBox1.Items.Add(nuevo);
+                MessageBox.Show("Seguimiento agregado correctamente.");
+
+            }
+        }
     }
 
 }

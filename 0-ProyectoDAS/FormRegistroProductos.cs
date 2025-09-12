@@ -276,8 +276,8 @@ namespace UI
             //string mensaje = txtAgregarPaso.Text;
             //string creadorSeguimiento = SesionActiva.Instancia.UsuarioActivo.Fullname;
             //string codigo = txtCodigoProducto.Text;
-            //Seguimiento nuevo = new Seguimiento(dia,mensaje, creadorSeguimiento,codigo);
-            
+            //Seguimiento nuevo = new Seguimiento(dia, mensaje, creadorSeguimiento, codigo);
+
             //listBox1.Items.Add(nuevo);
         }
 
