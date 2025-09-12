@@ -201,8 +201,8 @@
             this.numericUpDownCostoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownCostoProducto.Location = new System.Drawing.Point(40, 201);
             this.numericUpDownCostoProducto.Maximum = new decimal(new int[] {
-            1000000,
-            0,
+            -1981284353,
+            -1966660860,
             0,
             0});
             this.numericUpDownCostoProducto.Name = "numericUpDownCostoProducto";
@@ -342,6 +342,11 @@
             this.numericUpDownCostoPerdidaMateriaPrima.Enabled = false;
             this.numericUpDownCostoPerdidaMateriaPrima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownCostoPerdidaMateriaPrima.Location = new System.Drawing.Point(110, 162);
+            this.numericUpDownCostoPerdidaMateriaPrima.Maximum = new decimal(new int[] {
+            -1981284353,
+            -1966660860,
+            0,
+            0});
             this.numericUpDownCostoPerdidaMateriaPrima.Name = "numericUpDownCostoPerdidaMateriaPrima";
             this.numericUpDownCostoPerdidaMateriaPrima.Size = new System.Drawing.Size(140, 26);
             this.numericUpDownCostoPerdidaMateriaPrima.TabIndex = 9;
@@ -363,6 +368,11 @@
             this.numericUpDownCostoManoObra.Enabled = false;
             this.numericUpDownCostoManoObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownCostoManoObra.Location = new System.Drawing.Point(110, 256);
+            this.numericUpDownCostoManoObra.Maximum = new decimal(new int[] {
+            -1981284353,
+            -1966660860,
+            0,
+            0});
             this.numericUpDownCostoManoObra.Name = "numericUpDownCostoManoObra";
             this.numericUpDownCostoManoObra.Size = new System.Drawing.Size(140, 26);
             this.numericUpDownCostoManoObra.TabIndex = 10;

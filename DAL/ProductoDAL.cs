@@ -109,6 +109,7 @@ namespace DAL
                 {
 
                     con.Open();
+
                     return cmd.ExecuteNonQuery() > 0;
                 }
             }

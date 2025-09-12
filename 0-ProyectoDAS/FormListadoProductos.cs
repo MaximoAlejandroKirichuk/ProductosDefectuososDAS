@@ -131,13 +131,13 @@ namespace UI
             //int indice = e.RowIndex;
 
             //// Validación extra por seguridad
-            
+
             //if (indice >= 0 && indice < ListadoProductoDefectuosos.Instancia.ProductosDefectuosos.Count)
             //{
             //    Producto p = ListadoProductoDefectuosos.Instancia.ProductosDefectuosos[indice];
             //    try
             //    {
-                   
+
             //        //INFORMACION PRODUCTO
             //        txtCodigoProducto.Text = p.CodigoProducto;
             //        txtNombreProducto.Text = p.NombreProducto;
@@ -162,7 +162,7 @@ namespace UI
             //    {
             //        MessageBox.Show("Ocurrio un error al mostrar los datos del producto: " + p.NombreProducto );
             //    }
-                
+
             //}
             //else
             //{
@@ -184,14 +184,14 @@ namespace UI
 
                     bool respuesta = gestorProductoBLL.Borrar(codigoProducto);
 
-                        if (!respuesta)
-                        {
-                            throw new Exception("Ocurrió un error al eliminar el producto.");
-                        }
+                    if (!respuesta)
+                    {
+                        throw new Exception("Ocurrió un error al eliminar el producto.");
+                    }
 
-                        MessageBox.Show("El producto fue eliminado con éxito.");
-                        actualizarLista();
-                    
+                    MessageBox.Show("El producto fue eliminado con éxito.");
+                    actualizarLista();
+
                 }
                 catch (Exception ex)
                 {
@@ -203,71 +203,79 @@ namespace UI
                 MessageBox.Show("Seleccione un producto para eliminar.");
             }
         }
-
-        private void btnModificar_Click(object sender, EventArgs e)
+        private CondicionProducto ObtenerCondicionProductoSeleccionada()
         {
-           if (dataGridViewListadoProductosDefectuosos.SelectedRows.Count > 0)
-    {
-        try
-        {
-            DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
+            string seleccion = comboBoxCondicionProducto.SelectedItem?.ToString();
 
-            // ID producto
-            int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);
-
-            // ⚡ Manejo seguro de ComboBox
-            string condicionSeleccionada = comboBoxCondicionProducto.SelectedItem?.ToString();
-            CondicionProducto condicion = CondicionProducto.Nuevo; // poné el valor default de tu Enum
-            if (!string.IsNullOrEmpty(condicionSeleccionada))
+            if (!string.IsNullOrWhiteSpace(seleccion) && Enum.TryParse(seleccion, out CondicionProducto condicion))
             {
-                condicion = (CondicionProducto)Enum.Parse(typeof(CondicionProducto), condicionSeleccionada);
+                return condicion;
             }
 
+            throw new InvalidOperationException("Debe seleccionar una condición válida del producto.");
+        }
+
+        private Producto ObtenerProductoDesdeFormulario()
+        {
+            var fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
+
+            int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);
             string problemaSeleccionado = comboBoxProblemaEntrada.SelectedItem?.ToString() ?? "";
 
-            int idCliente = 0;
-            if (comboBoxCliente.SelectedValue != null)
-                idCliente = Convert.ToInt32(comboBoxCliente.SelectedValue);
+            int idCliente = comboBoxCliente.SelectedValue != null
+                ? Convert.ToInt32(comboBoxCliente.SelectedValue)
+                : 0;
 
-            // Crear el objeto producto
-            var productoModificado = new Producto()
+            return new Producto
             {
                 CodigoProducto = codigoProducto,
                 NombreProducto = txtNombreProducto.Text,
                 CostoProducto = numericUpDownCostoProducto.Value,
-                CondicionProducto = condicion,
+                CondicionProducto = ObtenerCondicionProductoSeleccionada(),
                 ProblemaEntrada = problemaSeleccionado,
-                Cliente = new Cliente()
+                Cliente = new Cliente
                 {
                     IdCliente = idCliente
                 },
                 CostoManoObra = numericUpDownCostoManoObra.Value,
                 CostoPerdidaMateriaPrima = numericUpDownCostoPerdidaMateriaPrima.Value,
-                Dimensiones = new Dimensiones()
+                Dimensiones = new Dimensiones
                 {
                     Alto = numericUpDownAlto.Value,
                     Ancho = numericUpDownAncho.Value,
                     Largo = numericUpDownLargo.Value
-                },
+                }
             };
-
-            var respuesta = gestorProductoBLL.Modificar(productoModificado);
-
-            if (!respuesta)
-                throw new Exception("Ocurrió un error al modificar el producto.");
-
-            MessageBox.Show("El producto se modificó con éxito.");
-            actualizarLista();
         }
-        catch (Exception ex)
+
+        private bool HayProductoSeleccionado()
         {
-            MessageBox.Show("Error al modificar el producto: " + ex.Message);
+            return dataGridViewListadoProductosDefectuosos.SelectedRows.Count > 0;
         }
-    }
-    else
-    {
-        MessageBox.Show("Seleccione un producto para modificar.");
-    }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (!HayProductoSeleccionado())
+            {
+                MessageBox.Show("Seleccione un producto para modificar.");
+                return;
+            }
+
+            try
+            {
+                Producto productoModificado = ObtenerProductoDesdeFormulario();
+                bool respuesta = gestorProductoBLL.Modificar(productoModificado);
+
+                if (!respuesta)
+                    throw new Exception("Ocurrió un error al modificar el producto.");
+
+                MessageBox.Show("El producto se modificó con éxito.");
+                actualizarLista();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el producto: " + ex.Message);
+            }
         }
 
         private void comboBoxEstadoProducto_SelectedIndexChanged(object sender, EventArgs e)
@@ -285,7 +293,7 @@ namespace UI
             //    numericUpDownCostoPerdidaMateriaPrima.Enabled = false;
             //}
         }
-        
+
 
         private void FormListadoProductos_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -312,7 +320,7 @@ namespace UI
 
         private void dataGridViewListadoProductosDefectuosos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void dataGridViewListadoProductosDefectuosos_SelectionChanged(object sender, EventArgs e)
@@ -325,8 +333,8 @@ namespace UI
                 txtNombreProducto.Text = fila.Cells["NombreProducto"].Value.ToString();
 
                 numericUpDownCostoProducto.Value = Convert.ToDecimal(fila.Cells["CostoProducto"].Value);
-                //numericUpDownCostoManoObra.Value = Convert.ToDecimal(fila.Cells["CostoManoObra"].Value);
-                //numericUpDownCostoPerdidaMateriaPrima.Value = Convert.ToDecimal(fila.Cells["CostoPerdidaMateriaPrima"].Value);
+                numericUpDownCostoManoObra.Value = Convert.ToDecimal(fila.Cells["CostoManoObra"].Value);
+                numericUpDownCostoPerdidaMateriaPrima.Value = Convert.ToDecimal(fila.Cells["CostoPerdidaMateriaPrima"].Value);
 
                 comboBoxCondicionProducto.SelectedItem = fila.Cells["CondicionProducto"].Value.ToString();
                 comboBoxProblemaEntrada.SelectedItem = fila.Cells["ProblemaEntrada"].Value.ToString();
