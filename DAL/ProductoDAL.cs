@@ -101,15 +101,50 @@ namespace DAL
         {
             using (SqlConnection con = new SqlConnection(stringConnection))
             {
-                string query = @"UPDATE Producto 
-                            SET NombreCompleto = @NombreCompleto
-                            WHERE CodigoProducto = @CodigoProducto";
+                string query = @"UPDATE Producto
+                         SET CostoProducto = @CostoProducto,
+                             CondicionProducto = @CondicionProducto,
+                             NombreProducto = @NombreProducto,
+                             ProblemaEntrada = @ProblemaEntrada,
+                             Cliente = @Cliente,
+                             FechaRecibida = @FechaRecibida,
+                             FechaEstimadaDevolucion = @FechaEstimadaDevolucion,
+                             Dimensiones = @Dimensiones,
+                             CostoPerdidaManoObra = @CostoPerdidaManoObra,
+                             CostoPerdidaMateriaPrima = @CostoPerdidaMateriaPrima,
+                             FechaDevolucionReal = @FechaDevolucionReal
+                         WHERE CodigoProducto = @CodigoProducto";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
+                    // Parámetros
+                    cmd.Parameters.AddWithValue("@CodigoProducto", objeto.CodigoProducto);
+                    cmd.Parameters.AddWithValue("@CostoProducto", objeto.CostoProducto);
+                    cmd.Parameters.AddWithValue("@CondicionProducto", objeto.CondicionProducto);
+                    cmd.Parameters.AddWithValue("@NombreProducto", objeto.NombreProducto);
+                    cmd.Parameters.AddWithValue("@ProblemaEntrada", objeto.ProblemaEntrada);
+                    cmd.Parameters.AddWithValue("@Cliente", objeto.Cliente.IdCliente);
+                    cmd.Parameters.AddWithValue("@Dimensiones", objeto.Dimensiones.ToString());
+                    cmd.Parameters.AddWithValue("@CostoPerdidaManoObra", objeto.CostoManoObra);
+                    cmd.Parameters.AddWithValue("@CostoPerdidaMateriaPrima", objeto.CostoPerdidaMateriaPrima);
+
+                    //// Manejo de NULL para FechaDevolucionReal
+                    //if (objeto.FechaDevolucionReal.HasValue)
+                    //    cmd.Parameters.AddWithValue("@FechaDevolucionReal", objeto.FechaDevolucionReal.Value);
+                    //else
+                    //    cmd.Parameters.AddWithValue("@FechaDevolucionReal", DBNull.Value);
+
+
+                    cmd.Parameters.AddWithValue("@FechaRecibida",
+                        objeto.FechaRecibidaProducto == DateTime.MinValue ? (object)DBNull.Value : objeto.FechaRecibidaProducto);
+
+                    cmd.Parameters.AddWithValue("@FechaEstimadaDevolucion",
+                        objeto.FechaEstimadaDevolucion == DateTime.MinValue ? (object)DBNull.Value : objeto.FechaEstimadaDevolucion);
+
+                    cmd.Parameters.AddWithValue("@FechaDevolucionReal",
+                        (object)objeto.FechaDevolucionReal ?? DBNull.Value);
 
                     con.Open();
-
                     return cmd.ExecuteNonQuery() > 0;
                 }
             }

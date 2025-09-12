@@ -23,7 +23,7 @@ namespace BE
         public Dimensiones Dimensiones { get; set; }
         public decimal CostoPerdidaMateriaPrima { get; set; }
         public decimal CostoManoObra { get; set; }
-        public DateTime FechaDevolucionReal { get; set; }
+        public DateTime? FechaDevolucionReal { get; set; }
 
         public Producto() { }
 

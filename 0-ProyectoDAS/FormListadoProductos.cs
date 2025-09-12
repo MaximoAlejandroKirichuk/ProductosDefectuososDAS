@@ -222,8 +222,8 @@ namespace UI
             int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);
             string problemaSeleccionado = comboBoxProblemaEntrada.SelectedItem?.ToString() ?? "";
 
-            int idCliente = comboBoxCliente.SelectedValue != null
-                ? Convert.ToInt32(comboBoxCliente.SelectedValue)
+            int idCliente = comboBoxCliente.SelectedItem.ToString() != null
+                ? Convert.ToInt32(comboBoxCliente.SelectedItem.ToString())
                 : 0;
 
             return new Producto
@@ -260,7 +260,6 @@ namespace UI
                 MessageBox.Show("Seleccione un producto para modificar.");
                 return;
             }
-
             try
             {
                 Producto productoModificado = ObtenerProductoDesdeFormulario();
