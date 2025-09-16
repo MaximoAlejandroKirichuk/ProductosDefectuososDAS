@@ -1,0 +1,62 @@
+﻿using BE;
+using BLL;
+using DAL;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MPP
+{
+    public class SeguimientoMPP : IGestorSeguimiento
+    {
+        public SeguimientoDAL seguimientoDAL = new SeguimientoDAL();
+        public bool AgregarSeguimientos(List<Seguimiento> nuevosSeguimientos)
+        {
+            return seguimientoDAL.GuardarSeguimiento(nuevosSeguimientos);
+        }
+
+        public bool BorrarSeguimiento(Seguimiento seguimientoABorrar)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ModificarEstadoSeguimiento()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ModificarSeguimiento(DateTime fechaOriginal, Seguimiento seguimientoModificado)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Seguimiento> ObtenerSeguimientosPorProducto(int codigoProducto)
+        {
+            DataTable dt = seguimientoDAL.ObtenerSeguimientoPorProductos(codigoProducto);
+            List<Seguimiento> lista = new List<Seguimiento>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Seguimiento s = new Seguimiento
+                {
+                    CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]),
+                    CodigoProducto = Convert.ToInt32(row["CodigoProducto"]),
+                    Mensaje = row["Mensaje"].ToString(),
+                    Responsable = new Empleado
+                    {
+                        IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),  
+                    },
+                    FechaRegistro = Convert.ToDateTime(row["FechaRegistro"]),
+                };
+
+                lista.Add(s);
+            }
+
+            return lista;
+        }
+
+    }
+}

@@ -27,7 +27,8 @@ namespace UI
             AplicarIdioma(idioma);
 
         }
-
+        GestorSeguimientoBLL gestorSeguimientoBLL = new GestorSeguimientoBLL();
+        GestorProductosBLL gestorProductosBLL = new GestorProductosBLL();
         public void AplicarIdioma(int idiomanuevo)
         {
             if (idiomanuevo == 1)
@@ -60,22 +61,30 @@ namespace UI
         }
 
 
-        private void actualizarLista()
+        private void ActualizarLista(int codigoProducto)
         {
-            
+            //TODO: HARDCODEADO 
+
+            dataGridViewListadoProductosDefectuosos.DataSource = null;
+            dataGridViewListadoProductosDefectuosos.DataSource = gestorSeguimientoBLL.ObtenerSeguimientosPorProducto(codigoProducto);
+        }
+        private void CargarListadoProductos()
+        {
+            //TODO: HARDCODEADO 
+
+            DGVProductos.DataSource = null;
+            DGVProductos.DataSource = gestorProductosBLL.ObtenerTodos();
         }
         private void FormSeguimiento_Load(object sender, EventArgs e)
         {
-            
-            
+            //TODO: HARDCODEADO 
+            CargarListadoProductos();
+            ActualizarLista(1);
         }
 
 
-        
-        public void CargarDatosArchivosSeguimiento(int codigoProducto)
-        {
-           
-        }
+
+       
 
         private void dataGridViewListadoProductosDefectuosos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -223,30 +232,64 @@ namespace UI
             }
             if(resultado == DialogResult.Yes)
             {
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
+                this.Close();
             }
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if(dataGridViewListadoProductosDefectuosos.SelectedRows.Count > 0)
+            if (DGVProductos.SelectedRows.Count > 0)
             {
                 DateTime fecha = dateTimePickerFecha.Value;
                 string mensaje = txtAgregarPaso.Text;
 
                 // Responsable = usuario actual
-                Empleado Usuario = (Empleado)SesionActiva.Instancia.UsuarioActivo;
+                Usuario Usuario = (Usuario)SesionActiva.Instancia.UsuarioActivo;
 
                 // Código producto
                 DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
-                int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);
+
+                //TODO: HARDCODEADO
+                int codigoProducto = 1;
 
                 Seguimiento nuevo = new Seguimiento(fecha, mensaje, Usuario, codigoProducto);
 
                 listBox1.Items.Add(nuevo);
                 MessageBox.Show("Seguimiento agregado correctamente.");
 
+        }
+    }
+        
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
+            int codigoProducto = Convert.ToInt32("1"); //TODO: HARDCODEADO
+            List<Seguimiento> lista = new List<Seguimiento>();
+
+            foreach (Seguimiento s in listBox1.Items)
+            {
+                lista.Add(s);
+            }
+
+            try
+            {
+                bool ok = gestorSeguimientoBLL.AgregarSeguimientos(lista);
+                if (ok)
+                {
+                    MessageBox.Show("Seguimientos guardados correctamente.");
+                    listBox1.Items.Clear();
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception("Error al guardar seguimientos.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

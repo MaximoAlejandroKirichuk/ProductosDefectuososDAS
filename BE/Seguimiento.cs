@@ -12,10 +12,10 @@ namespace BE
         public int CodigoProducto { get; set; }
         public DateTime FechaRegistro { get; set; }
         public string Mensaje { get; set; }
-        public Empleado Responsable { get; set; }
+        public Usuario Responsable { get; set; }
         
 
-        public Seguimiento(DateTime fecha, string mensaje, Empleado responsable, int codigoProducto)
+        public Seguimiento(DateTime fecha, string mensaje, Usuario responsable, int codigoProducto)
         {
             this.FechaRegistro = fecha;
             this.Mensaje = mensaje;
@@ -28,7 +28,7 @@ namespace BE
 
         public override string ToString()
         {
-            return $"Fecha: {FechaRegistro:yyyy-MM-dd HH:mm:ss} | Mensaje: {Mensaje} | Responsable: {Responsable} | Código Producto: {CodigoProducto}";
+            return $"Fecha: {FechaRegistro:yyyy-MM-dd HH:mm:ss} | Mensaje: {Mensaje} | Responsable: {Responsable.IdUsuario} | Código Producto: {CodigoProducto}";
         }
 
         public object Clone()

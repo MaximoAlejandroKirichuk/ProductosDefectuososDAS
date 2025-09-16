@@ -47,8 +47,7 @@
     <Compile Include="ListadoClientesBLL.cs" />
     <Compile Include="ServiciosUsuarios.cs" />
     <Compile Include="GestorClienteBLL.cs" />
-    <Compile Include="GestorSeguimientos.cs" />
-    <Compile Include="Interfaces\IGestorSeguimiento.cs" />
+    <Compile Include="GestorSeguimientoBLL.cs" />
     <Compile Include="ListadoEmpleados.cs" />
     <Compile Include="ListadoProductoDefectuosos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

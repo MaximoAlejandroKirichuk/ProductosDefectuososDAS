@@ -30,13 +30,16 @@
         {
             this.dataGridViewListadoProductosDefectuosos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.txtAgregarPaso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.DGVProductos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoProductosDefectuosos)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewListadoProductosDefectuosos
@@ -50,6 +53,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.BtnAgregar);
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.dateTimePickerFecha);
@@ -62,6 +66,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seguimiento ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(495, 325);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(111, 46);
+            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.Location = new System.Drawing.Point(342, 325);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(111, 46);
+            this.BtnAgregar.TabIndex = 13;
+            this.BtnAgregar.Text = "Agregar";
+            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // listBox1
             // 
@@ -103,22 +127,21 @@
             this.label13.TabIndex = 7;
             this.label13.Text = "Paso al seguiemiento";
             // 
-            // BtnAgregar
+            // DGVProductos
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(461, 325);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(111, 46);
-            this.BtnAgregar.TabIndex = 13;
-            this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.UseVisualStyleBackColor = true;
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            this.DGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVProductos.Location = new System.Drawing.Point(753, 12);
+            this.DGVProductos.Name = "DGVProductos";
+            this.DGVProductos.Size = new System.Drawing.Size(506, 608);
+            this.DGVProductos.TabIndex = 13;
             // 
             // FormSeguimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(711, 632);
+            this.ClientSize = new System.Drawing.Size(1301, 632);
+            this.Controls.Add(this.DGVProductos);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewListadoProductosDefectuosos);
             this.Name = "FormSeguimiento";
@@ -128,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoProductosDefectuosos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,5 +165,7 @@
         private System.Windows.Forms.TextBox txtAgregarPaso;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button BtnAgregar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridView DGVProductos;
     }
 }
