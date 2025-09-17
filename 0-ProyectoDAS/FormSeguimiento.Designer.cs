@@ -37,6 +37,7 @@
             this.txtAgregarPaso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.DGVProductos = new System.Windows.Forms.DataGridView();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoProductosDefectuosos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
@@ -53,6 +54,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.BtnAgregar);
             this.groupBox1.Controls.Add(this.listBox1);
@@ -69,7 +71,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(495, 325);
+            this.btnGuardar.Location = new System.Drawing.Point(570, 324);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(111, 46);
             this.btnGuardar.TabIndex = 14;
@@ -79,7 +81,7 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(342, 325);
+            this.BtnAgregar.Location = new System.Drawing.Point(444, 325);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(111, 46);
             this.BtnAgregar.TabIndex = 13;
@@ -105,7 +107,7 @@
             this.dateTimePickerFecha.MaxDate = new System.DateTime(2040, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFecha.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFecha.Name = "dateTimePickerFecha";
-            this.dateTimePickerFecha.Size = new System.Drawing.Size(296, 20);
+            this.dateTimePickerFecha.Size = new System.Drawing.Size(226, 20);
             this.dateTimePickerFecha.TabIndex = 10;
             // 
             // txtAgregarPaso
@@ -134,6 +136,17 @@
             this.DGVProductos.Name = "DGVProductos";
             this.DGVProductos.Size = new System.Drawing.Size(506, 608);
             this.DGVProductos.TabIndex = 13;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(257, 336);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(162, 22);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "Seguimiento Publico";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // FormSeguimiento
             // 
@@ -167,5 +180,6 @@
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView DGVProductos;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

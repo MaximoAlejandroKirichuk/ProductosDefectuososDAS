@@ -230,10 +230,6 @@ namespace UI
             {
                 e.Cancel = true; // esto cancela el cierre del formulario
             }
-            if(resultado == DialogResult.Yes)
-            {
-                this.Close();
-            }
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -252,7 +248,14 @@ namespace UI
                 //TODO: HARDCODEADO
                 int codigoProducto = 1;
 
-                Seguimiento nuevo = new Seguimiento(fecha, mensaje, Usuario, codigoProducto);
+
+                Seguimiento nuevo = new Seguimiento(
+                    fecha,
+                    mensaje,
+                    Usuario,
+                    codigoProducto,
+                    checkBox1.Checked ? Seguimiento.Visibilidad.Publica : Seguimiento.Visibilidad.Privada
+                );
 
                 listBox1.Items.Add(nuevo);
                 MessageBox.Show("Seguimiento agregado correctamente.");

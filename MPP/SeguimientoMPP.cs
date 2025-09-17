@@ -47,10 +47,37 @@ namespace MPP
                     Mensaje = row["Mensaje"].ToString(),
                     Responsable = new Empleado
                     {
-                        IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),  
+                        IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),
+                        NombreCompleto = row["NombreResponsable"].ToString()
                     },
                     FechaRegistro = Convert.ToDateTime(row["FechaRegistro"]),
+                    TipoVisibilidad = (Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"])
+
                 };
+                lista.Add(s);
+            }
+            return lista;
+        }
+        public List<Seguimiento> ObtenerSeguimientosPublicosPorProducto(int codigoProducto)
+        {
+            DataTable dt = seguimientoDAL.ObtenerSeguimientosPublicosPorProducto(codigoProducto);
+            List<Seguimiento> lista = new List<Seguimiento>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Seguimiento s = new Seguimiento(
+                    Convert.ToDateTime(row["FechaRegistro"]),
+                    row["Mensaje"].ToString(),
+                    new Empleado
+                    {
+                        IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),
+                        NombreCompleto = row["NombreResponsable"].ToString()
+                    },
+                    Convert.ToInt32(row["CodigoProducto"]),
+                    (Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"])
+                );
+
+                s.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
 
                 lista.Add(s);
             }

@@ -310,11 +310,6 @@ namespace UI
             {
                 e.Cancel = true; // esto cancela el cierre del formulario
             }
-            if (resultado == DialogResult.Yes)
-            {
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
-            }
         }
 
         private void dataGridViewListadoProductosDefectuosos_CellContentClick(object sender, DataGridViewCellEventArgs e)

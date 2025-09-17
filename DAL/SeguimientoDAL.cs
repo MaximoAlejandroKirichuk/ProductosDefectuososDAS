@@ -32,6 +32,8 @@ namespace DAL
                             cmd.Parameters.AddWithValue("@IDPersonalResponsable", s.Responsable.IdUsuario);
                             cmd.Parameters.AddWithValue("@Mensaje", s.Mensaje);
                             cmd.Parameters.AddWithValue("@FechaRegistro", s.FechaRegistro);
+                            cmd.Parameters.AddWithValue("@Visibilidad", (int)s.TipoVisibilidad); 
+
 
                             cmd.ExecuteNonQuery();
                         }
@@ -56,7 +58,25 @@ namespace DAL
             using (SqlConnection conn = new SqlConnection(stringConnection))
             {
                 conn.Open();
-                string query = "SELECT * FROM Seguimiento WHERE CodigoProducto = @CodigoProducto";
+                //VOLVER A PONER ESTO O BORRARLO SINO FUNCIONAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                //string query = "SELECT * FROM Seguimiento WHERE CodigoProducto = @CodigoProducto";
+                string query = @"SELECT s.CodigoSeguimiento,
+                                 s.CodigoProducto,
+                                 s.Mensaje,
+                                 s.FechaRegistro,
+                                 s.IDPersonalResponsable,
+                                 s.Visibilidad,
+                                 e.NombreCompleto AS NombreResponsable
+                                 FROM Seguimiento s
+                                 INNER JOIN Empleado e ON s.IDPersonalResponsable = e.IdEmpleado
+                                 WHERE s.CodigoProducto = @CodigoProducto";
+
+                //esto lo escribe luki no gpt
+                //la parte donde dice: e.NombreCompleto AS NombreResponsable ; lo que hace es agarrar de la tabla e. osea empleado trae 
+                //el nombre del empleado y le ponemos como nombre NombreResponsable. por eso le pone el AS 
+                //por que dice traete el nombre de la tabla e. COMO/AS NombreResponsable.
+
+
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -71,7 +91,36 @@ namespace DAL
 
             return dt;
         }
+        public DataTable ObtenerSeguimientosPublicosPorProducto(int codigoProducto)
+        {
+            DataTable dt = new DataTable();
 
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                conn.Open();
+                string query = @"
+                                SELECT s.CodigoSeguimiento,
+                                       s.CodigoProducto,
+                                       s.Mensaje,
+                                       s.FechaRegistro,
+                                       s.IDPersonalResponsable,
+                                       s.Visibilidad,
+                                       e.NombreCompleto AS NombreResponsable
+                                FROM Seguimiento s
+                                INNER JOIN Empleado e ON s.IDPersonalResponsable = e.IdEmpleado
+                                WHERE s.CodigoProducto = @CodigoProducto
+                                  AND s.Visibilidad = 0"; // 0 = Publica
 
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@CodigoProducto", codigoProducto);
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
     }
 }

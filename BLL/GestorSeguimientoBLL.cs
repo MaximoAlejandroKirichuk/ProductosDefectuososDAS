@@ -2,6 +2,7 @@
 using MPP;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,11 @@ namespace BLL
         public GestorSeguimientoBLL()
         {
             listaSeguimientos = new List<Seguimiento>();
+        }
+
+        public List<Seguimiento> ObtenerSeguimientosPublicosPorProducto(int codigoProducto)
+        {
+            return seguimientoMPP.ObtenerSeguimientosPublicosPorProducto(codigoProducto);
         }
 
         public bool AgregarSeguimientos(List<Seguimiento> nuevosSeguimientos)
@@ -42,8 +48,6 @@ namespace BLL
         {
             return seguimientoMPP.ObtenerSeguimientosPorProducto(codigoProducto);
         }
-
-
 
 
         // Borra un seguimiento dado el código de producto y las propiedades del seguimiento

@@ -33,13 +33,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.DgvSeguimiento = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvSeguimiento)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNroDocumento
@@ -84,13 +84,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Seguimiento";
             // 
-            // dataGridView2
+            // DgvSeguimiento
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(33, 338);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(721, 150);
-            this.dataGridView2.TabIndex = 4;
+            this.DgvSeguimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvSeguimiento.Location = new System.Drawing.Point(33, 338);
+            this.DgvSeguimiento.Name = "DgvSeguimiento";
+            this.DgvSeguimiento.Size = new System.Drawing.Size(721, 150);
+            this.DgvSeguimiento.TabIndex = 4;
             // 
             // label4
             // 
@@ -138,15 +138,16 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.DgvSeguimiento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNroDocumento);
             this.Name = "FormCliente";
             this.Text = "FormCliente";
+            this.Load += new System.EventHandler(this.FormCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvSeguimiento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,7 +160,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView DgvSeguimiento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
