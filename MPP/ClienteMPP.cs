@@ -1,10 +1,12 @@
 ﻿using BE;
 using BE.actores;
+using DAL;
 using DAL.Interfaces;
 using MPP.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,6 +62,28 @@ namespace MPP
             }
 
             return clientes;
+        }
+
+        public int ObtenerIdClientePorDocumento(string nroDocumento)
+        {
+            using (SqlConnection con = new SqlConnection(StringConnection.stringConnection))
+            {
+                string query = "SELECT IdCliente FROM Cliente WHERE NroDocumento = @NroDocumento";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@NroDocumento", nroDocumento);
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int idCliente))
+                    {
+                        return idCliente;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+            }
         }
     }
 

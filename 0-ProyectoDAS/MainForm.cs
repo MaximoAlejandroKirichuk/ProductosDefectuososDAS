@@ -24,6 +24,7 @@ namespace UI
         {
             InitializeComponent();
         }
+        
         public int idioma;
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,10 +124,10 @@ namespace UI
         }
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //SesionActiva.Instancia.CerrarSesion();
+            BLL.SesionActiva.Instancia.CerrarSesion();
             MessageBox.Show("Se cerro sesión");
             this.Close();
-            Form form = new Login();
+            Login form = new Login();
             form.Show();
         }
 
@@ -257,6 +258,11 @@ namespace UI
             form.MdiParent = this;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
+        }
+
+        private void modificarSeguimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

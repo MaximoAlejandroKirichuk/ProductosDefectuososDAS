@@ -2,6 +2,8 @@
 using MPP;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +31,11 @@ namespace BLL
         public List<Producto> ObtenerTodos()
         {
             return productoMPP.ObtenerTodos();
+        }
+
+        public DataTable ObtenerProductosPorCliente(int idCliente)
+        {
+            return productoMPP.ObtenerProductosPorCliente(idCliente);
         }
     }
 }

@@ -244,9 +244,7 @@ namespace UI
 
                 // Código producto
                 DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
-
-                //TODO: HARDCODEADO
-                int codigoProducto = 1;
+                int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);  // "CodigoProducto" es el nombre de la columna, o usa índice
 
 
                 Seguimiento nuevo = new Seguimiento(
@@ -266,8 +264,8 @@ namespace UI
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-
-            int codigoProducto = Convert.ToInt32("1"); //TODO: HARDCODEADO
+            //DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
+            //int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);  // "CodigoProducto" es el nombre de la columna, o usa índice
             List<Seguimiento> lista = new List<Seguimiento>();
 
             foreach (Seguimiento s in listBox1.Items)

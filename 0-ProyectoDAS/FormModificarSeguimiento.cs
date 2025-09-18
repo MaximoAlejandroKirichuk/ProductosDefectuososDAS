@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace _0_ProyectoDAS
         public FormModificarSeguimiento()
         {
             InitializeComponent();
+        }
+        public GestorSeguimientoBLL gestorSeguimientoBLL = new GestorSeguimientoBLL();
+        
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

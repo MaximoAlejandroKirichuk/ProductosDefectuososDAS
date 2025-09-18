@@ -25,26 +25,46 @@ namespace _0_ProyectoDAS
             GestorSeguimientoBLL gestor = new GestorSeguimientoBLL();
             List<Seguimiento> lista = gestor.ObtenerSeguimientosPublicosPorProducto(codigoProducto);
 
-            DgvSeguimiento.DataSource = lista.Select(s => new
+            dataGridViewSeguimientos.DataSource = lista.Select(s => new
             {
                 s.Mensaje,
                 Fecha = s.FechaRegistro,
                 Responsable = s.Responsable.NombreCompleto
             }).ToList();
 
-            DgvSeguimiento.Columns["Mensaje"].HeaderText = "Seguimiento";
-            DgvSeguimiento.Columns["Fecha"].HeaderText = "Fecha";
-            DgvSeguimiento.Columns["Responsable"].HeaderText = "Empleado";
+            dataGridViewSeguimientos.Columns["Mensaje"].HeaderText = "Seguimiento";
+            dataGridViewSeguimientos.Columns["Fecha"].HeaderText = "Fecha";
+            dataGridViewSeguimientos.Columns["Responsable"].HeaderText = "Empleado";
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string nroDocumento = txtNroCuilCuit.Text.Trim();
+            GestorClienteBLL cliente = new GestorClienteBLL();
+            GestorProductosBLL productoBLL = new GestorProductosBLL();
+            GestorSeguimientoBLL seguimientoBLL = new GestorSeguimientoBLL();
+            int idCliente = cliente.ObtenerIdClientePorDocumento(nroDocumento);
+            if (idCliente == -1)
+            {
+                MessageBox.Show("Cliente no encontrado.");
+                return;
+            }
+            // Cargar productos del cliente
+            DataTable dtProductos = productoBLL.ObtenerProductosPorCliente(idCliente);
+            dataGridViewProductos.DataSource = dtProductos;
+            // Limpiar seguimientos
+            dataGridViewSeguimientos.DataSource = null;
         }
         
+        //public int ObtenerCuilCuit()
+        //{
+        //    1;
+        //}
+
         private void FormCliente_Load(object sender, EventArgs e)
         {
-            int codigoProducto = 1; //reemplazá con el producto que quieras mostrar
-            CargarGrid(codigoProducto);
+            
+            //CargarGrid(codigoProducto);
         }
     }
 }

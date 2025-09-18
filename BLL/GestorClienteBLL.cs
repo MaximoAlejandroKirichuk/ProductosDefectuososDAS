@@ -37,6 +37,11 @@ namespace BLL
         {
             return clienteMPP.ObtenerTodos();
         }
+
+        public int ObtenerIdClientePorDocumento(string nroDocumento)
+        {
+            return clienteMPP.ObtenerIdClientePorDocumento(nroDocumento);
+        }
     }
     
 }

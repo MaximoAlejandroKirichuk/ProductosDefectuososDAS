@@ -122,5 +122,27 @@ namespace DAL
             }
             return dt;
         }
+
+        public int ObtenerIdClientePorDocumento(string nroDocumento)
+        {
+            using (SqlConnection con = new SqlConnection(stringConnection))
+            {
+                string query = "SELECT IdCliente FROM Cliente WHERE NroDocumento = @NroDocumento";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@NroDocumento", nroDocumento);
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int idCliente))
+                    {
+                        return idCliente;
+                    }
+                    else
+                    {
+                        return -1; // o lanzar excepción o manejar error según convenga
+                    }
+                }
+            }
+        }
     }
 }

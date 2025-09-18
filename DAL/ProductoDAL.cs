@@ -149,5 +149,21 @@ namespace DAL
                 }
             }
         }
+
+        public DataTable ObtenerProductosPorCliente(int idCliente)
+        {
+            using (SqlConnection con = new SqlConnection(StringConnection.stringConnection))
+            {
+                string query = "SELECT * FROM Producto WHERE IdCliente = @IdCliente";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+        }
     }
 }

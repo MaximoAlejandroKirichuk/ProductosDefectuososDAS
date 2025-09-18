@@ -6,6 +6,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Versioning;
 using System.Text;
@@ -93,6 +94,22 @@ namespace MPP
         public bool Modificar(Producto objeto)
         {
             return dalProducto.Update(objeto);
+        }
+
+        public DataTable ObtenerProductosPorCliente(int idCliente)
+        {
+            using (SqlConnection con = new SqlConnection(StringConnection.stringConnection))
+            {
+                string query = "SELECT * FROM Producto WHERE Cliente = @IdCliente";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
         }
     }
 }

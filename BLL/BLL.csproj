@@ -45,7 +45,6 @@
     <Compile Include="GestorProductosBLL.cs" />
     <Compile Include="GestorUsuarioBLL.cs" />
     <Compile Include="ListadoClientesBLL.cs" />
-    <Compile Include="ServiciosUsuarios.cs" />
     <Compile Include="GestorClienteBLL.cs" />
     <Compile Include="GestorSeguimientoBLL.cs" />
     <Compile Include="ListadoEmpleados.cs" />

@@ -41,6 +41,7 @@ namespace UI
                     
                 }
                 MessageBox.Show("Ingreso correcto.");
+                this.Close();
                 MainForm mainMenu = new MainForm(); 
                 mainMenu.Show();
             }
