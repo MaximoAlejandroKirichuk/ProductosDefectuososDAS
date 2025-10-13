@@ -229,7 +229,7 @@ namespace UI
                 Usuario Usuario = (Usuario)SesionActiva.Instancia.UsuarioActivo;
 
                 // Código producto
-                DataGridViewRow fila = dataGridViewListadoSeguimiento.CurrentRow;
+                DataGridViewRow fila = DGVProductos.CurrentRow;
                 int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);  // "CodigoProducto" es el nombre de la columna, o usa índice
 
 

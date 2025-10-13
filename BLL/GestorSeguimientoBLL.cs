@@ -48,13 +48,7 @@ namespace BLL
         {
             var lista = seguimientoMPP.ObtenerSeguimientosPorProducto(codigoProducto);
 
-            return lista.Select(s => new Seguimiento
-            {
-                CodigoProducto = s.CodigoProducto,
-                Mensaje = s.Mensaje,
-                Responsable = s.Responsable,
-                FechaRegistro = s.FechaRegistro
-            }).ToList();
+            return lista;
         }
 
 

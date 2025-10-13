@@ -39,17 +39,12 @@ namespace UI
                 {
                     throw new Exception("Email o contrasaña inexistente");
                 }
-<<<<<<< HEAD
+
                 MainForm mainMenu = new MainForm();
                 mainMenu.Show();
                 MessageBox.Show($"Bienvenido {SesionActiva.Instancia.UsuarioActivo.NombreCompleto}.");
                 
                 this.Hide();
-=======
-                MessageBox.Show("Ingreso correcto.");
-                MainForm mainMenu = new MainForm();
-                mainMenu.Show();              
->>>>>>> ff44ac2c99d7e6372dcb09a1a9cee6e799038d86
             }
             catch (Exception ex)
             {

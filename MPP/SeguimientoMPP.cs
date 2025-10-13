@@ -48,7 +48,7 @@ namespace MPP
                     Responsable = new Empleado
                     {
                         IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),
-                        
+                        NombreCompleto = row["NombreResponsable"].ToString()
                     },
                     FechaRegistro = Convert.ToDateTime(row["FechaRegistro"]),
                     TipoVisibilidad = (Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"])
