@@ -46,7 +46,15 @@ namespace BLL
 
         public List<Seguimiento> ObtenerSeguimientosPorProducto(int codigoProducto)
         {
-            return seguimientoMPP.ObtenerSeguimientosPorProducto(codigoProducto);
+            var lista = seguimientoMPP.ObtenerSeguimientosPorProducto(codigoProducto);
+
+            return lista.Select(s => new Seguimiento
+            {
+                CodigoProducto = s.CodigoProducto,
+                Mensaje = s.Mensaje,
+                Responsable = s.Responsable,
+                FechaRegistro = s.FechaRegistro
+            }).ToList();
         }
 
 

@@ -48,7 +48,7 @@ namespace MPP
                     Responsable = new Empleado
                     {
                         IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),
-                        NombreCompleto = row["NombreResponsable"].ToString()
+                        
                     },
                     FechaRegistro = Convert.ToDateTime(row["FechaRegistro"]),
                     TipoVisibilidad = (Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"])
@@ -60,7 +60,7 @@ namespace MPP
         }
         public List<Seguimiento> ObtenerSeguimientosPublicosPorProducto(int codigoProducto)
         {
-            DataTable dt = seguimientoDAL.ObtenerSeguimientosPublicosPorProducto(codigoProducto);
+            DataTable dt = seguimientoDAL.ObtenerSeguimientoPorProductos(codigoProducto);
             List<Seguimiento> lista = new List<Seguimiento>();
 
             foreach (DataRow row in dt.Rows)

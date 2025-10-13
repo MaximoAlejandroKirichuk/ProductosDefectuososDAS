@@ -27,8 +27,8 @@ namespace UI
             AplicarIdioma(idioma);
 
         }
-        GestorSeguimientoBLL gestorSeguimientoBLL = new GestorSeguimientoBLL();
-        GestorProductosBLL gestorProductosBLL = new GestorProductosBLL();
+        private readonly GestorSeguimientoBLL gestorSeguimientoBLL = new GestorSeguimientoBLL();
+        private readonly GestorProductosBLL gestorProductosBLL = new GestorProductosBLL();
         public void AplicarIdioma(int idiomanuevo)
         {
             if (idiomanuevo == 1)
@@ -65,8 +65,8 @@ namespace UI
         {
             //TODO: HARDCODEADO 
 
-            dataGridViewListadoProductosDefectuosos.DataSource = null;
-            dataGridViewListadoProductosDefectuosos.DataSource = gestorSeguimientoBLL.ObtenerSeguimientosPorProducto(codigoProducto);
+            dataGridViewListadoSeguimiento.DataSource = null;
+            dataGridViewListadoSeguimiento.DataSource = gestorSeguimientoBLL.ObtenerSeguimientosPorProducto(codigoProducto);
         }
         private void CargarListadoProductos()
         {
@@ -79,7 +79,7 @@ namespace UI
         {
             //TODO: HARDCODEADO 
             CargarListadoProductos();
-            ActualizarLista(1);
+            
         }
 
 
@@ -89,7 +89,7 @@ namespace UI
         private void dataGridViewListadoProductosDefectuosos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica que se haya hecho clic en una fila valida
-            if (e.RowIndex < 0 || e.RowIndex >= dataGridViewListadoProductosDefectuosos.Rows.Count)
+            if (e.RowIndex < 0 || e.RowIndex >= dataGridViewListadoSeguimiento.Rows.Count)
                 return;
 
             // Obtener el índice real de la fila seleccionada
@@ -111,7 +111,7 @@ namespace UI
         private void dataGridViewSeguimiento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica que se haya hecho clic en una fila valida
-            if (e.RowIndex < 0 || e.RowIndex >= dataGridViewListadoProductosDefectuosos.Rows.Count)
+            if (e.RowIndex < 0 || e.RowIndex >= dataGridViewListadoSeguimiento.Rows.Count)
                 return;
 
             // Obtener el índice real de la fila seleccionada
@@ -120,7 +120,7 @@ namespace UI
             // Validación extra por seguridad
             try
             {
-                Seguimiento s = (Seguimiento)dataGridViewListadoProductosDefectuosos.Rows[e.RowIndex].DataBoundItem;
+                Seguimiento s = (Seguimiento)dataGridViewListadoSeguimiento.Rows[e.RowIndex].DataBoundItem;
 
                 // Mostrar detalles en controles auxiliares
                 DateTime fecha = s.FechaRegistro;
@@ -137,21 +137,7 @@ namespace UI
             }
        
         }
-        private void btnAgregarPaso_Click(object sender, EventArgs e)
-        {
-            //GESTOR CLASE
-            try
-            {  
-                
-                MessageBox.Show("Paso agregado correctamente.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al agregar paso: " + ex.Message);
-            }
-            
-        }
-
+  
        
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -243,7 +229,7 @@ namespace UI
                 Usuario Usuario = (Usuario)SesionActiva.Instancia.UsuarioActivo;
 
                 // Código producto
-                DataGridViewRow fila = dataGridViewListadoProductosDefectuosos.CurrentRow;
+                DataGridViewRow fila = dataGridViewListadoSeguimiento.CurrentRow;
                 int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);  // "CodigoProducto" es el nombre de la columna, o usa índice
 
 
@@ -291,6 +277,21 @@ namespace UI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DGVProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = DGVProductos.Rows[e.RowIndex];
+
+                var codigoProducto = fila.Cells["CodigoProducto"].Value;
+
+                int codigo = Convert.ToInt32(codigoProducto);
+
+                MessageBox.Show("Código seleccionado: " + codigo);
+                ActualizarLista(codigo);
             }
         }
     }

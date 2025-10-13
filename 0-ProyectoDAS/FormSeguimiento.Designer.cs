@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewListadoProductosDefectuosos = new System.Windows.Forms.DataGridView();
+            this.dataGridViewListadoSeguimiento = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -37,20 +38,19 @@
             this.txtAgregarPaso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.DGVProductos = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoProductosDefectuosos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoSeguimiento)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewListadoProductosDefectuosos
+            // dataGridViewListadoSeguimiento
             // 
-            this.dataGridViewListadoProductosDefectuosos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListadoProductosDefectuosos.Location = new System.Drawing.Point(12, 12);
-            this.dataGridViewListadoProductosDefectuosos.Name = "dataGridViewListadoProductosDefectuosos";
-            this.dataGridViewListadoProductosDefectuosos.Size = new System.Drawing.Size(687, 212);
-            this.dataGridViewListadoProductosDefectuosos.TabIndex = 2;
-            this.dataGridViewListadoProductosDefectuosos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListadoProductosDefectuosos_CellClick_1);
+            this.dataGridViewListadoSeguimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListadoSeguimiento.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewListadoSeguimiento.Name = "dataGridViewListadoSeguimiento";
+            this.dataGridViewListadoSeguimiento.Size = new System.Drawing.Size(687, 212);
+            this.dataGridViewListadoSeguimiento.TabIndex = 2;
+            this.dataGridViewListadoSeguimiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListadoProductosDefectuosos_CellClick_1);
             // 
             // groupBox1
             // 
@@ -68,6 +68,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seguimiento ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(257, 336);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(162, 22);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "Seguimiento Publico";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
@@ -136,17 +147,7 @@
             this.DGVProductos.Name = "DGVProductos";
             this.DGVProductos.Size = new System.Drawing.Size(506, 608);
             this.DGVProductos.TabIndex = 13;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(257, 336);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(162, 22);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "Seguimiento Publico";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.DGVProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVProductos_CellClick);
             // 
             // FormSeguimiento
             // 
@@ -156,12 +157,12 @@
             this.ClientSize = new System.Drawing.Size(1301, 632);
             this.Controls.Add(this.DGVProductos);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridViewListadoProductosDefectuosos);
+            this.Controls.Add(this.dataGridViewListadoSeguimiento);
             this.Name = "FormSeguimiento";
             this.Text = "FormSeguimiento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSeguimiento_FormClosing);
             this.Load += new System.EventHandler(this.FormSeguimiento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoProductosDefectuosos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoSeguimiento)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
@@ -171,7 +172,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewListadoProductosDefectuosos;
+        private System.Windows.Forms.DataGridView dataGridViewListadoSeguimiento;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
