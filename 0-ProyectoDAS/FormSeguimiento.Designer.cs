@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewListadoSeguimiento = new System.Windows.Forms.DataGridView();
+            this.DGVSeguimientos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -38,19 +38,19 @@
             this.txtAgregarPaso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.DGVProductos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoSeguimiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVSeguimientos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewListadoSeguimiento
+            // DGVSeguimientos
             // 
-            this.dataGridViewListadoSeguimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListadoSeguimiento.Location = new System.Drawing.Point(12, 12);
-            this.dataGridViewListadoSeguimiento.Name = "dataGridViewListadoSeguimiento";
-            this.dataGridViewListadoSeguimiento.Size = new System.Drawing.Size(687, 212);
-            this.dataGridViewListadoSeguimiento.TabIndex = 2;
-            this.dataGridViewListadoSeguimiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListadoProductosDefectuosos_CellClick_1);
+            this.DGVSeguimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVSeguimientos.Location = new System.Drawing.Point(12, 12);
+            this.DGVSeguimientos.Name = "DGVSeguimientos";
+            this.DGVSeguimientos.Size = new System.Drawing.Size(687, 212);
+            this.DGVSeguimientos.TabIndex = 2;
+            this.DGVSeguimientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSeguimientos_CellClick);
             // 
             // groupBox1
             // 
@@ -67,7 +67,6 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seguimiento ";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // checkBox1
             // 
@@ -157,12 +156,12 @@
             this.ClientSize = new System.Drawing.Size(1301, 632);
             this.Controls.Add(this.DGVProductos);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridViewListadoSeguimiento);
+            this.Controls.Add(this.DGVSeguimientos);
             this.Name = "FormSeguimiento";
             this.Text = "FormSeguimiento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSeguimiento_FormClosing);
             this.Load += new System.EventHandler(this.FormSeguimiento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoSeguimiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVSeguimientos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
@@ -172,7 +171,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewListadoSeguimiento;
+        private System.Windows.Forms.DataGridView DGVSeguimientos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DateTimePicker dateTimePickerFecha;

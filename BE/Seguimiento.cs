@@ -31,6 +31,15 @@ namespace BE
             this.TipoVisibilidad = visibilidad;
 
         }
+        public Seguimiento(DateTime fecha, string mensaje, Usuario responsable, int codigoProducto, Visibilidad visibilidad, int codigoSeguimiento)
+        {
+            this.FechaRegistro = fecha;
+            this.Mensaje = mensaje;
+            this.Responsable = responsable;
+            this.CodigoProducto = codigoProducto;
+            this.TipoVisibilidad = visibilidad;
+            this.CodigoSeguimiento = codigoSeguimiento;
+        }
 
         // Constructor sin parámetros para compatibilidad con la deserialización, si es necesario.
         public Seguimiento(){}

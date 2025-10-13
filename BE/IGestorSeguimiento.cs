@@ -13,7 +13,7 @@ namespace BLL
     {
         bool AgregarSeguimientos(List<Seguimiento> nuevosSeguimientos);
         bool BorrarSeguimiento(Seguimiento seguimientoABorrar);
-        bool ModificarSeguimiento(DateTime fechaOriginal, Seguimiento seguimientoModificado);
+        bool ModificarSeguimiento(Seguimiento seguimientoModificado);
         bool ModificarEstadoSeguimiento(); 
         List<Seguimiento> ObtenerSeguimientosPorProducto(int codigoProducto);
 

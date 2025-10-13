@@ -39,9 +39,9 @@ namespace BLL
             throw new NotImplementedException();
         }
 
-        public bool ModificarSeguimiento(DateTime fechaOriginal, Seguimiento seguimientoModificado)
+        public bool ModificarSeguimiento(Seguimiento seguimientoModificado)
         {
-            throw new NotImplementedException();
+            return seguimientoMPP.ModificarSeguimiento(seguimientoModificado);
         }
 
         public List<Seguimiento> ObtenerSeguimientosPorProducto(int codigoProducto)
