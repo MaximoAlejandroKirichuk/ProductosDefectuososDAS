@@ -330,7 +330,7 @@
             // 
             // txtProblemaEntrada
             // 
-            this.txtProblemaEntrada.Location = new System.Drawing.Point(229, 166);
+            this.txtProblemaEntrada.Location = new System.Drawing.Point(248, 166);
             this.txtProblemaEntrada.Multiline = true;
             this.txtProblemaEntrada.Name = "txtProblemaEntrada";
             this.txtProblemaEntrada.Size = new System.Drawing.Size(190, 62);
