@@ -82,7 +82,7 @@ namespace DAL
                 }
             }
         }
-
+        //DESCONECTADO
         public DataTable ObtenerTodos()
         {
             using (SqlConnection con = new SqlConnection(stringConnection))

@@ -38,12 +38,10 @@ namespace UI
                 if (!respuesta)
                 {
                     throw new Exception("Email o contrasaña inexistente");
-                    
                 }
                 MessageBox.Show("Ingreso correcto.");
-                this.Close();
-                MainForm mainMenu = new MainForm(); 
-                mainMenu.Show();
+                MainForm mainMenu = new MainForm();
+                mainMenu.Show();              
             }
             catch (Exception ex)
             {
