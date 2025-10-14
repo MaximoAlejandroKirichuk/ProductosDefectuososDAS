@@ -53,6 +53,7 @@
             this.comboBoxCondicionProducto = new System.Windows.Forms.ComboBox();
             this.numericUpDownCostoPerdidaMateriaPrima = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDownCostoManoObra = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.dateTimePickerFechaRecibida = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDownCostoManoObra = new System.Windows.Forms.NumericUpDown();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCostoProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoProductosDefectuosos)).BeginInit();
@@ -71,8 +71,8 @@
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCostoPerdidaMateriaPrima)).BeginInit();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCostoManoObra)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -363,6 +363,20 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Costo de materia prima para recuperar";
             // 
+            // numericUpDownCostoManoObra
+            // 
+            this.numericUpDownCostoManoObra.Enabled = false;
+            this.numericUpDownCostoManoObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownCostoManoObra.Location = new System.Drawing.Point(110, 256);
+            this.numericUpDownCostoManoObra.Maximum = new decimal(new int[] {
+            -1981284353,
+            -1966660860,
+            0,
+            0});
+            this.numericUpDownCostoManoObra.Name = "numericUpDownCostoManoObra";
+            this.numericUpDownCostoManoObra.Size = new System.Drawing.Size(140, 26);
+            this.numericUpDownCostoManoObra.TabIndex = 10;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -412,8 +426,6 @@
             // 
             this.comboBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCliente.FormattingEnabled = true;
-            this.comboBoxCliente.Items.AddRange(new object[] {
-            "9"});
             this.comboBoxCliente.Location = new System.Drawing.Point(21, 85);
             this.comboBoxCliente.Name = "comboBoxCliente";
             this.comboBoxCliente.Size = new System.Drawing.Size(204, 28);
@@ -449,20 +461,6 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Fecha recibida";
             // 
-            // numericUpDownCostoManoObra
-            // 
-            this.numericUpDownCostoManoObra.Enabled = false;
-            this.numericUpDownCostoManoObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownCostoManoObra.Location = new System.Drawing.Point(110, 256);
-            this.numericUpDownCostoManoObra.Maximum = new decimal(new int[] {
-            -1981284353,
-            -1966660860,
-            0,
-            0});
-            this.numericUpDownCostoManoObra.Name = "numericUpDownCostoManoObra";
-            this.numericUpDownCostoManoObra.Size = new System.Drawing.Size(140, 26);
-            this.numericUpDownCostoManoObra.TabIndex = 10;
-            // 
             // FormListadoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,9 +491,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCostoPerdidaMateriaPrima)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCostoManoObra)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCostoManoObra)).EndInit();
             this.ResumeLayout(false);
 
         }

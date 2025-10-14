@@ -16,6 +16,7 @@ namespace UI
             InitializeComponent();
             AplicarIdioma(idioma);
         }
+        private GestorClienteBLL gestorClientesBLL = new GestorClienteBLL();
 
         public void AplicarIdioma(int idiomanuevo)
         {
@@ -100,10 +101,12 @@ namespace UI
         private void FormListadoProductos_Load(object sender, EventArgs e)
         {
             actualizarLista();
-            //comboBoxPersonaResponsable.DataSource = ListadoEmpleados.Instancia.Empleados;
-            //comboBoxPersonaResponsable.DisplayMember = "NombreCompleto";
-            //if (ListadoEmpleados.Instancia.Empleados.Count > 0) return;
-            //Servicios.ServiciosUsuariosCSV.EmpleadosActivos();
+            //esto hace que en el combobox aparezcan los clientes que tenemos en la BD. 
+            comboBoxCliente.DataSource = null;
+            comboBoxCliente.DataSource = gestorClientesBLL.ObtenerClientes();
+            comboBoxCliente.DisplayMember = "NombreCompleto";
+            //borrar sino sirve
+            comboBoxCliente.ValueMember = "IdCliente";
         }
 
         private GestorProductosBLL gestorProductoBLL = new GestorProductosBLL();
@@ -333,10 +336,15 @@ namespace UI
                 comboBoxCondicionProducto.SelectedItem = fila.Cells["CondicionProducto"].Value.ToString();
                 comboBoxProblemaEntrada.SelectedItem = fila.Cells["ProblemaEntrada"].Value.ToString();
 
-                comboBoxCliente.SelectedValue = new Cliente()
+                Cliente clienteSeleccionado = fila.Cells["Cliente"].Value as Cliente;
+                if (clienteSeleccionado != null)
                 {
-                    IdCliente = Convert.ToInt32(comboBoxCliente.SelectedValue)
-                };
+                    comboBoxCliente.SelectedValue = clienteSeleccionado.IdCliente;
+                }
+                else
+                {
+                    comboBoxCliente.SelectedIndex = -1; // si no hay cliente asignado
+                }
             }
         }
 

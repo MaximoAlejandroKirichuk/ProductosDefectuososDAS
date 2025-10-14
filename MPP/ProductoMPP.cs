@@ -39,7 +39,11 @@ namespace MPP
                     producto.CondicionProducto = (CondicionProducto)Enum.Parse(typeof(CondicionProducto), row["CondicionProducto"].ToString());
                     producto.NombreProducto = row["NombreProducto"].ToString();
                     producto.ProblemaEntrada = row["ProblemaEntrada"].ToString();
-                    producto.Cliente = new Cliente() { IdCliente = Convert.ToInt32(row["Cliente"]) }; //esto esta mal, hay que arreglar
+                    int idCliente = Convert.ToInt32(row["Cliente"]);
+                    producto.Cliente = new Cliente
+                    {
+                        IdCliente = idCliente
+                    };
                     producto.CostoManoObra = Convert.ToDecimal(row["CostoPerdidaManoObra"]);
                     producto.CostoPerdidaMateriaPrima = Convert.ToDecimal(row["CostoPerdidaMateriaPrima"]);
 
