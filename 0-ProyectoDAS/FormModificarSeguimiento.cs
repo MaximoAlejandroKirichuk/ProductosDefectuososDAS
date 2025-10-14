@@ -61,6 +61,7 @@ namespace _0_ProyectoDAS
             txtSeguimientoActual.Text = seguimientoElegido.ToString();
             txtMensajeModificar.Text = seguimientoElegido.Mensaje;
             dateTimePickerFecha.Value = seguimientoElegido.FechaRegistro;
+
             if(seguimientoElegido.TipoVisibilidad == Seguimiento.Visibilidad.Publica)
             {
                 checkBox1.Checked = true;
@@ -69,7 +70,6 @@ namespace _0_ProyectoDAS
             {
                 checkBox1.Checked = false;
             }
-
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

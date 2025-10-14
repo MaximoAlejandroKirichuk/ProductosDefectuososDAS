@@ -503,10 +503,13 @@
             // 
             // dateTimePickerFechaRecibida
             // 
+            this.dateTimePickerFechaRecibida.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dateTimePickerFechaRecibida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerFechaRecibida.Location = new System.Drawing.Point(358, 69);
             this.dateTimePickerFechaRecibida.MaxDate = new System.DateTime(2040, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFechaRecibida.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFechaRecibida.Name = "dateTimePickerFechaRecibida";
+            this.dateTimePickerFechaRecibida.ShowUpDown = true;
             this.dateTimePickerFechaRecibida.Size = new System.Drawing.Size(296, 22);
             this.dateTimePickerFechaRecibida.TabIndex = 7;
             // 
