@@ -132,6 +132,10 @@ namespace UI
                     checkBox1.Checked ? Seguimiento.Visibilidad.Publica : Seguimiento.Visibilidad.Privada
                 );
 
+
+                DGVSeguimientos.DataSource = null;
+                DGVSeguimientos.DataSource = gestorSeguimientoBLL.ObtenerSeguimientosPorProducto(codigoProducto);
+
                 listBox1.Items.Add(nuevo);
                 MessageBox.Show("Seguimiento agregado correctamente.");
             }
@@ -156,6 +160,12 @@ namespace UI
                 {
                     MessageBox.Show("Seguimientos guardados correctamente.");
                     listBox1.Items.Clear();
+
+                    DataGridViewRow fila = DGVProductos.CurrentRow;
+                    int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value); 
+                    DGVSeguimientos.DataSource = null;
+                    DGVSeguimientos.DataSource = gestorSeguimientoBLL.ObtenerSeguimientosPorProducto(codigoProducto);
+
                     this.Close();
                 }
                 else
