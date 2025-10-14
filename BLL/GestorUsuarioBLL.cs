@@ -16,7 +16,7 @@ namespace BLL
         public bool IniciarSesion(string email, string contrasena)
         {
             Usuario usuario = BuscarUsuarioPorMail(email);
-            if (usuario == null) return false;
+            if (usuario == null) throw new Exception("Usuario inexistente");
 
             var hashContrasena = HashContrasena(contrasena);
             if (usuario.Contrasenia == hashContrasena)

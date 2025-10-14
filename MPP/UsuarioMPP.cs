@@ -42,7 +42,7 @@ namespace MPP
                 case RolesUsuarios.Empleado:
                     return new Empleado
                     {
-                        IdUsuario = Convert.ToInt32(row["IdUsuario"]),
+                        IdUsuario = Convert.ToInt32(row["IdEmpleado"]),
                         NombreCompleto = row["NombreCompleto"].ToString(),
                         Email = row["Email"].ToString(),
                         Contrasenia = row["Contrasena"].ToString(),
