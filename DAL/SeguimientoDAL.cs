@@ -46,77 +46,98 @@ namespace DAL
                 }
             }
         }
-    
-    public bool GuardarSeguimiento(List<Seguimiento> seguimientos)
-    {
-        using (SqlConnection conn = new SqlConnection(stringConnection))
-        {
-            conn.Open();
-            SqlTransaction transaction = conn.BeginTransaction();
 
+        public bool GuardarSeguimiento(List<Seguimiento> seguimientos)
+        {
             try
             {
-                foreach (var s in seguimientos)
+                using (SqlConnection conn = new SqlConnection(stringConnection))
                 {
-                    using (SqlCommand cmd = new SqlCommand("Seguimiento_Insertar", conn, transaction))
+                    conn.Open();
+                    DataSet ds = new DataSet();
+                    string query = "SELECT * FROM Seguimiento WHERE 1 = 0";//siempre va a ser falso y eso solo trae los encabezados
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+
+                    // genera automáticamente el INSERT, UPDATE, DELETE
+                    SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+
+                    
+                    adapter.Fill(ds, "Seguimiento");//nombre que le damos a la tabla dentro del DataSet
+                    DataTable tabla = ds.Tables["Seguimiento"];
+
+                    // Agregamos las filas al DataSet
+                    foreach (var s in seguimientos)
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.AddWithValue("@CodigoProducto", s.CodigoProducto);
-                        cmd.Parameters.AddWithValue("@IDPersonalResponsable", s.Responsable.IdUsuario);
-                        cmd.Parameters.AddWithValue("@Mensaje", s.Mensaje);
-                        cmd.Parameters.AddWithValue("@FechaRegistro", s.FechaRegistro);
-                        cmd.Parameters.AddWithValue("@Visibilidad", s.TipoVisibilidad);
-                        cmd.ExecuteNonQuery();
+                        DataRow row = tabla.NewRow();
+                        row["CodigoProducto"] = s.CodigoProducto;
+                        row["IDPersonalResponsable"] = s.Responsable.IdUsuario;
+                        row["Mensaje"] = s.Mensaje;
+                        row["FechaRegistro"] = s.FechaRegistro;
+                        row["Visibilidad"] = (int)s.TipoVisibilidad;
+                        tabla.Rows.Add(row);
                     }
-                }
+                    // Actualizamos la base de datos de una sola vez
+                    adapter.Update(ds, "Seguimiento");
 
-                //Si salio todo bien 
-                transaction.Commit();
-                return true;
+                    return true;
+                }
             }
             catch (Exception)
             {
-                //Volvemos para atras
-                transaction.Rollback();
                 return false;
             }
         }
-    }
-    public DataTable ObtenerSeguimientoPorProductos(int id)
-    {
-        DataTable dt = new DataTable();
 
-        using (SqlConnection conn = new SqlConnection(stringConnection))
+
+
+
+        //ESTO LO QUE HARIAMOS EN VEZ DE USAR EL SqlCommandBuilder
+        // Si no tendria el sqlCommandBuilder tendria que crear manualmente los comandos InsertCommand, UpdateCommand y DeleteCommand manualmente.
+
+        //adapter.InsertCommand = new SqlCommand(
+        //    "INSERT INTO Seguimiento (CodigoProducto, IDPersonalResponsable, Mensaje, FechaRegistro, Visibilidad) " +
+        //    "VALUES (@CodigoProducto, @IDPersonalResponsable, @Mensaje, @FechaRegistro, @Visibilidad)", conn);
+        //adapter.InsertCommand.Parameters.Add("@CodigoProducto", SqlDbType.Int, 0, "CodigoProducto");
+        //adapter.InsertCommand.Parameters.Add("@IDPersonalResponsable", SqlDbType.Int, 0, "IDPersonalResponsable");
+        //adapter.InsertCommand.Parameters.Add("@Mensaje", SqlDbType.NVarChar, 500, "Mensaje");
+        //adapter.InsertCommand.Parameters.Add("@FechaRegistro", SqlDbType.DateTime, 0, "FechaRegistro");
+        //adapter.InsertCommand.Parameters.Add("@Visibilidad", SqlDbType.Int, 0, "Visibilidad");
+
+        public DataSet ObtenerSeguimientoPorProductos(int id)
         {
-            conn.Open();
-            string query = @"SELECT s.CodigoSeguimiento,
-                         s.CodigoProducto,
-                         s.Mensaje,
-                         s.FechaRegistro,
-                         s.IDPersonalResponsable,
-                         s.Visibilidad,
-                         e.NombreCompleto AS NombreResponsable
-                         FROM Seguimiento s
-                         INNER JOIN Empleado e ON s.IDPersonalResponsable = e.IdEmpleado
-                         WHERE s.CodigoProducto = @CodigoProducto";
+            // Creamos el DataSet
+            DataSet ds = new DataSet();
 
-            //esto lo escribe luki 
-            //la parte donde dice: e.NombreCompleto AS NombreResponsable ; lo que hace es agarrar de la tabla e. osea empleado trae 
-            //el nombre del empleado y le ponemos como nombre NombreResponsable. por eso le pone el AS 
-            //por que dice traete el nombre de la tabla e. COMO/AS NombreResponsable.
-
-            using (SqlCommand cmd = new SqlCommand(query, conn))
+            using (SqlConnection conn = new SqlConnection(stringConnection))
             {
-                cmd.Parameters.AddWithValue("@CodigoProducto", id);
+                conn.Open();
+                string query = @"
+            SELECT s.CodigoSeguimiento,
+                   s.CodigoProducto,
+                   s.Mensaje,
+                   s.FechaRegistro,
+                   s.IDPersonalResponsable,
+                   s.Visibilidad,
+                   e.NombreCompleto AS NombreResponsable
+            FROM Seguimiento s
+            INNER JOIN Empleado e ON s.IDPersonalResponsable = e.IdEmpleado
+            WHERE s.CodigoProducto = @CodigoProducto";
 
-                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    da.Fill(dt);
+                    cmd.Parameters.AddWithValue("@CodigoProducto", id);
+
+                    
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        
+                        da.Fill(ds, "Seguimiento");
+                    }
                 }
             }
+
+            
+            return ds;
         }
-        return dt;
     }
-}
 }
