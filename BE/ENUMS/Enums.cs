@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace BE
 {
+    public enum Idioma
+    {
+        Ingles,
+        Español,
+        Portugues
+    }
     public enum TipoCosto
     {
         Perdida,
@@ -38,5 +44,22 @@ namespace BE
     {
         Entregado,
         NoEntregado
+    }
+
+    //BITACORA
+    public enum NivelLog
+    {
+        Informacion,
+        Alerta,
+        Error
+    }
+
+    public enum ModuloSistema
+    {
+        Login,
+        Seguimientos,
+        Clientes,
+        Productos,
+        Reportes
     }
 }
