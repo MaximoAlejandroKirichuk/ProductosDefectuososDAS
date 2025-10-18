@@ -214,11 +214,8 @@ namespace UI
         {
             try
             {
-                int idCliente = Convert.ToInt32(comboBoxCliente.SelectedItem);
-                var cliente = new Cliente
-                {
-                    IdCliente = idCliente
-                };
+                var cliente = (Cliente)comboBoxCliente.SelectedItem;
+                MessageBox.Show($"{cliente.NombreCompleto}");
                 return cliente;
             }
             catch (Exception)

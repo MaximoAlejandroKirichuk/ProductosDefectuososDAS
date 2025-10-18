@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace MPP
 {
-    public class ProductoMPP : IABM<Producto> , IMapeableTodos<Producto>
+    public class ProductoMPP : IABM<Producto> 
     {
         private ProductoDAL dalProducto = new ProductoDAL();
         public bool Agregar(Producto objeto)
@@ -27,74 +27,58 @@ namespace MPP
             return dalProducto.Delete(id);
         }
 
-        public List<Producto> MapearTodos(DataTable dt)
+        //public List<Producto> MapearTodos(DataTable dt)
+        //{
+        //    List<Producto> productos = new List<Producto>();
+
+        //    foreach (DataRow row in dt.Rows)
+        //    {
+        //        Producto producto = new Producto
+        //        {
+        //            CodigoProducto = Convert.ToInt32(row["CodigoProducto"]),
+        //            CostoProducto = Convert.ToDecimal(row["CostoProducto"]),
+        //            CondicionProducto = (CondicionProducto)Enum.Parse(typeof(CondicionProducto), row["CondicionProducto"].ToString()),
+        //            NombreProducto = row["NombreProducto"].ToString(),
+        //            ProblemaEntrada = row["ProblemaEntrada"].ToString(),
+        //            Cliente = new Cliente { IdCliente = Convert.ToInt32(row["Cliente"]) },
+        //            CostoManoObra = Convert.ToDecimal(row["CostoPerdidaManoObra"]),
+        //            CostoPerdidaMateriaPrima = Convert.ToDecimal(row["CostoPerdidaMateriaPrima"]),
+        //            FechaRecibidaProducto = row["FechaRecibida"] == DBNull.Value ? DateTime.Now : Convert.ToDateTime(row["FechaRecibida"]),
+        //            FechaEstimadaDevolucion = row["FechaEstimadaDevolucion"] == DBNull.Value ? DateTime.Now : Convert.ToDateTime(row["FechaEstimadaDevolucion"]),
+        //            FechaDevolucionReal = row["FechaDevolucionReal"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["FechaDevolucionReal"])
+        //        };
+
+        //        if (row["Dimensiones"] != DBNull.Value)
+        //        {
+        //            string dimensionesString = row["Dimensiones"].ToString();
+        //            string[] partes = dimensionesString.Split('x');
+
+        //            if (partes.Length == 3)
+        //            {
+        //                decimal ancho = decimal.Parse(partes[0]);
+        //                decimal largo = decimal.Parse(partes[1]);
+        //                decimal alto = decimal.Parse(partes[2]);
+
+        //                producto.Dimensiones = new Dimensiones(ancho, largo, alto);
+        //            }
+        //        }
+
+        //        productos.Add(producto);
+        //    }
+
+        //    return productos;
+        //}
+
+        public bool ExisteProducto(int codProducto)
         {
-            List<Producto> productos = new List<Producto>();
-            foreach (DataRow row in dt.Rows)    
-            {
-                Producto producto = new Producto();
-                {
-                    producto.CodigoProducto = Convert.ToInt32(row["CodigoProducto"]);
-                    producto.CostoProducto = Convert.ToInt32(row["CostoProducto"]);
-                    producto.CondicionProducto = (CondicionProducto)Enum.Parse(typeof(CondicionProducto), row["CondicionProducto"].ToString());
-                    producto.NombreProducto = row["NombreProducto"].ToString();
-                    producto.ProblemaEntrada = row["ProblemaEntrada"].ToString();
-                    int idCliente = Convert.ToInt32(row["Cliente"]);
-                    producto.Cliente = new Cliente
-                    {
-                        IdCliente = idCliente
-                    };
-                    producto.CostoManoObra = Convert.ToDecimal(row["CostoPerdidaManoObra"]);
-                    producto.CostoPerdidaMateriaPrima = Convert.ToDecimal(row["CostoPerdidaMateriaPrima"]);
-
-                    if (row["FechaRecibida"] != DBNull.Value)
-                    {
-                        producto.FechaRecibidaProducto = Convert.ToDateTime(row["FechaRecibida"]);
-                    }
-                    else
-                    {
-                        producto.FechaRecibidaProducto = DateTime.Now; 
-                    }
-
-                    if (row["FechaEstimadaDevolucion"] != DBNull.Value)
-                    {
-                        producto.FechaEstimadaDevolucion = Convert.ToDateTime(row["FechaEstimadaDevolucion"]);
-                    }
-
-                    if (row["FechaDevolucionReal"] != DBNull.Value)
-                    {
-                        producto.FechaDevolucionReal = Convert.ToDateTime(row["FechaDevolucionReal"]);
-                    }
-
-
-                    ////no entendi lo de DIMENSIONES. no lo supe hacer solo
-                    //if (row["Dimensiones"] != DBNull.Value)
-                    //{
-                    //    string dimensionesString = row["Dimensiones"].ToString();
-                    //    // Aquí debes implementar la lógica para extraer Ancho, Largo y Alto de ese string.
-                    //    // Por ejemplo, puedes usar el método Split() o un Regex.
-
-                    //    // Ejemplo con Split()
-                    //    string[] partes = dimensionesString.Split('x');
-                    //    decimal ancho = decimal.Parse(partes[0].Replace("Ancho:", ""));
-                    //    decimal largo = decimal.Parse(partes[1].Replace("Largo", ""));
-                    //    decimal alto = decimal.Parse(partes[2].Replace("Alto", ""));
-
-                    //    // Crea una nueva instancia de Dimensiones con los valores extraídos.
-                    //    producto.Dimensiones = new Dimensiones(ancho, largo, alto);
-                    //}
-                }
-                productos.Add(producto);
-            }
-
-            return productos;
+            return dalProducto.ExisteProducto(codProducto);
         }
 
         public List<Producto> ObtenerTodos()
         {
-            DataTable dt = dalProducto.ObtenerTodos();
-            return MapearTodos(dt);
+            return dalProducto.ObtenerTodos();
         }
+
         public bool Modificar(Producto objeto)
         {
             return dalProducto.Update(objeto);
