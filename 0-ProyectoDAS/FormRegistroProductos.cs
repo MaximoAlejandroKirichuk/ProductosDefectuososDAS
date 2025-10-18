@@ -31,6 +31,9 @@ namespace UI
         }
 
         private GestorProductosBLL gestorProductosBLL = new GestorProductosBLL();
+        private GestorClienteBLL gestorClientesBLL = new GestorClienteBLL();
+
+
         public void AplicarIdioma(int idiomanuevo)
         {
             if (idiomanuevo == 1)
@@ -123,16 +126,10 @@ namespace UI
 
         private void FormRegistroProductos_Load(object sender, EventArgs e)
         {
-            //comboBoxPersonaResponsable.DataSource = null;
-            //comboBoxPersonaResponsable.DataSource = ListadoEmpleados.Instancia.Empleados;
-            //comboBoxPersonaResponsable.DisplayMember = "NombreCompleto";
-            
-            //TODO: ESTA HARDCODEADO AHORA EL COMBOBOX
-            //aca va a ir nuestro cliente 
-            //comboBoxCliente.DataSource = null;
-            //comboBoxCliente.DataSource = ListadoClientesBLL.Instancia;
-            //comboBoxCliente.DisplayMember = "NombreCompleto";
-
+            //esto hace que en el combobox aparezcan los clientes que tenemos en la BD. 
+            comboBoxCliente.DataSource = null;
+            comboBoxCliente.DataSource = gestorClientesBLL.ObtenerClientes();            
+            comboBoxCliente.DisplayMember = "NombreCompleto";
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -217,11 +214,8 @@ namespace UI
         {
             try
             {
-                int idCliente = Convert.ToInt32(comboBoxCliente.SelectedItem);
-                var cliente = new Cliente
-                {
-                    IdCliente = idCliente
-                };
+                var cliente = (Cliente)comboBoxCliente.SelectedItem;
+                MessageBox.Show($"{cliente.NombreCompleto}");
                 return cliente;
             }
             catch (Exception)

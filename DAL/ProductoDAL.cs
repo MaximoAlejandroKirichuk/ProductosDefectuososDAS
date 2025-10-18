@@ -1,4 +1,5 @@
 ﻿using BE;
+using BE.actores;
 using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DAL
 {
-    public class ProductoDAL : IDAL<Producto>
+    public class ProductoDAL 
     {
         string stringConnection = StringConnection.stringConnection;
         public bool Delete(int id)
@@ -82,19 +83,78 @@ namespace DAL
                 }
             }
         }
-        //DESCONECTADO
-        public DataTable ObtenerTodos()
+        public bool ExisteProducto(int codigoProducto)
         {
             using (SqlConnection con = new SqlConnection(stringConnection))
             {
-                string query = "SELECT * FROM Producto";
-
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                return dt;
+                string query = "SELECT COUNT(*) FROM Producto WHERE CodigoProducto = @CodigoProducto";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@CodigoProducto", codigoProducto);
+                    con.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
             }
+        }
+
+        public List<Producto> ObtenerTodos()
+        {
+            List<Producto> productos = new List<Producto>();
+
+            using (SqlConnection con = new SqlConnection(stringConnection))
+            {
+                string query = "SELECT * FROM Producto";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Dimensiones dimensiones = null;
+                            string dimensionesString = reader["Dimensiones"].ToString();
+
+                            if (!string.IsNullOrEmpty(dimensionesString))
+                            {
+                                try
+                                {
+                                    string[] partes = dimensionesString.Split('x');
+
+                                    decimal ancho = decimal.Parse(partes[0].Replace("Ancho:", "").Trim());
+                                    decimal largo = decimal.Parse(partes[1].Replace("Largo:", "").Trim());
+                                    decimal alto = decimal.Parse(partes[2].Replace("Alto:", "").Trim());
+
+                                    dimensiones = new Dimensiones(ancho, largo, alto);
+                                }
+                                catch
+                                {
+                                    dimensiones = new Dimensiones(0, 0, 0);
+                                }
+                            }
+
+                            Producto p = new Producto
+                            {
+                                CodigoProducto = Convert.ToInt32(reader["CodigoProducto"]),
+                                NombreProducto = reader["NombreProducto"].ToString(),
+                                CondicionProducto = (CondicionProducto)Enum.Parse(typeof(CondicionProducto), reader["CondicionProducto"].ToString()),
+                                Dimensiones = dimensiones,
+                                ProblemaEntrada = reader["ProblemaEntrada"].ToString(),
+                                CostoProducto = Convert.ToDecimal(reader["CostoProducto"]),
+                                CostoManoObra = Convert.ToDecimal(reader["CostoPerdidaManoObra"]),
+                                CostoPerdidaMateriaPrima = Convert.ToDecimal(reader["CostoPerdidaMateriaPrima"]),
+                                Cliente = new Cliente { IdCliente = Convert.ToInt32(reader["Cliente"]) },
+                                FechaRecibidaProducto = reader["FechaRecibida"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(reader["FechaRecibida"]),
+                                FechaEstimadaDevolucion = reader["FechaEstimadaDevolucion"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(reader["FechaEstimadaDevolucion"]),
+                                FechaDevolucionReal = reader["FechaDevolucionReal"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["FechaDevolucionReal"])
+                            };
+                            productos.Add(p);
+                        }
+                    }
+                }
+            }
+
+            return productos;
         }
 
         public bool Update(Producto objeto)
@@ -128,12 +188,7 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@CostoPerdidaManoObra", objeto.CostoManoObra);
                     cmd.Parameters.AddWithValue("@CostoPerdidaMateriaPrima", objeto.CostoPerdidaMateriaPrima);
 
-                    //// Manejo de NULL para FechaDevolucionReal
-                    //if (objeto.FechaDevolucionReal.HasValue)
-                    //    cmd.Parameters.AddWithValue("@FechaDevolucionReal", objeto.FechaDevolucionReal.Value);
-                    //else
-                    //    cmd.Parameters.AddWithValue("@FechaDevolucionReal", DBNull.Value);
-
+                    
 
                     cmd.Parameters.AddWithValue("@FechaRecibida",
                         objeto.FechaRecibidaProducto == DateTime.MinValue ? (object)DBNull.Value : objeto.FechaRecibidaProducto);
