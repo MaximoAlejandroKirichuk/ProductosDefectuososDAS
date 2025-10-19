@@ -64,6 +64,12 @@
     <Compile Include="FormAyuda.Designer.cs">
       <DependentUpon>FormAyuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCambiarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCambiarContrasenia.Designer.cs">
+      <DependentUpon>FormCambiarContrasenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <EmbeddedResource Include="FormAyuda.resx">
       <DependentUpon>FormAyuda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCambiarContrasenia.resx">
+      <DependentUpon>FormCambiarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +223,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{495ebb27-cc65-4956-aaec-4a603381bebb}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{c852725e-c474-4e2a-8fd9-e719c15f9964}</Project>
+      <Name>Servicios</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

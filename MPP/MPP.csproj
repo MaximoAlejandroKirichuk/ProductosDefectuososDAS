@@ -45,6 +45,7 @@
     <Compile Include="EmpleadosMPP.cs" />
     <Compile Include="Interfaces\IMapeableUno.cs" />
     <Compile Include="Interfaces\IMapeableTodos.cs" />
+    <Compile Include="LogMPP.cs" />
     <Compile Include="ProductoMPP.cs" />
     <Compile Include="SeguimientoMPP.cs" />
     <Compile Include="UsuarioMPP.cs" />

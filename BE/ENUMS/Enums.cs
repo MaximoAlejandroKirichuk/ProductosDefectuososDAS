@@ -62,4 +62,11 @@ namespace BE
         Productos,
         Reportes
     }
+    public enum Criticidad
+    {
+        Baja,
+        Media,
+        Alta
+    }
+
 }

@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BitacoraBLL.cs" />
+    <Compile Include="LogsBLL.cs" />
     <Compile Include="GestorEmpleadoBLL.cs" />
     <Compile Include="GestorProductosBLL.cs" />
     <Compile Include="GestorUsuarioBLL.cs" />

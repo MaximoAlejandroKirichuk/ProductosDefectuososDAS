@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Bitacora
+    public class Log
     {
         public int Id { get; set; }
 
@@ -19,14 +19,14 @@ namespace BE
 
         // Módulo del sistema donde ocurrió el evento
         public ModuloSistema ModuloInvolucrado { get; set; }
-        public string Criticidad { get; set; }
+        public Criticidad Criticidad { get; set; }
         public string AccionRealizada { get; set; }
         
         // Constructor vacío
-        public Bitacora() { }
+        public Log() { }
 
         // Constructor con parámetros
-        public Bitacora(int? usuarioId, NivelLog nivel, ModuloSistema modulo, string accion)
+        public Log(int? usuarioId, NivelLog nivel, ModuloSistema modulo, string accion)
         {
             UsuarioId = usuarioId;
             FechaEvento = DateTime.Now;
