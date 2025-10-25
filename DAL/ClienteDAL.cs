@@ -65,17 +65,23 @@ namespace DAL.Interfaces
                 return dt;
             }
         }
-        public bool ExisteCliente(int NroDocumento)
+        public bool ExisteCliente(string NroDocumento)
         {
             using (SqlConnection con = new SqlConnection(stringConnection))
             {
                 string query = "SELECT COUNT(*) FROM Cliente WHERE NroDocumento = @NroDocumento";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@NroDocumento", NroDocumento);
-                    con.Open();
-                    int count = (int)cmd.ExecuteScalar();
-                    return count > 0;
+                    {
+                        // Ahora el parámetro se crea como VarChar EN STRING 
+                        SqlParameter param = new SqlParameter("@NroDocumento", SqlDbType.VarChar, 11);
+                        param.Value = NroDocumento;
+                        cmd.Parameters.Add(param);
+
+                        con.Open();
+                        int count = (int)cmd.ExecuteScalar();
+                        return count > 0;
+                    }
                 }
             }
         }

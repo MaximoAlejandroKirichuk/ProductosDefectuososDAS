@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions; //libreria para el regex 
 
 namespace BLL
 {
@@ -13,6 +14,7 @@ namespace BLL
         private EmpleadosMPP mppEmpleado = new EmpleadosMPP();
         public bool Agregar(Empleado objeto)
         {
+
             return mppEmpleado.Agregar(objeto);
         }
 

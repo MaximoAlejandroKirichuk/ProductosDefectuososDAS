@@ -10,7 +10,7 @@ namespace BE.actores
     {
         public int IdCliente { get; set; }
         public TipoDocumentoCliente TipoDocumento { get; set; }
-        public int NroDocumento { get; set; }//cuil o cuit nro
+        public string NroDocumento { get; set; }//cuil o cuit nro
         public string Direccion { get; set; }
         public List<Producto> ProductosComprados { get; set; }
         public decimal DeudaTotal { get; set; }
@@ -20,7 +20,7 @@ namespace BE.actores
         {
             
         }
-        public Cliente(string nombreCompleto, TipoDocumentoCliente tipo, int nroDocumento, string direc, decimal deuda, string email)
+        public Cliente(string nombreCompleto, TipoDocumentoCliente tipo, string nroDocumento, string direc, decimal deuda, string email)
         {
             NombreCompleto = nombreCompleto;
             TipoDocumento = tipo;
