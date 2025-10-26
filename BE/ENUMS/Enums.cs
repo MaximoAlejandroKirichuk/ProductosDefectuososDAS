@@ -13,7 +13,6 @@ namespace BE
     }
     public enum CondicionProducto
     {
-        Nuevo,
         Defectuoso,
         EnReparacion,
         Reparado,

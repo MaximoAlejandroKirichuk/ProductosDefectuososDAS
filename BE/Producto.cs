@@ -34,7 +34,7 @@ namespace BE
             this.NombreProducto = nombreProducto;
             this.CostoProducto = costoProducto;
             this.Cliente = cliente;
-            this.CondicionProducto = CondicionProducto.Nuevo; // Un producto nuevo inicia como normal.
+            this.CondicionProducto = CondicionProducto.Defectuoso; // Un producto nuevo inicia como defectuoso.
             EstadoEntrega = EstadoEntraga.NoEntregado; // Se recibe
         }
 
