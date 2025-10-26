@@ -264,6 +264,17 @@ namespace UI
         {
 
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCambiarContrasenia form = new FormCambiarContrasenia();
+            form.ShowDialog();
+        }
     }
 }
  

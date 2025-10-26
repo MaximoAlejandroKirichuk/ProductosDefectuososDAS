@@ -188,8 +188,7 @@ namespace UI
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormCambiarContrasenia form = new FormCambiarContrasenia();
-            form.ShowDialog();
+            
         }
     }
 }
