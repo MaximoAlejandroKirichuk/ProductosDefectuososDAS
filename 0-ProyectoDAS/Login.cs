@@ -185,5 +185,10 @@ namespace UI
             FormCliente formcliente = new FormCliente();
             formcliente.ShowDialog();
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
     }
 }

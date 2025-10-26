@@ -17,6 +17,8 @@ namespace BLL
         public bool Agregar(Cliente objeto)
         {
             //TODO VALIDACIONES ACA
+            var existe = clienteMPP.ExisteCliente(objeto.NroDocumento);
+            if (existe) throw new Exception("El cliente ya existe");
             return clienteMPP.Agregar(objeto);
         }
 

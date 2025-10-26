@@ -15,6 +15,8 @@ namespace BLL
         private ProductoMPP productoMPP = new ProductoMPP();
         public bool Agregar(Producto objeto)
         {
+            var existe = productoMPP.ExisteProducto(objeto.CodigoProducto);
+            if (existe) throw new Exception("El producto ya existe");
             return productoMPP.Agregar(objeto);
         }
 

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogsBLL.cs" />
     <Compile Include="GestorEmpleadoBLL.cs" />
     <Compile Include="GestorProductosBLL.cs" />
     <Compile Include="GestorUsuarioBLL.cs" />
@@ -57,9 +58,17 @@
       <Project>{ccec6f52-1f33-40ba-86f2-d19104cf9151}</Project>
       <Name>BE</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{331a07d3-c077-47f1-a438-7af45ed35455}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MPP\MPP.csproj">
       <Project>{2840d9db-1b09-4a29-b688-93edeed02de8}</Project>
       <Name>MPP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{c852725e-c474-4e2a-8fd9-e719c15f9964}</Project>
+      <Name>Servicios</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

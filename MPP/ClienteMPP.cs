@@ -16,7 +16,10 @@ namespace MPP
     public class ClienteMPP : IMapeableTodos<Cliente>, IABM<Cliente>
     {
         private ClienteDAL dalCliente = new ClienteDAL();
-
+        public bool ExisteCliente(int NroDocumento)
+        {
+            return dalCliente.ExisteCliente(NroDocumento);
+        }
         public bool Agregar(Cliente objeto)
         {
             return dalCliente.Insertar(objeto);

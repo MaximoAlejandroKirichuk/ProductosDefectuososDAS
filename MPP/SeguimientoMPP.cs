@@ -35,51 +35,65 @@ namespace MPP
 
         public List<Seguimiento> ObtenerSeguimientosPorProducto(int codigoProducto)
         {
-            DataTable dt = seguimientoDAL.ObtenerSeguimientoPorProductos(codigoProducto);
+            // Obtenemos el DataSet del DAL
+            DataSet ds = seguimientoDAL.ObtenerSeguimientoPorProductos(codigoProducto);
             List<Seguimiento> lista = new List<Seguimiento>();
 
-            foreach (DataRow row in dt.Rows)
+            // Nos aseguramos de que exista la tabla y tenga filas
+            if (ds.Tables.Count > 0)
             {
-                Seguimiento s = new Seguimiento
+                foreach (DataRow row in ds.Tables["Seguimiento"].Rows)
                 {
-                    CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]),
-                    CodigoProducto = Convert.ToInt32(row["CodigoProducto"]),
-                    Mensaje = row["Mensaje"].ToString(),
-                    Responsable = new Empleado
+                    Seguimiento s = new Seguimiento
                     {
-                        IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),
-                        NombreCompleto = row["NombreResponsable"].ToString()
-                    },
-                    FechaRegistro = Convert.ToDateTime(row["FechaRegistro"]),
-                    TipoVisibilidad = (Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"])
-
-                };
-                lista.Add(s);
+                        CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]),
+                        CodigoProducto = Convert.ToInt32(row["CodigoProducto"]),
+                        Mensaje = row["Mensaje"].ToString(),
+                        Responsable = new Empleado
+                        {
+                            IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),
+                            NombreCompleto = row["NombreResponsable"].ToString()
+                        },
+                        FechaRegistro = Convert.ToDateTime(row["FechaRegistro"]),
+                        TipoVisibilidad = (Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"])
+                    };
+                    lista.Add(s);
+                }
             }
+
             return lista;
         }
+
         public List<Seguimiento> ObtenerSeguimientosPublicosPorProducto(int codigoProducto)
         {
-            DataTable dt = seguimientoDAL.ObtenerSeguimientoPorProductos(codigoProducto);
+            DataSet ds = seguimientoDAL.ObtenerSeguimientoPorProductos(codigoProducto);
             List<Seguimiento> lista = new List<Seguimiento>();
 
-            foreach (DataRow row in dt.Rows)
+            if (ds.Tables.Count > 0)
             {
-                Seguimiento s = new Seguimiento(
-                    Convert.ToDateTime(row["FechaRegistro"]),
-                    row["Mensaje"].ToString(),
-                    new Empleado
+                foreach (DataRow row in ds.Tables["Seguimiento"].Rows)
+                {
+                    // Solo agregamos los que sean públicos
+                    if ((Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"]) == Seguimiento.Visibilidad.Publica)
                     {
-                        IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),
-                        NombreCompleto = row["NombreResponsable"].ToString()
-                    },
-                    Convert.ToInt32(row["CodigoProducto"]),
-                    (Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"])
-                );
+                        Seguimiento s = new Seguimiento(
+                            Convert.ToDateTime(row["FechaRegistro"]),
+                            row["Mensaje"].ToString(),
+                            new Empleado
+                            {
+                                IdUsuario = Convert.ToInt32(row["IDPersonalResponsable"]),
+                                NombreCompleto = row["NombreResponsable"].ToString()
+                            },
+                            Convert.ToInt32(row["CodigoProducto"]),
+                            (Seguimiento.Visibilidad)Convert.ToInt32(row["Visibilidad"])
+                        )
+                        {
+                            CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"])
+                        };
 
-                s.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
-
-                lista.Add(s);
+                        lista.Add(s);
+                    }
+                }
             }
 
             return lista;
