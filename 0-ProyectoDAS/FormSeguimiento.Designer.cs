@@ -33,11 +33,11 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.txtAgregarPaso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.DGVProductos = new System.Windows.Forms.DataGridView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSeguimientos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
@@ -99,18 +99,6 @@
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(6, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(675, 184);
-            this.listBox1.TabIndex = 9;
-            // 
             // dateTimePickerFecha
             // 
             this.dateTimePickerFecha.CustomFormat = "dd/MM/yyyy HH:mm";
@@ -150,6 +138,18 @@
             this.DGVProductos.TabIndex = 13;
             this.DGVProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVProductos_CellClick);
             // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(6, 19);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(675, 184);
+            this.listBox1.TabIndex = 9;
+            // 
             // FormSeguimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,7 +175,6 @@
 
         private System.Windows.Forms.DataGridView DGVSeguimientos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
         private System.Windows.Forms.TextBox txtAgregarPaso;
         private System.Windows.Forms.Label label13;
@@ -183,5 +182,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView DGVProductos;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

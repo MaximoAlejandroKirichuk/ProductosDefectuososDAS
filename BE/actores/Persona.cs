@@ -9,5 +9,6 @@ namespace BE.actores
     public abstract class Persona
     {
         public string NombreCompleto { get; set; }
+        public Idioma Idioma { get; set; }
     }
 }

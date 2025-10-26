@@ -70,28 +70,7 @@ namespace UI
         {
             CargarListadoProductos();
         }
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                MessageBox.Show("Paso modificado correctamente.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al modificar paso: " + ex.Message);
-            }
-        }
-        private void btnBorrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                MessageBox.Show("Paso eliminado correctamente.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al borrar paso: " + ex.Message);
-            }
-        }
+        
         private void Producto_EstadoProductoCambiado(Producto producto, string estadoAnterior, string estadoNuevo)
         {
             MessageBox.Show($"El estado del producto {producto.CodigoProducto} cambió de {estadoAnterior} a {estadoNuevo}");
@@ -121,7 +100,7 @@ namespace UI
 
                 // Código producto
                 DataGridViewRow fila = DGVProductos.CurrentRow;
-                int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);  // "CodigoProducto" es el nombre de la columna, o usa índice
+                int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value); 
 
 
                 Seguimiento nuevo = new Seguimiento(
@@ -131,10 +110,6 @@ namespace UI
                     codigoProducto,
                     checkBox1.Checked ? Seguimiento.Visibilidad.Publica : Seguimiento.Visibilidad.Privada
                 );
-
-
-                DGVSeguimientos.DataSource = null;
-                DGVSeguimientos.DataSource = gestorSeguimientoBLL.ObtenerSeguimientosPorProducto(codigoProducto);
 
                 listBox1.Items.Add(nuevo);
                 MessageBox.Show("Seguimiento agregado correctamente.");
@@ -160,12 +135,9 @@ namespace UI
                 {
                     MessageBox.Show("Seguimientos guardados correctamente.");
                     listBox1.Items.Clear();
-
                     DataGridViewRow fila = DGVProductos.CurrentRow;
-                    int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value); 
-                    DGVSeguimientos.DataSource = null;
-                    DGVSeguimientos.DataSource = gestorSeguimientoBLL.ObtenerSeguimientosPorProducto(codigoProducto);
-
+                    int codigoProducto = Convert.ToInt32(fila.Cells["CodigoProducto"].Value);
+                    ActualizarListaSeguimientoPorCodigo(codigoProducto);
                     this.Close();
                 }
                 else
@@ -202,18 +174,9 @@ namespace UI
             // Obtener el índice real de la fila seleccionada
             int indice = e.RowIndex;
 
-            // Validación extra por seguridad
             try
             {
                 Seguimiento s = (Seguimiento)DGVSeguimientos.Rows[e.RowIndex].DataBoundItem;
-
-                // Mostrar detalles en controles auxiliares
-                //DateTime fecha = s.FechaRegistro;
-                //string mensaje = s.Mensaje;
-                //listBox1.DataSource = new List<string> { s.ToString() }; ;
-                //dateTimePickerFecha.Value = fecha;
-                //txtAgregarPaso.Text = mensaje;
-
                 FormModificarSeguimiento form = new FormModificarSeguimiento(s);
                 form.Show();
                 

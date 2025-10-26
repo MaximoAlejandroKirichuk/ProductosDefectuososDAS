@@ -15,13 +15,15 @@ namespace BE
         public string Email { get; set; }
         public string Contrasenia { get; set; }
         public RolesUsuarios Rol { get; set; }
-        
+        public bool Bloqueado { get; set; }
+
         protected Usuario(string nombreCompleto, string email, string contrasenia, RolesUsuarios rol)
         {
             NombreCompleto = nombreCompleto;
             Email = email;
             Contrasenia = contrasenia;
             Rol = rol;
+            Bloqueado = false;
         }
 
         public Usuario() { }

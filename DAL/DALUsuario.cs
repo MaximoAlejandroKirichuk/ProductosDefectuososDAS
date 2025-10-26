@@ -29,6 +29,24 @@ namespace DAL
                 }
             }
         }
-        
+
+        public bool CambiarContrasenia(string contrasenia, int idEmpleado)
+        {
+            using (SqlConnection con = new SqlConnection(stringConnection))
+            {
+                string query = @"UPDATE Empleado 
+                            SET Contrasena = @Contrasena
+                            WHERE IdEmpleado = @IdEmpleado";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+                    cmd.Parameters.AddWithValue("@Contrasena", contrasenia);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
     }
 }
