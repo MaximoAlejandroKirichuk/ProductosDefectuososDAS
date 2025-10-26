@@ -15,6 +15,9 @@ using System.Windows.Forms;
 
 using static System.Windows.Forms.AxHost;
 using _0_ProyectoDAS;
+using BE;
+using BLL;
+using Servicios;
 
 namespace UI
 {
@@ -69,10 +72,18 @@ namespace UI
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
             gettextespañol();
 
+
+            var usuario = SesionActiva.Instancia.UsuarioActivo;
+
+            if (usuario is Administrador admin)
+            {
+                FormNotificacionesAdmin frmNotif = new FormNotificacionesAdmin(admin);
+                frmNotif.ShowDialog();
+            }
         }
+
 
         public void GetTextIngles()
         {
@@ -197,41 +208,7 @@ namespace UI
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //    if (comboBoxAreaResponsable.SelectedItem == null)
-            //    {
-            //        MessageBox.Show("Seleccione un área para buscar.");
-            //        return;
-            //    }
-
-            //    try
-            //    {
-            //        // Intentar convertir el valor seleccionado en un valor del enum
-            //        AreaResponsable.AreaPosibles areaEnum = (AreaResponsable.AreaPosibles)Enum.Parse(
-            //            typeof(AreaResponsable.AreaPosibles),
-            //            comboBoxAreaResponsable.SelectedItem.ToString()
-            //        );
-
-            //        // Validación personalizada (opcional)
-            //        if (!Enum.IsDefined(typeof(AreaResponsable.AreaPosibles), areaEnum))
-            //        {
-            //            throw new AreaResponsableInexistenteExpeption(comboBoxAreaResponsable.SelectedItem.ToString());
-            //        }
-
-            //        // Crear objeto AreaResponsable a partir del enum
-            //        AreaResponsable area = new AreaResponsable(areaEnum);
-
-            //        // Mostrar productos filtrados
-            //        dataGridViewListadoProductosDefectuosos.DataSource = null;
-            //        dataGridViewListadoProductosDefectuosos.DataSource = ListadoProductoDefectuosos.Instancia.FiltrarPorArea(area);
-            //    }
-            //    catch (AreaResponsableInexistenteExpeption ex)
-            //    {
-            //        MessageBox.Show(ex.Message);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Ocurrió un error: " + ex.Message);
-            //    }
+          
         }
 
         private void cambiarIdiomaToolStripMenuItem_Click(object sender, EventArgs e)

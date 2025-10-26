@@ -33,11 +33,12 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.txtAgregarPaso = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.DGVProductos = new System.Windows.Forms.DataGridView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnCondicionProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSeguimientos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
@@ -72,7 +73,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(257, 336);
+            this.checkBox1.Location = new System.Drawing.Point(242, 336);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(162, 22);
             this.checkBox1.TabIndex = 15;
@@ -81,9 +82,9 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(570, 324);
+            this.btnGuardar.Location = new System.Drawing.Point(547, 325);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(111, 46);
+            this.btnGuardar.Size = new System.Drawing.Size(89, 46);
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -91,13 +92,25 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(444, 325);
+            this.BtnAgregar.Location = new System.Drawing.Point(453, 325);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(111, 46);
+            this.BtnAgregar.Size = new System.Drawing.Size(88, 46);
             this.BtnAgregar.TabIndex = 13;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(6, 19);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(675, 184);
+            this.listBox1.TabIndex = 9;
             // 
             // dateTimePickerFecha
             // 
@@ -132,23 +145,21 @@
             // DGVProductos
             // 
             this.DGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVProductos.Location = new System.Drawing.Point(753, 12);
+            this.DGVProductos.Location = new System.Drawing.Point(732, 12);
             this.DGVProductos.Name = "DGVProductos";
-            this.DGVProductos.Size = new System.Drawing.Size(506, 608);
+            this.DGVProductos.Size = new System.Drawing.Size(557, 421);
             this.DGVProductos.TabIndex = 13;
             this.DGVProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVProductos_CellClick);
             // 
-            // listBox1
+            // btnCondicionProducto
             // 
-            this.listBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(6, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(675, 184);
-            this.listBox1.TabIndex = 9;
+            this.btnCondicionProducto.Location = new System.Drawing.Point(851, 540);
+            this.btnCondicionProducto.Name = "btnCondicionProducto";
+            this.btnCondicionProducto.Size = new System.Drawing.Size(158, 46);
+            this.btnCondicionProducto.TabIndex = 14;
+            this.btnCondicionProducto.Text = "Cambiar condicion del producto";
+            this.btnCondicionProducto.UseVisualStyleBackColor = true;
+            this.btnCondicionProducto.Click += new System.EventHandler(this.btnCambiarCondicionProducto_Click);
             // 
             // FormSeguimiento
             // 
@@ -156,6 +167,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1301, 632);
+            this.Controls.Add(this.btnCondicionProducto);
             this.Controls.Add(this.DGVProductos);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DGVSeguimientos);
@@ -183,5 +195,6 @@
         private System.Windows.Forms.DataGridView DGVProductos;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnCondicionProducto;
     }
 }

@@ -7,12 +7,26 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Producto : ICloneable //, IComparable<Producto>
+    public class Producto : ICloneable, ISujeto//, IComparable<Producto>
     {
+        private List<IObservador> _observadores = new List<IObservador>();
 
         public int CodigoProducto { get; set; }
         public decimal CostoProducto { get; set; }
-        public CondicionProducto CondicionProducto { get; set; }
+        private CondicionProducto _condicionProducto;
+        public CondicionProducto CondicionProducto
+        {
+            get => _condicionProducto;
+            set
+            {
+                if (_condicionProducto != value)
+                {
+                    _condicionProducto = value;
+                    // Notificar a los empleados
+                    NotificarObservadores($"El producto {NombreProducto} cambió su condición a {_condicionProducto}");
+                }
+            }
+        }
         public EstadoEntraga EstadoEntrega { get; set; }
         public string NombreProducto { get; set; }
         public List<Seguimiento> ListaSeguimiento { get; set; } = new List<Seguimiento>();
@@ -37,48 +51,36 @@ namespace BE
             this.CondicionProducto = CondicionProducto.Defectuoso; // Un producto nuevo inicia como defectuoso.
             EstadoEntrega = EstadoEntraga.NoEntregado; // Se recibe
         }
-
-        //public void MarcarComoDefectuoso(string problema, int cantidadDaniada, decimal gastoAdicional, Ubicacion ubicacion)
-        //{
-        //    this.EstadoActual = CondicionProducto.Defectuoso;
-        //    this.ProblemaEntrada = problema;
-        //    this.CantidadDaniada = cantidadDaniada;
-        //    this.GastoAdicionalAntesDefecto = gastoAdicional;
-        //    this.UbicacionProducto = ubicacion;
-            
-        //    this.AgregarSeguimiento("Producto marcado como defectuoso.", this.PersonaResponsabl);
-        //}
-
-        //public void AgregarSeguimiento(string mensaje, Usuario responsable, int codigoProducto)
-        //{
-        //    this.ListaSeguimiento.Add(new Seguimiento(DateTime.Now, mensaje,responsable,codigoProducto));
-        //}
-
-        // Métodos ICloneable e IComparable
-        public object Clone()
+        public void ModificarCondicionProducto(CondicionProducto nuevaCondicion)
         {
-            return new Producto
+            if (CondicionProducto != nuevaCondicion)
             {
-                CodigoProducto = this.CodigoProducto,
-                NombreProducto = this.NombreProducto,
-                CostoProducto = this.CostoProducto,
-                ProblemaEntrada = this.ProblemaEntrada,
-                Cliente = this.Cliente, // Se asume que Cliente es inmutable 
-                EstadoEntrega = this.EstadoEntrega,
-                ListaSeguimiento = new List<Seguimiento>(this.ListaSeguimiento.Select(s => (Seguimiento)s.Clone())) // Clonación profunda si la clase Seguimiento tiene Clone
-            };
+                CondicionProducto = nuevaCondicion;
+                NotificarObservadores($"El producto {NombreProducto} cambió su condición a {nuevaCondicion}");
+            }
+        }
+        // Implementación de ISujeto
+        public void AgregarObservador(IObservador observador)
+        {
+            _observadores.Add(observador);
         }
 
-        //public int CompareTo(Producto other)
-        //{
-        //    if (other == null) return 1;
-        //    //decimal thisTotal = this.CostoProducto + this.GastoAdicionalAntesDefecto;
-        //    //decimal otherTotal = other.CostoProducto + other.GastoAdicionalAntesDefecto;
-        //    return otherTotal.CompareTo(thisTotal); 
-        //}
+        public void QuitarObservador(IObservador observador)
+        {
+            _observadores.Remove(observador);
+        }
 
-        
+        public void NotificarObservadores(string mensaje)
+        {
+            foreach (var observador in _observadores)
+            {
+                observador.Actualizar(this, mensaje);
+            }
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
     }
-
-
 }

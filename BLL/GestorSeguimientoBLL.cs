@@ -1,5 +1,6 @@
 ﻿using BE;
 using MPP;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,11 +13,12 @@ namespace BLL
     public class GestorSeguimientoBLL : IGestorSeguimiento
     {
 
-        private List<Seguimiento> listaSeguimientos;
         private SeguimientoMPP seguimientoMPP = new SeguimientoMPP();
+        private ServicioNotificacion _servicioNotificacion;
+
         public GestorSeguimientoBLL()
         {
-            listaSeguimientos = new List<Seguimiento>();
+
         }
 
         public List<Seguimiento> ObtenerSeguimientosPublicosPorProducto(int codigoProducto)
@@ -34,11 +36,6 @@ namespace BLL
             return seguimientoMPP.BorrarSeguimiento(seguimientoABorrar);
         }
 
-        public bool ModificarEstadoSeguimiento()
-        {
-            throw new NotImplementedException();
-        }
-
         public bool ModificarSeguimiento(Seguimiento seguimientoModificado)
         {
             return seguimientoMPP.ModificarSeguimiento(seguimientoModificado);
@@ -51,64 +48,35 @@ namespace BLL
             return lista;
         }
 
+        public bool ActualizarCondicionProducto(Producto producto, CondicionProducto nuevaCondicion, Usuario empleado, string mensaje)
+        {
+            if (producto.CondicionProducto == nuevaCondicion)
+                throw new Exception("La condición del producto no puede ser igual a la actual.");
 
-        // Borra un seguimiento dado el código de producto y las propiedades del seguimiento
-        //public bool BorrarSeguimiento(int codigoProducto, Seguimiento seguimientoABorrar)
-        //{
-        //    var seguimientoExistente = listaSeguimientos.FirstOrDefault(s =>
-        //        s.CodigoProducto == codigoProducto &&
-        //        s.FechaRegistro == seguimientoABorrar.FechaRegistro &&
-        //        s.Mensaje == seguimientoABorrar.Mensaje &&
-        //        s.Responsable == seguimientoABorrar.Responsable);
+            var exito = seguimientoMPP.ActualizarCondicionProducto(producto, nuevaCondicion);
+            if (!exito) throw new Exception("Error al actualizar producto.");
 
-        //    if (seguimientoExistente != null)
-        //    {
-        //        listaSeguimientos.Remove(seguimientoExistente);
-        //        return true;
-        //    }
-        //    return false;
-        //}
+            producto.ModificarCondicionProducto(nuevaCondicion);
 
-        // Modifica un seguimiento buscando por código y FechaRegistro (asumiendo FechaRegistro como identificador único)
-        //public bool ModificarSeguimiento(int codigoProducto, DateTime FechaRegistroOriginal, Seguimiento seguimientoModificado)
-        //{
-        //    var seguimientoExistente = listaSeguimientos.FirstOrDefault(s =>
-        //        s.CodigoProducto == codigoProducto &&
-        //        s.FechaRegistro == FechaRegistroOriginal);
+            // Notificar al administrador
+            var admin = ObtenerAdministradorResponsable();
+            ServicioNotificacion servicio = new ServicioNotificacion();
 
-        //    if (seguimientoExistente != null)
-        //    {
-        //        seguimientoExistente.FechaRegistro = seguimientoModificado.FechaRegistro;
-        //        seguimientoExistente.Mensaje = seguimientoModificado.Mensaje;
-        //        seguimientoExistente.Responsable = seguimientoModificado.Responsable;
-        //        return true;
-        //    }
-        //    return false;
-        //}
+            string mensajeCompleto = $"El empleado {empleado.NombreCompleto} modificó la condición del producto {producto.NombreProducto} a {nuevaCondicion}.\nMensaje: {mensaje}";
+            servicio.Enviar(empleado, admin, mensajeCompleto);
+
+            return true;
+        }
 
 
 
+        private Administrador ObtenerAdministradorResponsable()
+        {
+            // Esto seria porque siempre hay un solo administrador
 
-        // Retorna los seguimientos para un producto específico
-        //public List<Seguimiento> ObtenerSeguimientosPorProducto(int codigoProducto)
-        //{
-        //    return listaSeguimientos
-        //        .Where(s => s.CodigoProducto == codigoProducto)
-        //        .OrderBy(s => s.FechaRegistro)
-        //        .ToList();
-        //}
+            return new Administrador {NombreCompleto = "Máximo Kirichuk", IdUsuario=1 };
+        }
 
-        // Método para cargar lista de seguimientos desde archivo, si hace falta
-        //public void CargarSeguimientosDesdeArchivo(List<Seguimiento> seguimientos)
-        //{
-        //    listaSeguimientos = seguimientos ?? new List<Seguimiento>();
-        //}
-
-        // Método para obtener la lista completa 
-        //public List<Seguimiento> ObtenerTodosLosSeguimientos()
-        //{
-        //    return listaSeguimientos;
-        //}
 
 
     }
