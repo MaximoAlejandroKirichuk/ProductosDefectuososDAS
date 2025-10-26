@@ -62,26 +62,31 @@ namespace BLL
 
         public bool CambiarContrasenia(Usuario usuario, string nuevaContrasenia)
         {
-            // TODO: FALTAN HACER VALIDACIONES DEL TIPO REGEX
+            var nuevaContraseniaHasheada = HashContrasena(nuevaContrasenia);
 
-            nuevaContrasenia = HashContrasena(nuevaContrasenia);
-            if (usuario.Contrasenia == nuevaContrasenia) 
+            if (usuario.Contrasenia == nuevaContraseniaHasheada)
             {
-                logger.RegistrarEvento(SesionActiva.Instancia.UsuarioActivo.IdUsuario, NivelLog.Error, ModuloSistema.Login, "Eror en el cambio de contraseña - Contraseña nueva es la misma a la anterior", Criticidad.Media);
-                throw new Exception("La contraseña nueva es la misma a la anterior");
+                logger.RegistrarEvento(
+                    SesionActiva.Instancia.UsuarioActivo.IdUsuario,
+                    NivelLog.Error,
+                    ModuloSistema.Login,
+                    "Error en el cambio de contraseña - La nueva contraseña es igual a la anterior",
+                    Criticidad.Media
+                );
+                throw new InvalidOperationException("La nueva contraseña no puede ser igual a la anterior.");
             }
 
-            var respuesta = daLUsuario.CambiarContrasenia(nuevaContrasenia, usuario.IdUsuario);
-            if (respuesta)
-            {
-                logger.RegistrarEvento(SesionActiva.Instancia.UsuarioActivo.IdUsuario, NivelLog.Informacion, ModuloSistema.Login, "Cambio de contraseña exitoso", Criticidad.Baja);
-                return true; 
-            }
+            var exito = daLUsuario.CambiarContrasenia(nuevaContraseniaHasheada, usuario.IdUsuario);
 
+            logger.RegistrarEvento(
+                SesionActiva.Instancia.UsuarioActivo.IdUsuario,
+                exito ? NivelLog.Informacion : NivelLog.Error,
+                ModuloSistema.Login,
+                exito ? "Cambio de contraseña exitoso" : "Error en el cambio de contraseña",
+                exito ? Criticidad.Baja : Criticidad.Alta
+            );
 
-            logger.RegistrarEvento(SesionActiva.Instancia.UsuarioActivo.IdUsuario, NivelLog.Error, ModuloSistema.Login, "Error en el cambio de contraseña", Criticidad.Alta);
-            return false;
-            
+            return exito;
         }
 
         public string HashContrasena(string contrasena)

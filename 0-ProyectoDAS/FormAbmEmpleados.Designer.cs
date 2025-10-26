@@ -73,6 +73,7 @@
             this.txtNombreCompleto.Name = "txtNombreCompleto";
             this.txtNombreCompleto.Size = new System.Drawing.Size(100, 20);
             this.txtNombreCompleto.TabIndex = 1;
+            this.txtNombreCompleto.TextChanged += new System.EventHandler(this.txtNombreCompleto_TextChanged);
             // 
             // LEmail
             // 

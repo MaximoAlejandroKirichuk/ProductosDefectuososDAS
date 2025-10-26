@@ -114,5 +114,27 @@ namespace _0_ProyectoDAS
                 MessageBox.Show("Error al borrar empleado: " + ex.Message);
             }
         }
+
+        private void txtNombreCompleto_TextChanged(object sender, EventArgs e)
+        {
+            string nombreCompleto = txtNombreCompleto.Text.Trim();
+
+            string contrasenaGenerada = GenerarContrasenaBaseEnNombre(nombreCompleto);
+
+            TxtContraseña.Text = contrasenaGenerada;
+
+        }
+        private string GenerarContrasenaBaseEnNombre(string nombre)
+        {
+            if (string.IsNullOrEmpty(nombre))
+            {
+                return string.Empty; // Devuelve vacío si no hay nombre
+            }
+            // 1. Quita todos los espacios del nombre.
+            string sinEspacios = nombre.Replace(" ", "");
+            string contrasenaFinal = sinEspacios.ToLower();
+           
+            return contrasenaFinal;
+        }
     }
 }
