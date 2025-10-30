@@ -88,6 +88,18 @@
     <Compile Include="FormModificarSeguimiento.Designer.cs">
       <DependentUpon>FormModificarSeguimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNotificacionesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotificacionesAdmin.Designer.cs">
+      <DependentUpon>FormNotificacionesAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNotificarCondicionProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotificarCondicionProducto.Designer.cs">
+      <DependentUpon>FormNotificarCondicionProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlNotificacion .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlNotificacion .Designer.cs">
+      <DependentUpon>UserControlNotificacion .cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormABMCliente.resx">
       <DependentUpon>FormABMCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +179,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModificarSeguimiento.resx">
       <DependentUpon>FormModificarSeguimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotificacionesAdmin.resx">
+      <DependentUpon>FormNotificacionesAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotificarCondicionProducto.resx">
+      <DependentUpon>FormNotificarCondicionProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistroCliente.resx">
       <DependentUpon>FormRegistroCliente.cs</DependentUpon>
@@ -202,6 +226,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlNotificacion .resx">
+      <DependentUpon>UserControlNotificacion .cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

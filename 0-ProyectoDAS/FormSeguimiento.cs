@@ -158,10 +158,8 @@ namespace UI
                 DataGridViewRow fila = DGVProductos.Rows[e.RowIndex];
 
                 var codigoProducto = fila.Cells["CodigoProducto"].Value;
-
                 int codigo = Convert.ToInt32(codigoProducto);
 
-                MessageBox.Show("Código seleccionado: " + codigo);
                 ActualizarListaSeguimientoPorCodigo(codigo);
             }
         }
@@ -184,6 +182,22 @@ namespace UI
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrio un error al mostrar los datos: " + ex.Message);
+            }
+        }
+
+        private void btnCambiarCondicionProducto_Click(object sender, EventArgs e)
+        {
+            if (DGVProductos.CurrentRow != null)
+            {
+                // Obtener el objeto Producto de la fila seleccionada
+                Producto prod = (Producto)DGVProductos.CurrentRow.DataBoundItem;
+
+                FormNotificarCondicionProducto form = new FormNotificarCondicionProducto(prod);
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccioná un producto primero.");
             }
         }
     }

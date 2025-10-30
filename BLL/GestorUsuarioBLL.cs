@@ -46,7 +46,7 @@ namespace BLL
                 // Log de intento de contraseña incorrecta
                 logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Error, ModuloSistema.Login,
                     $"Intento de inicio de sesión fallido - Contraseña incorrecta", Criticidad.Media);
-                // (aca incrementar los intentos fallidos)
+                //TODO (aca incrementar los intentos fallidos) Y SI ES IGUAL A 3 bloquear cuenta
                     return false;
                 
             }

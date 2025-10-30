@@ -84,7 +84,7 @@
             this.groupBox2.Controls.Add(this.dateTimePickerFecha);
             this.groupBox2.Location = new System.Drawing.Point(42, 313);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(599, 293);
+            this.groupBox2.Size = new System.Drawing.Size(599, 296);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Seguimiento Modificar";
