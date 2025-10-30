@@ -23,10 +23,11 @@ namespace MPP
             throw new NotImplementedException();
         }
 
-        public bool ModificarEstadoSeguimiento()
+        public bool ActualizarCondicionProducto(Producto producto, CondicionProducto nuevaCondicion)
         {
-            throw new NotImplementedException();
+            return seguimientoDAL.ActualizarCondicionProducto(producto.CodigoProducto, nuevaCondicion);
         }
+
 
         public bool ModificarSeguimiento(Seguimiento seguimientoModificado)
         {

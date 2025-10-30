@@ -1,4 +1,5 @@
-﻿using BLL;
+﻿using BE;
+using BLL;
 using Servicios;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace _0_ProyectoDAS
             InitializeComponent();
         }
 
+        GestorUsuarioBLL usuarioBLL = new GestorUsuarioBLL();
         private void FormCambiarContrasenia_Load(object sender, EventArgs e)
         {
             
@@ -42,11 +44,16 @@ namespace _0_ProyectoDAS
                 string contraseniaActual = txtContraseniaActual.Text;
                 string contraseniaNueva = txtContraseniaNueva.Text;
 
+                var respuesta = usuarioBLL.CambiarContrasenia(SesionActiva.Instancia.UsuarioActivo, contraseniaNueva);
 
+                if (!respuesta) throw new Exception("Ocurrio un error al cambiar la contraseña");
+                MessageBox.Show("Se logro cambiar correctamente la contraseña");
+                Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrio un erorr al cambiar la contraseña: " + ex.Message);
+                Close();
             }
         }
     }

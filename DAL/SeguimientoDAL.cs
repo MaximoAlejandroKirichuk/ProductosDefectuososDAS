@@ -139,5 +139,22 @@ namespace DAL
             
             return ds;
         }
+
+
+        public bool ActualizarCondicionProducto(int codigoProducto ,CondicionProducto nuevaCondicion)
+        {
+            using (var conn = new SqlConnection(stringConnection))
+            {
+                conn.Open();
+                string query = "UPDATE Producto SET CondicionProducto = @Condicion WHERE CodigoProducto = @Codigo";
+
+                using (var cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Condicion", nuevaCondicion.ToString());
+                    cmd.Parameters.AddWithValue("@Codigo", codigoProducto);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
     }
 }

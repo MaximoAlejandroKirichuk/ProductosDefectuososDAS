@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarSeguimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportePorUbicaciónGeográficaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,9 +41,9 @@
             this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.portuguesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarSeguimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,13 +60,15 @@
             this.empleadosToolStripMenuItem,
             this.empleadosToolStripMenuItem1,
             this.cambiarIdiomaToolStripMenuItem,
-            this.ayudaToolStripMenuItem,
-            this.cerrarSesiónToolStripMenuItem});
+            this.cambiarContraseñaToolStripMenuItem,
+            this.cerrarSesiónToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1175, 37);
+            this.menuStrip1.Size = new System.Drawing.Size(1207, 37);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // registrarToolStripMenuItem
             // 
@@ -86,6 +89,13 @@
             this.seguimientoToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.seguimientoToolStripMenuItem.Text = "Seguimiento";
             this.seguimientoToolStripMenuItem.Click += new System.EventHandler(this.seguimientoToolStripMenuItem_Click);
+            // 
+            // modificarSeguimientoToolStripMenuItem
+            // 
+            this.modificarSeguimientoToolStripMenuItem.Name = "modificarSeguimientoToolStripMenuItem";
+            this.modificarSeguimientoToolStripMenuItem.Size = new System.Drawing.Size(250, 28);
+            this.modificarSeguimientoToolStripMenuItem.Text = "Modificar seguimiento";
+            this.modificarSeguimientoToolStripMenuItem.Click += new System.EventHandler(this.modificarSeguimientoToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -166,14 +176,13 @@
             this.portuguesToolStripMenuItem.Text = "Portugues";
             this.portuguesToolStripMenuItem.Click += new System.EventHandler(this.portuguesToolStripMenuItem_Click);
             // 
-            // ayudaToolStripMenuItem
+            // cambiarContraseñaToolStripMenuItem
             // 
-            this.ayudaToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
-            this.ayudaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(70, 29);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
+            this.cambiarContraseñaToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
+            this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
+            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(175, 33);
+            this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
+            this.cambiarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambiarContraseñaToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
@@ -184,19 +193,21 @@
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
-            // modificarSeguimientoToolStripMenuItem
+            // ayudaToolStripMenuItem
             // 
-            this.modificarSeguimientoToolStripMenuItem.Name = "modificarSeguimientoToolStripMenuItem";
-            this.modificarSeguimientoToolStripMenuItem.Size = new System.Drawing.Size(250, 28);
-            this.modificarSeguimientoToolStripMenuItem.Text = "Modificar seguimiento";
-            this.modificarSeguimientoToolStripMenuItem.Click += new System.EventHandler(this.modificarSeguimientoToolStripMenuItem_Click);
+            this.ayudaToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
+            this.ayudaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(70, 29);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1175, 690);
+            this.ClientSize = new System.Drawing.Size(1207, 690);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -226,6 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarSeguimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
     }
 }
 
