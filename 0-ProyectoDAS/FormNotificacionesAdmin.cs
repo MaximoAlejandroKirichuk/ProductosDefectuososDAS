@@ -27,44 +27,74 @@ namespace _0_ProyectoDAS
 
         private void FormNotificacionesAdmin_Load(object sender, EventArgs e)
         {
-            CargarNotificaciones();
+            
         }
 
-        private void CargarNotificaciones()
+        private void CargarNotificaciones(List<Notificacion> pendientes)
         {
-            List<Notificacion> pendientes = servicio.ObtenerPendientes(admin);
-
             panelNotificaciones.Controls.Clear();
+            panelNotificaciones.AutoScroll = true;
+            panelNotificaciones.BackColor = Color.White;
 
-            if (pendientes.Count == 0)
+            if (pendientes == null || pendientes.Count == 0)
             {
                 Label lblVacio = new Label
                 {
-                    Text = "No hay notificaciones pendientes 😊",
-                    Dock = DockStyle.Fill,
-                    TextAlign = ContentAlignment.MiddleCenter,
+                    Text = "No hay notificaciones pendientes",
+                    AutoSize = true,
                     Font = new Font("Segoe UI", 11, FontStyle.Italic),
-                    ForeColor = Color.Gray
+                    ForeColor = Color.Gray,
                 };
+
+                // Centrado manual
+                lblVacio.Location = new Point(
+                    (panelNotificaciones.Width - lblVacio.Width) / 2,
+                    (panelNotificaciones.Height - lblVacio.Height) / 2
+                );
+
+                lblVacio.Anchor = AnchorStyles.None;
+
                 panelNotificaciones.Controls.Add(lblVacio);
+                panelNotificaciones.Resize += (s, e) =>
+                {
+                    // Recalcula el centrado al redimensionar
+                    lblVacio.Location = new Point(
+                        (panelNotificaciones.Width - lblVacio.Width) / 2,
+                        (panelNotificaciones.Height - lblVacio.Height) / 2
+                    );
+                };
+
                 return;
             }
 
+            // Caso normal con notificaciones
             foreach (var notificacion in pendientes)
             {
                 var control = new UserControl1();
                 control.SetNotificacion(notificacion);
+                control.Margin = new Padding(10);
                 panelNotificaciones.Controls.Add(control);
             }
-
-            // Marcarlas como leídas después de mostrarlas
-            servicio.MarcarTodasComoLeidas(admin);
         }
+
 
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-            CargarNotificaciones();
+            servicio.MarcarTodasComoLeidas(admin);
+        }
+
+        private void FormNotificacionesAdmin_Load_1(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Notificacion> pendientes = servicio.ObtenerPendientes(admin);
+                CargarNotificaciones(pendientes);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar notificaciones: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

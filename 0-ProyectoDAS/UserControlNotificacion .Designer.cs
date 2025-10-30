@@ -18,7 +18,6 @@
             this.lblMensaje = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.SuspendLayout();
-
             // 
             // lblMensaje
             // 
@@ -27,10 +26,9 @@
             this.lblMensaje.Location = new System.Drawing.Point(10, 10);
             this.lblMensaje.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(46, 19);
+            this.lblMensaje.Size = new System.Drawing.Size(45, 19);
             this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "label1";
-
             // 
             // lblFecha
             // 
@@ -39,10 +37,9 @@
             this.lblFecha.ForeColor = System.Drawing.Color.Gray;
             this.lblFecha.Location = new System.Drawing.Point(10, 40);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(46, 13);
+            this.lblFecha.Size = new System.Drawing.Size(36, 13);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "label2";
-
             // 
             // UserControl1
             // 
@@ -53,10 +50,11 @@
             this.Controls.Add(this.lblFecha);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(450, 70);
+            this.Size = new System.Drawing.Size(479, 266);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }

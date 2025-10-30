@@ -25,45 +25,51 @@ namespace _0_ProyectoDAS
             this.panelNotificaciones = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
-
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Dock = DockStyle.Top;
-            this.lblTitulo.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = Color.FromArgb(45, 45, 45);
-            this.lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblTitulo.Text = "Notificaciones del Sistema";
-            this.lblTitulo.Height = 60;
-            this.lblTitulo.BackColor = Color.FromArgb(240, 240, 240);
-            this.lblTitulo.Padding = new Padding(0, 10, 0, 10);
-
             // 
             // panelNotificaciones
             // 
             this.panelNotificaciones.AutoScroll = true;
-            this.panelNotificaciones.Dock = DockStyle.Fill;
-            this.panelNotificaciones.FlowDirection = FlowDirection.TopDown;
-            this.panelNotificaciones.Padding = new Padding(20);
+            this.panelNotificaciones.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelNotificaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNotificaciones.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelNotificaciones.Location = new System.Drawing.Point(0, 52);
+            this.panelNotificaciones.Name = "panelNotificaciones";
+            this.panelNotificaciones.Padding = new System.Windows.Forms.Padding(17);
+            this.panelNotificaciones.Size = new System.Drawing.Size(729, 381);
+            this.panelNotificaciones.TabIndex = 0;
             this.panelNotificaciones.WrapContents = false;
-            this.panelNotificaciones.BackColor = Color.WhiteSmoke;
-
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Padding = new System.Windows.Forms.Padding(0, 9, 0, 9);
+            this.lblTitulo.Size = new System.Drawing.Size(729, 52);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Notificaciones del Sistema";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormNotificacionesAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.BackColor = Color.White;
-            this.ClientSize = new System.Drawing.Size(850, 500);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(729, 433);
             this.Controls.Add(this.panelNotificaciones);
             this.Controls.Add(this.lblTitulo);
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormNotificacionesAdmin";
-            this.StartPosition = FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Centro de Notificaciones";
+            this.Load += new System.EventHandler(this.FormNotificacionesAdmin_Load_1);
             this.ResumeLayout(false);
+
         }
 
         #endregion

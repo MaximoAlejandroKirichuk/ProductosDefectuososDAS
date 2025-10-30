@@ -29,7 +29,7 @@ namespace DAL
                 }
             }
         }
-
+        
         public bool CambiarContrasenia(string contrasenia, int idEmpleado)
         {
             using (SqlConnection con = new SqlConnection(stringConnection))
@@ -48,5 +48,7 @@ namespace DAL
                 }
             }
         }
+
+        //TODO AUTOINCREMENTAR SI SE EQUIVOCA EL CONTADOR
     }
 }
