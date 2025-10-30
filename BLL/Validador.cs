@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BE;
+using System;
 using System.Text.RegularExpressions;
 
 namespace BLL
@@ -57,6 +58,35 @@ namespace BLL
                 // Si falla cualquier conversión, es inválido
                 return false;
             }
+        }
+
+
+        public static bool ValidarGmail(string gmail)
+        {
+            //  INICIO DE VALIDACIONES BLL 
+
+            if (gmail == null)
+            {
+                throw new Exception("Error al intentar agregar: El empleado es nulo.");
+            }
+
+            //  VALIDACIÓN DE GMAIL 
+            string patronGmail = @"^[\w-\.]+@gmail\.com$";
+
+            if (string.IsNullOrWhiteSpace(gmail) || !Regex.IsMatch(gmail.Trim(), patronGmail))
+            {
+                // Si NO es un email de @gmail.com válido, lanzamos la excepción
+                throw new Exception("El email del empleado debe ser una cuenta de @gmail.com válida.");
+            }
+
+            //  Validación de Contraseña
+            if (string.IsNullOrWhiteSpace(gmail))
+            {
+                throw new Exception("La contraseña es obligatoria.");
+            }
+
+            // Si todas las validaciones pasan
+            return true;
         }
     }
 }

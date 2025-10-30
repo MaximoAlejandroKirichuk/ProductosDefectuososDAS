@@ -14,30 +14,7 @@ namespace BLL
         private EmpleadosMPP mppEmpleado = new EmpleadosMPP();
         public bool Agregar(Empleado objeto)
         {
-            //  INICIO DE VALIDACIONES BLL 
-
-            if (objeto == null)
-            {
-                throw new Exception("Error al intentar agregar: El empleado es nulo.");
-            }
-
-            //  VALIDACIÓN DE GMAIL 
-            string patronGmail = @"^[\w-\.]+@gmail\.com$";
-
-            if (string.IsNullOrWhiteSpace(objeto.Email) || !Regex.IsMatch(objeto.Email.Trim(), patronGmail))
-            {
-                // Si NO es un email de @gmail.com válido, lanzamos la excepción
-                throw new Exception("El email del empleado debe ser una cuenta de @gmail.com válida.");
-            }
-
-            //  Validación de Contraseña
-            
-            if (string.IsNullOrWhiteSpace(objeto.Contrasenia))
-            {
-                throw new Exception("La contraseña es obligatoria.");
-            }
-
-            // Si todas las validaciones pasan, se llama al MPP
+            if (!Validador.ValidarGmail(objeto.Email)) throw new Exception("Ingrese correctamente el email"); 
             return mppEmpleado.Agregar(objeto);
         }
 
