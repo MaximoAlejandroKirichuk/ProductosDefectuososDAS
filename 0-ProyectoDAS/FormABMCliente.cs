@@ -35,13 +35,11 @@ namespace _0_ProyectoDAS
                 TipoDocumentoCliente tipoDocumentoCliente;
                 Enum.TryParse(comboBoxTipoDocumento.SelectedItem.ToString(), out tipoDocumentoCliente);
 
-                // --- CAMBIO AQUÍ ---
-                // int nroDocumento = Convert.ToInt32(txtNroDocumento.Text); // ANTES
                 string nroDocumento = txtNroDocumento.Text.Trim(); // AHORA
 
                 var deudaTotal = Convert.ToDecimal(txtDeudaTotal.Text);
 
-                // El constructor ahora acepta un string
+                
                 var nuevoCliente = new Cliente(nombreCompleto, tipoDocumentoCliente, nroDocumento, direccion, deudaTotal, email);
 
                 // Si la BLL falla (ej. CUIL inválido), saltará al CATCH
