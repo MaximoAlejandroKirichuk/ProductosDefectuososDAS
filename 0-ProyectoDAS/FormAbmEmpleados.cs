@@ -43,7 +43,7 @@ namespace _0_ProyectoDAS
                 
 
                 var hashContrasena = gestorUsuarioBLL.HashContrasena(contrasena);
-                var nuevoEmpleado = new Empleado(nombreCompleto, email, hashContrasena, RolesUsuarios.Empleado);
+                var nuevoEmpleado = new Empleado(nombreCompleto, email, hashContrasena, RolesUsuarios.EmpleadoReparacion);
                 var respuesta = gestorEmpleadoBLL.Agregar(nuevoEmpleado);
                 if (!respuesta) throw new Exception("Ocurrio un error al agregar");
                 MessageBox.Show("Se pudo agregar el empleado");
@@ -65,11 +65,12 @@ namespace _0_ProyectoDAS
 
                     int idEmpleado = Convert.ToInt32(fila.Cells["IdUsuario"].Value);  //esto vaya a saber uno porque es IdUsuario
                     string nombreCompleto = txtNombreCompleto.Text;
-
+                    string password = gestorUsuarioBLL.HashContrasena(TxtContraseña.Text);
                     var nuevoEmpleado = new Empleado
                     {
                         NombreCompleto = nombreCompleto,
-                        IdUsuario = idEmpleado
+                        IdUsuario = idEmpleado,
+                        Contrasenia = password
                     };
                     var respuesta = gestorEmpleadoBLL.Modificar(nuevoEmpleado);
                     if (!respuesta) throw new Exception("Ocurrio un error al modificar");

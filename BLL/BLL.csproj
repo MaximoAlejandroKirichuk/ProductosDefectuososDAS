@@ -50,7 +50,9 @@
     <Compile Include="GestorSeguimientoBLL.cs" />
     <Compile Include="ListadoEmpleados.cs" />
     <Compile Include="ListadoProductoDefectuosos.cs" />
+    <Compile Include="BLLPermiso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolBLL.cs" />
     <Compile Include="SesionActiva.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -16,6 +16,7 @@ namespace BLL
         private DALUsuario daLUsuario = new DALUsuario();
         private UsuarioMPP usuarioMPP = new UsuarioMPP();
         private readonly LogsBLL logger = new LogsBLL();
+        private readonly BLLPermiso permisoBLL = new BLLPermiso();
         public bool IniciarSesion(string email, string contrasena)
         {
             try
@@ -35,6 +36,9 @@ namespace BLL
                 if (usuario.Contrasenia == hashContrasena)
                 {
                     SesionActiva.Instancia.IniciarSesion(usuario);
+                    
+                    // Cargar jerarquía de permisos (Composite)
+                    usuario.Permisos = permisoBLL.ObtenerPermisosPorRol(usuario.Rol);
 
                     // Log de login exitoso
                     logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Informacion, ModuloSistema.Login,

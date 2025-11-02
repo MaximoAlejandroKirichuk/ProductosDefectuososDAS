@@ -50,6 +50,10 @@
     <Compile Include="Dimensiones.cs" />
     <Compile Include="IABM.cs" />
     <Compile Include="IGestorSeguimiento.cs" />
+    <Compile Include="Modulo.cs" />
+    <Compile Include="RolComponent.cs" />
+    <Compile Include="RolCompuesto.cs" />
+    <Compile Include="RolSimple.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

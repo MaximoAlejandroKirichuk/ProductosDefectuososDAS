@@ -24,10 +24,29 @@ namespace MPP
 
         public Usuario Mapear(DataRow row)
         {
+            string rolString = row["Rol"]?.ToString();
             RolesUsuarios rol;
-            Enum.TryParse(row["Rol"].ToString(), out rol);
 
+            // Mapear string a enum
+            switch (rolString)
+            {
+                case "Admin":
+                    rol = RolesUsuarios.Admin;
+                    break;
+                case "EmpleadoReparacion":
+                    rol = RolesUsuarios.EmpleadoReparacion;
+                    break;
+                case "JefeReparacion":
+                    rol = RolesUsuarios.JefeReparacion;
+                    break;
+                case "Vendedor":
+                    rol = RolesUsuarios.Vendedor;
+                    break;
+                default:
+                    return null; // Rol desconocido
+            }
 
+            // Crear usuario segun rol
             switch (rol)
             {
                 case RolesUsuarios.Admin:
@@ -39,7 +58,7 @@ namespace MPP
                         Contrasenia = row["Contrasena"].ToString(),
                         Rol = rol
                     };
-                case RolesUsuarios.Empleado:
+                case RolesUsuarios.EmpleadoReparacion:
                     return new Empleado
                     {
                         IdUsuario = Convert.ToInt32(row["IdEmpleado"]),
@@ -48,9 +67,28 @@ namespace MPP
                         Contrasenia = row["Contrasena"].ToString(),
                         Rol = rol
                     };
-                default: return null;
+                case RolesUsuarios.JefeReparacion:
+                    return new Empleado
+                    {
+                        IdUsuario = Convert.ToInt32(row["IdEmpleado"]),
+                        NombreCompleto = row["NombreCompleto"].ToString(),
+                        Email = row["Email"].ToString(),
+                        Contrasenia = row["Contrasena"].ToString(),
+                        Rol = rol
+                    };
+                case RolesUsuarios.Vendedor:
+                    return new Empleado
+                    {
+                        IdUsuario = Convert.ToInt32(row["IdEmpleado"]),
+                        NombreCompleto = row["NombreCompleto"].ToString(),
+                        Email = row["Email"].ToString(),
+                        Contrasenia = row["Contrasena"].ToString(),
+                        Rol = rol
+                    };
+                default:
+                    return null;
             }
-
         }
+
     }
 }

@@ -23,6 +23,7 @@ namespace BLL
 
         public bool Modificar(Empleado objeto)
         {
+
             return mppEmpleado.Modificar(objeto);
         }
         public List<Empleado> ObtenerTodos()

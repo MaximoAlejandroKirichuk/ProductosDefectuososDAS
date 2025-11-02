@@ -16,6 +16,7 @@ namespace BE
         public string Contrasenia { get; set; }
         public RolesUsuarios Rol { get; set; }
         public bool Bloqueado { get; set; }
+        public RolComponent Permisos { get; set; }
 
         protected Usuario(string nombreCompleto, string email, string contrasenia, RolesUsuarios rol)
         {

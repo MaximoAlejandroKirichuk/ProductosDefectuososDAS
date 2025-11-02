@@ -67,14 +67,16 @@ namespace DAL
             using (SqlConnection con = new SqlConnection(stringConnection))
             {
                 string query = @"UPDATE Empleado 
-                            SET NombreCompleto = @NombreCompleto
+                            SET NombreCompleto = @NombreCompleto,
+                                Contrasena = @Contrasena
                             WHERE IdEmpleado = @IdEmpleado";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@IdEmpleado", objeto.IdUsuario);
                     cmd.Parameters.AddWithValue("@NombreCompleto", objeto.NombreCompleto);
-                    
+                    cmd.Parameters.AddWithValue("@Contrasena", objeto.Contrasenia);
+
                     con.Open();
                     return cmd.ExecuteNonQuery() > 0;
                 }
