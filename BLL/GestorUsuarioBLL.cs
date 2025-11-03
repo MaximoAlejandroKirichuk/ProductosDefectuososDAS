@@ -18,8 +18,9 @@ namespace BLL
         private readonly LogsBLL logger = new LogsBLL();
         public bool IniciarSesion(string email, string contrasena)
         {
+            if (!Validador.ValidarGmail(email)) throw new Exception("Ingrese un email valido");
             try
-            {
+            {   
                 Usuario usuario = BuscarUsuarioPorMail(email);
 
                 if (usuario == null)

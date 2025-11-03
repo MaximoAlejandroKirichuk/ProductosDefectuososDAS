@@ -34,36 +34,38 @@ namespace _0_ProyectoDAS
                 string direccion = txtDireccion.Text;
                 TipoDocumentoCliente tipoDocumentoCliente;
                 Enum.TryParse(comboBoxTipoDocumento.SelectedItem.ToString(), out tipoDocumentoCliente);
-                int nroDocumento = Convert.ToInt32(txtNroDocumento.Text);
+
+                string nroDocumento = txtNroDocumento.Text.Trim(); // AHORA
+
                 var deudaTotal = Convert.ToDecimal(txtDeudaTotal.Text);
 
+                
                 var nuevoCliente = new Cliente(nombreCompleto, tipoDocumentoCliente, nroDocumento, direccion, deudaTotal, email);
-                var respuesta = gestorClienteBLL.Agregar(nuevoCliente);
-                if (!respuesta) throw new Exception("No se pudo agregar el nuevo usuario");
-                MessageBox.Show("Se agrego correctamente el usuario"); 
+
+                // Si la BLL falla (ej. CUIL inválido), saltará al CATCH
+                gestorClienteBLL.Agregar(nuevoCliente);
+
+                MessageBox.Show("Se agrego correctamente el usuario", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarClientes();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo agregar el usuario: " + ex.Message);
+                // Esto atrapará el error de la BLL (ej. "Ingrese correctamente el cuil...")
+                MessageBox.Show(ex.Message, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
         private void btnBorrarCliente_Click(object sender, EventArgs e)
         {
+            // ... (Este método está bien, usa IdCliente) ...
             try
             {
                 if (dataGridView1.CurrentRow != null)
                 {
                     DataGridViewRow fila = dataGridView1.CurrentRow;
-
                     int idCliente = Convert.ToInt32(fila.Cells["IdCliente"].Value);
-      
-                    var respuesta = gestorClienteBLL.Borrar(idCliente);
-                    if (!respuesta) throw new Exception("No se pudo borrar el cliente");
-
-
+                    gestorClienteBLL.Borrar(idCliente);
                     MessageBox.Show("Cliente borrado correctamente");
                     CargarClientes();
                 }
@@ -92,17 +94,20 @@ namespace _0_ProyectoDAS
                     string direccion = txtDireccion.Text;
                     TipoDocumentoCliente tipoDocumentoCliente;
                     Enum.TryParse(comboBoxTipoDocumento.SelectedItem.ToString(), out tipoDocumentoCliente);
-                    int nroDocumento = Convert.ToInt32(txtNroDocumento.Text);
+
+                    // --- CAMBIO AQUÍ ---
+                    // int nroDocumento = Convert.ToInt32(txtNroDocumento.Text); // ANTES
+                    string nroDocumento = txtNroDocumento.Text.Trim(); // AHORA
+
                     var deudaTotal = Convert.ToDecimal(txtDeudaTotal.Text);
 
                     var clienteModificado = new Cliente(nombreCompleto, tipoDocumentoCliente, nroDocumento, direccion, deudaTotal, email);
-                    clienteModificado.IdCliente = idCliente; // importante para que sepa cuál modificar ya que el constructor es sin idCliente
+                    clienteModificado.IdCliente = idCliente;
 
-                    var respuesta = gestorClienteBLL.Modificar(clienteModificado);
-                    if (!respuesta) throw new Exception("No se pudo modificar el cliente");
+                    // La BLL lanzará una excepción si el CUIL es inválido
+                    gestorClienteBLL.Modificar(clienteModificado);
 
                     MessageBox.Show("Cliente modificado correctamente");
-
                     CargarClientes();
                 }
                 else
@@ -112,7 +117,8 @@ namespace _0_ProyectoDAS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al modificar cliente: " + ex.Message);
+                // Esto atrapará el error de la BLL
+                MessageBox.Show(ex.Message, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void CargarClientes()
@@ -123,23 +129,21 @@ namespace _0_ProyectoDAS
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Para evitar el header
+            // Este método ya estaba bien, porque .ToString() funciona
+            // tanto para int como para string.
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
 
-                // Llenar los TextBox
                 txtNombreCompleto.Text = fila.Cells["NombreCompleto"].Value.ToString();
                 txtEmail.Text = fila.Cells["Email"].Value.ToString();
                 txtDireccion.Text = fila.Cells["Direccion"].Value.ToString();
                 txtNroDocumento.Text = fila.Cells["NroDocumento"].Value.ToString();
                 txtDeudaTotal.Text = fila.Cells["DeudaTotal"].Value.ToString();
 
-                // Llenar el ComboBox (suponiendo que en el grid tenés guardado el nombre del enum)
                 string tipoDoc = fila.Cells["TipoDocumento"].Value.ToString();
                 comboBoxTipoDocumento.SelectedItem = tipoDoc;
             }
         }
-
     }
-
 }
