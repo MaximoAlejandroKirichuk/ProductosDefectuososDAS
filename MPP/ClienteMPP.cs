@@ -1,7 +1,7 @@
 ﻿using BE;
 using BE.actores;
 using DAL;
-using DAL.Interfaces; // Asegúrate que ClienteDAL esté aquí
+using DAL.Interfaces;
 using MPP.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -16,14 +16,10 @@ namespace MPP
     public class ClienteMPP : IMapeableTodos<Cliente>, IABM<Cliente>
     {
         private ClienteDAL dalCliente = new ClienteDAL();
-
-       
-        public bool ExisteCliente(string NroDocumento) // Antes era 'int'
+        public bool ExisteCliente(int NroDocumento)
         {
-            return dalCliente.ExisteCliente(NroDocumento); // Pasa el 'string'
+            return dalCliente.ExisteCliente(NroDocumento);
         }
-        // 
-
         public bool Agregar(Cliente objeto)
         {
             return dalCliente.Insertar(objeto);
@@ -62,11 +58,7 @@ namespace MPP
                     TipoDocumento = tipoDoc,
                     Direccion = row["Direccion"].ToString(),
                     DeudaTotal = Convert.ToDecimal(row["DeudaTotal"]),
-
-                    // --- CAMBIO AQUÍ ---
-                    // Lee el NroDocumento de la BD como un 'string'
-                    NroDocumento = row["NroDocumento"].ToString() // Antes era Convert.ToInt32
-                    // --- FIN CAMBIO ---
+                    NroDocumento = Convert.ToInt32(row["NroDocumento"]),
                 };
 
                 clientes.Add(cliente);
@@ -77,20 +69,12 @@ namespace MPP
 
         public int ObtenerIdClientePorDocumento(string nroDocumento)
         {
-            // Este método ya estaba bien (aceptaba string),
-            // pero es una buena práctica definir el tipo de parámetro.
             using (SqlConnection con = new SqlConnection(StringConnection.stringConnection))
             {
                 string query = "SELECT IdCliente FROM Cliente WHERE NroDocumento = @NroDocumento";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    // --- MEJORA DE CÓDIGO ---
-                    // Definir el tipo y tamaño es mejor que AddWithValue para strings
-                    SqlParameter param = new SqlParameter("@NroDocumento", SqlDbType.VarChar, 11);
-                    param.Value = nroDocumento;
-                    cmd.Parameters.Add(param);
-                    // --- FIN MEJORA ---
-
+                    cmd.Parameters.AddWithValue("@NroDocumento", nroDocumento);
                     con.Open();
                     object result = cmd.ExecuteScalar();
                     if (result != null && int.TryParse(result.ToString(), out int idCliente))
@@ -105,4 +89,5 @@ namespace MPP
             }
         }
     }
+
 }

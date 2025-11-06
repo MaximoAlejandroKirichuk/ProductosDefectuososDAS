@@ -16,11 +16,11 @@ namespace BLL
         private DALUsuario daLUsuario = new DALUsuario();
         private UsuarioMPP usuarioMPP = new UsuarioMPP();
         private readonly LogsBLL logger = new LogsBLL();
+        private readonly BLLPermiso permisoBLL = new BLLPermiso();
         public bool IniciarSesion(string email, string contrasena)
         {
-            if (!Validador.ValidarGmail(email)) throw new Exception("Ingrese un email valido");
             try
-            {   
+            {
                 Usuario usuario = BuscarUsuarioPorMail(email);
 
                 if (usuario == null)
@@ -36,6 +36,9 @@ namespace BLL
                 if (usuario.Contrasenia == hashContrasena)
                 {
                     SesionActiva.Instancia.IniciarSesion(usuario);
+                    
+                    // Cargar jerarquía de permisos (Composite)
+                    usuario.Permisos = permisoBLL.ObtenerPermisosPorRol(usuario.Rol);
 
                     // Log de login exitoso
                     logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Informacion, ModuloSistema.Login,
@@ -47,7 +50,7 @@ namespace BLL
                 // Log de intento de contraseña incorrecta
                 logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Error, ModuloSistema.Login,
                     $"Intento de inicio de sesión fallido - Contraseña incorrecta", Criticidad.Media);
-                //TODO (aca incrementar los intentos fallidos) Y SI ES IGUAL A 3 bloquear cuenta
+                // (aca incrementar los intentos fallidos)
                     return false;
                 
             }

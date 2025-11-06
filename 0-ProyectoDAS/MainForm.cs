@@ -17,7 +17,6 @@ using static System.Windows.Forms.AxHost;
 using _0_ProyectoDAS;
 using BE;
 using BLL;
-using Servicios;
 
 namespace UI
 {
@@ -38,51 +37,56 @@ namespace UI
             ventanaAyuda.Show();
         }
 
-
-
-        private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormListadoProductos formListado = new FormListadoProductos(idioma);
-            formListado.MdiParent = this; 
-            formListado.WindowState = FormWindowState.Maximized;
-            formListado.Show();
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
         public void gettextespañol()
         {
             registrarToolStripMenuItem.Text = Res_español.Registrar;
             seguimientoToolStripMenuItem.Text = Res_español.Seguimiento;
             reportesToolStripMenuItem.Text = Res_español.Reporte;
-            ModificarToolStripMenuItem.Text = Res_español.Modificar_Productos;
+            //ModificarToolStripMenuItem.Text = Res_español.Modificar_Productos; 
             ayudaToolStripMenuItem.Text = Res_español.Ayuda;
             cerrarSesiónToolStripMenuItem.Text = Res_español.Cerrar_Sesion_;
-            cambiarIdiomaToolStripMenuItem.Text = Res_español.Cambiar_Idioma;
+            AccesibilidadToolStripMenuItem.Text = Res_español.Cambiar_Idioma;
             reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_español.Reportes_por_ubicacion_geografica;
 
 
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
-            cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
-            cambiarIdiomaToolStripMenuItem.DropDownItems[1].Text = "English";
+            AccesibilidadToolStripMenuItem.DropDownItems[0].Text = "Español";
+            AccesibilidadToolStripMenuItem.DropDownItems[1].Text = "English";
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            gettextespañol();
-
-
             var usuario = SesionActiva.Instancia.UsuarioActivo;
 
-            if (usuario is Administrador admin)
+            if (usuario == null)
             {
-                FormNotificacionesAdmin frmNotif = new FormNotificacionesAdmin(admin);
-                frmNotif.ShowDialog();
+                MessageBox.Show("No hay un usuario activo. Inicie sesión nuevamente.");
+                this.Close();
+                return;
             }
+
+            
+
+            // Obtener los módulos permitidos desde su Composite de permisos
+            var modulos = usuario.Permisos?.ObtenerModulos() ?? new List<ModuloSistema>();
+
+            AplicarPermisos(modulos);
         }
+
+        private void AplicarPermisos(List<ModuloSistema> modulos)
+        {
+            registrarToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Productos);
+            seguimientoToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Seguimientos);
+            reportesToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Reportes);
+            ClientesToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Clientes);
+            empleadosToolStripMenuItem1.Visible = modulos.Contains(ModuloSistema.Empleados);
+            
+            AccesibilidadToolStripMenuItem.Visible = true; // visible para todos
+            ayudaToolStripMenuItem.Visible = true;         
+            cerrarSesiónToolStripMenuItem.Visible = true;  
+        }
+
+
 
 
         public void GetTextIngles()
@@ -91,17 +95,17 @@ namespace UI
             registrarToolStripMenuItem.Text = Res_ingles.Register;
             seguimientoToolStripMenuItem.Text = Res_ingles.Follow_up;
             reportesToolStripMenuItem.Text = Res_ingles.Report;
-            ModificarToolStripMenuItem.Text = Res_ingles.Modify_Product;
+            //ModificarToolStripMenuItem.Text = Res_ingles.Modify_Product;
             ayudaToolStripMenuItem.Text = Res_ingles.Help;
             cerrarSesiónToolStripMenuItem.Text = Res_ingles.Log_Out;
-            cambiarIdiomaToolStripMenuItem.Text = Res_ingles.Change_Language;
+            AccesibilidadToolStripMenuItem.Text = Res_ingles.Change_Language;
             reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_ingles.Reports_by_Geographic_Location;
 
 
 
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
-            cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
-            cambiarIdiomaToolStripMenuItem.DropDownItems[1].Text = "English";
+            AccesibilidadToolStripMenuItem.DropDownItems[0].Text = "Español";
+            AccesibilidadToolStripMenuItem.DropDownItems[1].Text = "English";
         }
 
         public void GetTextPortugues()
@@ -109,30 +113,16 @@ namespace UI
             registrarToolStripMenuItem.Text = Res_portugues.Registrar;
             seguimientoToolStripMenuItem.Text = Res_portugues.Acompanhamento;
             reportesToolStripMenuItem.Text = Res_portugues.Relatórios;
-            ModificarToolStripMenuItem.Text = Res_portugues.Modificar_produto;
+            //ModificarToolStripMenuItem.Text = Res_portugues.Modificar_produto;
             ayudaToolStripMenuItem.Text = Res_portugues.Ajuda;
             cerrarSesiónToolStripMenuItem.Text = Res_portugues.Sair;
-            cambiarIdiomaToolStripMenuItem.Text = Res_portugues.mudar_idioma;
+            AccesibilidadToolStripMenuItem.Text = Res_portugues.mudar_idioma;
             reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_portugues.Relatórios_por_Localização_Geográfica;
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
-            cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
-            cambiarIdiomaToolStripMenuItem.DropDownItems[1].Text = "English";
+            AccesibilidadToolStripMenuItem.DropDownItems[0].Text = "Español";
+            AccesibilidadToolStripMenuItem.DropDownItems[1].Text = "English";
         }
 
-
-
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-        }
-       
-
-        private void dataGridViewListadoProductosDefectuosos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-        public void CargarDatosArchivosSeguimiento(string codigoProducto)
-        {
-        }
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BLL.SesionActiva.Instancia.CerrarSesion();
@@ -208,7 +198,41 @@ namespace UI
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-          
+            //    if (comboBoxAreaResponsable.SelectedItem == null)
+            //    {
+            //        MessageBox.Show("Seleccione un área para buscar.");
+            //        return;
+            //    }
+
+            //    try
+            //    {
+            //        // Intentar convertir el valor seleccionado en un valor del enum
+            //        AreaResponsable.AreaPosibles areaEnum = (AreaResponsable.AreaPosibles)Enum.Parse(
+            //            typeof(AreaResponsable.AreaPosibles),
+            //            comboBoxAreaResponsable.SelectedItem.ToString()
+            //        );
+
+            //        // Validación personalizada (opcional)
+            //        if (!Enum.IsDefined(typeof(AreaResponsable.AreaPosibles), areaEnum))
+            //        {
+            //            throw new AreaResponsableInexistenteExpeption(comboBoxAreaResponsable.SelectedItem.ToString());
+            //        }
+
+            //        // Crear objeto AreaResponsable a partir del enum
+            //        AreaResponsable area = new AreaResponsable(areaEnum);
+
+            //        // Mostrar productos filtrados
+            //        dataGridViewListadoProductosDefectuosos.DataSource = null;
+            //        dataGridViewListadoProductosDefectuosos.DataSource = ListadoProductoDefectuosos.Instancia.FiltrarPorArea(area);
+            //    }
+            //    catch (AreaResponsableInexistenteExpeption ex)
+            //    {
+            //        MessageBox.Show(ex.Message);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("Ocurrió un error: " + ex.Message);
+            //    }
         }
 
         private void cambiarIdiomaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -242,15 +266,57 @@ namespace UI
 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
+    
 
-        }
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCambiarContrasenia form = new FormCambiarContrasenia();
             form.ShowDialog();
+        }
+
+        private void modificarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListadoProductos formListado = new FormListadoProductos(idioma);
+            formListado.MdiParent = this;
+            formListado.WindowState = FormWindowState.Maximized;
+            formListado.Show();
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cambiarContraseñaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormCambiarContrasenia form = new FormCambiarContrasenia();
+            form.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
