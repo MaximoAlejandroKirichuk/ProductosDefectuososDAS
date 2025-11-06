@@ -21,15 +21,14 @@ namespace BLL
         {
             try
             {
-                Usuario usuario = BuscarUsuarioPorMail(email);
+                // Validación de parámetros
+                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(contrasena))
+                    throw new ArgumentException("El email y la contraseña son obligatorios.");
 
+                // Buscar usuario por email
+                Usuario usuario = BuscarUsuarioPorMail(email);
                 if (usuario == null)
-                {
-                    // Log de intento de login con usuario inexistente
-                    logger.RegistrarEvento(null, NivelLog.Alerta, ModuloSistema.Login,
-                        $"Intento de inicio de sesión fallido - Usuario '{email}' inexistente");
-                    throw new Exception("Usuario inexistente");
-                }
+                    throw new InvalidOperationException("Usuario inexistente.");
 
                 var hashContrasena = HashContrasena(contrasena);
 
@@ -56,11 +55,9 @@ namespace BLL
             }
             catch (Exception ex)
             {
-                // Log de error interno del proceso de login
-                logger.RegistrarEvento(null, NivelLog.Error, ModuloSistema.Login,
-                    $"Error al iniciar sesión: {ex.Message}", Criticidad.Alta);
+                
 
-                throw;
+                throw new Exception(ex.Message); ;
             }
         }
 
