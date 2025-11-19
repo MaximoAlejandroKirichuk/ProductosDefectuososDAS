@@ -35,7 +35,7 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportePorUbicaciónGeográficaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarIdiomaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +57,7 @@
             this.seguimientoToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.ModificarToolStripMenuItem,
-            this.empleadosToolStripMenuItem,
+            this.ClientesToolStripMenuItem,
             this.empleadosToolStripMenuItem1,
             this.cambiarIdiomaToolStripMenuItem,
             this.cambiarContraseñaToolStripMenuItem,
@@ -124,14 +124,14 @@
             this.ModificarToolStripMenuItem.Text = "Modificar Productos";
             this.ModificarToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
             // 
-            // empleadosToolStripMenuItem
+            // ClientesToolStripMenuItem
             // 
-            this.empleadosToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
-            this.empleadosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(82, 29);
-            this.empleadosToolStripMenuItem.Text = "Clientes";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
+            this.ClientesToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem";
+            this.ClientesToolStripMenuItem.Size = new System.Drawing.Size(82, 29);
+            this.ClientesToolStripMenuItem.Text = "Clientes";
+            this.ClientesToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem1
             // 
@@ -158,21 +158,21 @@
             // españolToolStripMenuItem
             // 
             this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
-            this.españolToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.españolToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.españolToolStripMenuItem.Text = "Español";
             this.españolToolStripMenuItem.Click += new System.EventHandler(this.españolToolStripMenuItem_Click);
             // 
             // inglesToolStripMenuItem
             // 
             this.inglesToolStripMenuItem.Name = "inglesToolStripMenuItem";
-            this.inglesToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.inglesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.inglesToolStripMenuItem.Text = "Ingles";
             this.inglesToolStripMenuItem.Click += new System.EventHandler(this.inglesToolStripMenuItem_Click);
             // 
             // portuguesToolStripMenuItem
             // 
             this.portuguesToolStripMenuItem.Name = "portuguesToolStripMenuItem";
-            this.portuguesToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.portuguesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.portuguesToolStripMenuItem.Text = "Portugues";
             this.portuguesToolStripMenuItem.Click += new System.EventHandler(this.portuguesToolStripMenuItem_Click);
             // 
@@ -234,7 +234,7 @@
         private System.Windows.Forms.ToolStripMenuItem españolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inglesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem portuguesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarSeguimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;

@@ -74,15 +74,42 @@ namespace UI
         {
             gettextespañol();
 
-
             var usuario = SesionActiva.Instancia.UsuarioActivo;
 
+            // Validar usuario activo
+            if (usuario == null)
+            {
+                MessageBox.Show("No hay un usuario activo. Inicie sesión nuevamente.");
+                this.Close();
+                return;
+            }
+
+            // Si es administrador debe cargar ventana de notificaciones
             if (usuario is Administrador admin)
             {
                 FormNotificacionesAdmin frmNotif = new FormNotificacionesAdmin(admin);
                 frmNotif.ShowDialog();
             }
+
+            // Obtener los modulos permitidos desde su Composite
+            var modulos = usuario.Permisos?.ObtenerModulos() ?? new List<ModuloSistema>();
+
+            AplicarPermisos(modulos);
         }
+
+        private void AplicarPermisos(List<ModuloSistema> modulos)
+        {
+            registrarToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Productos);
+            seguimientoToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Seguimientos);
+            reportesToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Reportes);
+            ClientesToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Clientes);
+            empleadosToolStripMenuItem1.Visible = modulos.Contains(ModuloSistema.Empleados);
+
+            //AccesibilidadToolStripMenuItem.Visible = true;
+            ayudaToolStripMenuItem.Visible = true;
+            cerrarSesiónToolStripMenuItem.Visible = true;
+        }
+
 
 
         public void GetTextIngles()

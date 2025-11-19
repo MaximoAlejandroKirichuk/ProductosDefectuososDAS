@@ -16,18 +16,25 @@ namespace BLL
         private DALUsuario daLUsuario = new DALUsuario();
         private UsuarioMPP usuarioMPP = new UsuarioMPP();
         private readonly LogsBLL logger = new LogsBLL();
+        private readonly BLLPermiso permisoBLL = new BLLPermiso();
         public bool IniciarSesion(string email, string contrasena)
         {
-            if (!Validador.ValidarGmail(email)) throw new Exception("Ingrese un email valido");
+            if (!Validador.ValidarGmail(email))
+                throw new Exception("Ingrese un email valido");
+
             try
-            {   
+            {
                 Usuario usuario = BuscarUsuarioPorMail(email);
 
                 if (usuario == null)
                 {
                     // Log de intento de login con usuario inexistente
-                    logger.RegistrarEvento(null, NivelLog.Alerta, ModuloSistema.Login,
-                        $"Intento de inicio de sesión fallido - Usuario '{email}' inexistente");
+                    logger.RegistrarEvento(
+                        null,
+                        NivelLog.Alerta,
+                        ModuloSistema.Login,
+                        $"Intento de inicio de sesión fallido - Usuario '{email}' inexistente"
+                    );
                     throw new Exception("Usuario inexistente");
                 }
 
@@ -37,25 +44,44 @@ namespace BLL
                 {
                     SesionActiva.Instancia.IniciarSesion(usuario);
 
+                    // Cargar jerarquía de permisos (Composite)
+                    usuario.Permisos = permisoBLL.ObtenerPermisosPorRol(usuario.Rol);
+
                     // Log de login exitoso
-                    logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Informacion, ModuloSistema.Login,
-                        $"Inicio de sesión exitoso para usuario '{usuario.Email}'", Criticidad.Baja);
+                    logger.RegistrarEvento(
+                        usuario.IdUsuario,
+                        NivelLog.Informacion,
+                        ModuloSistema.Login,
+                        $"Inicio de sesión exitoso para usuario '{usuario.Email}'",
+                        Criticidad.Baja
+                    );
 
                     return true;
                 }
 
                 // Log de intento de contraseña incorrecta
-                logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Error, ModuloSistema.Login,
-                    $"Intento de inicio de sesión fallido - Contraseña incorrecta", Criticidad.Media);
-                //TODO (aca incrementar los intentos fallidos) Y SI ES IGUAL A 3 bloquear cuenta
-                    return false;
-                
+                logger.RegistrarEvento(
+                    usuario.IdUsuario,
+                    NivelLog.Error,
+                    ModuloSistema.Login,
+                    $"Intento de inicio de sesión fallido - Contraseña incorrecta",
+                    Criticidad.Media
+                );
+
+                // (aca incrementar los intentos fallidos)
+
+                return false;
             }
             catch (Exception ex)
             {
                 // Log de error interno del proceso de login
-                logger.RegistrarEvento(null, NivelLog.Error, ModuloSistema.Login,
-                    $"Error al iniciar sesión: {ex.Message}", Criticidad.Alta);
+                logger.RegistrarEvento(
+                    null,
+                    NivelLog.Error,
+                    ModuloSistema.Login,
+                    $"Error al iniciar sesión: {ex.Message}",
+                    Criticidad.Alta
+                );
 
                 throw;
             }

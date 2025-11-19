@@ -32,8 +32,12 @@ namespace BE
     public enum RolesUsuarios
     {
         Admin,
-        Empleado
+        Empleado,
+        JefeReparacion,
+        EmpleadoReparacion,
+        Vendedor
     }
+
     public enum TipoDocumentoCliente
     {
         CUIL,
@@ -59,7 +63,8 @@ namespace BE
         Seguimientos,
         Clientes,
         Productos,
-        Reportes
+        Reportes,
+        Empleados
     }
     public enum Criticidad
     {
@@ -67,5 +72,6 @@ namespace BE
         Media,
         Alta
     }
+
 
 }

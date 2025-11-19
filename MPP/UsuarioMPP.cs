@@ -27,7 +27,6 @@ namespace MPP
             RolesUsuarios rol;
             Enum.TryParse(row["Rol"].ToString(), out rol);
 
-
             switch (rol)
             {
                 case RolesUsuarios.Admin:
@@ -39,7 +38,9 @@ namespace MPP
                         Contrasenia = row["Contrasena"].ToString(),
                         Rol = rol
                     };
+
                 case RolesUsuarios.Empleado:
+                case RolesUsuarios.EmpleadoReparacion:
                     return new Empleado
                     {
                         IdUsuario = Convert.ToInt32(row["IdEmpleado"]),
@@ -48,9 +49,31 @@ namespace MPP
                         Contrasenia = row["Contrasena"].ToString(),
                         Rol = rol
                     };
-                default: return null;
-            }
 
+                case RolesUsuarios.JefeReparacion:
+                    return new Empleado
+                    {
+                        IdUsuario = Convert.ToInt32(row["IdEmpleado"]),
+                        NombreCompleto = row["NombreCompleto"].ToString(),
+                        Email = row["Email"].ToString(),
+                        Contrasenia = row["Contrasena"].ToString(),
+                        Rol = rol
+                    };
+
+                case RolesUsuarios.Vendedor:
+                    return new Empleado
+                    {
+                        IdUsuario = Convert.ToInt32(row["IdEmpleado"]),
+                        NombreCompleto = row["NombreCompleto"].ToString(),
+                        Email = row["Email"].ToString(),
+                        Contrasenia = row["Contrasena"].ToString(),
+                        Rol = rol
+                    };
+
+                default:
+                    return null;
+            }
         }
+
     }
 }
