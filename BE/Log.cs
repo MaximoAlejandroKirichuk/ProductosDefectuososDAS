@@ -1,38 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BE;
+using System;
 
-namespace BE
+public class Log : ICloneable, IComparable<Log>
 {
-    public class Log
+    public int Id { get; set; }
+    public int? UsuarioId { get; set; }
+    public DateTime FechaEvento { get; set; } = DateTime.Now;
+
+    public NivelLog NivelLog { get; set; }
+    public ModuloSistema ModuloInvolucrado { get; set; }
+    public Criticidad Criticidad { get; set; }
+    public string AccionRealizada { get; set; }
+
+    public Log() { }
+
+    public Log(int? usuarioId, NivelLog nivel, ModuloSistema modulo, string accion)
     {
-        public int Id { get; set; }
+        UsuarioId = usuarioId;
+        FechaEvento = DateTime.Now;
+        NivelLog = nivel;
+        ModuloInvolucrado = modulo;
+        AccionRealizada = accion;
+    }
 
-        // Usuario relacionado, nullable si el log es del sistema
-        public int? UsuarioId { get; set; }
-        public DateTime FechaEvento { get; set; } = DateTime.Now;
+    // CLONADO
+    public object Clone()
+    {
+        return this.MemberwiseClone();
+    }
 
-        // Nivel de log (INFO, ERROR, etc)
-        public NivelLog NivelLog { get; set; }
-
-        // Módulo del sistema donde ocurrió el evento
-        public ModuloSistema ModuloInvolucrado { get; set; }
-        public Criticidad Criticidad { get; set; }
-        public string AccionRealizada { get; set; }
-        
-        // Constructor vacío
-        public Log() { }
-
-        // Constructor con parámetros
-        public Log(int? usuarioId, NivelLog nivel, ModuloSistema modulo, string accion)
-        {
-            UsuarioId = usuarioId;
-            FechaEvento = DateTime.Now;
-            NivelLog = nivel;
-            ModuloInvolucrado = modulo;
-            AccionRealizada = accion;
-        }
+    // COMPARACIÓN por fecha
+    public int CompareTo(Log other)
+    {
+        return FechaEvento.CompareTo(other.FechaEvento);
     }
 }

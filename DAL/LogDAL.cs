@@ -31,6 +31,33 @@ namespace DAL
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+        public List<Log> Listar()
+        {
+            List<Log> logs = new List<Log>();
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                string query = "SELECT * FROM Log";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    logs.Add(new Log
+                    {
+                        Id = Convert.ToInt32(dr["NumeroLog"]),
+                        UsuarioId = dr["IdEmpleado"] == DBNull.Value ? null : (int?)Convert.ToInt32(dr["IdEmpleado"]),
+                        FechaEvento = Convert.ToDateTime(dr["FechaEvento"]),
+                        NivelLog = (NivelLog)Enum.Parse(typeof(NivelLog), dr["NivelLog"].ToString()),
+                        ModuloInvolucrado = (ModuloSistema)Enum.Parse(typeof(ModuloSistema), dr["ModuloInvolucrado"].ToString()),
+                        Criticidad = (Criticidad)Enum.Parse(typeof(Criticidad), dr["Criticidad"].ToString()),
+                        AccionRealizada = dr["AccionRealizada"].ToString()
+                    });
+                }
+                return logs;
+            }
+        }
 
     }
 }

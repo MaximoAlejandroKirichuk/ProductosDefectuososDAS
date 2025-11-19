@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExportacionCSVHandler.cs" />
+    <Compile Include="LogExportadorCSV.cs" />
     <Compile Include="ServicioNotificacion.cs" />
     <Compile Include="SessionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

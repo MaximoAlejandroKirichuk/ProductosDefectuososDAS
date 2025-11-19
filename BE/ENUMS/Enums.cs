@@ -64,7 +64,8 @@ namespace BE
         Clientes,
         Productos,
         Reportes,
-        Empleados
+        Empleados,
+        Bitacora
     }
     public enum Criticidad
     {

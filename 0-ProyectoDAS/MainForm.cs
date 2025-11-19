@@ -28,6 +28,7 @@ namespace UI
             InitializeComponent();
         }
         
+
         public int idioma;
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,13 +58,11 @@ namespace UI
         {
             registrarToolStripMenuItem.Text = Res_español.Registrar;
             seguimientoToolStripMenuItem.Text = Res_español.Seguimiento;
-            reportesToolStripMenuItem.Text = Res_español.Reporte;
             ModificarToolStripMenuItem.Text = Res_español.Modificar_Productos;
             ayudaToolStripMenuItem.Text = Res_español.Ayuda;
             cerrarSesiónToolStripMenuItem.Text = Res_español.Cerrar_Sesion_;
             cambiarIdiomaToolStripMenuItem.Text = Res_español.Cambiar_Idioma;
-            reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_español.Reportes_por_ubicacion_geografica;
-
+            
 
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
             cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
@@ -101,7 +100,6 @@ namespace UI
         {
             registrarToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Productos);
             seguimientoToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Seguimientos);
-            reportesToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Reportes);
             ClientesToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Clientes);
             empleadosToolStripMenuItem1.Visible = modulos.Contains(ModuloSistema.Empleados);
 
@@ -117,13 +115,11 @@ namespace UI
             //form menu
             registrarToolStripMenuItem.Text = Res_ingles.Register;
             seguimientoToolStripMenuItem.Text = Res_ingles.Follow_up;
-            reportesToolStripMenuItem.Text = Res_ingles.Report;
             ModificarToolStripMenuItem.Text = Res_ingles.Modify_Product;
             ayudaToolStripMenuItem.Text = Res_ingles.Help;
             cerrarSesiónToolStripMenuItem.Text = Res_ingles.Log_Out;
             cambiarIdiomaToolStripMenuItem.Text = Res_ingles.Change_Language;
-            reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_ingles.Reports_by_Geographic_Location;
-
+            
 
 
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
@@ -135,12 +131,10 @@ namespace UI
         {
             registrarToolStripMenuItem.Text = Res_portugues.Registrar;
             seguimientoToolStripMenuItem.Text = Res_portugues.Acompanhamento;
-            reportesToolStripMenuItem.Text = Res_portugues.Relatórios;
             ModificarToolStripMenuItem.Text = Res_portugues.Modificar_produto;
             ayudaToolStripMenuItem.Text = Res_portugues.Ajuda;
             cerrarSesiónToolStripMenuItem.Text = Res_portugues.Sair;
             cambiarIdiomaToolStripMenuItem.Text = Res_portugues.mudar_idioma;
-            reportePorUbicaciónGeográficaToolStripMenuItem.Text = Res_portugues.Relatórios_por_Localização_Geográfica;
             //esto hay que ponerlo cuando el toolstrip tiene submenus.
             cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
             cambiarIdiomaToolStripMenuItem.DropDownItems[1].Text = "English";
@@ -278,6 +272,14 @@ namespace UI
         {
             FormCambiarContrasenia form = new FormCambiarContrasenia();
             form.ShowDialog();
+        }
+
+        private void AdministradortoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdmin form = new FormAdmin();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
         }
     }
 }

@@ -32,8 +32,6 @@
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarSeguimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportePorUbicaciónGeográficaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +40,7 @@
             this.inglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.portuguesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AdministradortoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -55,12 +54,12 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem,
             this.seguimientoToolStripMenuItem,
-            this.reportesToolStripMenuItem,
             this.ModificarToolStripMenuItem,
             this.ClientesToolStripMenuItem,
-            this.empleadosToolStripMenuItem1,
             this.cambiarIdiomaToolStripMenuItem,
             this.cambiarContraseñaToolStripMenuItem,
+            this.empleadosToolStripMenuItem1,
+            this.AdministradortoolStripMenuItem,
             this.cerrarSesiónToolStripMenuItem,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -96,24 +95,6 @@
             this.modificarSeguimientoToolStripMenuItem.Size = new System.Drawing.Size(250, 28);
             this.modificarSeguimientoToolStripMenuItem.Text = "Modificar seguimiento";
             this.modificarSeguimientoToolStripMenuItem.Click += new System.EventHandler(this.modificarSeguimientoToolStripMenuItem_Click);
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportePorUbicaciónGeográficaToolStripMenuItem});
-            this.reportesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
-            // 
-            // reportePorUbicaciónGeográficaToolStripMenuItem
-            // 
-            this.reportePorUbicaciónGeográficaToolStripMenuItem.Name = "reportePorUbicaciónGeográficaToolStripMenuItem";
-            this.reportePorUbicaciónGeográficaToolStripMenuItem.Size = new System.Drawing.Size(334, 28);
-            this.reportePorUbicaciónGeográficaToolStripMenuItem.Text = "Reporte por ubicación geográfica";
-            this.reportePorUbicaciónGeográficaToolStripMenuItem.Click += new System.EventHandler(this.reportePorUbicaciónGeográficaToolStripMenuItem_Click);
             // 
             // ModificarToolStripMenuItem
             // 
@@ -184,6 +165,15 @@
             this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
             this.cambiarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambiarContraseñaToolStripMenuItem_Click);
             // 
+            // AdministradortoolStripMenuItem
+            // 
+            this.AdministradortoolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
+            this.AdministradortoolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.AdministradortoolStripMenuItem.Name = "AdministradortoolStripMenuItem";
+            this.AdministradortoolStripMenuItem.Size = new System.Drawing.Size(130, 29);
+            this.AdministradortoolStripMenuItem.Text = "Administrador";
+            this.AdministradortoolStripMenuItem.Click += new System.EventHandler(this.AdministradortoolStripMenuItem_Click);
+            // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
@@ -225,11 +215,9 @@
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ModificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguimientoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportePorUbicaciónGeográficaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarIdiomaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem españolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inglesToolStripMenuItem;
@@ -238,6 +226,7 @@
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarSeguimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AdministradortoolStripMenuItem;
     }
 }
 
