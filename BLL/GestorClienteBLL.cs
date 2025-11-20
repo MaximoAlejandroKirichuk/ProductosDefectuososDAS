@@ -65,8 +65,8 @@ namespace BLL
                 throw new Exception("El Nro documento es obligatorio");
 
             // . VALIDACIÓN DE CUIL/CUIT (NroDocumento)
-            var respuesta = Validador.EsCuitValido(nroDocumento);
-            if (!respuesta) throw new Exception("Cuit/Cuil invalido");
+            //var respuesta = Validador.EsCuitValido(nroDocumento);
+            //if (!respuesta) throw new Exception("Cuit/Cuil invalido");
 
             return clienteMPP.ObtenerIdClientePorDocumento(nroDocumento);
         }

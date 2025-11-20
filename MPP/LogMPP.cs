@@ -29,6 +29,7 @@ namespace MPP
                       .ToList();
         }
 
+        //LINQ
         public List<Log> FiltrarPorCriticidad(Criticidad criticidad)
         {
             var logs = dal.Listar();

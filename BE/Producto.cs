@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Producto : ICloneable, ISujeto//, IComparable<Producto>
+    public class Producto : ICloneable, ISujeto
     {
         private List<IObservador> _observadores = new List<IObservador>();
 

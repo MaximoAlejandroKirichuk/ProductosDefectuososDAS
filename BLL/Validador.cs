@@ -8,60 +8,50 @@ namespace BLL
     {
         public static bool EsCuitValido(string cuit)
         {
-            // 1. Quitar guiones y espacios (si los hubiera)
+            if (string.IsNullOrWhiteSpace(cuit))
+                return false;
+
+            // 1. Quitar guiones y espacios
             cuit = cuit.Replace("-", "").Replace(" ", "");
 
-            // 2. Validación de formato y prefijos con Regex
-            string patron = @"^(20|23|24|27|30|33|34)[0-9]{9}$";
+            // 2. Validar longitud (11 dígitos)
+            if (cuit.Length != 11)
+                return false;
+
+            // 3. Validación de prefijo y que el resto sean números
+            string patron = @"^(20|23|24|27|30|33|34)\d{9}$";
             if (!Regex.IsMatch(cuit, patron))
-            {
                 return false;
-            }
 
-            // 3. Validación del dígito verificador (Algoritmo Módulo 11)
-            try
+            // 4. Validar dígito verificador (Módulo 11)
+            int[] coeficientes = { 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 };
+            int suma = 0;
+
+            for (int i = 0; i < 10; i++)
             {
-                // Coeficientes del algoritmo
-                int[] coeficientes = { 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 };
-                int suma = 0;
-
-                // Calcular la suma ponderada de los primeros 10 dígitos
-                for (int i = 0; i < 10; i++)
-                {
-                    suma += int.Parse(cuit[i].ToString()) * coeficientes[i];
-                }
-
-                // Obtener el resto de la división por 11
-                int resto = suma % 11;
-
-                // Calcular el dígito verificador esperado
-                int digitoEsperado = 11 - resto;
-                if (digitoEsperado == 11)
-                {
-                    digitoEsperado = 0;
-                }
-                else if (digitoEsperado == 10)
-                {
-                    // Un CUIT/CUIL con dígito verificador 10 es inválido
-                    // (Nota: existen casos históricos raros, pero para nuevos registros se considera inválido)
+                if (!int.TryParse(cuit[i].ToString(), out int digito))
                     return false;
-                }
 
-                // Obtener el dígito verificador real (el último dígito del CUIT)
-                int digitoReal = int.Parse(cuit[10].ToString());
-
-                // Comparar
-                return digitoEsperado == digitoReal;
+                suma += digito * coeficientes[i];
             }
-            catch
-            {
-                // Si falla cualquier conversión, es inválido
+
+            int resto = suma % 11;
+            int digitoEsperado = 11 - resto;
+
+            if (digitoEsperado == 11)
+                digitoEsperado = 0;
+            else if (digitoEsperado == 10)
+                return false; // dígito 10 no válido
+
+            if (!int.TryParse(cuit[10].ToString(), out int digitoReal))
                 return false;
-            }
+
+            return digitoEsperado == digitoReal;
         }
+    
 
 
-        public static bool ValidarGmail(string gmail)
+    public static bool ValidarGmail(string gmail)
         {
             //  INICIO DE VALIDACIONES BLL 
 

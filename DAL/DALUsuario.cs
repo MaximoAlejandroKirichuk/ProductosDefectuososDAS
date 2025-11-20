@@ -20,7 +20,7 @@ namespace DAL
                 using (SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, con))
                 {
                     sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@Email", email);
-                    DataTable dt = new DataTable();
+                     DataTable dt = new DataTable();
                     sqlDataAdapter.Fill(dt);
                     if (dt.Rows.Count > 0)
                         return dt.Rows[0];

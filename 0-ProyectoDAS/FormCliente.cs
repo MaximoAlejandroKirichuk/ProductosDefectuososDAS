@@ -43,23 +43,29 @@ namespace _0_ProyectoDAS
             GestorClienteBLL cliente = new GestorClienteBLL();
             GestorProductosBLL productoBLL = new GestorProductosBLL();
             GestorSeguimientoBLL seguimientoBLL = new GestorSeguimientoBLL();
-            int idCliente = cliente.ObtenerIdClientePorDocumento(nroDocumento);
-            if (idCliente == -1)
+            try
             {
-                MessageBox.Show("Cliente no encontrado.");
-                return;
+                int idCliente = cliente.ObtenerIdClientePorDocumento(nroDocumento);
+                if (idCliente == -1)
+                {
+                    MessageBox.Show("Cliente no encontrado.");
+                    return;
+                }
+                // Cargar productos del cliente
+                DataTable dtProductos = productoBLL.ObtenerProductosPorCliente(idCliente);
+                dataGridViewProductos.DataSource = dtProductos;
+                // Limpiar seguimientos
+                dataGridViewSeguimientos.DataSource = null;
             }
-            // Cargar productos del cliente
-            DataTable dtProductos = productoBLL.ObtenerProductosPorCliente(idCliente);
-            dataGridViewProductos.DataSource = dtProductos;
-            // Limpiar seguimientos
-            dataGridViewSeguimientos.DataSource = null;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un error: " + ex.Message);
+            }
+           
+           
         }
         
-        //public int ObtenerCuilCuit()
-        //{
-        //    1;
-        //}
+       
 
         private void FormCliente_Load(object sender, EventArgs e)
         {

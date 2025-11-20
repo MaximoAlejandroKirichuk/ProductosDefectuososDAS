@@ -215,7 +215,7 @@ namespace UI
             try
             {
                 var cliente = (Cliente)comboBoxCliente.SelectedItem;
-                MessageBox.Show($"{cliente.NombreCompleto}");
+               
                 return cliente;
             }
             catch (Exception)
