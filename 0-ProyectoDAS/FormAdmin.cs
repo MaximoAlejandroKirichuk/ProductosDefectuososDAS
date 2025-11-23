@@ -121,6 +121,24 @@ namespace _0_ProyectoDAS
             dgvLogs.DataSource = filtrados;
         }
 
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+            // Usamos lo que hay en el Grid. Si el grid está vacío, usamos el cache.
+            var logsParaGraficar = dgvLogs.DataSource as List<Log> ?? _logsCache;
 
+            if (logsParaGraficar.Count == 0)
+            {
+                MessageBox.Show("No hay datos para graficar.");
+                return;
+            }
+            
+            List<LogEstadistica> datosGrafico = _bll.CalcularEstadisticas(logsParaGraficar);
+
+            //Abro el formulario del gráfico pasándole los datos limpios
+            using (FormGrafico frm = new FormGrafico(datosGrafico))
+            {
+                frm.ShowDialog(); 
+            }
+        }
     }
 }

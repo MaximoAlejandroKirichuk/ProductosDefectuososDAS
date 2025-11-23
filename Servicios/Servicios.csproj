@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encriptador.cs" />
     <Compile Include="ExportacionCSVHandler.cs" />
     <Compile Include="LogExportadorCSV.cs" />
     <Compile Include="ServicioNotificacion.cs" />

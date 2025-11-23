@@ -2,6 +2,7 @@
 using BLL.BLL;
 using DAL;
 using MPP;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -39,7 +40,7 @@ namespace BLL
                     throw new Exception("Usuario inexistente");
                 }
 
-                var hashContrasena = HashContrasena(contrasena);
+                var hashContrasena = Encriptador.HashContrasena(contrasena);
 
                 if (usuario.Contrasenia == hashContrasena)
                 {
@@ -90,7 +91,7 @@ namespace BLL
 
         public bool CambiarContrasenia(Usuario usuario, string nuevaContrasenia)
         {
-            var nuevaContraseniaHasheada = HashContrasena(nuevaContrasenia);
+            var nuevaContraseniaHasheada = Encriptador.HashContrasena(nuevaContrasenia);
 
             if (usuario.Contrasenia == nuevaContraseniaHasheada)
             {
@@ -117,20 +118,7 @@ namespace BLL
             return exito;
         }
 
-        public string HashContrasena(string contrasena)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(contrasena);
-                byte[] hash = sha256.ComputeHash(bytes);
-                StringBuilder result = new StringBuilder();
-                foreach (byte b in hash)
-                {
-                    result.Append(b.ToString("x2")); // formato hexadecimal
-                }
-                return result.ToString();
-            }
-        }
+       
 
         public Usuario BuscarUsuarioPorMail(string email)
         {

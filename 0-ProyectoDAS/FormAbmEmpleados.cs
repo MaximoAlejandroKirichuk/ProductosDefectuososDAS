@@ -1,5 +1,6 @@
 ﻿using BE;
 using BLL;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,7 +43,7 @@ namespace _0_ProyectoDAS
                 if(gestorUsuarioBLL.BuscarUsuarioPorMail(email) != null) throw new Exception("Ya hiciste un mail asociado a esta cuenta");
                 
 
-                var hashContrasena = gestorUsuarioBLL.HashContrasena(contrasena);
+                var hashContrasena = Encriptador.HashContrasena(contrasena);
                 var nuevoEmpleado = new Empleado(nombreCompleto, email, hashContrasena, RolesUsuarios.Empleado);
                 var respuesta = gestorEmpleadoBLL.Agregar(nuevoEmpleado);
                 if (!respuesta) throw new Exception("Ocurrio un error al agregar");

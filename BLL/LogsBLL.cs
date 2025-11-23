@@ -72,6 +72,19 @@ namespace BLL
                 
             }
 
+            public List<LogEstadistica> CalcularEstadisticas(List<Log> logsParaProcesar)
+            {
+                //LINQ para agrupar 
+                return logsParaProcesar
+                    .GroupBy(log => log.Criticidad) // Agrupamos por el Enum
+                    .Select(grupo => new LogEstadistica
+                    {
+                        Criticidad = grupo.Key, // Convertimos el Enum a Texto
+                        Cantidad = grupo.Count() // Contamos cuantos hay
+                    })
+                    .ToList();
+            }
+
         }
     }
 }

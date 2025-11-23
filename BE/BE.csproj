@@ -52,6 +52,7 @@
     <Compile Include="Dimensiones.cs" />
     <Compile Include="IABM.cs" />
     <Compile Include="IGestorSeguimiento.cs" />
+    <Compile Include="LogEstadistica.cs" />
     <Compile Include="Modulo.cs" />
     <Compile Include="Notificacion.cs" />
     <Compile Include="RolComponent.cs" />

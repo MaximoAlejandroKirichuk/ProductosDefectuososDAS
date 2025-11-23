@@ -37,6 +37,7 @@
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.btnFiltrarCriticidad = new System.Windows.Forms.Button();
             this.cmbCriticidad = new System.Windows.Forms.ComboBox();
+            this.btnChart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +103,7 @@
             // 
             // btnFiltrarCriticidad
             // 
-            this.btnFiltrarCriticidad.Location = new System.Drawing.Point(211, 400);
+            this.btnFiltrarCriticidad.Location = new System.Drawing.Point(25, 387);
             this.btnFiltrarCriticidad.Name = "btnFiltrarCriticidad";
             this.btnFiltrarCriticidad.Size = new System.Drawing.Size(130, 23);
             this.btnFiltrarCriticidad.TabIndex = 7;
@@ -117,16 +118,27 @@
             "Baja",
             "Media",
             "Alta"});
-            this.cmbCriticidad.Location = new System.Drawing.Point(188, 360);
+            this.cmbCriticidad.Location = new System.Drawing.Point(25, 360);
             this.cmbCriticidad.Name = "cmbCriticidad";
             this.cmbCriticidad.Size = new System.Drawing.Size(266, 21);
             this.cmbCriticidad.TabIndex = 8;
+            // 
+            // btnChart
+            // 
+            this.btnChart.Location = new System.Drawing.Point(603, 371);
+            this.btnChart.Name = "btnChart";
+            this.btnChart.Size = new System.Drawing.Size(102, 23);
+            this.btnChart.TabIndex = 9;
+            this.btnChart.Text = "Observar Chart";
+            this.btnChart.UseVisualStyleBackColor = true;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
             // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnChart);
             this.Controls.Add(this.cmbCriticidad);
             this.Controls.Add(this.btnFiltrarCriticidad);
             this.Controls.Add(this.label2);
@@ -156,5 +168,6 @@
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Button btnFiltrarCriticidad;
         private System.Windows.Forms.ComboBox cmbCriticidad;
+        private System.Windows.Forms.Button btnChart;
     }
 }

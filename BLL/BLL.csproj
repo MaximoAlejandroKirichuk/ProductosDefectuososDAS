@@ -46,11 +46,8 @@
     <Compile Include="GestorEmpleadoBLL.cs" />
     <Compile Include="GestorProductosBLL.cs" />
     <Compile Include="GestorUsuarioBLL.cs" />
-    <Compile Include="ListadoClientesBLL.cs" />
     <Compile Include="GestorClienteBLL.cs" />
     <Compile Include="GestorSeguimientoBLL.cs" />
-    <Compile Include="ListadoEmpleados.cs" />
-    <Compile Include="ListadoProductoDefectuosos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RolBLL.cs" />
     <Compile Include="SesionActiva.cs" />
