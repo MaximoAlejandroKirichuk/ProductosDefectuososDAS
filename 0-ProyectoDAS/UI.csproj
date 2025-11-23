@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormABMCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,23 +119,11 @@
     <Compile Include="FormNotificarCondicionProducto.Designer.cs">
       <DependentUpon>FormNotificarCondicionProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistroCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRegistroCliente.Designer.cs">
-      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormRegistroProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegistroProductos.Designer.cs">
       <DependentUpon>FormRegistroProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormReportesUbicacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReportesUbicacion.Designer.cs">
-      <DependentUpon>FormReportesUbicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSeguimiento.cs">
       <SubType>Form</SubType>
@@ -137,15 +131,15 @@
     <Compile Include="FormSeguimiento.Designer.cs">
       <DependentUpon>FormSeguimiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Idiomas\Res.español.Designer.cs">
+    <Compile Include="Idiomas\Res.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Res.español.resx</DependentUpon>
+      <DependentUpon>Res.resx</DependentUpon>
     </Compile>
-    <Compile Include="Idiomas\Res.ingles.Designer.cs">
+    <Compile Include="Idiomas\Res.en.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Res.ingles.resx</DependentUpon>
+      <DependentUpon>Res.en.resx</DependentUpon>
     </Compile>
     <Compile Include="Idiomas\Res.portugues.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -205,25 +199,19 @@
     <EmbeddedResource Include="FormNotificarCondicionProducto.resx">
       <DependentUpon>FormNotificarCondicionProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegistroCliente.resx">
-      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormRegistroProductos.resx">
       <DependentUpon>FormRegistroProductos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReportesUbicacion.resx">
-      <DependentUpon>FormReportesUbicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSeguimiento.resx">
       <DependentUpon>FormSeguimiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Idiomas\Res.español.resx">
+    <EmbeddedResource Include="Idiomas\Res.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Res.español.Designer.cs</LastGenOutput>
+      <LastGenOutput>Res.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Idiomas\Res.ingles.resx">
+    <EmbeddedResource Include="Idiomas\Res.en.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Res.ingles.Designer.cs</LastGenOutput>
+      <LastGenOutput>Res.en.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Idiomas\Res.portugues.resx">
       <Generator>ResXFileCodeGenerator</Generator>

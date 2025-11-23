@@ -18,6 +18,7 @@ using _0_ProyectoDAS;
 using BE;
 using BLL;
 using Servicios;
+using BE.ObserverIdioma;
 
 namespace UI
 {
@@ -43,7 +44,7 @@ namespace UI
 
         private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormListadoProductos formListado = new FormListadoProductos(idioma);
+            FormListadoProductos formListado = new FormListadoProductos();
             formListado.MdiParent = this; 
             formListado.WindowState = FormWindowState.Maximized;
             formListado.Show();
@@ -54,25 +55,10 @@ namespace UI
         {
             
         }
-        public void gettextespañol()
-        {
-            registrarToolStripMenuItem.Text = Res_español.Registrar;
-            seguimientoToolStripMenuItem.Text = Res_español.Seguimiento;
-            ModificarToolStripMenuItem.Text = Res_español.Modificar_Productos;
-            ayudaToolStripMenuItem.Text = Res_español.Ayuda;
-            cerrarSesiónToolStripMenuItem.Text = Res_español.Cerrar_Sesion_;
-            cambiarIdiomaToolStripMenuItem.Text = Res_español.Cambiar_Idioma;
-            
-
-            //esto hay que ponerlo cuando el toolstrip tiene submenus.
-            cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
-            cambiarIdiomaToolStripMenuItem.DropDownItems[1].Text = "English";
-        }
-
+       
         private void MainForm_Load(object sender, EventArgs e)
         {
-            gettextespañol();
-
+            
             var usuario = SessionManager.Instancia.UsuarioActivo;
 
             // Validar usuario activo
@@ -110,36 +96,6 @@ namespace UI
 
 
 
-        public void GetTextIngles()
-        {
-            //form menu
-            registrarToolStripMenuItem.Text = Res_ingles.Register;
-            seguimientoToolStripMenuItem.Text = Res_ingles.Follow_up;
-            ModificarToolStripMenuItem.Text = Res_ingles.Modify_Product;
-            ayudaToolStripMenuItem.Text = Res_ingles.Help;
-            cerrarSesiónToolStripMenuItem.Text = Res_ingles.Log_Out;
-            cambiarIdiomaToolStripMenuItem.Text = Res_ingles.Change_Language;
-            
-
-
-            //esto hay que ponerlo cuando el toolstrip tiene submenus.
-            cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
-            cambiarIdiomaToolStripMenuItem.DropDownItems[1].Text = "English";
-        }
-
-        public void GetTextPortugues()
-        {
-            registrarToolStripMenuItem.Text = Res_portugues.Registrar;
-            seguimientoToolStripMenuItem.Text = Res_portugues.Acompanhamento;
-            ModificarToolStripMenuItem.Text = Res_portugues.Modificar_produto;
-            ayudaToolStripMenuItem.Text = Res_portugues.Ajuda;
-            cerrarSesiónToolStripMenuItem.Text = Res_portugues.Sair;
-            cambiarIdiomaToolStripMenuItem.Text = Res_portugues.mudar_idioma;
-            //esto hay que ponerlo cuando el toolstrip tiene submenus.
-            cambiarIdiomaToolStripMenuItem.DropDownItems[0].Text = "Español";
-            cambiarIdiomaToolStripMenuItem.DropDownItems[1].Text = "English";
-        }
-
 
 
 
@@ -167,7 +123,7 @@ namespace UI
 
         private void seguimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormSeguimiento f = new FormSeguimiento(idioma);
+            FormSeguimiento f = new FormSeguimiento();
             f.MdiParent = this;
             f.WindowState = FormWindowState.Maximized;
             f.Show();
@@ -180,9 +136,10 @@ namespace UI
 
         private void reportePorUbicaciónGeográficaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormReportesUbicacion F = new FormReportesUbicacion();
-            F.MdiParent = this;
-            F.Show();
+            // El ID "es" (o vacío) usará el archivo base Res.resx
+            IIdioma idioma = new BE.Idioma { Nombre = "Español", Id = "es" };
+
+            Servicios.LanguageManager.Instance.CambiarIdioma(idioma);
         }
 
         private void reporteFinancieroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -192,31 +149,25 @@ namespace UI
 
         private void españolToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            gettextespañol();
-
-            idioma = 1; 
+           
         }
 
         private void inglesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // objeto con el ID exacto que coincide con tu archivo Res.en.resx
+            IIdioma idioma = new BE.Idioma { Nombre = "English", Id = "en" };
 
-            GetTextIngles();
-            idioma = 2;
-
-            
+            Servicios.LanguageManager.Instance.CambiarIdioma(idioma);
         }
 
         private void portuguesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GetTextPortugues();
-
-            idioma = 3;
 
         }
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormRegistroProductos formRegistro = new FormRegistroProductos(idioma);
+            FormRegistroProductos formRegistro = new FormRegistroProductos();
             formRegistro.MdiParent = this;
             formRegistro.WindowState = FormWindowState.Maximized;
             formRegistro.Show();

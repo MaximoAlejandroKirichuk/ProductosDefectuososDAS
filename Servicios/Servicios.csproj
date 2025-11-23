@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Encriptador.cs" />
     <Compile Include="ExportacionCSVHandler.cs" />
+    <Compile Include="LanguageManager.cs" />
     <Compile Include="LogExportadorCSV.cs" />
     <Compile Include="ServicioNotificacion.cs" />
     <Compile Include="SessionManager.cs" />

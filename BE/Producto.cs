@@ -9,7 +9,7 @@ namespace BE
 {
     public class Producto : ICloneable, ISujeto
     {
-        private List<IObservador> _observadores = new List<IObservador>();
+        private List<IObservadorProducto> _observadores = new List<IObservadorProducto>();
 
         public int CodigoProducto { get; set; }
         public decimal CostoProducto { get; set; }
@@ -60,12 +60,12 @@ namespace BE
             }
         }
         // Implementación de ISujeto
-        public void AgregarObservador(IObservador observador)
+        public void AgregarObservador(IObservadorProducto observador)
         {
             _observadores.Add(observador);
         }
 
-        public void QuitarObservador(IObservador observador)
+        public void QuitarObservador(IObservadorProducto observador)
         {
             _observadores.Remove(observador);
         }
