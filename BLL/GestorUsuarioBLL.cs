@@ -44,7 +44,7 @@ namespace BLL
 
                 if (usuario.Contrasenia == hashContrasena)
                 {
-                    SesionActiva.Instancia.IniciarSesion(usuario);
+                    SessionManager.Instancia.IniciarSesion(usuario);
 
                     // Cargar jerarquía de permisos (Composite)
                     usuario.Permisos = permisoBLL.ObtenerPermisosPorRol(usuario.Rol);
@@ -96,7 +96,7 @@ namespace BLL
             if (usuario.Contrasenia == nuevaContraseniaHasheada)
             {
                 logger.RegistrarEvento(
-                    SesionActiva.Instancia.UsuarioActivo.IdUsuario,
+                    SessionManager.Instancia.UsuarioActivo.IdUsuario,
                     NivelLog.Error,
                     ModuloSistema.Login,
                     "Error en el cambio de contraseña - La nueva contraseña es igual a la anterior",
@@ -108,7 +108,7 @@ namespace BLL
             var exito = daLUsuario.CambiarContrasenia(nuevaContraseniaHasheada, usuario.IdUsuario);
 
             logger.RegistrarEvento(
-                SesionActiva.Instancia.UsuarioActivo.IdUsuario,
+                SessionManager.Instancia.UsuarioActivo.IdUsuario,
                 exito ? NivelLog.Informacion : NivelLog.Error,
                 ModuloSistema.Login,
                 exito ? "Cambio de contraseña exitoso" : "Error en el cambio de contraseña",

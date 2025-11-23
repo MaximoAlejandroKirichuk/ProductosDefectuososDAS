@@ -17,7 +17,7 @@ namespace BLL
         private readonly LogsBLL logger = new LogsBLL(); // Instancia del logger
 
             // Propiedad auxiliar para obtener el ID del usuario actual de forma segura
-            private int? IdUsuarioActual => SesionActiva.Instancia.UsuarioActivo?.IdUsuario;
+            private int? IdUsuarioActual => SessionManager.Instancia.UsuarioActivo?.IdUsuario;
 
             public bool Agregar(Empleado objeto)
             {

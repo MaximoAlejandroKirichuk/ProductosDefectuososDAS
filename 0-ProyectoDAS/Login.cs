@@ -13,6 +13,7 @@ using System.Drawing.Drawing2D;
 using BE;
 using BLL;
 using _0_ProyectoDAS;
+using Servicios;
 namespace UI
 {
     public partial class Login : Form
@@ -42,7 +43,7 @@ namespace UI
 
                 MainForm mainMenu = new MainForm();
                 mainMenu.Show();
-                MessageBox.Show($"Bienvenido {SesionActiva.Instancia.UsuarioActivo.NombreCompleto}.");
+                MessageBox.Show($"Bienvenido {SessionManager.Instancia.UsuarioActivo.NombreCompleto}.");
                 
                 this.Hide();
             }
@@ -51,28 +52,7 @@ namespace UI
                 MessageBox.Show("Ocurrio un error al iniciar sesion: " + ex.Message);
             }
 
-            ////esta funcion es media rara pero es facil. nada mas es para fijarse si esta vacio el txtbox.
-            //if (string.IsNullOrWhiteSpace(nombreUsuario) || string.IsNullOrWhiteSpace(contrasenia))
-            //{
-            //    MessageBox.Show("Por favor complete todos los campos.");
-            //    return;
-            //}
-            ////aca iniciar sesion
-            //// singleton
-            //ServiciosUsuariosCSV.Ingresar(nombreUsuario, contrasenia);
-
-            //Usuario usuarioActivo = SesionActiva.Instancia.UsuarioActivo;
-            //if (usuarioActivo != null)
-            //{
-            //    MessageBox.Show("Inicio de sesión exitoso. Bienvenido: " + usuarioActivo.Fullname);
-            //    MainForm frm = new MainForm();
-            //    frm.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Usuario o contraseña incorrectos.");
-            //}
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

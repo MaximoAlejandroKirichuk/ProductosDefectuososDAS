@@ -268,7 +268,7 @@ namespace UI
         {
             //DateTime dia = dateTimePickerFecha.Value;
             //string mensaje = txtAgregarPaso.Text;
-            //string creadorSeguimiento = SesionActiva.Instancia.UsuarioActivo.Fullname;
+            //string creadorSeguimiento = SessionManager.Instancia.UsuarioActivo.Fullname;
             //string codigo = txtCodigoProducto.Text;
             //Seguimiento nuevo = new Seguimiento(dia, mensaje, creadorSeguimiento, codigo);
 

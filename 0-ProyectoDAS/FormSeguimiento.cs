@@ -2,6 +2,7 @@
 using _0_ProyectoDAS.Idiomas;
 using BE;
 using BLL;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,7 +97,7 @@ namespace UI
                 string mensaje = txtAgregarPaso.Text;
 
                 // Responsable = usuario actual
-                Usuario Usuario = (Usuario)SesionActiva.Instancia.UsuarioActivo;
+                Usuario Usuario = (Usuario)SessionManager.Instancia.UsuarioActivo;
 
                 // Código producto
                 DataGridViewRow fila = DGVProductos.CurrentRow;

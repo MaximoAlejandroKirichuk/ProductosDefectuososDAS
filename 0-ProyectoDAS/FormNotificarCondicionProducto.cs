@@ -1,5 +1,6 @@
 ﻿using BE;
 using BLL;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,7 +53,7 @@ namespace _0_ProyectoDAS
                 CondicionProducto nuevaCondicion = (CondicionProducto)cmbCondicionProducto.SelectedItem;
                 string mensaje = txtMensajeNotificar.Text;
                 // Llamar al método de negocio
-                bool exito = gestorSeguimientoBLL.ActualizarCondicionProducto(productoActualizar, nuevaCondicion,(Empleado)SesionActiva.Instancia.UsuarioActivo, mensaje);
+                bool exito = gestorSeguimientoBLL.ActualizarCondicionProducto(productoActualizar, nuevaCondicion,(Empleado)SessionManager.Instancia.UsuarioActivo, mensaje);
 
                 // Mostrar mensaje de éxito
                 if (exito)

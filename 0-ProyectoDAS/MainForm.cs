@@ -73,7 +73,7 @@ namespace UI
         {
             gettextespañol();
 
-            var usuario = SesionActiva.Instancia.UsuarioActivo;
+            var usuario = SessionManager.Instancia.UsuarioActivo;
 
             // Validar usuario activo
             if (usuario == null)
@@ -156,7 +156,7 @@ namespace UI
         }
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BLL.SesionActiva.Instancia.CerrarSesion();
+            SessionManager.Instancia.CerrarSesion();
             MessageBox.Show("Se cerro sesión");
             this.Close();
             Login form = new Login();

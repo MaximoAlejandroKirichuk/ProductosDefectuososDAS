@@ -44,7 +44,7 @@ namespace _0_ProyectoDAS
                 string contraseniaActual = txtContraseniaActual.Text;
                 string contraseniaNueva = txtContraseniaNueva.Text;
 
-                var respuesta = usuarioBLL.CambiarContrasenia(SesionActiva.Instancia.UsuarioActivo, contraseniaNueva);
+                var respuesta = usuarioBLL.CambiarContrasenia(SessionManager.Instancia.UsuarioActivo, contraseniaNueva);
 
                 if (!respuesta) throw new Exception("Ocurrio un error al cambiar la contraseña");
                 MessageBox.Show("Se logro cambiar correctamente la contraseña");

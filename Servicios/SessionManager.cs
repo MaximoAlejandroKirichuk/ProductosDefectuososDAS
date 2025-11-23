@@ -26,25 +26,15 @@ namespace Servicios
                 return _instancia;
             }
         }
-        //public bool CambiarIdioma(string idioma)
-        //{
-        //    return true;
-        //}
+        public void IniciarSesion(Usuario usuario)
+        {
+            UsuarioActivo = usuario;
+        }
 
-        //public bool LogIn()
-        //{
-        //    return true;
-        //}
-
-        //public bool LogOut()
-        //{
-        //    return true;
-        //}
-
-        //public bool CambiarContrasenia()
-        //{
-              
-        //}
+        public void CerrarSesion()
+        {
+            UsuarioActivo = null;
+        }
 
     }
 }

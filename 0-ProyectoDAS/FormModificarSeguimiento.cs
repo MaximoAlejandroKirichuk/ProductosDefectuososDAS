@@ -1,5 +1,6 @@
 ﻿using BE;
 using BLL;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,7 @@ namespace _0_ProyectoDAS
                 int CodigoSeguimiento = seguimientoElegido.CodigoSeguimiento;
                 DateTime fecha = dateTimePickerFecha.Value;
                 string mensaje = txtMensajeModificar.Text;
-                Usuario responsable = SesionActiva.Instancia.UsuarioActivo;
+                Usuario responsable = SessionManager.Instancia.UsuarioActivo;
                 Visibilidad tipoVisibilidad = checkBox1.Checked ? Seguimiento.Visibilidad.Publica : Seguimiento.Visibilidad.Privada;
                
                 Seguimiento nuevo = new Seguimiento(
