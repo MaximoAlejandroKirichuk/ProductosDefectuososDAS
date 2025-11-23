@@ -11,11 +11,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI;
 using static BE.Seguimiento;
 
 namespace _0_ProyectoDAS
 {
-    public partial class FormModificarSeguimiento : Form
+    public partial class FormModificarSeguimiento : BaseForm
     {
         public FormModificarSeguimiento(Seguimiento seguimientoElegido)
         {

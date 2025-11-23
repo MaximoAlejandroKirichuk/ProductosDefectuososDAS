@@ -15,12 +15,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI;
-using static System.Net.WebRequestMethods;
 
 
 namespace UI
 {
-    public partial class FormSeguimiento : Form
+    public partial class FormSeguimiento : BaseForm
     {
         public FormSeguimiento()
         {

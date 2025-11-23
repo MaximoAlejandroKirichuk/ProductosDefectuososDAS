@@ -10,10 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI;
 
 namespace _0_ProyectoDAS
 {
-    public partial class FormCliente : Form
+    public partial class FormCliente : BaseForm
     {
         public FormCliente()
         {

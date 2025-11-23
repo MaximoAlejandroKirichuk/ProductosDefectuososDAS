@@ -10,10 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI;
 
 namespace _0_ProyectoDAS
 {
-    public partial class FormAdmin : Form
+    public partial class FormAdmin : BaseForm
     {
         private readonly LogsBLL _bll = new LogsBLL();
         private List<Log> _logsCache = new List<Log>();

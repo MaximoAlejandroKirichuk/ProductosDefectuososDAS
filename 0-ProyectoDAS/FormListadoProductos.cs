@@ -9,7 +9,7 @@ using UI;
 
 namespace UI
 {
-    public partial class FormListadoProductos : Form
+    public partial class FormListadoProductos : BaseForm
     {
         public FormListadoProductos()
         {

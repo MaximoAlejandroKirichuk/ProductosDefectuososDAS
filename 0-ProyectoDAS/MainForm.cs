@@ -22,7 +22,7 @@ using BE.ObserverIdioma;
 
 namespace UI
 {
-    public partial class MainForm : Form
+    public partial class MainForm : BaseForm
     {
         public MainForm()
         {

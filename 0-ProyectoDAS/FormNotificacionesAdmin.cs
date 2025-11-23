@@ -5,10 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using UI;
 
 namespace _0_ProyectoDAS
 {
-    public partial class FormNotificacionesAdmin : Form
+    public partial class FormNotificacionesAdmin : BaseForm
     {
         private readonly ServicioNotificacion servicio;
         private readonly Usuario admin;
