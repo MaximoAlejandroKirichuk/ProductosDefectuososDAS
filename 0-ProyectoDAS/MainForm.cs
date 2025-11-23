@@ -102,7 +102,7 @@ namespace UI
             seguimientoToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Seguimientos);
             ClientesToolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Clientes);
             empleadosToolStripMenuItem1.Visible = modulos.Contains(ModuloSistema.Empleados);
-
+            AdministradortoolStripMenuItem.Visible = modulos.Contains(ModuloSistema.Bitacora);
             //AccesibilidadToolStripMenuItem.Visible = true;
             ayudaToolStripMenuItem.Visible = true;
             cerrarSesiónToolStripMenuItem.Visible = true;

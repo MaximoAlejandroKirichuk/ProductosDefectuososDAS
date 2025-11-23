@@ -24,11 +24,11 @@ namespace BLL
             
             if (string.IsNullOrWhiteSpace(objeto.Email))
                 throw new Exception("El Email es obligatorio.");
-            
+
             // . VALIDACIÓN DE CUIL/CUIT (NroDocumento)
 
-            var respuesta= Validador.EsCuitValido(objeto.NroDocumento);
-            if (!respuesta) throw new Exception("cuit invalido");
+            //var respuesta = Validador.EsCuitValido(objeto.NroDocumento);
+            //if (!respuesta) throw new Exception("cuit invalido");
 
             // Validación de existencia (usa la variable correcta 'clienteMPP')
             var existe = clienteMPP.ExisteCliente(objeto.NroDocumento.Trim());

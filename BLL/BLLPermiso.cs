@@ -22,7 +22,7 @@ namespace BLL
                     admin.AgregarModulo(ModuloSistema.Productos);
                     admin.AgregarModulo(ModuloSistema.Reportes);
                     admin.AgregarModulo(ModuloSistema.Empleados);
-
+                    admin.AgregarModulo(ModuloSistema.Bitacora);
                     root.Agregar(admin);
                     break;
 
