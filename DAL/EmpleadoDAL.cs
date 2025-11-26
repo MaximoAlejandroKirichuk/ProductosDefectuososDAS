@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class EmpleadoDAL : IDAL<Empleado>
+    public class EmpleadoDAL 
     {
         private string stringConnection = StringConnection.stringConnection;
         public bool Delete(int id)

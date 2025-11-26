@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Interfaces
 {
-    public class ClienteDAL : IDAL<Cliente>
+    public class ClienteDAL 
     {
         string stringConnection = StringConnection.stringConnection;
         public bool Delete(int id)

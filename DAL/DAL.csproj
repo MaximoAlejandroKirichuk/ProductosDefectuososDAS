@@ -44,7 +44,6 @@
     <Compile Include="DALUsuario.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="EmpleadoDAL.cs" />
-    <Compile Include="Interfaces\IDAL.cs" />
     <Compile Include="LogDAL.cs" />
     <Compile Include="NotificacionDAL.cs" />
     <Compile Include="ProductoDAL.cs" />
