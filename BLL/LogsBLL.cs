@@ -57,7 +57,6 @@ namespace BLL
                 return mpp.FiltrarPorCriticidad(c);
             }
 
-
             public void ExportarLogsConStream(List<Log> logs, FileStream stream)
             {
                 //  ordenar la colección antes de exportarla.

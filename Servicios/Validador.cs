@@ -1,8 +1,11 @@
-﻿using BE;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
-namespace BLL
+namespace Servicios
 {
     public static class Validador
     {
@@ -48,10 +51,10 @@ namespace BLL
 
             return digitoEsperado == digitoReal;
         }
-    
 
 
-    public static bool ValidarGmail(string gmail)
+
+        public static bool ValidarGmail(string gmail)
         {
             //  INICIO DE VALIDACIONES BLL 
 
@@ -78,7 +81,6 @@ namespace BLL
             // Si todas las validaciones pasan
             return true;
         }
-        
-        
+
     }
 }
