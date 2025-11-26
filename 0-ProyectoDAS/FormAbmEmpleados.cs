@@ -2,13 +2,6 @@
 using BLL;
 using Servicios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI;
 
@@ -41,11 +34,11 @@ namespace _0_ProyectoDAS
                 string nombreCompleto = txtNombreCompleto.Text;
                 string email = txtEmail.Text;
                 string contrasena = TxtContraseña.Text;
-                if(gestorUsuarioBLL.BuscarUsuarioPorMail(email) != null) throw new Exception("Ya hiciste un mail asociado a esta cuenta");
-                
+                if (gestorUsuarioBLL.BuscarUsuarioPorMail(email) != null) throw new Exception("Ya hiciste un mail asociado a esta cuenta");
+
 
                 var hashContrasena = Encriptador.HashContrasena(contrasena);
-                var nuevoEmpleado = new Empleado(nombreCompleto, email, hashContrasena, RolesUsuarios.Empleado);
+                var nuevoEmpleado = new Empleado(nombreCompleto, email, hashContrasena, RolesUsuarios.EmpleadoReparacion);
                 var respuesta = gestorEmpleadoBLL.Agregar(nuevoEmpleado);
                 if (!respuesta) throw new Exception("Ocurrio un error al agregar");
                 MessageBox.Show("Se pudo agregar el empleado");
@@ -53,7 +46,7 @@ namespace _0_ProyectoDAS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo agregar el empleado: " +ex.Message);
+                MessageBox.Show("No se pudo agregar el empleado: " + ex.Message);
             }
         }
 
@@ -82,7 +75,7 @@ namespace _0_ProyectoDAS
                 {
                     MessageBox.Show("Debe seleccionar un empleado de la lista");
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -135,7 +128,7 @@ namespace _0_ProyectoDAS
             // 1. Quita todos los espacios del nombre.
             string sinEspacios = nombre.Replace(" ", "");
             string contrasenaFinal = sinEspacios.ToLower();
-           
+
             return contrasenaFinal;
         }
     }

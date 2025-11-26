@@ -27,7 +27,6 @@ namespace BE
     public enum RolesUsuarios
     {
         Admin,
-        Empleado,
         JefeReparacion,
         EmpleadoReparacion,
         Vendedor

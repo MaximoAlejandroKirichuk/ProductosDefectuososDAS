@@ -39,7 +39,7 @@ namespace MPP
                         Rol = rol
                     };
 
-                case RolesUsuarios.Empleado:
+                
                 case RolesUsuarios.EmpleadoReparacion:
                     return new Empleado
                     {
