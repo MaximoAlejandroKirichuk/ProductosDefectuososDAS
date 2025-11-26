@@ -9,8 +9,8 @@ namespace BE
 {
     public interface ISujeto
     {
-        void AgregarObservador(IObservador observador);
-        void QuitarObservador(IObservador observador);
+        void AgregarObservador(IObservadorProducto observador);
+        void QuitarObservador(IObservadorProducto observador);
         void NotificarObservadores(string mensaje);
     }
 

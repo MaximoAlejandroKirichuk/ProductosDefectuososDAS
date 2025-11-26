@@ -67,6 +67,7 @@
             this.groupBox1.Size = new System.Drawing.Size(687, 390);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Tag = "F_Seguimiento_GroupBox_Seguimiento";
             this.groupBox1.Text = "Seguimiento ";
             // 
             // checkBox1
@@ -77,6 +78,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(162, 22);
             this.checkBox1.TabIndex = 15;
+            this.checkBox1.Tag = "F_Seguimiento_CheckBox_SeguimientoPublico";
             this.checkBox1.Text = "Seguimiento Publico";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -86,6 +88,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 46);
             this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Tag = "F_Seguimiento_Btn_Guardar";
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
@@ -96,6 +99,7 @@
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(88, 46);
             this.BtnAgregar.TabIndex = 13;
+            this.BtnAgregar.Tag = "F_Seguimiento_Btn_Agregar";
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
@@ -140,6 +144,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(180, 20);
             this.label13.TabIndex = 7;
+            this.label13.Tag = "F_Seguimiento_Lbl_PasoAlSeguimiento";
             this.label13.Text = "Paso al seguiemiento";
             // 
             // DGVProductos
@@ -157,6 +162,7 @@
             this.btnCondicionProducto.Name = "btnCondicionProducto";
             this.btnCondicionProducto.Size = new System.Drawing.Size(158, 46);
             this.btnCondicionProducto.TabIndex = 14;
+            this.btnCondicionProducto.Tag = "F_Seguimiento_Btn_CambiarCondicionDelProducto";
             this.btnCondicionProducto.Text = "Cambiar condicion del producto";
             this.btnCondicionProducto.UseVisualStyleBackColor = true;
             this.btnCondicionProducto.Click += new System.EventHandler(this.btnCambiarCondicionProducto_Click);

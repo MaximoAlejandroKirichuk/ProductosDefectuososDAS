@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public enum Idioma
-    {
-        Ingles,
-        Español,
-        Portugues
-    }
+   
     public enum TipoCosto
     {
         Perdida,
@@ -74,5 +69,5 @@ namespace BE
         Alta
     }
 
-
+  
 }

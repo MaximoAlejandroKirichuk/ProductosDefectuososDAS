@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class FormAyuda : Form
+    public partial class FormAyuda : BaseForm
     {
         public FormAyuda(int idioma)
         {

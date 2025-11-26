@@ -50,6 +50,7 @@ namespace _0_ProyectoDAS
             this.lblTitulo.Padding = new System.Windows.Forms.Padding(0, 9, 0, 9);
             this.lblTitulo.Size = new System.Drawing.Size(729, 52);
             this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Tag = "F_NotificacionesAdmin_Lbl_NotificacionesDelSistema";
             this.lblTitulo.Text = "Notificaciones del Sistema";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

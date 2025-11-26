@@ -16,7 +16,7 @@ using _0_ProyectoDAS;
 using Servicios;
 namespace UI
 {
-    public partial class Login : Form
+    public partial class Login : BaseForm
     {
         public Login()
         {

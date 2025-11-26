@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="F_AbmCliente_Btn_AgregarCliente" xml:space="preserve">
+    <value>Agregar Cliente</value>
+  </data>
+  <data name="F_AbmCliente_Btn_BorrarCliente" xml:space="preserve">
+    <value>Borrar Cliente</value>
+  </data>
+  <data name="F_AbmCliente_Btn_ModificarCliente" xml:space="preserve">
+    <value>Modificar Cliente</value>
+  </data>
+  <data name="F_AbmCliente_GroupBox_Propiedades" xml:space="preserve">
+    <value>Propiedades</value>
+  </data>
+  <data name="F_AbmCliente_Lbl_DeudaTotal" xml:space="preserve">
+    <value>Deuda Total</value>
+  </data>
+  <data name="F_AbmCliente_Lbl_Direccion" xml:space="preserve">
+    <value>Direccion</value>
+  </data>
+  <data name="F_AbmCliente_Lbl_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="F_ABMCliente_Lbl_NombreCompleto" xml:space="preserve">
+    <value>Nombre Completo</value>
+  </data>
+  <data name="F_AbmCliente_Lbl_NumeroDocumento" xml:space="preserve">
+    <value>Numero Documento</value>
+  </data>
+  <data name="F_AbmCliente_Lbl_TipoDocumento" xml:space="preserve">
+    <value>Tipo Documento</value>
+  </data>
+  <data name="F_AbmEmpleados_Btn_AgregarEmpleado" xml:space="preserve">
+    <value>Agregar Empleado</value>
+  </data>
+  <data name="F_AbmEmpleados_Btn_BorrarEmpleado" xml:space="preserve">
+    <value>Borrar Empleado</value>
+  </data>
+  <data name="F_AbmEmpleados_Btn_ModificarEmpleado" xml:space="preserve">
+    <value>Modificar Empleado</value>
+  </data>
+  <data name="F_AbmEmpleados_GroupBox_Propiedades" xml:space="preserve">
+    <value>Propiedades</value>
+  </data>
+  <data name="F_AbmEmpleados_Lbl_Contraseña" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="F_AbmEmpleados_Lbl_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="F_AbmEmpleados_Lbl_NombreCompleto" xml:space="preserve">
+    <value>Nombre Completo</value>
+  </data>
+  <data name="F_Admin_Btn_ExportarACsv" xml:space="preserve">
+    <value>Exportar A Csv</value>
+  </data>
+  <data name="F_Admin_Btn_Filtrar" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="F_Admin_Btn_FiltrarPorCriticidad" xml:space="preserve">
+    <value>Filtrar Por Criticidad</value>
+  </data>
+  <data name="F_Admin_Btn_ObservarChart" xml:space="preserve">
+    <value>Observar Chart</value>
+  </data>
+  <data name="F_Admin_Lbl_DesdeEstaFecha" xml:space="preserve">
+    <value>Desde Esta Fecha</value>
+  </data>
+  <data name="F_Admin_Lbl_HastaEstaFecha" xml:space="preserve">
+    <value>Hasta Esta Fecha</value>
+  </data>
+  <data name="F_CambiarContrasenia_Btn_Cambiar" xml:space="preserve">
+    <value>Cambiar</value>
+  </data>
+  <data name="F_CambiarContrasenia_Lbl_CambiarContraseña" xml:space="preserve">
+    <value>Cambiar Contraseña</value>
+  </data>
+  <data name="F_CambiarContrasenia_Lbl_ContraseñaActual" xml:space="preserve">
+    <value>Contraseña Actual</value>
+  </data>
+  <data name="F_CambiarContrasenia_Lbl_ContraseñaNueva" xml:space="preserve">
+    <value>Contraseña Nueva</value>
+  </data>
+  <data name="F_CambiarContrasenia_Lbl_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="F_Cliente_Btn_Buscar" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="F_Cliente_Lbl_Cuil/Cuit" xml:space="preserve">
+    <value>Cuil/Cuit</value>
+  </data>
+  <data name="F_Cliente_Lbl_FechaTerminado" xml:space="preserve">
+    <value>Fecha Terminado</value>
+  </data>
+  <data name="F_Cliente_Lbl_IngreseDatosABuscar" xml:space="preserve">
+    <value>Ingrese Datos A Buscar</value>
+  </data>
+  <data name="F_Cliente_Lbl_Productos" xml:space="preserve">
+    <value>Productos</value>
+  </data>
+  <data name="F_Cliente_Lbl_Seguimiento" xml:space="preserve">
+    <value>Seguimiento</value>
+  </data>
+  <data name="F_ListadoProductos_Btn_Actualizar" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="F_ListadoProductos_Btn_Eliminar" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="F_ListadoProductos_Btn_Modificar" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="F_ListadoProductos_GroupBox_Dimensiones" xml:space="preserve">
+    <value>Dimensiones</value>
+  </data>
+  <data name="F_ListadoProductos_GroupBox_EstadoDelProducto" xml:space="preserve">
+    <value>Estado Del Producto</value>
+  </data>
+  <data name="F_ListadoProductos_GroupBox_InformacionProducto" xml:space="preserve">
+    <value>Informacion Producto</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_Alto" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_Ancho" xml:space="preserve">
+    <value>Ancho</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_ClienteAlQueLePertence" xml:space="preserve">
+    <value>Cliente Al Que Le Pertence</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_CodigoProducto" xml:space="preserve">
+    <value>Codigo Producto</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_CondicionDelProducto" xml:space="preserve">
+    <value>Condicion Del Producto</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_CostoDeManoDeObraParaRecuperar" xml:space="preserve">
+    <value>Costo De Mano De Obra Para Recuperar</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_CostoDeMateriaPrimaParaRecuperar" xml:space="preserve">
+    <value>Costo De Materia Prima Para Recuperar</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_CostoProducto" xml:space="preserve">
+    <value>Costo Producto</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_FechaEstimadaDevolucion" xml:space="preserve">
+    <value>Fecha Estimada Devolucion</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_FechaRecibida" xml:space="preserve">
+    <value>Fecha Recibida</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_Largo" xml:space="preserve">
+    <value>Largo</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_NombreProducto" xml:space="preserve">
+    <value>Nombre Producto</value>
+  </data>
+  <data name="F_ListadoProductos_Lbl_ProblemaDeEntrada" xml:space="preserve">
+    <value>Problema De Entrada</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_Administrador" xml:space="preserve">
+    <value>Administrador</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_CambiarContrasena" xml:space="preserve">
+    <value>Cambiar Contraseña</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_CambiarIdioma" xml:space="preserve">
+    <value>Cambiar Idioma</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_CerrarSesion" xml:space="preserve">
+    <value>Cerrar Sesion</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_Clientes" xml:space="preserve">
+    <value>Clientes</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_Empleados" xml:space="preserve">
+    <value>Empleados</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_EspañolCambiarIdioma" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_InglesCambiarIdioma" xml:space="preserve">
+    <value>Ingles</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_ModificarProductos" xml:space="preserve">
+    <value>Modificar Productos</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_ModificarSeguimiento" xml:space="preserve">
+    <value>Modificar Seguimiento</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_Registrar" xml:space="preserve">
+    <value>Registrar</value>
+  </data>
+  <data name="F_MainForm_MenuStrip_Seguimiento" xml:space="preserve">
+    <value>Seguimiento</value>
+  </data>
+  <data name="F_ModificarSeguimiento_Btn_Modificar" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="F_ModificarSeguimiento_CheckBox_SeguimientoPublico" xml:space="preserve">
+    <value>Seguimiento Publico</value>
+  </data>
+  <data name="F_ModificarSeguimiento_GroupBox_SeguimientoModificar" xml:space="preserve">
+    <value>Seguimiento Modificar</value>
+  </data>
+  <data name="F_ModificarSeguimiento_Lbl_SeguimientoActual" xml:space="preserve">
+    <value>Seguimiento Actual</value>
+  </data>
+  <data name="F_ModificarSeguimiento_Lbl_SeguimientoMensaje" xml:space="preserve">
+    <value>Seguimiento Mensaje</value>
+  </data>
+  <data name="F_ModificarSeguimiento_Lbl_SeguimientoModificar" xml:space="preserve">
+    <value>Seguimiento Modificar</value>
+  </data>
+  <data name="F_NotificacionesAdmin_Lbl_NotificacionesDelSistema" xml:space="preserve">
+    <value>Notificaciones Del Sistema</value>
+  </data>
+  <data name="F_NotificarCondicionProducto_Btn_Notificar" xml:space="preserve">
+    <value>Notificar</value>
+  </data>
+  <data name="F_NotificarCondicionProducto_GroupBox_NotificarAlAdministradorLaCondicionDelProducto" xml:space="preserve">
+    <value>Notificar Al Administrador La Condicion Del Producto</value>
+  </data>
+  <data name="F_NotificarCondicionProducto_GroupBox_seguimiento" xml:space="preserve">
+    <value>Seguimiento</value>
+  </data>
+  <data name="F_NotificarCondicionProducto_Lbl_CambioDeCondicionDeProductoActual" xml:space="preserve">
+    <value>Cambio De Condicion De Producto Actual</value>
+  </data>
+  <data name="F_NotificarCondicionProducto_Lbl_MensajeANotificar" xml:space="preserve">
+    <value>Mensaje A Notificar</value>
+  </data>
+  <data name="F_NotificarCondicionProducto_Lbl_SeguimientoActualDelProducto" xml:space="preserve">
+    <value>Seguimiento Actual Del Producto</value>
+  </data>
+  <data name="F_RegistroProductos_Btn_CrearCliente" xml:space="preserve">
+    <value>Crear Cliente</value>
+  </data>
+  <data name="F_RegistroProductos_Btn_TerminarCarga" xml:space="preserve">
+    <value>Terminar Carga</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_AgregarPasosAlSeguimiento" xml:space="preserve">
+    <value>Agregar Pasos Al Seguimiento</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_Alto" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_Ancho" xml:space="preserve">
+    <value>Ancho</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_ClienteAlQuePerteneceElProducto" xml:space="preserve">
+    <value>Cliente Al Que Le Pertenece El Producot</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_CondicionDelProducto" xml:space="preserve">
+    <value>Condicion Del Producto</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_CostoManoObraRecuperar" xml:space="preserve">
+    <value>Costo De Mano De Obra A Recuperar</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_CostoMateriaPrimaRecuperar" xml:space="preserve">
+    <value>Costo de Materia Prima a Recuperar</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_CostoProducto" xml:space="preserve">
+    <value>Costo Del Producto</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_FechaEstimadaDevolucion" xml:space="preserve">
+    <value>Fecha Estimada De Devolucion</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_FechaRecibida" xml:space="preserve">
+    <value>Fecha Recibida</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_Largo" xml:space="preserve">
+    <value>Largo</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_NombreProducto" xml:space="preserve">
+    <value>Nombre Del Producto</value>
+  </data>
+  <data name="F_RegistroProductos_Lbl_ProblemaPorElQueLlega" xml:space="preserve">
+    <value>Problema Por El Que Llega</value>
+  </data>
+  <data name="F_RegistroProductos_TabControl_Cliente" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="F_RegistroProductos_TabControl_DatosDelProducto" xml:space="preserve">
+    <value>Datos del producto</value>
+  </data>
+  <data name="F_RegistroProductos_TabControl_Dimensiones" xml:space="preserve">
+    <value>Dimensiones</value>
+  </data>
+  <data name="F_RegistroProductos_TabControl_EstadoDelProducto" xml:space="preserve">
+    <value>Estado Del Producto</value>
+  </data>
+  <data name="F_RegistroProductos_TabControl_Fechas" xml:space="preserve">
+    <value>Fechas</value>
+  </data>
+  <data name="F_RegistroProductos_TabControl_FinalizarFormulario" xml:space="preserve">
+    <value>Finalizar Formulario</value>
+  </data>
+  <data name="F_RegistroProductos_TabControl_Seguimiento" xml:space="preserve">
+    <value>Seguimiento</value>
+  </data>
+  <data name="F_Seguimiento_Btn_Agregar" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="F_Seguimiento_Btn_CambiarCondicionDelProducto" xml:space="preserve">
+    <value>Cambiar Condicion Del Producto</value>
+  </data>
+  <data name="F_Seguimiento_Btn_Guardar" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="F_Seguimiento_CheckBox_SeguimientoPublico" xml:space="preserve">
+    <value>Seguimiento Publico</value>
+  </data>
+  <data name="F_Seguimiento_GroupBox_Seguimiento" xml:space="preserve">
+    <value>Seguimiento</value>
+  </data>
+  <data name="F_Seguimiento_Lbl_PasoAlSeguimiento" xml:space="preserve">
+    <value>Paso Al Seguimiento</value>
+  </data>
+</root>

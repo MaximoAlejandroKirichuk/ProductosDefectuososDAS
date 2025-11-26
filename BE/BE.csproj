@@ -46,7 +46,8 @@
     <Compile Include="actores\Empleado.cs" />
     <Compile Include="actores\Persona.cs" />
     <Compile Include="actores\Usuario.cs" />
-    <Compile Include="IObservador.cs" />
+    <Compile Include="Idioma.cs" />
+    <Compile Include="IObservadorProducto.cs" />
     <Compile Include="ISujeto.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Dimensiones.cs" />
@@ -55,6 +56,9 @@
     <Compile Include="LogEstadistica.cs" />
     <Compile Include="Modulo.cs" />
     <Compile Include="Notificacion.cs" />
+    <Compile Include="ObserverIdioma\IIdioma.cs" />
+    <Compile Include="ObserverIdioma\IObservadorIdioma.cs" />
+    <Compile Include="ObserverIdioma\ISujetoIdioma.cs" />
     <Compile Include="RolComponent.cs" />
     <Compile Include="RolCompuesto.cs" />
     <Compile Include="RolSimple.cs" />

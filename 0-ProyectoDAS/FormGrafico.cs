@@ -9,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using UI;
 
 namespace _0_ProyectoDAS
 {
-    public partial class FormGrafico : Form
+    public partial class FormGrafico : BaseForm
     {
  
         public FormGrafico(List<LogEstadistica> datos)

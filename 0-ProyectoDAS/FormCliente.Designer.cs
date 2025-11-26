@@ -56,6 +56,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 1;
+            this.label1.Tag = "F_Cliente_Lbl_Cuil/Cuit";
             this.label1.Text = "Cuil/Cuit";
             // 
             // dataGridViewProductos
@@ -73,6 +74,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 3;
+            this.label2.Tag = "F_Cliente_Lbl_Productos";
             this.label2.Text = "Productos";
             // 
             // label3
@@ -82,6 +84,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 5;
+            this.label3.Tag = "F_Cliente_Lbl_Seguimiento";
             this.label3.Text = "Seguimiento";
             // 
             // dataGridViewSeguimientos
@@ -99,6 +102,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 7;
+            this.label4.Tag = "F_Cliente_Lbl_FechaTerminado";
             this.label4.Text = "Fecha terminado";
             // 
             // txtFechaTerm
@@ -115,6 +119,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 13);
             this.label5.TabIndex = 8;
+            this.label5.Tag = "F_Cliente_Lbl_IngreseDatosABuscar";
             this.label5.Text = "Ingrese datos a buscar";
             // 
             // button1
@@ -123,6 +128,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
+            this.button1.Tag = "F_Cliente_Btn_Buscar";
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

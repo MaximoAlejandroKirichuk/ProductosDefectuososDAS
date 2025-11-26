@@ -15,47 +15,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI;
-using static System.Net.WebRequestMethods;
 
 
 namespace UI
 {
-    public partial class FormSeguimiento : Form
+    public partial class FormSeguimiento : BaseForm
     {
-        public FormSeguimiento(int idioma)
+        public FormSeguimiento()
         {
             InitializeComponent();
 
-            AplicarIdioma(idioma);
 
         }
         private readonly GestorSeguimientoBLL gestorSeguimientoBLL = new GestorSeguimientoBLL();
         private readonly GestorProductosBLL gestorProductosBLL = new GestorProductosBLL();
-        public void AplicarIdioma(int idiomanuevo)
-        {
-            if (idiomanuevo == 1)
-                gettextespañol();
-            else if (idiomanuevo == 2)
-                gettextingles();
-            else if (idiomanuevo == 3)
-                gettextportugues();
-        }
-        public void gettextespañol()
-        {
-            groupBox1.Text = Res_español.Seguimiento;
-            label13.Text = Res_español.Paso_al_seguimiento;
-        }
-        public void gettextingles()
-        {
-            groupBox1.Text = Res_ingles.Follow_up;
-
-            label13.Text = Res_ingles.Steps_of_Follow_up;
-        }
-        public void gettextportugues()
-        {
-            groupBox1.Text = Res_portugues.Acompanhamento;
-            label13.Text = Res_portugues.steps_Acompanhamento;
-        }
+        
+        
         private void ActualizarListaSeguimientoPorCodigo(int codigoProducto)
         {   
             DGVSeguimientos.DataSource = null;

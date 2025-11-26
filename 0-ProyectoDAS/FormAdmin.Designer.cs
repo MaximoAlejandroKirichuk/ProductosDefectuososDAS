@@ -63,6 +63,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 2;
+            this.label1.Tag = "F_Admin_Lbl_DesdeEstaFecha";
             this.label1.Text = "Desde esta fecha:";
             // 
             // btnFiltrar
@@ -71,6 +72,7 @@
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
             this.btnFiltrar.TabIndex = 3;
+            this.btnFiltrar.Tag = "F_Admin_Btn_Filtrar";
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -81,6 +83,7 @@
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(102, 23);
             this.btnExportar.TabIndex = 4;
+            this.btnExportar.Tag = "F_Admin_Btn_ExportarACsv";
             this.btnExportar.Text = "Exportar a csv";
             this.btnExportar.UseVisualStyleBackColor = true;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
@@ -92,7 +95,9 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 6;
+            this.label2.Tag = "F_Admin_Lbl_HastaEstaFecha";
             this.label2.Text = "Hasta esta fecha:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dtpHasta
             // 
@@ -107,6 +112,7 @@
             this.btnFiltrarCriticidad.Name = "btnFiltrarCriticidad";
             this.btnFiltrarCriticidad.Size = new System.Drawing.Size(130, 23);
             this.btnFiltrarCriticidad.TabIndex = 7;
+            this.btnFiltrarCriticidad.Tag = "F_Admin_Btn_FiltrarPorCriticidad";
             this.btnFiltrarCriticidad.Text = "Filtrar por crticidad";
             this.btnFiltrarCriticidad.UseVisualStyleBackColor = true;
             this.btnFiltrarCriticidad.Click += new System.EventHandler(this.btnFiltrarCriticidad_Click);
@@ -129,6 +135,7 @@
             this.btnChart.Name = "btnChart";
             this.btnChart.Size = new System.Drawing.Size(102, 23);
             this.btnChart.TabIndex = 9;
+            this.btnChart.Tag = "F_Admin_Btn_ObservarChart";
             this.btnChart.Text = "Observar Chart";
             this.btnChart.UseVisualStyleBackColor = true;
             this.btnChart.Click += new System.EventHandler(this.btnChart_Click);

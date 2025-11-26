@@ -82,6 +82,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 43);
             this.button1.TabIndex = 1;
+            this.button1.Tag = "F_ListadoProductos_Btn_Actualizar";
             this.button1.Text = "Actualizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -93,6 +94,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(137, 43);
             this.btnModificar.TabIndex = 2;
+            this.btnModificar.Tag = "F_ListadoProductos_Btn_Modificar";
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -104,6 +106,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(137, 43);
             this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Tag = "F_ListadoProductos_Btn_Eliminar";
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -116,6 +119,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 4;
+            this.label1.Tag = "F_ListadoProductos_Lbl_CodigoProducto";
             this.label1.Text = "Codigo Producto";
             // 
             // txtCodigoProducto
@@ -142,6 +146,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 6;
+            this.label2.Tag = "F_ListadoProductos_Lbl_NombreProducto";
             this.label2.Text = "Nombre Producto";
             // 
             // label3
@@ -152,6 +157,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 20);
             this.label3.TabIndex = 8;
+            this.label3.Tag = "F_ListadoProductos_Lbl_CostoProducto";
             this.label3.Text = "Costo Producto";
             // 
             // label10
@@ -162,6 +168,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(166, 20);
             this.label10.TabIndex = 14;
+            this.label10.Tag = "F_ListadoProductos_Lbl_ProblemaDeEntrada";
             this.label10.Text = "Problema de Entrada";
             // 
             // comboBoxProblemaEntrada
@@ -194,6 +201,7 @@
             this.groupBox2.Size = new System.Drawing.Size(264, 322);
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Tag = "F_ListadoProductos_GroupBox_InformacionProducto";
             this.groupBox2.Text = "Información Producto";
             // 
             // numericUpDownCostoProducto
@@ -229,6 +237,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 20);
             this.label12.TabIndex = 12;
+            this.label12.Tag = "F_ListadoProductos_Lbl_Alto";
             this.label12.Text = "Alto";
             // 
             // label11
@@ -240,6 +249,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 20);
             this.label11.TabIndex = 14;
+            this.label11.Tag = "F_ListadoProductos_Lbl_Ancho";
             this.label11.Text = "Ancho";
             // 
             // label6
@@ -251,6 +261,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 15;
+            this.label6.Tag = "F_ListadoProductos_Lbl_Largo";
             this.label6.Text = "Largo";
             // 
             // numericUpDownAlto
@@ -291,6 +302,7 @@
             this.groupBox3.Size = new System.Drawing.Size(264, 322);
             this.groupBox3.TabIndex = 37;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Tag = "F_ListadoProductos_GroupBox_Dimensiones";
             this.groupBox3.Text = "Dimensiones";
             // 
             // groupBox1
@@ -307,6 +319,7 @@
             this.groupBox1.Size = new System.Drawing.Size(361, 322);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Tag = "F_ListadoProductos_GroupBox_EstadoDelProducto";
             this.groupBox1.Text = "Estado del producto";
             // 
             // label7
@@ -318,6 +331,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(334, 20);
             this.label7.TabIndex = 11;
+            this.label7.Tag = "F_ListadoProductos_Lbl_CostoDeManoDeObraParaRecuperar";
             this.label7.Text = "Costo de mano de obra para recuperar";
             // 
             // comboBoxCondicionProducto
@@ -361,6 +375,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(336, 20);
             this.label8.TabIndex = 8;
+            this.label8.Tag = "F_ListadoProductos_Lbl_CostoDeMateriaPrimaParaRecuperar";
             this.label8.Text = "Costo de materia prima para recuperar";
             // 
             // numericUpDownCostoManoObra
@@ -386,6 +401,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(202, 20);
             this.label13.TabIndex = 7;
+            this.label13.Tag = "F_ListadoProductos_Lbl_CondicionDelProducto";
             this.label13.Text = "Condicion del producto";
             // 
             // groupBox4
@@ -411,6 +427,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(212, 20);
             this.label4.TabIndex = 45;
+            this.label4.Tag = "F_ListadoProductos_Lbl_FechaEstimadaDevolucion";
             this.label4.Text = "Fecha estimada devolucion";
             // 
             // dateTimePickerFechaEstimadaDevolucion
@@ -440,6 +457,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(195, 40);
             this.label18.TabIndex = 40;
+            this.label18.Tag = "F_ListadoProductos_Lbl_ClienteAlQueLePertence";
             this.label18.Text = "Cliente al que pertenece \r\nel producto\r\n";
             // 
             // dateTimePickerFechaRecibida
@@ -459,6 +477,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 20);
             this.label9.TabIndex = 43;
+            this.label9.Tag = "F_ListadoProductos_Lbl_FechaRecibida";
             this.label9.Text = "Fecha recibida";
             // 
             // FormListadoProductos
