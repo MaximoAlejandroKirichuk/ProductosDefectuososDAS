@@ -52,6 +52,7 @@
             this.groupBox1.Size = new System.Drawing.Size(599, 245);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Tag = "F_MainForm_MenuStrip_Seguimiento";
             this.groupBox1.Text = "Seguimiento ";
             // 
             // label1
@@ -62,6 +63,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 20);
             this.label1.TabIndex = 17;
+            this.label1.Tag = "F_ModificarSeguimiento_Lbl_SeguimientoActual";
             this.label1.Text = "Seguimiento actual";
             // 
             // txtSeguimientoActual
@@ -87,6 +89,7 @@
             this.groupBox2.Size = new System.Drawing.Size(599, 296);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Tag = "F_ModificarSeguimiento_GroupBox_SeguimientoModificar";
             this.groupBox2.Text = "Seguimiento Modificar";
             // 
             // label3
@@ -97,6 +100,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 20);
             this.label3.TabIndex = 28;
+            this.label3.Tag = "F_ModificarSeguimiento_Lbl_SeguimientoMensaje";
             this.label3.Text = "Seguimiento mensaje";
             // 
             // listBox1
@@ -115,6 +119,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 20);
             this.label2.TabIndex = 27;
+            this.label2.Tag = "F_ModificarSeguimiento_Lbl_SeguimientoModificar";
             this.label2.Text = "Seguimiento modificar";
             // 
             // txtMensajeModificar
@@ -134,6 +139,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(162, 22);
             this.checkBox1.TabIndex = 24;
+            this.checkBox1.Tag = "F_ModificarSeguimiento_CheckBox_SeguimientoPublico";
             this.checkBox1.Text = "Seguimiento Publico";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -143,6 +149,7 @@
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(134, 46);
             this.BtnModificar.TabIndex = 23;
+            this.BtnModificar.Tag = "F_ModificarSeguimiento_Btn_Modificar";
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);

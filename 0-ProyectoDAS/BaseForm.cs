@@ -57,10 +57,66 @@ namespace UI
                     }
                 }
 
+                if (c is MenuStrip)
+                {
+                    var menu = (MenuStrip)c;
+                    foreach (ToolStripItem item in menu.Items)
+                    {
+                        TraducirMenu(item, idioma);
+                    }
+                }
+
+                if (c is TabControl)
+                {
+                    var tabControl = (TabControl)c;
+                    foreach (TabPage page in tabControl.TabPages)
+                    {
+                        // A. Traducir el título de la pestaña ("oreja")
+                        if (page.Tag != null)
+                        {
+                            string trad = ObtenerTraduccion(page.Tag.ToString(), idioma);
+                            if (!string.IsNullOrEmpty(trad)) page.Text = trad;
+                        }
+
+                        // B. Recursividad forzada: Entrar a traducir lo que hay DENTRO de la pestaña
+                        if (page.HasChildren)
+                        {
+                            RecorrerControles(page.Controls, idioma);
+                        }
+                    }
+                }
+
                 // Paso 2: Si el control es un contenedor (Panel, GroupBox), entramos dentro
                 if (c.HasChildren)
                 {
                     RecorrerControles(c.Controls, idioma);
+                }
+            }
+        }
+        // --- NUEVO MÉTODO AUXILIAR PARA MENÚS ---
+        private void TraducirMenu(ToolStripItem item, IIdioma idioma)
+        {
+            // 1. Traducir el item actual (ej: "Archivo")
+            if (item.Tag != null)
+            {
+                string traduccion = ObtenerTraduccion(item.Tag.ToString(), idioma);
+                if (!string.IsNullOrEmpty(traduccion))
+                {
+                    item.Text = traduccion;
+                }
+            }
+
+            // 2. Si es un menú desplegable (ToolStripMenuItem), recorrer sus hijos (DropDrownItems)
+            if (item is ToolStripMenuItem)
+            {
+                var dropDownItem = (ToolStripMenuItem)item;
+                if (dropDownItem.HasDropDownItems)
+                {
+                    foreach (ToolStripItem subItem in dropDownItem.DropDownItems)
+                    {
+                        // Recursividad: Se llama a sí mismo para sub-menús infinitos
+                        TraducirMenu(subItem, idioma);
+                    }
                 }
             }
         }

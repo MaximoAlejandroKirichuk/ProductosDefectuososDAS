@@ -37,7 +37,6 @@
             this.cambiarIdiomaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.portuguesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AdministradortoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +74,7 @@
             this.registrarToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
+            this.registrarToolStripMenuItem.Tag = "F_MainForm_MenuStrip_Registrar";
             this.registrarToolStripMenuItem.Text = "Registrar";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
@@ -86,6 +86,7 @@
             this.seguimientoToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
             this.seguimientoToolStripMenuItem.Name = "seguimientoToolStripMenuItem";
             this.seguimientoToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
+            this.seguimientoToolStripMenuItem.Tag = "F_MainForm_MenuStrip_Seguimiento";
             this.seguimientoToolStripMenuItem.Text = "Seguimiento";
             this.seguimientoToolStripMenuItem.Click += new System.EventHandler(this.seguimientoToolStripMenuItem_Click);
             // 
@@ -93,6 +94,7 @@
             // 
             this.modificarSeguimientoToolStripMenuItem.Name = "modificarSeguimientoToolStripMenuItem";
             this.modificarSeguimientoToolStripMenuItem.Size = new System.Drawing.Size(250, 28);
+            this.modificarSeguimientoToolStripMenuItem.Tag = "F_MainForm_MenuStrip_ModificarSeguimiento";
             this.modificarSeguimientoToolStripMenuItem.Text = "Modificar seguimiento";
             this.modificarSeguimientoToolStripMenuItem.Click += new System.EventHandler(this.modificarSeguimientoToolStripMenuItem_Click);
             // 
@@ -102,6 +104,7 @@
             this.ModificarToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
             this.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem";
             this.ModificarToolStripMenuItem.Size = new System.Drawing.Size(175, 29);
+            this.ModificarToolStripMenuItem.Tag = "F_MainForm_MenuStrip_ModificarProductos";
             this.ModificarToolStripMenuItem.Text = "Modificar Productos";
             this.ModificarToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
             // 
@@ -111,6 +114,7 @@
             this.ClientesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
             this.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem";
             this.ClientesToolStripMenuItem.Size = new System.Drawing.Size(82, 29);
+            this.ClientesToolStripMenuItem.Tag = "F_MainForm_MenuStrip_Clientes";
             this.ClientesToolStripMenuItem.Text = "Clientes";
             this.ClientesToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -119,40 +123,37 @@
             this.cambiarIdiomaToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
             this.cambiarIdiomaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.españolToolStripMenuItem,
-            this.inglesToolStripMenuItem,
-            this.portuguesToolStripMenuItem});
+            this.inglesToolStripMenuItem});
             this.cambiarIdiomaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
             this.cambiarIdiomaToolStripMenuItem.Name = "cambiarIdiomaToolStripMenuItem";
             this.cambiarIdiomaToolStripMenuItem.Size = new System.Drawing.Size(144, 29);
+            this.cambiarIdiomaToolStripMenuItem.Tag = "F_MainForm_MenuStrip_CambiarIdioma";
             this.cambiarIdiomaToolStripMenuItem.Text = "Cambiar Idioma";
             this.cambiarIdiomaToolStripMenuItem.Click += new System.EventHandler(this.cambiarIdiomaToolStripMenuItem_Click);
             // 
             // españolToolStripMenuItem
             // 
             this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
-            this.españolToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.españolToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.españolToolStripMenuItem.Tag = "F_MainForm_MenuStrip_EspañolCambiarIdioma";
             this.españolToolStripMenuItem.Text = "Español";
             this.españolToolStripMenuItem.Click += new System.EventHandler(this.españolToolStripMenuItem_Click);
             // 
             // inglesToolStripMenuItem
             // 
             this.inglesToolStripMenuItem.Name = "inglesToolStripMenuItem";
-            this.inglesToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.inglesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.inglesToolStripMenuItem.Tag = "F_MainForm_MenuStrip_InglesCambiarIdioma";
             this.inglesToolStripMenuItem.Text = "Ingles";
             this.inglesToolStripMenuItem.Click += new System.EventHandler(this.inglesToolStripMenuItem_Click);
-            // 
-            // portuguesToolStripMenuItem
-            // 
-            this.portuguesToolStripMenuItem.Name = "portuguesToolStripMenuItem";
-            this.portuguesToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
-            this.portuguesToolStripMenuItem.Text = "Portugues";
-            this.portuguesToolStripMenuItem.Click += new System.EventHandler(this.portuguesToolStripMenuItem_Click);
             // 
             // cambiarContraseñaToolStripMenuItem
             // 
             this.cambiarContraseñaToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
+            this.cambiarContraseñaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
             this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
-            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(175, 33);
+            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(175, 29);
+            this.cambiarContraseñaToolStripMenuItem.Tag = "F_MainForm_MenuStrip_CambiarContrasena";
             this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
             this.cambiarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambiarContraseñaToolStripMenuItem_Click);
             // 
@@ -162,6 +163,7 @@
             this.empleadosToolStripMenuItem1.Margin = new System.Windows.Forms.Padding(2);
             this.empleadosToolStripMenuItem1.Name = "empleadosToolStripMenuItem1";
             this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(105, 29);
+            this.empleadosToolStripMenuItem1.Tag = "F_MainForm_MenuStrip_Empleados";
             this.empleadosToolStripMenuItem1.Text = "Empleados";
             this.empleadosToolStripMenuItem1.Click += new System.EventHandler(this.empleadosToolStripMenuItem1_Click);
             // 
@@ -171,6 +173,7 @@
             this.AdministradortoolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
             this.AdministradortoolStripMenuItem.Name = "AdministradortoolStripMenuItem";
             this.AdministradortoolStripMenuItem.Size = new System.Drawing.Size(130, 29);
+            this.AdministradortoolStripMenuItem.Tag = "F_MainForm_MenuStrip_Administrador";
             this.AdministradortoolStripMenuItem.Text = "Administrador";
             this.AdministradortoolStripMenuItem.Click += new System.EventHandler(this.AdministradortoolStripMenuItem_Click);
             // 
@@ -180,6 +183,7 @@
             this.cerrarSesiónToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
             this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(123, 29);
+            this.cerrarSesiónToolStripMenuItem.Tag = "F_MainForm_MenuStrip_CerrarSesion";
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
@@ -221,7 +225,6 @@
         private System.Windows.Forms.ToolStripMenuItem cambiarIdiomaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem españolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inglesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem portuguesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarSeguimientoToolStripMenuItem;

@@ -56,6 +56,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 0;
+            this.label1.Tag = "F_AbmEmpleados_Lbl_NombreCompleto";
             this.label1.Text = "Nombre completo";
             // 
             // txtNombreCompleto
@@ -79,6 +80,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 2;
+            this.label2.Tag = "F_AbmCliente_Lbl_Email";
             this.label2.Text = "Email";
             // 
             // label3
@@ -88,6 +90,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 4;
+            this.label3.Tag = "F_AbmCliente_Lbl_TipoDocumento";
             this.label3.Text = "Tipo documento";
             // 
             // txtDireccion
@@ -104,6 +107,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 6;
+            this.label4.Tag = "F_AbmCliente_Lbl_Direccion";
             this.label4.Text = "Dirección";
             // 
             // txtDeudaTotal
@@ -120,6 +124,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 8;
+            this.label5.Tag = "F_AbmCliente_Lbl_DeudaTotal";
             this.label5.Text = "Deuda total";
             // 
             // txtNroDocumento
@@ -136,6 +141,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 13);
             this.label7.TabIndex = 12;
+            this.label7.Tag = "F_AbmCliente_Lbl_NumeroDocumento";
             this.label7.Text = "Número documento";
             // 
             // comboBoxTipoDocumento
@@ -155,6 +161,7 @@
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(108, 23);
             this.btnAgregarCliente.TabIndex = 15;
+            this.btnAgregarCliente.Tag = "F_AbmCliente_Btn_AgregarCliente";
             this.btnAgregarCliente.Text = "Agregar cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
@@ -165,6 +172,7 @@
             this.btnBorrarCliente.Name = "btnBorrarCliente";
             this.btnBorrarCliente.Size = new System.Drawing.Size(108, 23);
             this.btnBorrarCliente.TabIndex = 16;
+            this.btnBorrarCliente.Tag = "F_AbmCliente_Btn_BorrarCliente";
             this.btnBorrarCliente.Text = "Borrar cliente";
             this.btnBorrarCliente.UseVisualStyleBackColor = true;
             this.btnBorrarCliente.Click += new System.EventHandler(this.btnBorrarCliente_Click);
@@ -175,6 +183,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(108, 23);
             this.btnModificar.TabIndex = 17;
+            this.btnModificar.Tag = "F_AbmCliente_Btn_ModificarCliente";
             this.btnModificar.Text = "Modificar cliente";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -207,6 +216,7 @@
             this.groupBox1.Size = new System.Drawing.Size(178, 354);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Tag = "F_AbmCliente_GroupBox_Propiedades";
             this.groupBox1.Text = "Propiedades";
             // 
             // FormABMCliente

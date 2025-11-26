@@ -141,11 +141,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Res.en.resx</DependentUpon>
     </Compile>
-    <Compile Include="Idiomas\Res.portugues.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Res.portugues.resx</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,10 +207,6 @@
     <EmbeddedResource Include="Idiomas\Res.en.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Res.en.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Idiomas\Res.portugues.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Res.portugues.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

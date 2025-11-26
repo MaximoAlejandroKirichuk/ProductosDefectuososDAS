@@ -101,6 +101,7 @@
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(768, 380);
             this.tabPage4.TabIndex = 3;
+            this.tabPage4.Tag = "F_RegistroProductos_TabControl_Seguimiento";
             this.tabPage4.Text = "Seguimiento";
             // 
             // listBox1
@@ -121,6 +122,7 @@
             this.btnAgregarPaso.Name = "btnAgregarPaso";
             this.btnAgregarPaso.Size = new System.Drawing.Size(75, 30);
             this.btnAgregarPaso.TabIndex = 3;
+            this.btnAgregarPaso.Tag = "F_RegistroProductos_Btn_Agregar";
             this.btnAgregarPaso.Text = "Agregar";
             this.btnAgregarPaso.UseVisualStyleBackColor = true;
             this.btnAgregarPaso.Click += new System.EventHandler(this.btnAgregarPaso_Click);
@@ -133,6 +135,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(251, 20);
             this.label13.TabIndex = 2;
+            this.label13.Tag = "F_RegistroProductos_Lbl_AgregarPasosAlSeguimiento";
             this.label13.Text = "Agregar pasos al siguiemiento";
             // 
             // txtAgregarPaso
@@ -157,6 +160,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(768, 380);
             this.tabPage3.TabIndex = 2;
+            this.tabPage3.Tag = "F_RegistroProductos_TabControl_EstadoDelProducto";
             this.tabPage3.Text = "Estado del producto";
             // 
             // label12
@@ -168,6 +172,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(319, 20);
             this.label12.TabIndex = 5;
+            this.label12.Tag = "F_RegistroProductos_Lbl_CostoManoObraRecuperar";
             this.label12.Text = "Costo de mano de obra para recuperar";
             // 
             // numericUpDownCostoManoObra
@@ -197,6 +202,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(318, 20);
             this.label11.TabIndex = 2;
+            this.label11.Tag = "F_RegistroProductos_Lbl_CostoMateriaPrimaRecuperar";
             this.label11.Text = "Costo de materia prima para recuperar";
             // 
             // label6
@@ -208,6 +214,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(193, 20);
             this.label6.TabIndex = 1;
+            this.label6.Tag = "F_RegistroProductos_Lbl_CondicionDelProducto";
             this.label6.Text = "Condicion del producto";
             // 
             // comboBoxCondicionProducto
@@ -235,6 +242,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(768, 380);
             this.tabPage2.TabIndex = 1;
+            this.tabPage2.Tag = "F_RegistroProductos_TabControl_Dimensiones";
             this.tabPage2.Text = "Dimensiones";
             // 
             // panel2
@@ -281,6 +289,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 25);
             this.label8.TabIndex = 2;
+            this.label8.Tag = "F_RegistroProductos_Lbl_Largo";
             this.label8.Text = "Largo";
             // 
             // label7
@@ -291,6 +300,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 25);
             this.label7.TabIndex = 1;
+            this.label7.Tag = "F_RegistroProductos_Lbl_Ancho";
             this.label7.Text = "Ancho";
             // 
             // Alto
@@ -301,6 +311,7 @@
             this.Alto.Name = "Alto";
             this.Alto.Size = new System.Drawing.Size(49, 25);
             this.Alto.TabIndex = 0;
+            this.Alto.Tag = "F_RegistroProductos_Lbl_Alto";
             this.Alto.Text = "Alto";
             // 
             // tabPage1
@@ -312,6 +323,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(768, 380);
             this.tabPage1.TabIndex = 0;
+            this.tabPage1.Tag = "F_RegistroProductos_TabControl_DatosDelProducto";
             this.tabPage1.Text = "Datos del Producto";
             // 
             // panel1
@@ -344,6 +356,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(159, 42);
             this.label15.TabIndex = 22;
+            this.label15.Tag = "F_RegistroProductos_Lbl_ProblemaPorElQueLlega";
             this.label15.Text = "Problema por el que llega";
             // 
             // txtCostoProducto
@@ -369,6 +382,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 20);
             this.label4.TabIndex = 15;
+            this.label4.Tag = "F_RegistroProductos_Lbl_CostoProducto";
             this.label4.Text = "Costo producto";
             // 
             // label3
@@ -380,6 +394,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 20);
             this.label3.TabIndex = 14;
+            this.label3.Tag = "F_RegistroProductos_Lbl_NombreProducto";
             this.label3.Text = "Nombre producto";
             // 
             // empleadosBindingSource
@@ -405,6 +420,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(776, 411);
             this.tabControl1.TabIndex = 11;
+            this.tabControl1.Tag = "";
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage6
@@ -417,6 +433,7 @@
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(768, 380);
             this.tabPage6.TabIndex = 5;
+            this.tabPage6.Tag = "F_RegistroProductos_TabControl_Cliente";
             this.tabPage6.Text = "Cliente";
             // 
             // comboBoxCliente
@@ -439,6 +456,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(395, 25);
             this.label18.TabIndex = 7;
+            this.label18.Tag = "F_RegistroProductos_Lbl_ClienteAlQuePerteneceElProducto";
             this.label18.Text = "Cliente al que pertenece el producto";
             // 
             // LinkLabelCliente
@@ -454,6 +472,7 @@
             this.LinkLabelCliente.Size = new System.Drawing.Size(167, 29);
             this.LinkLabelCliente.TabIndex = 10;
             this.LinkLabelCliente.TabStop = true;
+            this.LinkLabelCliente.Tag = "F_RegistroProductos_Btn_CrearCliente";
             this.LinkLabelCliente.Text = "Crear Cliente";
             this.LinkLabelCliente.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
@@ -467,6 +486,7 @@
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(768, 380);
             this.tabPage7.TabIndex = 6;
+            this.tabPage7.Tag = "F_RegistroProductos_TabControl_Fechas";
             this.tabPage7.Text = "Fechas";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
@@ -478,6 +498,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 20);
             this.label1.TabIndex = 10;
+            this.label1.Tag = "F_RegistroProductos_Lbl_FechaEstimadaDevolucion";
             this.label1.Text = "Fecha estimada devolucion";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -499,6 +520,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(127, 20);
             this.label9.TabIndex = 8;
+            this.label9.Tag = "F_RegistroProductos_Lbl_FechaRecibida";
             this.label9.Text = "Fecha recibida";
             // 
             // dateTimePickerFechaRecibida
@@ -521,6 +543,7 @@
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(768, 380);
             this.tabPage5.TabIndex = 4;
+            this.tabPage5.Tag = "F_RegistroProductos_TabControl_FinalizarFormulario";
             this.tabPage5.Text = "Finalizar formulario";
             // 
             // btnTerminarCarga
@@ -532,6 +555,7 @@
             this.btnTerminarCarga.Name = "btnTerminarCarga";
             this.btnTerminarCarga.Size = new System.Drawing.Size(245, 38);
             this.btnTerminarCarga.TabIndex = 0;
+            this.btnTerminarCarga.Tag = "F_RegistroProductos_Btn_TerminarCarga";
             this.btnTerminarCarga.Text = "Terminar carga";
             this.btnTerminarCarga.UseVisualStyleBackColor = false;
             this.btnTerminarCarga.Click += new System.EventHandler(this.btnTerminarCarga_Click);

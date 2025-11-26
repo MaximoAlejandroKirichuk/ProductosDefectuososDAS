@@ -61,380 +61,957 @@ namespace _0_ProyectoDAS.Idiomas {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Actualizar.
+        ///   Busca una cadena traducida similar a Agregar Cliente.
         /// </summary>
-        internal static string Actualizar {
+        internal static string F_AbmCliente_Btn_AgregarCliente {
             get {
-                return ResourceManager.GetString("Actualizar", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_Btn_AgregarCliente", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Agregar.
+        ///   Busca una cadena traducida similar a Borrar Cliente.
         /// </summary>
-        internal static string Agregar {
+        internal static string F_AbmCliente_Btn_BorrarCliente {
             get {
-                return ResourceManager.GetString("Agregar", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_Btn_BorrarCliente", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ayuda.
+        ///   Busca una cadena traducida similar a Modificar Cliente.
         /// </summary>
-        internal static string Ayuda {
+        internal static string F_AbmCliente_Btn_ModificarCliente {
             get {
-                return ResourceManager.GetString("Ayuda", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_Btn_ModificarCliente", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Borrar.
+        ///   Busca una cadena traducida similar a Propiedades.
         /// </summary>
-        internal static string Borrar {
+        internal static string F_AbmCliente_GroupBox_Propiedades {
             get {
-                return ResourceManager.GetString("Borrar", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_GroupBox_Propiedades", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Cambiar Idioma.
+        ///   Busca una cadena traducida similar a Deuda Total.
         /// </summary>
-        internal static string Cambiar_Idioma {
+        internal static string F_AbmCliente_Lbl_DeudaTotal {
             get {
-                return ResourceManager.GetString("Cambiar Idioma", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_Lbl_DeudaTotal", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Cantidad de productos dañada .
+        ///   Busca una cadena traducida similar a Direccion.
         /// </summary>
-        internal static string Cantidad_de_productos_dañada_ {
+        internal static string F_AbmCliente_Lbl_Direccion {
             get {
-                return ResourceManager.GetString("Cantidad de productos dañada ", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_Lbl_Direccion", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Cerrar Sesion .
+        ///   Busca una cadena traducida similar a Email.
         /// </summary>
-        internal static string Cerrar_Sesion_ {
+        internal static string F_AbmCliente_Lbl_Email {
             get {
-                return ResourceManager.GetString("Cerrar Sesion ", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_Lbl_Email", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a codigo producto.
+        ///   Busca una cadena traducida similar a Nombre Completo.
         /// </summary>
-        internal static string codigo_producto {
+        internal static string F_ABMCliente_Lbl_NombreCompleto {
             get {
-                return ResourceManager.GetString("codigo producto", resourceCulture);
+                return ResourceManager.GetString("F_ABMCliente_Lbl_NombreCompleto", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Código producto .
+        ///   Busca una cadena traducida similar a Numero Documento.
         /// </summary>
-        internal static string Código_producto_ {
+        internal static string F_AbmCliente_Lbl_NumeroDocumento {
             get {
-                return ResourceManager.GetString("Código producto ", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_Lbl_NumeroDocumento", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Columna.
+        ///   Busca una cadena traducida similar a Tipo Documento.
         /// </summary>
-        internal static string Columna {
+        internal static string F_AbmCliente_Lbl_TipoDocumento {
             get {
-                return ResourceManager.GetString("Columna", resourceCulture);
+                return ResourceManager.GetString("F_AbmCliente_Lbl_TipoDocumento", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Costo de mano de obra.
+        ///   Busca una cadena traducida similar a Agregar Empleado.
         /// </summary>
-        internal static string Costo_de_mano_de_obra {
+        internal static string F_AbmEmpleados_Btn_AgregarEmpleado {
             get {
-                return ResourceManager.GetString("Costo de mano de obra", resourceCulture);
+                return ResourceManager.GetString("F_AbmEmpleados_Btn_AgregarEmpleado", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Costo de mano de obra.
+        ///   Busca una cadena traducida similar a Borrar Empleado.
         /// </summary>
-        internal static string Costo_de_mano_de_obra1 {
+        internal static string F_AbmEmpleados_Btn_BorrarEmpleado {
             get {
-                return ResourceManager.GetString("Costo de mano de obra1", resourceCulture);
+                return ResourceManager.GetString("F_AbmEmpleados_Btn_BorrarEmpleado", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Costo de perdida de materia prima.
+        ///   Busca una cadena traducida similar a Modificar Empleado.
         /// </summary>
-        internal static string Costo_de_perdida_de_materia_prima {
+        internal static string F_AbmEmpleados_Btn_ModificarEmpleado {
             get {
-                return ResourceManager.GetString("Costo de perdida de materia prima", resourceCulture);
+                return ResourceManager.GetString("F_AbmEmpleados_Btn_ModificarEmpleado", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Costo producto .
+        ///   Busca una cadena traducida similar a Propiedades.
         /// </summary>
-        internal static string Costo_producto_ {
+        internal static string F_AbmEmpleados_GroupBox_Propiedades {
             get {
-                return ResourceManager.GetString("Costo producto ", resourceCulture);
+                return ResourceManager.GetString("F_AbmEmpleados_GroupBox_Propiedades", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Datos del Producto .
+        ///   Busca una cadena traducida similar a Contraseña.
         /// </summary>
-        internal static string Datos_del_Producto_ {
+        internal static string F_AbmEmpleados_Lbl_Contraseña {
             get {
-                return ResourceManager.GetString("Datos del Producto ", resourceCulture);
+                return ResourceManager.GetString("F_AbmEmpleados_Lbl_Contraseña", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Deposito almacenado.
+        ///   Busca una cadena traducida similar a Email.
         /// </summary>
-        internal static string Deposito_almacenado {
+        internal static string F_AbmEmpleados_Lbl_Email {
             get {
-                return ResourceManager.GetString("Deposito almacenado", resourceCulture);
+                return ResourceManager.GetString("F_AbmEmpleados_Lbl_Email", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Estado del producto.
+        ///   Busca una cadena traducida similar a Nombre Completo.
         /// </summary>
-        internal static string Estado_del_producto {
+        internal static string F_AbmEmpleados_Lbl_NombreCompleto {
             get {
-                return ResourceManager.GetString("Estado del producto", resourceCulture);
+                return ResourceManager.GetString("F_AbmEmpleados_Lbl_NombreCompleto", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Estado del producto .
+        ///   Busca una cadena traducida similar a Exportar A Csv.
         /// </summary>
-        internal static string Estado_del_producto_ {
+        internal static string F_Admin_Btn_ExportarACsv {
             get {
-                return ResourceManager.GetString("Estado del producto ", resourceCulture);
+                return ResourceManager.GetString("F_Admin_Btn_ExportarACsv", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Estante.
+        ///   Busca una cadena traducida similar a Filtrar.
         /// </summary>
-        internal static string Estante {
+        internal static string F_Admin_Btn_Filtrar {
             get {
-                return ResourceManager.GetString("Estante", resourceCulture);
+                return ResourceManager.GetString("F_Admin_Btn_Filtrar", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Finalizar formulario .
+        ///   Busca una cadena traducida similar a Filtrar Por Criticidad.
         /// </summary>
-        internal static string Finalizar_formulario_ {
+        internal static string F_Admin_Btn_FiltrarPorCriticidad {
             get {
-                return ResourceManager.GetString("Finalizar formulario ", resourceCulture);
+                return ResourceManager.GetString("F_Admin_Btn_FiltrarPorCriticidad", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Gasto adicional.
+        ///   Busca una cadena traducida similar a Observar Chart.
         /// </summary>
-        internal static string Gasto_adicional {
+        internal static string F_Admin_Btn_ObservarChart {
             get {
-                return ResourceManager.GetString("Gasto adicional", resourceCulture);
+                return ResourceManager.GetString("F_Admin_Btn_ObservarChart", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Gasto generado (antes de ser defectuoso) .
+        ///   Busca una cadena traducida similar a Desde Esta Fecha.
         /// </summary>
-        internal static string Gasto_generado__antes_de_ser_defectuoso__ {
+        internal static string F_Admin_Lbl_DesdeEstaFecha {
             get {
-                return ResourceManager.GetString("Gasto generado (antes de ser defectuoso) ", resourceCulture);
+                return ResourceManager.GetString("F_Admin_Lbl_DesdeEstaFecha", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar.
+        ///   Busca una cadena traducida similar a Hasta Esta Fecha.
         /// </summary>
-        internal static string Guardar {
+        internal static string F_Admin_Lbl_HastaEstaFecha {
             get {
-                return ResourceManager.GetString("Guardar", resourceCulture);
+                return ResourceManager.GetString("F_Admin_Lbl_HastaEstaFecha", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a informacion producto.
+        ///   Busca una cadena traducida similar a Cambiar.
         /// </summary>
-        internal static string informacion_producto {
+        internal static string F_CambiarContrasenia_Btn_Cambiar {
             get {
-                return ResourceManager.GetString("informacion producto", resourceCulture);
+                return ResourceManager.GetString("F_CambiarContrasenia_Btn_Cambiar", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Modificar.
+        ///   Busca una cadena traducida similar a Cambiar Contraseña.
         /// </summary>
-        internal static string Modificar {
+        internal static string F_CambiarContrasenia_Lbl_CambiarContraseña {
             get {
-                return ResourceManager.GetString("Modificar", resourceCulture);
+                return ResourceManager.GetString("F_CambiarContrasenia_Lbl_CambiarContraseña", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Modificar Productos.
+        ///   Busca una cadena traducida similar a Contraseña Actual.
         /// </summary>
-        internal static string Modificar_Productos {
+        internal static string F_CambiarContrasenia_Lbl_ContraseñaActual {
             get {
-                return ResourceManager.GetString("Modificar Productos", resourceCulture);
+                return ResourceManager.GetString("F_CambiarContrasenia_Lbl_ContraseñaActual", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a nivel de estante.
+        ///   Busca una cadena traducida similar a Contraseña Nueva.
         /// </summary>
-        internal static string Nivel_de_estante {
+        internal static string F_CambiarContrasenia_Lbl_ContraseñaNueva {
             get {
-                return ResourceManager.GetString("Nivel de estante", resourceCulture);
+                return ResourceManager.GetString("F_CambiarContrasenia_Lbl_ContraseñaNueva", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a nombre producto.
+        ///   Busca una cadena traducida similar a Email.
         /// </summary>
-        internal static string nombre_producto {
+        internal static string F_CambiarContrasenia_Lbl_Email {
             get {
-                return ResourceManager.GetString("nombre producto", resourceCulture);
+                return ResourceManager.GetString("F_CambiarContrasenia_Lbl_Email", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Nombre producto .
+        ///   Busca una cadena traducida similar a Buscar.
         /// </summary>
-        internal static string Nombre_producto_ {
+        internal static string F_Cliente_Btn_Buscar {
             get {
-                return ResourceManager.GetString("Nombre producto ", resourceCulture);
+                return ResourceManager.GetString("F_Cliente_Btn_Buscar", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Paso al seguimiento.
+        ///   Busca una cadena traducida similar a Cuil/Cuit.
         /// </summary>
-        internal static string Paso_al_seguimiento {
+        internal static string F_Cliente_Lbl_Cuil_Cuit {
             get {
-                return ResourceManager.GetString("Paso al seguimiento", resourceCulture);
+                return ResourceManager.GetString("F_Cliente_Lbl_Cuil/Cuit", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a persona responsable.
+        ///   Busca una cadena traducida similar a Fecha Terminado.
         /// </summary>
-        internal static string persona_responsable {
+        internal static string F_Cliente_Lbl_FechaTerminado {
             get {
-                return ResourceManager.GetString("persona responsable", resourceCulture);
+                return ResourceManager.GetString("F_Cliente_Lbl_FechaTerminado", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a problema de entrada.
+        ///   Busca una cadena traducida similar a Ingrese Datos A Buscar.
         /// </summary>
-        internal static string problema_de_entrada {
+        internal static string F_Cliente_Lbl_IngreseDatosABuscar {
             get {
-                return ResourceManager.GetString("problema de entrada", resourceCulture);
+                return ResourceManager.GetString("F_Cliente_Lbl_IngreseDatosABuscar", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Problema por el que llega .
+        ///   Busca una cadena traducida similar a Productos.
         /// </summary>
-        internal static string Problema_por_el_que_llega_ {
+        internal static string F_Cliente_Lbl_Productos {
             get {
-                return ResourceManager.GetString("Problema por el que llega ", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Registrar.
-        /// </summary>
-        internal static string Registrar {
-            get {
-                return ResourceManager.GetString("Registrar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Reporte.
-        /// </summary>
-        internal static string Reporte {
-            get {
-                return ResourceManager.GetString("Reporte", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Reportes financieros.
-        /// </summary>
-        internal static string Reportes_financieros {
-            get {
-                return ResourceManager.GetString("Reportes financieros", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Reportes por responsable.
-        /// </summary>
-        internal static string Reportes_por_responsable {
-            get {
-                return ResourceManager.GetString("Reportes por responsable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Reportes por ubicacion geografica.
-        /// </summary>
-        internal static string Reportes_por_ubicacion_geografica {
-            get {
-                return ResourceManager.GetString("Reportes por ubicacion geografica", resourceCulture);
+                return ResourceManager.GetString("F_Cliente_Lbl_Productos", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Seguimiento.
         /// </summary>
-        internal static string Seguimiento {
+        internal static string F_Cliente_Lbl_Seguimiento {
             get {
-                return ResourceManager.GetString("Seguimiento", resourceCulture);
+                return ResourceManager.GetString("F_Cliente_Lbl_Seguimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar.
+        /// </summary>
+        internal static string F_ListadoProductos_Btn_Actualizar {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Btn_Actualizar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar.
+        /// </summary>
+        internal static string F_ListadoProductos_Btn_Eliminar {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Btn_Eliminar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar.
+        /// </summary>
+        internal static string F_ListadoProductos_Btn_Modificar {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Btn_Modificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dimensiones.
+        /// </summary>
+        internal static string F_ListadoProductos_GroupBox_Dimensiones {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_GroupBox_Dimensiones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estado Del Producto.
+        /// </summary>
+        internal static string F_ListadoProductos_GroupBox_EstadoDelProducto {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_GroupBox_EstadoDelProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Informacion Producto.
+        /// </summary>
+        internal static string F_ListadoProductos_GroupBox_InformacionProducto {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_GroupBox_InformacionProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Alto.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_Alto {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_Alto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ancho.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_Ancho {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_Ancho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cliente Al Que Le Pertence.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_ClienteAlQueLePertence {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_ClienteAlQueLePertence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Codigo Producto.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_CodigoProducto {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_CodigoProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Condicion Del Producto.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_CondicionDelProducto {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_CondicionDelProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Costo De Mano De Obra Para Recuperar.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_CostoDeManoDeObraParaRecuperar {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_CostoDeManoDeObraParaRecuperar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Costo De Materia Prima Para Recuperar.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_CostoDeMateriaPrimaParaRecuperar {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_CostoDeMateriaPrimaParaRecuperar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Costo Producto.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_CostoProducto {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_CostoProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Estimada Devolucion.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_FechaEstimadaDevolucion {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_FechaEstimadaDevolucion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Recibida.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_FechaRecibida {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_FechaRecibida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Largo.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_Largo {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_Largo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre Producto.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_NombreProducto {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_NombreProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Problema De Entrada.
+        /// </summary>
+        internal static string F_ListadoProductos_Lbl_ProblemaDeEntrada {
+            get {
+                return ResourceManager.GetString("F_ListadoProductos_Lbl_ProblemaDeEntrada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Administrador.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_Administrador {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_Administrador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cambiar Contraseña.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_CambiarContrasena {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_CambiarContrasena", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cambiar Idioma.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_CambiarIdioma {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_CambiarIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cerrar Sesion.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_CerrarSesion {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_CerrarSesion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Clientes.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_Clientes {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_Clientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Empleados.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_Empleados {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_Empleados", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Español.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_EspañolCambiarIdioma {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_EspañolCambiarIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingles.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_InglesCambiarIdioma {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_InglesCambiarIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Productos.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_ModificarProductos {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_ModificarProductos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Seguimiento.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_ModificarSeguimiento {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_ModificarSeguimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Registrar.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_Registrar {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_Registrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento.
+        /// </summary>
+        internal static string F_MainForm_MenuStrip_Seguimiento {
+            get {
+                return ResourceManager.GetString("F_MainForm_MenuStrip_Seguimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar.
+        /// </summary>
+        internal static string F_ModificarSeguimiento_Btn_Modificar {
+            get {
+                return ResourceManager.GetString("F_ModificarSeguimiento_Btn_Modificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento Publico.
+        /// </summary>
+        internal static string F_ModificarSeguimiento_CheckBox_SeguimientoPublico {
+            get {
+                return ResourceManager.GetString("F_ModificarSeguimiento_CheckBox_SeguimientoPublico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento Modificar.
+        /// </summary>
+        internal static string F_ModificarSeguimiento_GroupBox_SeguimientoModificar {
+            get {
+                return ResourceManager.GetString("F_ModificarSeguimiento_GroupBox_SeguimientoModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento Actual.
+        /// </summary>
+        internal static string F_ModificarSeguimiento_Lbl_SeguimientoActual {
+            get {
+                return ResourceManager.GetString("F_ModificarSeguimiento_Lbl_SeguimientoActual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento Mensaje.
+        /// </summary>
+        internal static string F_ModificarSeguimiento_Lbl_SeguimientoMensaje {
+            get {
+                return ResourceManager.GetString("F_ModificarSeguimiento_Lbl_SeguimientoMensaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento Modificar.
+        /// </summary>
+        internal static string F_ModificarSeguimiento_Lbl_SeguimientoModificar {
+            get {
+                return ResourceManager.GetString("F_ModificarSeguimiento_Lbl_SeguimientoModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Notificaciones Del Sistema.
+        /// </summary>
+        internal static string F_NotificacionesAdmin_Lbl_NotificacionesDelSistema {
+            get {
+                return ResourceManager.GetString("F_NotificacionesAdmin_Lbl_NotificacionesDelSistema", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Notificar.
+        /// </summary>
+        internal static string F_NotificarCondicionProducto_Btn_Notificar {
+            get {
+                return ResourceManager.GetString("F_NotificarCondicionProducto_Btn_Notificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Notificar Al Administrador La Condicion Del Producto.
+        /// </summary>
+        internal static string F_NotificarCondicionProducto_GroupBox_NotificarAlAdministradorLaCondicionDelProducto {
+            get {
+                return ResourceManager.GetString("F_NotificarCondicionProducto_GroupBox_NotificarAlAdministradorLaCondicionDelProdu" +
+                        "cto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento.
+        /// </summary>
+        internal static string F_NotificarCondicionProducto_GroupBox_seguimiento {
+            get {
+                return ResourceManager.GetString("F_NotificarCondicionProducto_GroupBox_seguimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cambio De Condicion De Producto Actual.
+        /// </summary>
+        internal static string F_NotificarCondicionProducto_Lbl_CambioDeCondicionDeProductoActual {
+            get {
+                return ResourceManager.GetString("F_NotificarCondicionProducto_Lbl_CambioDeCondicionDeProductoActual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mensaje A Notificar.
+        /// </summary>
+        internal static string F_NotificarCondicionProducto_Lbl_MensajeANotificar {
+            get {
+                return ResourceManager.GetString("F_NotificarCondicionProducto_Lbl_MensajeANotificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento Actual Del Producto.
+        /// </summary>
+        internal static string F_NotificarCondicionProducto_Lbl_SeguimientoActualDelProducto {
+            get {
+                return ResourceManager.GetString("F_NotificarCondicionProducto_Lbl_SeguimientoActualDelProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Crear Cliente.
+        /// </summary>
+        internal static string F_RegistroProductos_Btn_CrearCliente {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Btn_CrearCliente", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Terminar Carga.
         /// </summary>
-        internal static string Terminar_Carga {
+        internal static string F_RegistroProductos_Btn_TerminarCarga {
             get {
-                return ResourceManager.GetString("Terminar Carga", resourceCulture);
+                return ResourceManager.GetString("F_RegistroProductos_Btn_TerminarCarga", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ubicación Geográfica .
+        ///   Busca una cadena traducida similar a Agregar Pasos Al Seguimiento.
         /// </summary>
-        internal static string Ubicación_Geográfica {
+        internal static string F_RegistroProductos_Lbl_AgregarPasosAlSeguimiento {
             get {
-                return ResourceManager.GetString("Ubicación Geográfica", resourceCulture);
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_AgregarPasosAlSeguimiento", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ubicación Geográfica .
+        ///   Busca una cadena traducida similar a Alto.
         /// </summary>
-        internal static string Ubicación_Geográfica_ {
+        internal static string F_RegistroProductos_Lbl_Alto {
             get {
-                return ResourceManager.GetString("Ubicación Geográfica ", resourceCulture);
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_Alto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ancho.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_Ancho {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_Ancho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cliente Al Que Le Pertenece El Producot.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_ClienteAlQuePerteneceElProducto {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_ClienteAlQuePerteneceElProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Condicion Del Producto.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_CondicionDelProducto {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_CondicionDelProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Costo De Mano De Obra A Recuperar.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_CostoManoObraRecuperar {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_CostoManoObraRecuperar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Costo de Materia Prima a Recuperar.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_CostoMateriaPrimaRecuperar {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_CostoMateriaPrimaRecuperar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Costo Del Producto.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_CostoProducto {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_CostoProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Estimada De Devolucion.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_FechaEstimadaDevolucion {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_FechaEstimadaDevolucion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Recibida.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_FechaRecibida {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_FechaRecibida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Largo.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_Largo {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_Largo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre Del Producto.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_NombreProducto {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_NombreProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Problema Por El Que Llega.
+        /// </summary>
+        internal static string F_RegistroProductos_Lbl_ProblemaPorElQueLlega {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_Lbl_ProblemaPorElQueLlega", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cliente.
+        /// </summary>
+        internal static string F_RegistroProductos_TabControl_Cliente {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_TabControl_Cliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Datos del producto.
+        /// </summary>
+        internal static string F_RegistroProductos_TabControl_DatosDelProducto {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_TabControl_DatosDelProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dimensiones.
+        /// </summary>
+        internal static string F_RegistroProductos_TabControl_Dimensiones {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_TabControl_Dimensiones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estado Del Producto.
+        /// </summary>
+        internal static string F_RegistroProductos_TabControl_EstadoDelProducto {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_TabControl_EstadoDelProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fechas.
+        /// </summary>
+        internal static string F_RegistroProductos_TabControl_Fechas {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_TabControl_Fechas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Finalizar Formulario.
+        /// </summary>
+        internal static string F_RegistroProductos_TabControl_FinalizarFormulario {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_TabControl_FinalizarFormulario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento.
+        /// </summary>
+        internal static string F_RegistroProductos_TabControl_Seguimiento {
+            get {
+                return ResourceManager.GetString("F_RegistroProductos_TabControl_Seguimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar.
+        /// </summary>
+        internal static string F_Seguimiento_Btn_Agregar {
+            get {
+                return ResourceManager.GetString("F_Seguimiento_Btn_Agregar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cambiar Condicion Del Producto.
+        /// </summary>
+        internal static string F_Seguimiento_Btn_CambiarCondicionDelProducto {
+            get {
+                return ResourceManager.GetString("F_Seguimiento_Btn_CambiarCondicionDelProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Guardar.
+        /// </summary>
+        internal static string F_Seguimiento_Btn_Guardar {
+            get {
+                return ResourceManager.GetString("F_Seguimiento_Btn_Guardar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento Publico.
+        /// </summary>
+        internal static string F_Seguimiento_CheckBox_SeguimientoPublico {
+            get {
+                return ResourceManager.GetString("F_Seguimiento_CheckBox_SeguimientoPublico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seguimiento.
+        /// </summary>
+        internal static string F_Seguimiento_GroupBox_Seguimiento {
+            get {
+                return ResourceManager.GetString("F_Seguimiento_GroupBox_Seguimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Paso Al Seguimiento.
+        /// </summary>
+        internal static string F_Seguimiento_Lbl_PasoAlSeguimiento {
+            get {
+                return ResourceManager.GetString("F_Seguimiento_Lbl_PasoAlSeguimiento", resourceCulture);
             }
         }
     }

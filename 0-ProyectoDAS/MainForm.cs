@@ -149,7 +149,9 @@ namespace UI
 
         private void españolToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            IIdioma idioma = new BE.Idioma { Nombre = "Español", Id = "es" };
+
+            Servicios.LanguageManager.Instance.CambiarIdioma(idioma);
         }
 
         private void inglesToolStripMenuItem_Click(object sender, EventArgs e)

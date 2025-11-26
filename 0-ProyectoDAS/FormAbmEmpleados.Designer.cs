@@ -56,6 +56,7 @@
             this.groupBox1.Size = new System.Drawing.Size(178, 195);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Tag = "F_AbmEmpleados_GroupBox_Propiedades";
             this.groupBox1.Text = "Propiedades";
             // 
             // LNombre
@@ -65,6 +66,7 @@
             this.LNombre.Name = "LNombre";
             this.LNombre.Size = new System.Drawing.Size(90, 13);
             this.LNombre.TabIndex = 0;
+            this.LNombre.Tag = "F_AbmEmpleados_Lbl_NombreCompleto";
             this.LNombre.Text = "Nombre completo";
             // 
             // txtNombreCompleto
@@ -82,6 +84,7 @@
             this.LEmail.Name = "LEmail";
             this.LEmail.Size = new System.Drawing.Size(32, 13);
             this.LEmail.TabIndex = 2;
+            this.LEmail.Tag = "F_AbmEmpleados_Lbl_Email";
             this.LEmail.Text = "Email";
             // 
             // txtEmail
@@ -98,6 +101,7 @@
             this.LContraseña.Name = "LContraseña";
             this.LContraseña.Size = new System.Drawing.Size(61, 13);
             this.LContraseña.TabIndex = 8;
+            this.LContraseña.Tag = "F_AbmEmpleados_Lbl_Contraseña";
             this.LContraseña.Text = "Contraseña";
             // 
             // TxtContraseña
@@ -121,6 +125,7 @@
             this.btnModificarEmpleado.Name = "btnModificarEmpleado";
             this.btnModificarEmpleado.Size = new System.Drawing.Size(108, 23);
             this.btnModificarEmpleado.TabIndex = 22;
+            this.btnModificarEmpleado.Tag = "F_AbmEmpleados_Btn_ModificarEmpleado";
             this.btnModificarEmpleado.Text = "Modificar empleado";
             this.btnModificarEmpleado.UseVisualStyleBackColor = true;
             this.btnModificarEmpleado.Click += new System.EventHandler(this.btnModificarEmpleado_Click);
@@ -131,6 +136,7 @@
             this.btnBorrarEmpleado.Name = "btnBorrarEmpleado";
             this.btnBorrarEmpleado.Size = new System.Drawing.Size(108, 23);
             this.btnBorrarEmpleado.TabIndex = 21;
+            this.btnBorrarEmpleado.Tag = "F_AbmEmpleados_Btn_BorrarEmpleado";
             this.btnBorrarEmpleado.Text = "Borrar empleado";
             this.btnBorrarEmpleado.UseVisualStyleBackColor = true;
             this.btnBorrarEmpleado.Click += new System.EventHandler(this.btnBorrarEmpleado_Click);
@@ -141,6 +147,7 @@
             this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
             this.btnAgregarEmpleado.Size = new System.Drawing.Size(108, 23);
             this.btnAgregarEmpleado.TabIndex = 20;
+            this.btnAgregarEmpleado.Tag = "F_AbmEmpleados_Btn_AgregarEmpleado";
             this.btnAgregarEmpleado.Text = "Agregar empleado";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
             this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
@@ -149,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 555);
+            this.ClientSize = new System.Drawing.Size(943, 550);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DgvEmpleados);
             this.Controls.Add(this.btnModificarEmpleado);

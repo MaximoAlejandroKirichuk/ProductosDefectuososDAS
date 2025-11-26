@@ -141,5 +141,10 @@ namespace _0_ProyectoDAS
                 frm.ShowDialog(); 
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
