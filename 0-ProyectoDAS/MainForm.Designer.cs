@@ -134,7 +134,7 @@
             // españolToolStripMenuItem
             // 
             this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
-            this.españolToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.españolToolStripMenuItem.Size = new System.Drawing.Size(139, 28);
             this.españolToolStripMenuItem.Tag = "F_MainForm_MenuStrip_EspañolCambiarIdioma";
             this.españolToolStripMenuItem.Text = "Español";
             this.españolToolStripMenuItem.Click += new System.EventHandler(this.españolToolStripMenuItem_Click);
@@ -142,7 +142,7 @@
             // inglesToolStripMenuItem
             // 
             this.inglesToolStripMenuItem.Name = "inglesToolStripMenuItem";
-            this.inglesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.inglesToolStripMenuItem.Size = new System.Drawing.Size(139, 28);
             this.inglesToolStripMenuItem.Tag = "F_MainForm_MenuStrip_InglesCambiarIdioma";
             this.inglesToolStripMenuItem.Text = "Ingles";
             this.inglesToolStripMenuItem.Click += new System.EventHandler(this.inglesToolStripMenuItem_Click);
@@ -198,8 +198,8 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1207, 690);
             this.Controls.Add(this.menuStrip1);
