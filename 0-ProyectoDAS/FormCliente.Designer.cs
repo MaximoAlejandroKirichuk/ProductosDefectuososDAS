@@ -34,10 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewSeguimientos = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtFechaTerm = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnExportarSeguimiento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSeguimientos)).BeginInit();
             this.SuspendLayout();
@@ -96,23 +95,6 @@
             this.dataGridViewSeguimientos.Size = new System.Drawing.Size(721, 150);
             this.dataGridViewSeguimientos.TabIndex = 4;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 508);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Tag = "F_Cliente_Lbl_FechaTerminado";
-            this.label4.Text = "Fecha terminado";
-            // 
-            // txtFechaTerm
-            // 
-            this.txtFechaTerm.Location = new System.Drawing.Point(42, 524);
-            this.txtFechaTerm.Name = "txtFechaTerm";
-            this.txtFechaTerm.Size = new System.Drawing.Size(100, 20);
-            this.txtFechaTerm.TabIndex = 6;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -134,16 +116,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnExportarSeguimiento
+            // 
+            this.btnExportarSeguimiento.Enabled = false;
+            this.btnExportarSeguimiento.Location = new System.Drawing.Point(661, 525);
+            this.btnExportarSeguimiento.Name = "btnExportarSeguimiento";
+            this.btnExportarSeguimiento.Size = new System.Drawing.Size(94, 37);
+            this.btnExportarSeguimiento.TabIndex = 10;
+            this.btnExportarSeguimiento.Tag = "F_Cliente_Btn_Buscar";
+            this.btnExportarSeguimiento.Text = "Exportar seguimiento";
+            this.btnExportarSeguimiento.UseVisualStyleBackColor = true;
+            this.btnExportarSeguimiento.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(884, 648);
+            this.Controls.Add(this.btnExportarSeguimiento);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtFechaTerm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewSeguimientos);
             this.Controls.Add(this.label2);
@@ -168,9 +161,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewSeguimientos;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtFechaTerm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExportarSeguimiento;
     }
 }
