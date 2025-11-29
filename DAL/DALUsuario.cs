@@ -101,6 +101,27 @@ namespace DAL
                 }
             }
         }
+        public bool DesbloquearUsuario(int idEmpleado, string nuevaContrasenaHash)
+        {
+            using (SqlConnection con = new SqlConnection(stringConnection))
+            {
+                string query = @"UPDATE Empleado 
+                         SET Bloqueado = 0,
+                             IntentosFallidos = 0,
+                             UltimoIntento = NULL,
+                             Contrasena = @Contrasena
+                         WHERE IdEmpleado = @IdEmpleado";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+                    cmd.Parameters.AddWithValue("@Contrasena", nuevaContrasenaHash);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
 
     }
 }

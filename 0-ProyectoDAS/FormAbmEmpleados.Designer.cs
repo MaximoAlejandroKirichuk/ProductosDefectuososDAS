@@ -39,6 +39,7 @@
             this.btnModificarEmpleado = new System.Windows.Forms.Button();
             this.btnBorrarEmpleado = new System.Windows.Forms.Button();
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEmpleados)).BeginInit();
             this.SuspendLayout();
@@ -152,11 +153,23 @@
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
             this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(118, 428);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 33);
+            this.button1.TabIndex = 25;
+            this.button1.Tag = "F_AbmEmpleados_Btn_ModificarEmpleado";
+            this.button1.Text = "Desbloquear empleado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormAbmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 550);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DgvEmpleados);
             this.Controls.Add(this.btnModificarEmpleado);
@@ -185,5 +198,6 @@
         private System.Windows.Forms.Button btnModificarEmpleado;
         private System.Windows.Forms.Button btnBorrarEmpleado;
         private System.Windows.Forms.Button btnAgregarEmpleado;
+        private System.Windows.Forms.Button button1;
     }
 }

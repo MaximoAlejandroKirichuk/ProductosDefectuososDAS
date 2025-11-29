@@ -162,8 +162,7 @@ namespace BLL
             {
                 try
                 {
-                    // Generalmente no se loguean los "Select" exitosos para no llenar la BD de basura,
-                    // pero SÍ es importante atrapar errores de conexión aquí.
+                  
                     return mppEmpleado.ObtenerTodos();
                 }
                 catch (Exception ex)

@@ -112,8 +112,32 @@ namespace BLL
 
             return exito;
         }
+        public bool DesbloquearCuenta(string emailUsuario)
+        {
+            Usuario usuario = BuscarUsuarioPorMail(emailUsuario);
 
-       
+            if (usuario == null)
+                throw new Exception("El usuario no existe.");
+
+            if (!usuario.Bloqueado)
+                throw new Exception("El usuario no está bloqueado.");
+
+            string nuevaContrasena = Encriptador.HashContrasena("campichuelo1");
+            bool ok = usuarioMPP.Desbloquear(usuario,nuevaContrasena);
+
+            if (ok)
+            {
+                logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Informacion,
+                    ModuloSistema.Empleados,
+                    "Cuenta desbloqueada y contraseña restaurada por un administrador");
+
+                return true;
+            }
+
+            return false;
+        }
+
+
 
         public Usuario BuscarUsuarioPorMail(string email)
         {

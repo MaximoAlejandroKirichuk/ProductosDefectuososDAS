@@ -120,6 +120,10 @@ namespace MPP
             return dalUsuario.ReiniciarIntentos(u.IdUsuario);
         }
 
+        public bool Desbloquear(Usuario usuario, string nuevaContrasena)
+        {
+            return dalUsuario.DesbloquearUsuario(usuario.IdUsuario, nuevaContrasena);
+        }
 
     }
 }

@@ -31,24 +31,36 @@ namespace MPP
         public List<Empleado> MapearTodos(DataTable dt)
         {
             List<Empleado> empleados = new List<Empleado>();
+
             foreach (DataRow row in dt.Rows)
             {
-                RolesUsuarios rol;
-                Enum.TryParse(row["Rol"].ToString(), out rol);
-                var cliente = new Empleado
+                // Parse del rol solo una vez
+                var rol = (RolesUsuarios)Enum.Parse(typeof(RolesUsuarios), row["Rol"].ToString());
+
+                // Saltar admins
+                if (rol == RolesUsuarios.Admin) continue;
+
+                var empleado = new Empleado
                 {
                     IdUsuario = Convert.ToInt32(row["IdEmpleado"]),
+
+                    NombreCompleto = row["NombreCompleto"].ToString(),
                     Email = row["Email"].ToString(),
                     Contrasenia = row["Contrasena"].ToString(),
-                    NombreCompleto = row["NombreCompleto"].ToString(),
+
                     Rol = rol,
+
+                    Bloqueado = row["Bloqueado"] != DBNull.Value && Convert.ToBoolean(row["Bloqueado"]),
+                    IntentosFallidos = row["IntentosFallidos"] != DBNull.Value ? Convert.ToInt32(row["IntentosFallidos"]) : 0,
+                    UltimoIntento = row["UltimoIntento"] != DBNull.Value ? Convert.ToDateTime(row["UltimoIntento"]) : (DateTime?)null
                 };
 
-                empleados.Add(cliente);
+                empleados.Add(empleado);
             }
 
             return empleados;
         }
+
 
         public bool Modificar(Empleado objeto)
         {

@@ -131,5 +131,36 @@ namespace _0_ProyectoDAS
 
             return contrasenaFinal;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Desbloquear
+            try
+            {
+                if (DgvEmpleados.CurrentRow == null)
+                {
+                    MessageBox.Show("Seleccione un empleado.");
+                    return;
+                }
+
+                string emailEmpleado = DgvEmpleados.CurrentRow.Cells["Email"].Value.ToString();
+
+                var ok = gestorUsuarioBLL.DesbloquearCuenta(emailEmpleado);
+
+                if (ok)
+                {
+                    MessageBox.Show("El empleado fue desbloqueado.\nNueva contraseña: campichuelo1");
+                    ActualizarData();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo desbloquear el empleado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al desbloquear: " + ex.Message);
+            }
+        }
     }
 }
