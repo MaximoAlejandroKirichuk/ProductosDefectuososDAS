@@ -106,7 +106,7 @@ namespace BLL
                 SessionManager.Instancia.UsuarioActivo.IdUsuario,
                 exito ? NivelLog.Informacion : NivelLog.Error,
                 ModuloSistema.Login,
-                exito ? "Cambio de contraseña exitoso" : "Error en el cambio de contraseña",
+                exito ? $"Cambio de contraseña exitoso en el usuario con id: {usuario.IdUsuario}" : "Error en el cambio de contraseña",
                 exito ? Criticidad.Baja : Criticidad.Alta
             );
 
