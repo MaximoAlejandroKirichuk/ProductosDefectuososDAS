@@ -18,11 +18,10 @@ namespace MPP
         private ClienteDAL dalCliente = new ClienteDAL();
 
        
-        public bool ExisteCliente(string NroDocumento) // Antes era 'int'
+        public bool ExisteCliente(string NroDocumento) 
         {
-            return dalCliente.ExisteCliente(NroDocumento); // Pasa el 'string'
+            return dalCliente.ExisteCliente(NroDocumento);
         }
-        // 
 
         public bool Agregar(Cliente objeto)
         {
@@ -62,11 +61,7 @@ namespace MPP
                     TipoDocumento = tipoDoc,
                     Direccion = row["Direccion"].ToString(),
                     DeudaTotal = Convert.ToDecimal(row["DeudaTotal"]),
-
-                    // --- CAMBIO AQUÍ ---
-                    // Lee el NroDocumento de la BD como un 'string'
-                    NroDocumento = row["NroDocumento"].ToString() // Antes era Convert.ToInt32
-                    // --- FIN CAMBIO ---
+                    NroDocumento = row["NroDocumento"].ToString()
                 };
 
                 clientes.Add(cliente);
@@ -75,34 +70,11 @@ namespace MPP
             return clientes;
         }
 
-        public int ObtenerIdClientePorDocumento(string nroDocumento)
+        public int ObtenerIdClientePorDoucmento(string nroDocumento)
         {
             // Este método ya estaba bien (aceptaba string),
             // pero es una buena práctica definir el tipo de parámetro.
-            using (SqlConnection con = new SqlConnection(StringConnection.stringConnection))
-            {
-                string query = "SELECT IdCliente FROM Cliente WHERE NroDocumento = @NroDocumento";
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    // --- MEJORA DE CÓDIGO ---
-                    // Definir el tipo y tamaño es mejor que AddWithValue para strings
-                    SqlParameter param = new SqlParameter("@NroDocumento", SqlDbType.VarChar, 11);
-                    param.Value = nroDocumento;
-                    cmd.Parameters.Add(param);
-                    // --- FIN MEJORA ---
-
-                    con.Open();
-                    object result = cmd.ExecuteScalar();
-                    if (result != null && int.TryParse(result.ToString(), out int idCliente))
-                    {
-                        return idCliente;
-                    }
-                    else
-                    {
-                        return -1;
-                    }
-                }
-            }
+            return dalCliente.ObtenerIdClientePorDoucmento(nroDocumento);
         }
     }
 }

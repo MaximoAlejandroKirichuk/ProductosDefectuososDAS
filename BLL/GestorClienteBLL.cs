@@ -68,7 +68,7 @@ namespace BLL
             //var respuesta = Validador.EsCuitValido(nroDocumento);
             //if (!respuesta) throw new Exception("Cuit/Cuil invalido");
 
-            return clienteMPP.ObtenerIdClientePorDocumento(nroDocumento);
+            return clienteMPP.ObtenerIdClientePorDoucmento(nroDocumento);
         }
     }
     

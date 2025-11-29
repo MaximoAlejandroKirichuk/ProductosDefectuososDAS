@@ -162,13 +162,18 @@ namespace UI
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormCliente formcliente = new FormCliente();
-            formcliente.ShowDialog();
+            
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             
+        }
+        private void lblSoyCliente_Click(object sender, EventArgs e)
+        {
+            FormCliente formcliente = new FormCliente();
+            formcliente.ShowDialog();
+            this.Close();
         }
     }
 }

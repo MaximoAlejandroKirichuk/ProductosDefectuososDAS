@@ -1,4 +1,5 @@
 ﻿using BE;
+using BE.actores;
 using BLL;
 using System;
 using System.CodeDom.Compiler;
@@ -20,11 +21,12 @@ namespace _0_ProyectoDAS
         {
             InitializeComponent();
         }
-
+        GestorClienteBLL cliente = new GestorClienteBLL();
+        GestorProductosBLL productoBLL = new GestorProductosBLL();
+        GestorSeguimientoBLL seguimientoBLL = new GestorSeguimientoBLL();
         public void CargarGrid(int codigoProducto)
         {
-            GestorSeguimientoBLL gestor = new GestorSeguimientoBLL();
-            List<Seguimiento> lista = gestor.ObtenerSeguimientosPublicosPorProducto(codigoProducto);
+            List<Seguimiento> lista = seguimientoBLL.ObtenerSeguimientosPublicosPorProducto(codigoProducto);
 
             dataGridViewSeguimientos.DataSource = lista.Select(s => new
             {
@@ -41,9 +43,7 @@ namespace _0_ProyectoDAS
         private void button1_Click(object sender, EventArgs e)
         {
             string nroDocumento = txtNroCuilCuit.Text.Trim();
-            GestorClienteBLL cliente = new GestorClienteBLL();
-            GestorProductosBLL productoBLL = new GestorProductosBLL();
-            GestorSeguimientoBLL seguimientoBLL = new GestorSeguimientoBLL();
+
             try
             {
                 int idCliente = cliente.ObtenerIdClientePorDocumento(nroDocumento);
@@ -53,10 +53,9 @@ namespace _0_ProyectoDAS
                     return;
                 }
                 // Cargar productos del cliente
-                DataTable dtProductos = productoBLL.ObtenerProductosPorCliente(idCliente);
-                dataGridViewProductos.DataSource = dtProductos;
-                // Limpiar seguimientos
-                dataGridViewSeguimientos.DataSource = null;
+                ActualizarLista(idCliente);
+
+
             }
             catch (Exception ex)
             {
@@ -66,12 +65,37 @@ namespace _0_ProyectoDAS
            
         }
         
-       
+        private void ActualizarLista(int idCliente)
+        {
+            dataGridViewSeguimientos.DataSource = null;
+            dataGridViewProductos.DataSource = productoBLL.ObtenerProductosPorCliente(idCliente); ;
+        }
 
         private void FormCliente_Load(object sender, EventArgs e)
         {
             
             //CargarGrid(codigoProducto);
         }
+
+        private void dataGridViewProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewProductos.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un producto");
+                return;
+            }
+            try
+            {
+                DataGridViewRow row = dataGridViewProductos.SelectedRows[0];
+                int idCodigoProducto = Convert.ToInt32(row.Cells["CodigoProducto"].Value);
+
+                CargarGrid(idCodigoProducto);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error");
+            }
+        }
+
     }
 }

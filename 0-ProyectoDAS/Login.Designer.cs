@@ -37,6 +37,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblSoyCliente = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -118,7 +119,8 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.BackgroundImage = global::_0_ProyectoDAS.Properties.Resources.Captura_de_pantalla_FONDO;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblSoyCliente);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label3);
@@ -146,6 +148,19 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            // 
+            // lblSoyCliente
+            // 
+            this.lblSoyCliente.AutoSize = true;
+            this.lblSoyCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lblSoyCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoyCliente.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblSoyCliente.Location = new System.Drawing.Point(87, 412);
+            this.lblSoyCliente.Name = "lblSoyCliente";
+            this.lblSoyCliente.Size = new System.Drawing.Size(131, 29);
+            this.lblSoyCliente.TabIndex = 9;
+            this.lblSoyCliente.Text = "Soy cliente";
+            this.lblSoyCliente.Click += new System.EventHandler(this.lblSoyCliente_Click);
             // 
             // Login
             // 
@@ -177,5 +192,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblSoyCliente;
     }
 }

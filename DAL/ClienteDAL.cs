@@ -113,5 +113,30 @@ namespace DAL.Interfaces
                 }
             }
         }
+
+        public int ObtenerIdClientePorDoucmento(string nroDocumento)
+        {
+            using (SqlConnection con = new SqlConnection(StringConnection.stringConnection))
+            {
+                string query = "SELECT IdCliente FROM Cliente WHERE NroDocumento = @NroDocumento";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    
+                    SqlParameter param = new SqlParameter("@NroDocumento", SqlDbType.VarChar, 13);
+                    param.Value = nroDocumento;
+                    cmd.Parameters.Add(param);
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int idCliente))
+                    {
+                        return idCliente;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+            }
+        }
     }
 }

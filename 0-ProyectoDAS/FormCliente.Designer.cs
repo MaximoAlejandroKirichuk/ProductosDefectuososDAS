@@ -66,6 +66,7 @@
             this.dataGridViewProductos.Name = "dataGridViewProductos";
             this.dataGridViewProductos.Size = new System.Drawing.Size(721, 150);
             this.dataGridViewProductos.TabIndex = 2;
+            this.dataGridViewProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProductos_CellClick);
             // 
             // label2
             // 
