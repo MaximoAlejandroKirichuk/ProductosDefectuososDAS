@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,68 +27,62 @@ namespace BLL
 
             try
             {
-                Usuario usuario = BuscarUsuarioPorMail(email);
-
-                if (usuario == null)
-                {
-                    // Log de intento de login con usuario inexistente
-                    logger.RegistrarEvento(
-                        null,
-                        NivelLog.Alerta,
-                        ModuloSistema.Login,
-                        $"Intento de inicio de sesión fallido - Usuario '{email}' inexistente"
-                    );
-                    throw new Exception("Usuario inexistente");
-                }
-
+                Usuario usuario = BuscarUsuarioPorMail(email) ?? throw new Exception("Usuario inexistente con ese email ");
+                // SI ESTÁ BLOQUEADO
+                if (usuario.Bloqueado)
+                    throw new Exception("La cuenta está bloqueada. Contacte a un administrador.");
+                
                 var hashContrasena = Encriptador.HashContrasena(contrasena);
-
-                if (usuario.Contrasenia == hashContrasena)
+                if (usuario.Contrasenia != hashContrasena)
                 {
-                    SessionManager.Instancia.IniciarSesion(usuario);
+                    usuario.IntentosFallidos++;
+                    usuario.UltimoIntento = DateTime.Now;
 
-                    // Cargar jerarquía de permisos (Composite)
-                    usuario.Permisos = permisoBLL.ObtenerPermisosPorRol(usuario.Rol);
+                    // Actualizar intentos en DB
+                    usuarioMPP.ActualizarIntentos(usuario);
 
-                    // Log de login exitoso
-                    logger.RegistrarEvento(
-                        usuario.IdUsuario,
-                        NivelLog.Informacion,
-                        ModuloSistema.Login,
-                        $"Inicio de sesión exitoso para usuario '{usuario.Email}'",
-                        Criticidad.Baja
-                    );
+                    logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Error, ModuloSistema.Login,
+                        $"Intento de inicio de sesión fallido - Contraseña incorrecta", Criticidad.Media);
 
-                    return true;
+                    // BLOQUEAR SI SUPERA 3 INTENTOS
+                    if (usuario.IntentosFallidos >= 3)
+                    {
+                        usuario.Bloqueado = true;
+                        usuarioMPP.Bloquear(usuario);
+
+                        logger.RegistrarEvento(usuario.IdUsuario, NivelLog.Error, ModuloSistema.Login,
+                            $"Usuario bloqueado por múltiples intentos fallidos", Criticidad.Alta);
+
+                        throw new Exception("Cuenta bloqueada por seguridad.");
+                    }
+
+                    return false;
                 }
 
-                // Log de intento de contraseña incorrecta
+
+                // LOGIN EXITOSO → RESET
+                usuario.IntentosFallidos = 0;
+                usuarioMPP.ReiniciarIntentos(usuario);
+                SessionManager.Instancia.IniciarSesion(usuario);
+                // Cargar jerarquía de permisos (Composite)
+                usuario.Permisos = permisoBLL.ObtenerPermisosPorRol(usuario.Rol);
+
                 logger.RegistrarEvento(
                     usuario.IdUsuario,
-                    NivelLog.Error,
+                    NivelLog.Informacion,
                     ModuloSistema.Login,
-                    $"Intento de inicio de sesión fallido - Contraseña incorrecta",
-                    Criticidad.Media
+                    $"Inicio de sesión exitoso para usuario '{usuario.Email}'",
+                    Criticidad.Baja
                 );
 
-                // (aca incrementar los intentos fallidos)
-
-                return false;
+                return true;
             }
             catch (Exception ex)
             {
-                // Log de error interno del proceso de login
-                logger.RegistrarEvento(
-                    null,
-                    NivelLog.Error,
-                    ModuloSistema.Login,
-                    $"Error al iniciar sesión: {ex.Message}",
-                    Criticidad.Alta
-                );
-
-                throw;
+                throw new Exception(ex.Message);
             }
         }
+
 
         public bool CambiarContrasenia(Usuario usuario, string nuevaContrasenia)
         {

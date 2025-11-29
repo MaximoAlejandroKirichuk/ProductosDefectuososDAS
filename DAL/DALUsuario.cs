@@ -48,7 +48,59 @@ namespace DAL
                 }
             }
         }
+        public bool ActualizarIntentosFallidos(int idEmpleado, int nuevosIntentos)
+        {
+            using (SqlConnection con = new SqlConnection(stringConnection))
+            {
+                string query = @"UPDATE Empleado 
+                         SET IntentosFallidos = @IntentosFallidos,
+                             UltimoIntento = GETDATE()
+                         WHERE IdEmpleado = @IdEmpleado";
 
-        //TODO AUTOINCREMENTAR SI SE EQUIVOCA EL CONTADOR
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IntentosFallidos", nuevosIntentos);
+                    cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public bool BloquearUsuario(int idEmpleado)
+        {
+            using (SqlConnection con = new SqlConnection(stringConnection))
+            {
+                string query = @"UPDATE Empleado 
+                         SET Bloqueado = 1
+                         WHERE IdEmpleado = @IdEmpleado";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+                    con.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public bool ReiniciarIntentos(int idEmpleado)
+        {
+            using (SqlConnection con = new SqlConnection(stringConnection))
+            {
+                string query = @"UPDATE Empleado 
+                         SET IntentosFallidos = 0
+                         WHERE IdEmpleado = @IdEmpleado";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+                    con.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
     }
 }

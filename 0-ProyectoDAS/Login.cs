@@ -36,24 +36,28 @@ namespace UI
             try
             {
                 var respuesta = gestorUsuario.IniciarSesion(email, contrasenia);
+
+                // Contraseña incorrecta (pero no bloqueado)
                 if (!respuesta)
                 {
-                    throw new Exception("Email o contrasaña inexistente");
+                    MessageBox.Show("Contraseña incorrecta.");
+                    return;
                 }
 
+                // Login OK
                 MainForm mainMenu = new MainForm();
                 mainMenu.Show();
                 MessageBox.Show($"Bienvenido {SessionManager.Instancia.UsuarioActivo.NombreCompleto}.");
-                
                 this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un error al iniciar sesion: " + ex.Message);
+                MessageBox.Show("Ocurrió un error al iniciar sesión: " + ex.Message);
             }
 
-            
-        }
+
+
+            }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
